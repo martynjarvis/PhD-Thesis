@@ -13,8 +13,8 @@ DEFAULT_TARGET = 'pdf'
 # --- Things below should mostly not need touching. ---
 # Some rather fixed configurations.
 
-IMAGES_DIRECTORY = 'raw_fig'
-GENERATED_DIRECTORY = 'gen_fig'
+IMAGES_DIRECTORY = 'figures'
+GENERATED_DIRECTORY = 'gen_figures'
 CHAPTER_DIRECTORY = 'chapters'
 
 FILE_EXTENSIONS = {'eps': '.eps',
