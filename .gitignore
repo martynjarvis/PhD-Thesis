@@ -28,4 +28,5 @@
 *.mtc
 *.mtc0
 *.pyc
+*.pdf
 .sconsign.dblite
