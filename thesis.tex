@@ -1,43 +1,56 @@
-\documentclass[hyper,nobind,oneside,noroman]{hepthesis}
-%Note: for the final build, remove 'draft' and 'final' options and
-%build with hyper
-%seems to build faster without hyper
-% \documentclass{agb_thesis}
-\usepackage{AGB_thesis}
+\documentclass{mythesis}
+\usepackage{mythesis}
 
+%% You can set the line spacing this way
+%\setallspacing{double}
+%% or a section at a time like this
+%\setfrontmatterspacing{double}
+
+%% PDF metadata
 \makeatletter
 \@ifpackageloaded{hyperref}{%
 \hypersetup{%
+pdftitle = {title},
+pdfsubject = {subject},
+pdfkeywords = {physics, LHC},
+pdfauthor = {Martyn Jarvis}
 }
 }{}
 \makeatother
 
-% The path(s) to the graphics files:
 \graphicspath{{figures/}{gen_figures/}}
 
-% \listfiles
 
-\begin{document}
-\linenumbers 
+%% Define the thesis title and author
 \title{Some Thesis}
 \author{Some Author}
-   
-\begin{frontmatter} 
-\titlepage[Other \\ Stuff]
-{More \\ Stuff}
-\input{chapters/Preface.tex}
+
+%% Start the document
+\begin{document}
+
+%% Define the un-numbered front matter (cover pages, rubrik and table of contents)
+\begin{frontmatter}
+  \input{chapters/Front.tex}
 \end{frontmatter}
-  
+
+%% Start the content body of the thesis
 \begin{mainmatter}
-%%NOTE LOWER CASE 'i' IN INCLUDE
-\input{chapters/Introduction}
-
+  %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
+  \input{chapters/Introduction}
+  %% To ignore a specific chapter while working on another,
+  %% making the build faster, comment it out like this:
+  %\input{chap4}
 \end{mainmatter}
-    
-% \appendix
-% \input{chapters/Appendix}
 
+%% Produce the appendices
+\begin{appendices}
+  %\input{chapters/End.tex}
+\end{appendices}
+
+%% Produce the un-numbered back matter (e.g. colophon,
+%% bibliography, tables of figures etc., index...)
 % \begin{backmatter}
+% \input{backmatter}
 % \bibliographystyle{plain}
 % \bibliography{thesis}
 % \end{backmatter}
