@@ -6,6 +6,8 @@
 *.glg
 *.glo
 *.gls
+*.fls
+*.cut
 *.idx
 *.ilg
 *.ind
@@ -26,3 +28,4 @@
 *.mtc
 *.mtc0
 *.pyc
+.sconsign.dblite
