@@ -30,3 +30,4 @@
 *.pyc
 *.pdf
 .sconsign.dblite
+*gen_figures/*
