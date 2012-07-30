@@ -33,7 +33,6 @@
 \def\@requirehep{}
 \def\@requirehyper{}
 \def\@requiredraft{}
-\def\@requireAGBdraft{}
 \def\@useAFour{yes}
 \def\@requireAFourWide{}
 \def\@oneside{}
@@ -42,7 +41,6 @@
 \def\@bindmargins{yes}
 \def\@hidefrontmatter{}
 \def\@hidebackmatter{}
-\def\@noroman{}
 
 %% Part-wise spacing commands and definitions
 \def\@frontmatterspacing{onehalfspacing}
@@ -87,15 +85,6 @@
 %% Change footnote markers to alphabetic
 \DeclareOption{alphafoot}{%
   \DeclareRobustCommand{\thefootnote}{\alph{footnote}}%
-}
-
-%% Draft mode with line numbers and draft over-Print - AGBdraft keeps the figures in, And works in PDF. Default draft Is still there
-\DeclareOption{AGBdraft}{%
-  \def\@requireAGBdraft{yes}
-  \AtEndOfPackage{%
-    \let\@oldermainmatter\mainmatter%
-    \DeclareRobustCommand{\mainmatter}{\@oldermainmatter\linenumbers}%
-  }
 }
 
 %% Draft mode with line numbers and draft over-print
@@ -190,10 +179,6 @@
 \ifx\@useAFour\@empty\else%
   \PassOptionsToClass{a4paper}{scrbook}%
 \fi
-
-\DeclareOption{noroman}{%
-  \def\@noroman{yes}
-}
 
 
 %% Options to be passed to the hep package
@@ -291,13 +276,6 @@
 \ifx\@requiredraft\@empty\else%
   \RequirePackage[pagewise, mathlines]{lineno}
   \RequirePackage{draftcopy}
-  \fi
-
-  %% ``DRAFT'' underprint and line numbering in draft mode (optional)
-\ifx\@requireAGBdraft\@empty\else%
-  \RequirePackage[pagewise, mathlines]{lineno}
-  \RequirePackage{draftwatermark}
-  \SetWatermarkScale{8}
 \fi
 
 %% The right way to do custom spacing
@@ -528,7 +506,6 @@
   \setcounter{secnumdepth}{2}% number down to subsections
   \newcounter{iterlist}%
   \@oldfrontmatter%
-  \ifx\@noroman\@yes\pagenumbering{arabic}\fi%
   \adjustwidth{\@frontmatterextramargin}{\@frontmatterextramargin}%
   \begin{\@frontmatterspacing}%
 }{%
@@ -543,7 +520,7 @@
 \specialcomment{mainmatter}{%
   %\@oldmainmatter%
   \@mainmattertrue
-   \ifx\@noroman\@empty\pagenumbering{arabic}\fi%
+  \pagenumbering{arabic}%
   \adjustwidth{\@mainmatterextramargin}{\@mainmatterextramargin}%
   \begin{\@mainmatterspacing}%
 }{%
