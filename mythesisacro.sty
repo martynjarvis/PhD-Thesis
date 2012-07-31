@@ -1,0 +1,26 @@
+\ProvidesPackage{mythesisacro}[2005/11/01]
+%common acronyms
+
+\RequirePackage{acronym}
+
+%Physics concepts
+\acrodef{SM}{standard model}
+
+%Experiments/Accelerators
+\acrodef{CMS}{Compact Muon Solenoid}
+\acrodef{LHC}{Large Hadron Collider}
+\acrodef{D0}[D\O]{DZero}
+
+%You can define acronyms with \acrodef{label}[acronym]{written out form}, 
+%    for example \acrodef{etacar}[$\eta$ Car]{Eta Carinae}, with the restriction that the label should be simple ASCII. 
+%If label and acronym are the same, just use
+%    \acronym{SN}{supernova}.
+
+% \ac{label} The standard command to use an acronym is \ac{label}.
+% \acresetall resets all acronyms to not used. Useful after the abstract to redefine all acronyms in the introduction.
+% \acf{label} written out form with acronym in parentheses, irrespective of previous use
+% \acs{label} acronym form, irrespective of previous use
+% \acl{label} written out form without following acronym
+% \acp{label} plural form of acronym by adding an s. \acfp. \acsp, \aclp work as well.
+
+

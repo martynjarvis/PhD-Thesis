@@ -1,157 +1,44 @@
 \ProvidesPackage{mythesis}[2005/07/28]
 \RequirePackage{hepnicenames,hepunits}
 
-%% Citation spacing hack to bring the citation
-%% number a little closer to the referring text
-%\let\@OldCite\cite
-%\renewcommand{\cite}[1]{\mbox{\!\!\!\@OldCite{#1}}}
-
-%% Maths
-\DeclareRobustCommand{\thesismath}[1]{\ensuremath{\maybebmsf{#1}}}
-\DeclareRobustCommand{\parenths}[1]{\thesismath{\left({#1}\right)}}
-\DeclareRobustCommand{\braces}[1]{\thesismath{\left\{{#1}\right\}}}
-\DeclareRobustCommand{\angles}[1]{\thesismath{\left\langle{#1}\right\rangle}}
-\DeclareRobustCommand{\sqbracs}[1]{\thesismath{\left[{#1}\right]}}
-\DeclareRobustCommand{\mods}[1]{\thesismath{\left\lvert{#1}\right\rvert}}
-\DeclareRobustCommand{\modsq}[1]{\thesismath{\mods{#1}^2}}
-\DeclareRobustCommand{\dblmods}[1]{\thesismath{\left\lVert{#1}\right\rVert}}
-\DeclareRobustCommand{\expOf}[1]{\thesismath{\exp{\!\parenths{#1}}}}
-\DeclareRobustCommand{\eexp}[1]{\thesismath{e^{#1}}}
-\DeclareRobustCommand{\plusquad}{\thesismath{\oplus}}
-\DeclareRobustCommand{\logOf}[1]{\log\!\parenths{#1}}
-\DeclareRobustCommand{\lnOf}[1]{\ln\!\parenths{#1}}
-\DeclareRobustCommand{\ofOrder}[1]{\thesismath{ \mathcal{O}\parenths{#1} }}
+% Some shorthand
+% turn off italics
+\newcommand {\etal}{\mbox{et al.}\xspace} %et al. - no preceding comma
+\newcommand {\ie}{\mbox{i.e.}\xspace}     %i.e.
+\newcommand {\eg}{\mbox{e.g.}\xspace}     %e.g.
+\newcommand {\etc}{\mbox{etc.}\xspace}     %etc.
+\newcommand {\vs}{\mbox{\sl vs.}\xspace}      %vs.
+\newcommand {\mdash}{\ensuremath{\mathrm{-}}} % for use within formulas
 
 %% General utility defns
-\DeclareRobustCommand{\arXivCode}[1]{arXiv:#1}
-\DeclareRobustCommand{\CPviolation}{\CP-violation\xspace}
-\DeclareRobustCommand{\electroweak}{electro-weak\xspace}
-\DeclareRobustCommand{\StandardModel}{Standard Model\xspace}
-\DeclareRobustCommand{\pseudorapidity}{pseudo-rapidity\xspace}
-\DeclareRobustCommand{\SM}{Standard Model\xspace}
-\DeclareRobustCommand{\CPv}{\CPviolation}
-\DeclareRobustCommand{\LHCb}{LHCb\xspace}
-\DeclareRobustCommand{\CMS}{CMS\xspace}
-\DeclareRobustCommand{\ATLAS}{ATLAS\xspace}
-\DeclareRobustCommand{\LHC}{LHC\xspace}
-\DeclareRobustCommand{\LEP}{LEP\xspace}
-\DeclareRobustCommand{\CERN}{CERN\xspace}
-
 \DeclareRobustCommand{\purity}{\thesismath{p}\xspace}
 \DeclareRobustCommand{\luminosity}{\thesismath{\mathcal{L}}\xspace}
 \DeclareRobustCommand{\sqrtS}{\thesismath{\sqrt{s}}\xspace}
 
-%% Basic rate formalisms
-\DeclareRobustCommand{\Rate}{\thesismath{\Gamma}\xspace}
-\DeclareRobustCommand{\RateOf}[1]{\thesismath{\Gamma}\parenths{#1}\xspace}
-
-%% Phrases to be consistent about (with b/B)
-\DeclareRobustCommand{\bphysics}{\Pbottom-physics\xspace}
-\DeclareRobustCommand{\bhadron}{\Pbottom-hadron\xspace}
-\DeclareRobustCommand{\Bmeson}{\PB-meson\xspace}
-\DeclareRobustCommand{\bbaryon}{\Pbottom-baryon\xspace}
-\DeclareRobustCommand{\Bdecay}{\PB-decay\xspace}
-\DeclareRobustCommand{\bdecay}{\Pbottom-decay\xspace}
-
-
 %% Processes
-\DeclareRobustCommand{\BToKPi}{\HepProcess{ \PB \to \PK \, \Ppi }\xspace}
-\DeclareRobustCommand{\BToPiPi}{\HepProcess{ \PB \to \Ppi \, \Ppi }\xspace}
-\DeclareRobustCommand{\BToKK}{\HepProcess{\PB \to \PK \, \PK}\xspace}
-\DeclareRobustCommand{\BToRhoPi}{\HepProcess{ \PB \to \Prho \, \Ppi }\xspace}
-\DeclareRobustCommand{\BToRhoRho}{\HepProcess{ \PB \to \Prho \Prho }\xspace}
-\DeclareRobustCommand{\X}{\thesismath{X}\xspace}
-\DeclareRobustCommand{\Xbar}{\thesismath{\overline{X}}\xspace}
-\DeclareRobustCommand{\Xzero}{\HepGenParticle{X}{}{0}\xspace}
-\DeclareRobustCommand{\Xzerobar}{\HepGenAntiParticle{X}{}{0}\xspace}
-\DeclareRobustCommand{\epluseminus}{\Pelectron\Ppositron\xspace}
 \DeclareRobustCommand{\inclusiveWe}{\HepProcess{\Pproton\Pproton\to\PW(\Pe\Pnu)+\X}\xspace}
 \DeclareRobustCommand{\inclusiveW}{\HepProcess{\Pproton\Pproton\to\PW(\Plepton\Pnu)+\X}\xspace}
+\DeclareRobustCommand{\Wenu}{\HepProcess{\PW\to\Pe\Pnu}\xspace}
+\DeclareRobustCommand{\Wlnu}{\HepProcess{\PW\to\Plepton\Pnu}\xspace}
+\DeclareRobustCommand{\Zee}{\HepProcess{\PZ\to\Pe\Pe}\xspace}
+\DeclareRobustCommand{\Ztt}{\HepProcess{\PZ\to\Ptau\Ptau}\xspace}
+\DeclareRobustCommand{\Zll}{\HepProcess{\PZ\to\Plepton\Plepton}\xspace}
 
-% Fix hyperref labels in PDFTeX
-\@ifpackageloaded{hyperref}{%
-  \pdfstringdefDisableCommands{%
-      \def\pi{pi}%
-      \def\gamma{gamma}%
-  }%
-}{} 
+% Physics symbols ...
+\newcommand{\PT}{\ensuremath{p_{\mathrm{T}}}\xspace}
+\newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
+\newcommand{\ET}{\ensuremath{E_{\mathrm{T}}}\xspace}
+\newcommand{\HT}{\ensuremath{H_{\mathrm{T}}}\xspace}
+\newcommand{\HTm}{\ensuremath{H_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\MHT}{\HTm}
 
-
-% General lagrangian formalism
-\DeclareRobustCommand{\matrixelementM}{\thesismath{ \mathcal{M} }\xspace}
-\DeclareRobustCommand{\matrixelementA}{\thesismath{ \mathcal{A} }\xspace}
-
-\DeclareRobustCommand{\Amplitude}[1]{\thesismath{
-    \mathcal{A}%
-    \begingroup%
-    \def\@empty{}%
-    \def\@arg{#1}%
-    \ifx\@arg\@empty{}\else\parenths{#1}\fi%
-    \endgroup%
-}}
-
-% also want Rate and BranchingRatio
-\DeclareRobustCommand{\Lagrangian}{\thesismath{ \mathcal{L} }\xspace}
-\DeclareRobustCommand{\Hamiltonian}{\thesismath{ \mathcal{H} }\xspace}
-\DeclareRobustCommand{\lagrangian}{\Lagrangian}
-\DeclareRobustCommand{\hamiltonian}{\Hamiltonian}
-\DeclareRobustCommand{\RenormalisationScale}{\thesismath{ \mu }\xspace}
-
-\DeclareRobustCommand{\adjointField}[1]{\thesismath{ \bar{#1} }\xspace}
-\DeclareRobustCommand{\scalarField}{\thesismath{ \phi }\xspace}
-\DeclareRobustCommand{\spinorField}{\thesismath{ \psi }\xspace}
-
-\DeclareRobustCommand{\pathD}{\thesismath{ \mathcal{D} }\xspace}
-\DeclareRobustCommand{\VEV}{VEV\xspace}
-\DeclareRobustCommand{\QCD}{QCD\xspace}
-\DeclareRobustCommand{\EW}{EW\xspace}
-\DeclareRobustCommand{\EM}{EM\xspace}
-\DeclareRobustCommand{\PDG}{PDG\xspace}
-
-% covariant derivative
-% covariant vectors, tensors, vectors
-
-% Common Feynman rules
-%% photon propagator
-%% external vector boson
-%% Z,W propagator
-
-
-% Rates and measurements
-\DeclareRobustCommand{\BR}[1]{\thesismath{%
-    \def\empty{}%
-    \def\thearg{#1}%
-    \mathcal{B}%
-    \ifx\thearg\empty{}\else{(\HepProcess{#1})}\fi%
-}\xspace}
-
-\DeclareRobustCommand{\efficiency}[1]{\thesismath{
-    \def\empty{}%
-    \def\thearg{#1}%
-    \varepsilon%
-    \ifx\thearg\empty{}\else{(\text{#1})}\fi%
-}\xspace}
-
-
-%% symmetry violation shorthands
-\DeclareRobustCommand{\CPv}{\thesismath{\cancel{\opCP}}\xspace}
-\DeclareRobustCommand{\CPViolation}{\thesismath{\opCP\text{-violation}}\xspace}
-\DeclareRobustCommand{\CPTv}{\thesismath{\cancel{\opCPT}}\xspace}
-\DeclareRobustCommand{\CPTViolation}{\thesismath{\opCPT\text{-violation}}\xspace}
-
-%% Typical analysis concepts
-\DeclareRobustCommand{\PV}{\MathUpright{PV}}
-\DeclareRobustCommand{\IP}{\MathUpright{IP}}
-\DeclareRobustCommand{\pT}{\thesismath{p_\MathUpright{T}}\xspace}
-\DeclareRobustCommand{\missingpT}{\thesismath{\cancel{\pT}}\xspace}
-\DeclareRobustCommand{\Et}{\thesismath{E_\MathUpright{T}}\xspace}
-\DeclareRobustCommand{\missingEt}{\thesismath{\cancel{\Et}}\xspace}
-\DeclareRobustCommand{\p}{\thesismath{p}\xspace}
-\DeclareRobustCommand{\chisq}{\thesismath{\chi^2}\xspace}
-\DeclareRobustCommand{\tuple}[1]{\ensuremath{#1}-tuple\xspace}
-\DeclareRobustCommand{\tuples}[1]{\ensuremath{#1}-tuples\xspace}
-\DeclareRobustCommand{\ntuple}{\tuple{n}\xspace}
-\DeclareRobustCommand{\ntuples}{\tuples{n}\xspace}
-\DeclareRobustCommand{\dataset}{data set\xspace}
-\DeclareRobustCommand{\cutset}{cut set\xspace}
-\DeclareRobustCommand{\CoM}{CoM\xspace}
+\newcommand{\et}{\ensuremath{E_{\mathrm{T}}}\xspace}
+\newcommand{\Em}{\ensuremath{E\hspace{-0.6em}/}\xspace}
+\newcommand{\Pm}{\ensuremath{p\hspace{-0.5em}/}\xspace}
+\newcommand{\PTm}{\ensuremath{{p}_\mathrm{T}\hspace{-1.02em}/}\xspace}
+\newcommand{\PTslash}{\ensuremath{{p}_\mathrm{T}\hspace{-1.02em}/}\xspace}
+\newcommand{\ETm}{\ensuremath{E_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\MET}{\ETm}
+\newcommand{\ETmiss}{\ETm}
+\newcommand{\ETslash}{\ensuremath{E_{\mathrm{T}}\hspace{-1.1em}/}\xspace}
+\newcommand{\VEtmiss}{\ensuremath{{\vec E}_{\mathrm{T}}^{\text{miss}}}\xspace}
