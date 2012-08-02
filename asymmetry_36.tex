@@ -27,6 +27,18 @@ As the luminosity increased even further, it was necesary to use electron
 triggers that included cuts on electron ID variables.
 
 %% TODO Trigger tables 
+\begin{table}[htb]
+  \caption{A placeholder table}
+  \label{asym36:triggers}
+  \centering
+  \begin{tabular}{| l c r |}
+    \hline
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9 \\
+  \hline
+  \end{tabular}
+\end{table}
 
 \subsection{Electron Selection}
 
@@ -49,19 +61,56 @@ To removed Drell-Yan events an event is vetoed if it contasins a second lepton
 The Particle Flow \ETm distribution for the events that pass the event
 selection, with $\pt > \unit{25}{\GeV}$ and $|\eta| < 2.4$ is shown in
 \fig{asym36:pfmet}.
+The number of selected events that pass the event selection, binned in charge 
+and eta, are shown in \tab{asym36:selectedevents}. 
 
-
-\begin{figure}[h!]
+\begin{figure}[htb]
   \caption{Particle Flow \ETm distribution for selected events.}
   \label{asym36:pfmet}
   \centering
-    \includegraphics[width=0.5\textwidth]{placeholder}
+  \includegraphics[width=0.5\textwidth]{placeholder}
 \end{figure}
 
+\begin{table}[htb]
+  \caption{A placeholder table}
+  \label{asym36:selectedevents}
+  \centering
+  \begin{tabular}{| l c r |}
+    \hline
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9 \\
+  \hline
+  \end{tabular}
+\end{table}
+                           
+The exected composition of the selected events, derived from MC simulation
+samples, is show in \tab{asym36:selectedcomp}. 
+
+\begin{table}[htb]
+  \caption{A placeholder table}
+  \label{asym36:selectedcomp}
+  \centering
+  \begin{tabular}{| l c r |}
+    \hline
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9 \\
+  \hline
+  \end{tabular}
+\end{table}
+
+
 \section{Signal Yield Extraction}
-\subsection{QCD \ETm Shape}
+
+The number of signal and background events in each bin is extracted using a fit
+to the \ETm distribution using two templates.
+The first is the sum of the \Wenu signal and the \EWK background shapes,
+and the second is the sum of the \QCD plus \gjet processes.
+
+\subsection{\QCD \ETm Shape}
 \subsection{Signal \ETm Shape from Boson Recoil}
-\subsection{EWK \ETm Shape}
+\subsection{\EWK \ETm Shape}
 \subsection{Validation of Signal Extraction Method on Simulation}
 \subsection{Fit on Real Data}
 
