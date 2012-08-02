@@ -28,7 +28,9 @@
 
 % Physics symbols ...
 \newcommand{\PT}{\ensuremath{p_{\mathrm{T}}}\xspace}
-\newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
+\newcommand{\pt}{\PT}
+\newcommand{\Pt}{\PT}
+\newcommand{\pT}{\PT}% for convenience because I'm an idiot
 \newcommand{\ET}{\ensuremath{E_{\mathrm{T}}}\xspace}
 \newcommand{\HT}{\ensuremath{H_{\mathrm{T}}}\xspace}
 \newcommand{\HTm}{\ensuremath{H_{\mathrm{T}}^{\text{miss}}}\xspace}
@@ -42,6 +44,11 @@
 \newcommand{\ETm}{\ensuremath{E_{\mathrm{T}}^{\text{miss}}}\xspace}
 \newcommand{\MET}{\ETm}
 \newcommand{\met}{\ETm}
-\newcommand{\ETmiss}{\ETm}
+\newcommand{\ETmiss}{\ETm}% for convenience because I'm still an idiot
 \newcommand{\ETslash}{\ensuremath{E_{\mathrm{T}}\hspace{-1.1em}/}\xspace}
 \newcommand{\VEtmiss}{\ensuremath{{\vec E}_{\mathrm{T}}^{\text{miss}}}\xspace}
+
+
+% to ensure capitilasation remains teh same throughout
+\newcommand {\fig}[1]{Figure \ref{#1}\xspace}
+\newcommand {\tab}[1]{Table \ref{#1}\xspace}
