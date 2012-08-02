@@ -1,10 +1,62 @@
 \chapter{ 
 Measurement of the electron charge asymmetry with \unit{36}{\invpb} }
 
+
+In this chapter the first measurement of the electron charge asymmetry in
+inclusive \inclusiveWe production with the CMS detecotr is described.
+
+The analysis is performed on the full 2010 dataset, which corresponds to a
+luminosity of \unit{36.1}{\invpb}.
+
+%% TODO MC SAMPLES USED
+
 \section{Event Selection}
+
+The event selection used in this analysis is based on a limited number of cuts.
+This is due to the limited statistics available in early data taking.
+
 \subsection{Trigger}
+
+Several triggers were used to select the events, due to the increasing
+luminosity in the LHC 2010 run.
+
+In the initial runs, events were selected using only a single photon trigger. 
+As the luminosity increased these triggers became prescaled it was
+necessary to use electron triggers to select events. 
+As the luminosity increased even further, it was necesary to use electron
+triggers that included cuts on electron ID variables.
+
+%% TODO Trigger tables 
+
 \subsection{Electron Selection}
+
+The available unprescaled triggers constrain the electron momentum to be above
+\unit{25}{\GeV}.
+
+Electrons candidates are identified using a cut based approach on an limited
+number of variables.
+
+%% TODO finish ZZZzzzzz,,,,
+
 \subsection{Event Selection}
+
+An Event is selected if if contains a single electron that passes all electron
+selection.
+To removed Drell-Yan events an event is vetoed if it contasins a second lepton
+(an electron passing a loose selecton, or an isolated muon) with $\pt > 
+\unit{15}{\GeV}$
+
+The Particle Flow \ETm distribution for the events that pass the event
+selection, with $\pt > \unit{25}{\GeV}$ and $|\eta| < 2.4$ is shown in
+\fig{asym36:pfmet}.
+
+
+\begin{figure}[h!]
+  \caption{Particle Flow \ETm distribution for selected events.}
+  \label{asym36:pfmet}
+  \centering
+    \includegraphics[width=0.5\textwidth]{placeholder}
+\end{figure}
 
 \section{Signal Yield Extraction}
 \subsection{QCD \ETm Shape}
