@@ -15,7 +15,7 @@ import build_config
 env = Environment(ENV = os.environ)
 # Get all the nested SConscripts in that may alter and pass back
 # the environment.
-env = SConscript('aux/SConscript', 'env')
+env = SConscript('build_aux/SConscript', 'env')
 
 
 class LatexBuilder(object):
