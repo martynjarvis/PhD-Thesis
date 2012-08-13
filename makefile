@@ -19,7 +19,7 @@ $(OUTPUT).pdf: $(INPUT).tex chapters/*.tex
 	)
 
 clean::
-	rm -fv *.aux chapters/*.aux *.log *.bbl *.blg *.toc *.out *.lot *.lof thesis_*.pdf
+	rm -fv *.aux chapters/*.aux *.log *.bbl *.blg *.toc *.fls *.cut *.out *.lot *.lof thesis_*.pdf
 
 show: $(OUTPUT).pdf
 	$(VIEW) $(OUTPUT).pdf
