@@ -5,7 +5,7 @@ INPUT  = thesis
 DATE   = $(shell date "+%d%b")
 OUTPUT = thesis_draft_$(DATE)
 
-TEX = pdflatex -interaction batchmode -jobname $(OUTPUT)
+TEX = pdflatex -interaction nonstopmode -jobname $(OUTPUT)
 BIB = bibtex
 VIEW = mupdf
 
