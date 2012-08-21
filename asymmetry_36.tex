@@ -193,6 +193,42 @@ integrated luminosity of \unit{36.1}{\invpb} are summarised in
 
 \section{Systematic Uncertainties}
 \subsection{Relative Efficiency}
+
+If the reconstruction efficiency of electrons is different to that of positrons
+then the measured asymmetry wil be diluted and will need to be corrected for
+the relative efficiency.
+
+The efficiency for electrons and positrons is measured using the tag and probe
+method %TODO ref 
+with a sample of \Zee events from the same datasets used in the analysis. 
+The \Zee events offer a high purity source of unbiased electrons with which to
+measure the efficiencies.
+
+From the sample of \Zee events a ``tag'' electron is selected with a strict
+selection criteria. 
+A ``probe'' electron is selected with the same electron selection decribed
+earlier.
+The invariant mass of the tag-probe pair is required to be
+$\unit{60}{\GeV} < M_ee < \unit{120}{\GeV}$ to ensure a high purity sample.
+
+Efficiencies can then be calculated by measuring the signal yield in events
+with one tag electron and one probe passing the selection (tag \& pass) and
+events where the probe electron fails the selection (tag \& fail).
+The signal yield is extracted using an simultaneous maximum likelihood fit to
+both the tag \& pass and the tag \& fail samples.
+
+For this analysis the efficiencies are measured in two parts:
+
+\begin{itemize}
+    \item GSF tracking efficiency
+    \item Identification efficiency, including conversion rejection, unaminous
+charge assignment and HLT request.
+\end{itemize}
+
+
+
+
+
 \subsection{Signal Extraction Method}
 \subsubsection{QCD \ETm Shape}
 \subsubsection{Signal \ETm Shape from Boson Recoil}
