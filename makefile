@@ -29,3 +29,7 @@ test::
 
 once::
 	$(TEX) $(INPUT)
+
+
+spell:
+	aspell -t check ${INPUT}.tex
