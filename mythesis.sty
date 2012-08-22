@@ -1,5 +1,27 @@
 \ProvidesPackage{mythesis}[2005/07/28]
 \RequirePackage{hepnicenames,hepunits}
+\RequirePackage{acronym}
+
+% Acronyms
+% \acrodef{label}[acronym]{written out form},
+% for example:
+% \acrodef{etacar}[$\eta$ Car]{Eta Carinae}
+
+% Acronyms - Physics
+\acrodef{QCD}[QCD]{Quantum Chromodynamics}
+\acrodef{EWK}[EWK]{Electroweak}
+\acrodef{PDF}[PDF]{Parton Density Function}
+
+% Acronyms - Techniques
+\acrodef{MC}[MC]{Monte Carlo}
+\acrodef{CL}[CL]{Confidence Level}
+
+% Acronyms - Experimental
+\acrodef{CMS}[CMS]{Compact Muon Solenoid}
+\acrodef{ATLAS}[ATLAS]{ATLAS}%todo change
+\acrodef{LHC}[LHC]{LHC}%todo change
+\acrodef{ECAL}[ECAL]{Electromagnetic Calorimeter}
+
 
 % Some shorthand
 % turn off italics
@@ -25,8 +47,8 @@
 \DeclareRobustCommand{\Zee}{\HepProcess{\PZ\to\Pe\Pe}\xspace}
 \DeclareRobustCommand{\Ztt}{\HepProcess{\PZ\to\Ptau\Ptau}\xspace}
 \DeclareRobustCommand{\Zll}{\HepProcess{\PZ\to\Plepton\Plepton}\xspace}
-\DeclareRobustCommand{\QCD}{QCD\xspace}
-\DeclareRobustCommand{\EWK}{Electroweak\xspace}
+\DeclareRobustCommand{\QCD}{QCD\xspace} % TODO remove this
+\DeclareRobustCommand{\EWK}{Electroweak\xspace} % TODO remove this
 \DeclareRobustCommand{\gjet}{\HepProcess{\Pphoton + jet}\xspace}
 
 
