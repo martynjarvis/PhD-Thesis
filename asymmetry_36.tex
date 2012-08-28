@@ -70,21 +70,21 @@ number of variables.
     \midrule
     \multicolumn{3}{l}{ID Cuts} \\
     \midrule
-    H/E                 & 0.04  & 0.025 \\
-    $\Delta\phi$        & 0.04  & 0.025 \\
-    $\Delta\eta$        & 0.04  & 0.025 \\
-    $\sigma_{\eta\eta}$ & 0.04  & 0.025 \\
+    $\nicefrac{H}{E}$ & 0.04 & 0.025  \\
+    $\Delta\phi$     & 0.06 & 0.03  \\
+    $\Delta\eta$     & 0.004 & 0.007  \\
+    $\sigma_{\eta\eta}$ & 0.01 & 0.03  \\
     \midrule
     \multicolumn{3}{l}{Isolation Cuts} \\
     \midrule
-    $ISO_{trk}/ \ET $   & 0.04  & 0.025 \\
-    $ISO_{ECAL}/ \ET $  & 0.04  & 0.025 \\
-    $ISO_{HCAL}/ \ET $  & 0.04  & 0.025 \\
+    $\nicefrac{ISO_{trk}}{\ET}$    & 0.09 & 0.04  \\
+    $\nicefrac{ISO_{ECAL}}{\ET}$     & 0.07 & 0.05  \\
+    $\nicefrac{ISO_{HCAL}}{\ET}$     & 0.10 & 0.025  \\
     \midrule
     \multicolumn{3}{l}{Conversion Rejection Cuts} \\
     \midrule
-    Missing Hits       & 0.04  & 0.025 \\
-    Dist or DCOTs   & 0.04  & 0.025 \\ % TODO change this or explain it
+    Missing Hits   & \multicolumn{2}{c}{$\leq 0$} \\
+    $DIST || Dcot$ & \multicolumn{2}{c}{$> 0.02$} \\
   \end{tabular}
   \caption{Electron selection variables and corresponding cut values for the
 barrel and endcap.}
@@ -114,19 +114,32 @@ and eta, are shown in \TableRef{asym36:selectedevents}.
   \label{asym36:pfmet}
 \end{figure}
 
-\begin{table}[htb]
-  \centering
-  \begin{tabular}{| l c r |}
-    \hline
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    7 & 8 & 9 \\
-  \hline
-  \end{tabular}
-  \caption{A placeholder table}
-  \label{asym36:selectedevents}
+
+\begin{table}[htbp]
+  \begin{center}
+    \leavevmode
+    \begin{tabular}{|l|cccc|}
+     \hline
+Process & HLT & $N_{\Pe} = 1$ & $N_{\Pmu} = 0$ & $\met > \unit{30}{\GeV}$ \\
+\hline
+\Wenu           & 500 & 320 & 320 & 188\\
+\PZ + jets      & 79  & 35  & 35  & 0.4\\
+QCD             & 32275 & 106 & 106 & 0.3\\
+\Pphoton + jets & 22  & 2.1 & 2.1 & 0.0\\
+\Ptop\APtop +jets & 5.1 & 1.1 & 1.0 & 0.7\\
+Drell-Yan       & 0.8 & 0.3 & 0.3 & 0.0\\
+\hline
+\nicefrac{S}{B} & 0.02 & 2.2 & 2.2 & 135\\
+\hline
+   \end{tabular}
+   \caption{Number of expected events and $\nicefrac{S}{B}$ with
+\unit{0.1}{\invpb} of data. \cite{me}}
+    \label{asym36:selectedevents}
+  \end{center}
 \end{table}
-                           
+% TODO REMOVE MET CUT
+
+
 The exected composition of the selected events, derived from MC simulation
 samples, is show in \TableRef{asym36:selectedcomp}. 
 

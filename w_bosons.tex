@@ -4,4 +4,87 @@
 \section{Introduction}
 \section{W Boson Production}
 \section{W Charge Asymmetry}
+
+A particularly interesting observable involving \PW bosons produced in hadron
+collisions is an asymmetry in the production of \PWp and \PWm bosons as a
+function of rapidity.
+In proton-antiproton colliders, such as Fermilab's Tevatron,  \PWp and \PWm
+bosons are produced at equal rates but \PWp are produced more in the direction
+on the incoming proton where as the \PWm are produced more in the opposite
+direction.
+In proton-proton colliders, such as the LHC, the \PWp is produced in greater
+rates than the \PWm. Additionally the \PWp are produced at larger rapidities
+where as the \PWm bosons are produced more centrally. \cite{phenom}
+
+The difference in production rate of \PWpm boson is mainly due to the quark
+content in the proton and the rapidity dependence is due to the \Pup quarks on
+average carrying a greater fraction of the proton momentum that \Pdown quarks.
+Therefore a measurement of the charge asymmetry can provide important
+information on the parton density functions of the proton.\cite{phenom,pdf}.
+
+At the LHC it has been proposed \cite{kom} that an asymmetry measurement could
+also be used to measure the contribution of New Physics, since in the Standard
+Model, \begin{equation}
+\sigma_{SM}(\PWp + jets) \approx 1.3 \times \sigma_{SM}(\PWm + jets)
+\end{equation}
+where as typically in many New Physics theories and models predict
+\begin{equation}
+\sigma_{NP}(\PWp + jets) = \sigma_{NP}(\PWm + jets)
+\end{equation}
+examples include the pair production of gluinos in supersymmetry where the
+gluinos decay to one charged lepton, missing energy and jets.\cite{kom}
+
 \section{Electron Charge Asymmetry}
+
+\PW bosons are identified by their decay to a lepton plus neutrino, however at
+hadronic colliders the neutrino longitudinal momentum is unmeasured meaning
+that the \PW rapidity is unknown. Instead what is studied is the lepton charge
+asymmetry.\cite{phenom} The theoretical asymmetry is given by equation
+\ref{eq:AsymThe}.
+
+\begin{equation}
+A_{the}(\eta)=\frac{  \frac{d\sigma}{d\eta}(\Wpenu) -
+\frac{d\sigma}{d\eta}(\Wmenu) }{ \frac{d\sigma}{d\eta}(\Wpenu) +
+\frac{d\sigma}{d\eta}(\Wmenu) }
+\label{eq:AsymThe}
+\end{equation} 
+
+The experimentally measured asymmetry is given by equation
+\ref{eq:AsymExp}.\cite{kom}
+ 
+\begin{equation}
+A_{exp}(\eta)=\frac{  \frac{dN}{d\eta}(\Pelectron) -
+\frac{dN}{d\eta}(\APelectron) }{ \frac{dN}{d\eta}(\Pelectron) +
+\frac{dN}{d\eta}(\APelectron) }
+\label{eq:AsymExp}
+\end{equation} 
+
+The two measurements are related by equation \ref{eq:NumEve} which takes in to
+account the experimental effects such as the luminosity (${\cal L}$), high
+level trigger ($\epsilon_{HLT}$), offline efficiency ($ \epsilon_{off}$) and
+the acceptance ($\epsilon_{acc}$).
+
+\begin{equation}
+\frac{dN}{d\eta} = {\cal L } \frac{d\sigma}{d\eta}  \epsilon_{HLT}
+\epsilon_{off} \epsilon_{acc}
+\label{eq:NumEve}
+\end{equation} 
+
+Since the asymmetry is a ratio, the luminosity high level trigger and the
+offline efficiency cancel.\cite{me} The acceptance can not be cancelled
+however, since it is a function of rapidity and momentum and electrons and
+positrons will have different rapidity and momentum distributions. The
+experimentally measured asymmetry can therefore be related to the theoretical
+asymmetry by correcting for the acceptance.\cite{me}
+
+\begin{align} 
+A_{exp}(\eta) &= \frac{ \frac{dN}{d\eta}(\Pelectron) -
+\frac{dN}{d\eta}(\APelectron) }{ \frac{dN}{d\eta}(\Pelectron) +
+\frac{dN}{d\eta}(\APelectron) }\\   
+              &= \frac{ \frac{d\sigma}{d\eta}(\Wpenu) -
+\frac{\epsilon^{-}_{acc}}{\epsilon^{+}_{acc}} \frac{d\sigma}{d\eta}(\Wmenu) }{
+\frac{d\sigma}{d\eta}(\Wpenu) + \frac{\epsilon^{-}_{acc}}{\epsilon^{+}_{acc}}
+\frac{d\sigma}{d\eta}(\Wmenu) }
+\label{eq:AsymExpCorr}
+\end{align}
+

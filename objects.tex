@@ -4,9 +4,69 @@
 
 \section{Electrons}
 \subsection{Reconstruction}
+The electron reconstruction proceeds by matching a track found in the CMS
+tracker to an energy cluster in the ECAL.
+Due to Bremsstrahlung radiation, electron tracks may suffer from sudden changes
+in the radius of curvature. 
+Therefore, electron track reconstructions uses a Gaussian-Sum Filter (GSF) fit
+to allow for energy losses. 
+The first step in the GSF electron reconstruction is to construct
+superclusters.
+A seed cluster is formed from the closest ECAL cluster to the extrapolated GSF
+track. 
+Potential Bremsstrahlung photons are identified by creating a straight line in
+the ECAL from where the track enters the ECAL and the tangent to the initial
+direction of the track. 
+Any unlinked ECAL clusters that can be linked to this line are then identified
+as Bremsstrahlung photons and their energy is added to the total ECAL
+supercluster energy.\cite{eleReco}
+
+From the supercluster, seeds in the pixel detector are found where two hits in
+the detector are compatible with a given beam spot. The seed is then used to
+build a trajectory by extrapolating the seed to the next layers and looking for
+compatible hits using a Bethe Heitler modelling of the electron losses and a
+GSF in the forward fit. This is repeated for each new layer until the last
+layer or until no hits can be found in two consecutive layers.\cite{eleReco}
+
 \subsection{Electron Identification}
 \subsection{Electron Charge Measurement}
 
 \section{Missing Energy}
 
 \section{Particle Flow at CMS}
+
+New physics will manifest itself in CMS through signatures involving standard
+model particles. Important signatures for many new phenomena include high \Pt\
+jets, missing transverse energy (\met), jets containing \Pbottom quarks and
+hadronically decaying tau leptons. To study these signatures it is important to
+reconstruct and identify all particles in events as accurately as possible. The
+particle-flow event reconstruction attempts to reconstruct and identify all
+stable particles in an event by combining information from all CMS
+sub-detectors. The particle reconstruction and identification starts with
+collecting information from each subdetector to form elements such as tracks
+and energy clusters in the calorimeters. These basic 'elements' are then
+combined to form blocks which are then interpreted in terms of particles by the
+particle flow algorithm. A list of individual particles is then returned from
+the algorithm which can be used to study the event in greater detail by,
+amongst other things, building jets, tagging b quarks and calculating missing
+transverse energy.\cite{PF}
+
+The first step of the particle-flow reconstruction algorithm is to collect the
+fundamental elements. The elements consist of charged particles tracks from the
+tracker, clusters of energy deposition in the calorimeters and muon tracks.
+These elements need to be identified with a high efficiency and low fake rate
+since the particle reconstruction depends on these basic elements and
+misidentified elements could lead to missing or double counted
+particles.\cite{PF}
+
+As a particle traverses the detector it may interact with many CMS subdetectors
+creating several particle-flow elements. A link algorithm is used to connect
+the elements together to form blocks that typically contain 1, 2 or 3 elements.
+The algorithm returns a distance between the elements as a measure of the
+quality of the link. The final step of the particle flow algorithm is to
+reconstruct and identify particles from each block of linked elements.\cite{PF}
+
+Once the event has been fully reconstructed with the particle flow technique
+the missing transverse energy (\met) in the event can be easily computed by
+summing up the transverse momentum of all the reconstructed particles.\cite{PF}
+
