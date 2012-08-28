@@ -12,6 +12,7 @@ VIEW = mupdf
 $(OUTPUT).pdf: $(INPUT).tex chapters/*.tex
 	( \
 	$(TEX) $(INPUT); \
+	$(BIB) $(OUTPUT); \
 	while grep -q "Rerun to get cross-references right." $(OUTPUT).log; \
 	do \
 		$(TEX) $(INPUT); \
