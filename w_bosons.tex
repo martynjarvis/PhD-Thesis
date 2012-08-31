@@ -1,4 +1,3 @@
-
 \chapter{W Bosons at the LHC}
 
 \section{Introduction}
@@ -64,47 +63,81 @@ at the parton level, and the \acp{PDF}.
   \label{wbos:xsec}
 \end{multline}
 
-the partonic cross section.
 
-In \EquationRef{wbos:xsec}, $\sum\limits_{a,b}$ represents the sum over the
-initial parton states $a$ and $b$. At the Tevatron (a proton-antiproton
-collider) the two incoming partons, $a$ and $b$, are most likely to be valence
-quarks from the proton and antiproton respectivly. Therefore, previous studys
-of the \PW boson at the Tevatron have been mostly sensative to the valence
-quarks of the proton.
+$d\hat{\sigma}_{(\HepProcess{a b \to \PWpm})}(x_1 p_1, x_2 p_2; Q^2)$
+represents the partonic sub-process crosssection. At \ac{LO} the process is
+simply
+\begin{equation}
+  \HepProcess{\Pup + \APdown \to \PWp \to \Pleptonplus \Pnulepton} \label{wbos:wprod} \\
+  \HepProcess{\APup + \Pdown \to \PWm \to \Pleptonminus \APnulepton}
+\end{equation}
 
-At the \ac{LHC} (a proton-proton collider), one parton is most likely be a
-valence quark with a high fraction of the protons momentum, and the other
-parton will tend to be a sea anti-quark with a lower fraction of the momentum
-than the quark, this causes the \PW bosons to be produced at higher rapidities.
-Therefore a measurement of the distribution of the \PW bosons rapidities at the
-\ac{LHC} provides direct information on the quark and anti-quark densities of
-the proton at a high scale and low values of the parton momentum fraction. 
-
-In \EquationRef{wbos:xsec}, $f_a^{h}(x,Q^2)$ are the \acp{PDF}.
+In \EquationRef{wbos:xsec}, $f_a^{h}(x,Q^2)$ represent the \acp{PDF}.
 The \ac{PDF} represents the number density of parton $a$ that has a momentum
 fraction $x+\mathrm{d}x$ of the colliding hadron $h$.
 
 \acp{PDF} are obtained from global fits to experimental data. %TODO more?
 
-\FigureRef{wbos:pdf} shows the proton PDF at $Q^2\approx M_{\PW}^2$ 
-o
-pdfs
- explanation
- plot
- more u than d
- W+ different to W- production!!!
- an asymmetry!
- plot u/d ratio as fn of x
- ratio differs as a fn of x
- 
+\begin{figure}[htb]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \caption{Proton PDF at $Q^2\approx M_{\PW}^2$.}
+  \label{wbos:pdf}
+\end{figure}
+
+\FigureRef{wbos:pdf} shows the proton PDF at $Q^2\approx M_{\PW}^2$. 
+The \ac{PDF} for the up-type quark and the down-type quark differ, the
+$\Pup(x)$ is greater than $\Pdown(x)$ due to the valence quark content of the
+proton (\HepProcess{\Pup\Pup\Pdown}). 
+Due to the \PWp and \PWm production processes in \EquationRef{wbos:wprod} being asymmetric with
+respect to quark flavour, the difference in the $\Pup$ and $\Pdown$ \acp{PDF}
+will cause the \PWpm cross sections to also differ.  
+A measurement of the ratio of the \PWp and \PWm cross sections directly probes
+the $\nicefrac{\Pup}{\Pdown}$ ratio in the proton.
+
+\begin{figure}[htb]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \caption{Proton PDF at $Q^2\approx M_{\PW}^2$.}
+  \label{wbos:pdf}
+\end{figure}
+
+
+\FigureRef{wbos:pdf} shows PDF $\nicefrac{\Pup}{\Pdown}$ ratio in the proton at
+$Q^2\approx M_{\PW}^2$. The ratio increases as $x\to 1$. As a consequence of
+this, \Pup quarks tend to carry a greater fraction of the protons momentum,
+$x$, than the \Pdown type quarks. This causes the \PWp to be produced at a
+larger rapidity, where as the \PWm will tend to be produced more centrally. 
+\FigureRef{wbos:wrapid} shows the \PWp and \PWm rapidity distributions at the
+LHC. 
+
+\begin{figure}[htb]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \caption{Rapidity distributions for \PWpm production at the LHC.}
+  \label{wbos:wrapid}
+\end{figure}
+
 Therefore a measurement of the asymmetric production of \PW bosons, as a
-function of the rapidity of the boson, at the \ac{LHC} provides importnant
+function of the rapidity of the boson, at the \ac{LHC} provides important
 information on the up-type and down-type quark parton densities within the
 proton. 
 
 
+%In \EquationRef{wbos:xsec}, $\sum\limits_{a,b}$ represents the sum over the
+%initial parton states $a$ and $b$. At the Tevatron (a proton-antiproton
+%collider) the two incoming partons, $a$ and $b$, are most likely to be valence
+%quarks from the proton and antiproton respectivly. Therefore, previous studys
+%of the \PW boson at the Tevatron have been mostly sensative to the valence
+%quarks of the proton.
 
+%At the \ac{LHC} (a proton-proton collider), one parton is most likely be a
+%valence quark with a high fraction of the protons momentum, and the other
+%parton will tend to be a sea anti-quark with a lower fraction of the momentum
+%than the quark, this causes the \PW bosons to be produced at higher rapidities.
+%Therefore a measurement of the distribution of the \PW bosons rapidities at the
+%\ac{LHC} provides direct information on the quark and anti-quark densities of
+%the proton at a high scale and low values of the parton momentum fraction. 
 
 
 \section{W Charge Asymmetry}
