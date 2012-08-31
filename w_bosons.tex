@@ -2,7 +2,111 @@
 \chapter{W Bosons at the LHC}
 
 \section{Introduction}
+
+\PW boson production is an important process for physics studies at the LHC.
+
+At the \ac{LHC}, \PW bosons are produced at a high rate while offering a clean
+experimental signal with a final state consisting of, in the case of a
+leptonically decaying \PW, a single high \PT lepton with a large ammount of
+missing transverse energy due to the neutrino in the event.
+
+\PW provide an important test of the \ac{SM} and accurate measurements of the
+\ac{SM} parameters. 
+
+The production of \PW, through the \ac{DY} process, provides important
+information on the interacting partons within the colliding hadrons.
+
 \section{W Boson Production}
+
+The dominant production process for a \PW boson at a hadron-hadron collider is
+shown in \EquationRef{wbos:dyproc}
+
+\begin{equation}
+  h_1(P_1) + h_2(P_2)
+  \to 
+  \PW + X
+  \to
+  \Pe \Pnue + X
+  \label{wbos:dyproc}
+\end{equation}
+
+The \PW boson is produced by the collision of the two incoming hadrons $h_1$
+and $h_2$ with momenta $p_1$ and $p_2$. The \PW then decays leptonically to an
+electron and its corresonding neutrino. $X$ represents the accompanying final
+state.
+
+
+%A tree-level feynman diagram representing this process is shown in
+%\FigureRef{wbos:feynman}.
+
+%\begin{figure}[htb]
+  %\centering
+  %%\includegraphics[width=0.5\textwidth]{placeholder}
+  %\caption{Tree-level diagram of a W boson production at a hadron-hadron
+  %collider.}
+  %\label{wbos:feynman}
+%\end{figure}
+
+The differential crossection at a fixed rapidity of the \PW boson is denoted by
+$\nicefrac{d\sigma_{(\HepProcess{h_1 h_2 \to \PWpm}})}{dy_W}$ where $y_W$ is
+the rapidity of the \PW boson. 
+At hadron colliders the full cross section is a convolution of the crosssection
+at the parton level, and the \acp{PDF}.
+
+\begin{multline}
+  d\sigma_{(\HepProcess{h_1 h_2 \to \PWpm})}(p_1,p_2) = \\
+  \sum\limits_{a,b}
+  \int_0^1 \! \mathrm{d} x_1 
+  \int_0^1 \! \mathrm{d} x_2 
+  f_a^{h_1}(x_1,Q^2)
+  f_b^{h_2}(x_2,Q^2) 
+  d\hat{\sigma}_{(\HepProcess{a b \to \PWpm})}(x_1 p_1, x_2 p_2; Q^2)
+  \label{wbos:xsec}
+\end{multline}
+
+the partonic cross section.
+
+In \EquationRef{wbos:xsec}, $\sum\limits_{a,b}$ represents the sum over the
+initial parton states $a$ and $b$. At the Tevatron (a proton-antiproton
+collider) the two incoming partons, $a$ and $b$, are most likely to be valence
+quarks from the proton and antiproton respectivly. Therefore, previous studys
+of the \PW boson at the Tevatron have been mostly sensative to the valence
+quarks of the proton.
+
+At the \ac{LHC} (a proton-proton collider), one parton is most likely be a
+valence quark with a high fraction of the protons momentum, and the other
+parton will tend to be a sea anti-quark with a lower fraction of the momentum
+than the quark, this causes the \PW bosons to be produced at higher rapidities.
+Therefore a measurement of the distribution of the \PW bosons rapidities at the
+\ac{LHC} provides direct information on the quark and anti-quark densities of
+the proton at a high scale and low values of the parton momentum fraction. 
+
+In \EquationRef{wbos:xsec}, $f_a^{h}(x,Q^2)$ are the \acp{PDF}.
+The \ac{PDF} represents the number density of parton $a$ that has a momentum
+fraction $x+\mathrm{d}x$ of the colliding hadron $h$.
+
+\acp{PDF} are obtained from global fits to experimental data. %TODO more?
+
+\FigureRef{wbos:pdf} shows the proton PDF at $Q^2\approx M_{\PW}^2$ 
+o
+pdfs
+ explanation
+ plot
+ more u than d
+ W+ different to W- production!!!
+ an asymmetry!
+ plot u/d ratio as fn of x
+ ratio differs as a fn of x
+ 
+Therefore a measurement of the asymmetric production of \PW bosons, as a
+function of the rapidity of the boson, at the \ac{LHC} provides importnant
+information on the up-type and down-type quark parton densities within the
+proton. 
+
+
+
+
+
 \section{W Charge Asymmetry}
 
 A particularly interesting observable involving \PW bosons produced in hadron
