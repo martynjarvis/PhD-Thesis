@@ -7,10 +7,9 @@
 At the \ac{LHC}, \PW bosons are produced at a high rate while offering a clean
 experimental signal with a final state consisting of, in the case of a
 leptonically decaying \PW, a single high \PT lepton with a large ammount of
-missing transverse energy due to the neutrino in the event.
-
-\PW provide an important test of the \ac{SM} and accurate measurements of the
-\ac{SM} parameters. 
+missing transverse energy due to the neutrino in the event. \PW provide an
+important test of the \ac{SM} and accurate measurements of the \ac{SM}
+parameters. 
 
 The production of \PW, through the \ac{DY} process, provides important
 information on the interacting partons within the colliding hadrons.
@@ -18,7 +17,7 @@ information on the interacting partons within the colliding hadrons.
 \section{W Boson Production}
 
 The dominant production process for a \PW boson at a hadron-hadron collider is
-shown in \EquationRef{wbos:dyproc}
+shown in \EquationRef{wbos:wprod}
 
 \begin{equation}
   h_1(P_1) + h_2(P_2)
@@ -26,17 +25,22 @@ shown in \EquationRef{wbos:dyproc}
   \PW + X
   \to
   \Pe \Pnue + X
-  \label{wbos:dyproc}
+  \label{wbos:wprod}
 \end{equation}
 
+\begin{figure}[htb]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \caption{Diagram of a W boson production at a hadron-hadron collider.}
+  \label{wbos:wproddiag}
+\end{figure}
+
+This process is shown in \FigureRef{wbos:wproddiag}. 
 The \PW boson is produced by the collision of the two incoming hadrons $h_1$
 and $h_2$ with momenta $p_1$ and $p_2$. The \PW then decays leptonically to an
 electron and its corresonding neutrino. $X$ represents the accompanying final
 state.
 
-The differential crossection at a fixed rapidity of the \PW boson is denoted by
-$\nicefrac{d\sigma_{(\HepProcess{h_1 h_2 \to \PWpm}})}{dy_W}$ where $y_W$ is
-the rapidity of the \PW boson. 
 At hadron colliders the full cross section is a convolution of the crosssection
 at the parton level, and the \acp{PDF}.
 
@@ -56,15 +60,17 @@ and $b$, $f_a^{h}(x,Q^2)$ represents the \acp{PDF} and
 $d\hat{\sigma}_{(\HepProcess{a b \to \PWpm})}(x_1 p_1, x_2 p_2; Q^2)$
 represents the partonic sub-process crosssection.
 
-\subsection{Partonic Sub-Process}
+\subsection*{Partonic Sub-Process}
 
 At \ac{LO} the process for a \PWp is
 \begin{equation}
-  \HepProcess{\Pup + \APdown \to \PWp \to \Pleptonplus \Pnulepton} \label{wbos:wprod} \\
+  \HepProcess{\Pup + \APdown \to \PWp \to \Pleptonplus \Pnulepton} 
+  \label{wbos:wpprod} 
 \end{equation}
 and for a \PWm:
 \begin{equation}
   \HepProcess{\APup + \Pdown \to \PWm \to \Pleptonminus \APnulepton}
+  \label{wbos:wmprod} 
 \end{equation}
 
 A tree-level feynman diagram representing this process is shown in
@@ -77,11 +83,6 @@ A tree-level feynman diagram representing this process is shown in
   \label{wbos:feynman}
 \end{figure}
 
-%At the Tevatron (a proton-antiproton collider) the two incoming partons, $a$ and $b$, are most likely to be valence
-%quarks from the proton and antiproton respectivly. Therefore, previous studys
-%of the \PW boson at the Tevatron have been mostly sensative to the valence
-%quarks of the proton.
-
 At the \ac{LHC} (a proton-proton collider), one parton is most likely be a
 valence quark with a high fraction of the protons momentum, and the other
 parton will tend to be a sea anti-quark with a lower fraction of the momentum
@@ -90,16 +91,16 @@ rapidities than at the Tevatron (a proton-antiproton collider) where the two
 incoming partons are most likely to be valence quarks from the proton and
 antiproton respectivly.
 
-It follows from \EquationRef{wbos:prod} that and difference in distributions of
-the $\Pup$ and $\Pdown$ quarks or the $\APup$ and $\APdown$ anti-quarks will
-cause the cross-section for \PWp and \PWm production to differ.
+%It follows from \EquationRef{wbos:prod} that and difference in distributions of
+%the $\Pup$ and $\Pdown$ quarks or the $\APup$ and $\APdown$ anti-quarks will
+%cause the cross-section for \PWp and \PWm production to differ.
 
 %A measurement of
 %the distribution of the \PW bosons rapidities at the \ac{LHC} provides direct
 %information on the quark and anti-quark densities of the proton at a high scale
 %and low values of the parton momentum fraction. 
 
-\subsection{\acp{PDF}} 
+\subsection*{\acp{PDF}} 
 The \ac{PDF} represents the number density of parton $a$ that has a momentum
 fraction $x+\mathrm{d}x$ of the colliding hadron $h$.  \acp{PDF} are obtained
 from global fits to experimental data. %TODO more?
@@ -118,20 +119,16 @@ relatively similar especially at the LHC energies, where the parton momentum
 fraction, x, tends to be small.
 
 The \ac{PDF} for the valence quarks in the proton differ, the up-type quark
-dominates over the down-type, mainly due to the valence quark content of the
-proton (\HepProcess{\Pup\Pup\Pdown}). 
+dominates over the down-type. This is mainly due to the valence quark content
+of the proton (\HepProcess{\Pup\Pup\Pdown}). 
 
-\subsection{Asymmetric \PW boson Production} 
-
-The ratio of the up-type and the down-type \acp{PDF}, $R_{ud}(x.Q^2)$, is given
-by:
+This can be seen if we take the ratio of the up-type and the down-type \acp{PDF}, $R_{ud}(x.Q^2)$, given by:
 
 \begin{equation}
   R_{ud}(x.Q^2) = \frac{\Pup(x.Q^2)}{ \Pdown(x.Q^2)} > 1
 \end{equation}
 
 Where $\Pup(x.Q^2)$ are the up and down quark \acp{PDF}.
-
 \begin{figure}[htb]
   \centering
   %\includegraphics[width=0.5\textwidth]{placeholder}
@@ -144,13 +141,37 @@ Where $\Pup(x.Q^2)$ are the up and down quark \acp{PDF}.
 $R_{ud}(x.Q^2)$, in the proton at $Q^2\approx M_{\PW}^2$. 
 The ratio $R$ is a function of $x$, $R \approx 1$ for $x<<1$ and increases
 monotonically as $x$ increases.  
-This is due to \Pup quarks tending to carry a greater fraction of the protons
-momentum, $x$, than the \Pdown type quarks.
 % TODO why?
 
-%This causes the \PWp to be produced at a greater rate and at a larger rapidity, where as the \PWm
-%will tend to be produced less and more centrally. 
+\section{\PW Boson Rapidity Distribution}
 
+The rapidity distribution for \PWp and \PWm at the \ac{LHC} is shown in
+\FigureRef{wbos:wrapid}. 
+%TODO talk about how this plot was made
+The \PWm distribution is shown in the left panel and the \PWp distribution is
+shown in the right panel. The distributions are invariant with respect to the
+flipping the rapidity, $y\leftrightarrow-y$, so are show on a folded rapidity
+axis.
+%TODO make that make sense.
+
+\begin{figure}[htb]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \caption{The rapidity distribution for \PWp and \PWm at the LHC.}
+  \label{wbos:wrapid}
+\end{figure}
+
+In \FigureRef{wbos:wrapid} the \PWp cross section is greater than the \PWm
+cross section. This is a consequence of the different production processes for
+\PWp (\EquationRef{wbos:wpprod}) and \PWm (\EquationRef{wbos:wmprod}) and the
+\ac{PDF} for the valence quarks in the proton differing.
+There are more up-type quarks than the down-type, which leads to a greater \PWp
+production rate than \PWm.
+
+It is also seen in \FigureRef{wbos:wrapid} that the \PWm tends to be produced
+more centrally where as the \PWp is produced at larger rapidities. This is due
+to \Pup quarks tending to carry a greater fraction of the protons momentum,
+$x$, than the \Pdown type quarks.
 The difference in distributions of the $\Pup$ and $\Pdown$ quarks cause the
 cross-section for \PWp and \PWm production to differ as a function of the boson
 rapidity.
@@ -160,49 +181,60 @@ function of the rapidity of the boson, at the \ac{LHC} provides important
 information on the ratio of the up-type and down-type quark parton densities ,
 $R_{ud}(x.Q^2)$, within the proton. 
 
-%\section{W Charge Asymmetry}
+\section{\PW Boson Charge Asymmetry}
 
-%A particularly interesting observable involving \PW bosons produced in hadron
-%collisions is an asymmetry in the production of \PWp and \PWm bosons as a
-%function of rapidity.
-%In proton-antiproton colliders, such as Fermilab's Tevatron,  \PWp and \PWm
-%bosons are produced at equal rates but \PWp are produced more in the direction
-%on the incoming proton where as the \PWm are produced more in the opposite
-%direction.
-%In proton-proton colliders, such as the LHC, the \PWp is produced in greater
-%rates than the \PWm. Additionally the \PWp are produced at larger rapidities
-%where as the \PWm bosons are produced more centrally. \cite{phenom}
-
-%The difference in production rate of \PWpm boson is mainly due to the quark
-%content in the proton and the rapidity dependence is due to the \Pup quarks on
-%average carrying a greater fraction of the proton momentum that \Pdown quarks.
-%Therefore a measurement of the charge asymmetry can provide important
-%information on the parton density functions of the proton.\cite{phenom,pdf}.
-
-%At the LHC it has been proposed \cite{kom} that an asymmetry measurement could
-%also be used to measure the contribution of New Physics, since in the Standard
-%Model, \begin{equation}
-%\sigma_{SM}(\PWp + jets) \approx 1.3 \times \sigma_{SM}(\PWm + jets)
-%\end{equation}
-%where as typically in many New Physics theories and models predict
-%\begin{equation}
-%\sigma_{NP}(\PWp + jets) = \sigma_{NP}(\PWm + jets)
-%\end{equation}
-%examples include the pair production of gluinos in supersymmetry where the
-%gluinos decay to one charged lepton, missing energy and jets.\cite{kom}
-
-\section{Electron Charge Asymmetry}
 % formalised def of w asymmetry
+We define the \PWpm boson charge asymmetry as
 
-% explanation of why this can't be done, W rapidity
+\begin{equation}
+  A_{W}(y_{\PW})=
+    \frac{ 
+      \nicefrac{ d\sigma (\PWp) }{ dy_{W} } -
+      \nicefrac{ d\sigma (\PWm) }{ dy_{W} }
+    }
+    {
+      \nicefrac{ d\sigma (\PWp) }{ dy_{W} } +
+      \nicefrac{ d\sigma (\PWm) }{ dy_{W} }
+    }
+\label{wbos:wasym}
+\end{equation} 
+
+Where $y_{W}$ is the boson rapidity, and 
+$\nicefrac{ d\sigma (\PWpm) }{ dy_{W} }$ is the \PWpm production cross section
+at a fixed $y_{W}$. 
+
+If $d\sigma(\PWp) > d\sigma(\PWm) $ then $A_{W}(y_{\PW})> 0$;
+else if $d\sigma(\PWp) < d\sigma(\PWm) $ then $A_{W}(y_{\PW})< 0$
+and for a symmetric \PWpm boson production, $A_{W}(y_{\PW})= 0$,
 
 \PW bosons are identified by their decay to a lepton plus neutrino, however at
-hadronic colliders the neutrino longitudinal momentum is unmeasured meaning
-that the \PW rapidity is unknown. Instead what is studied is the lepton charge
-asymmetry.
+hadronic colliders the neutrino longitudinal momentum can not be determined
+which means that the \PW rapidity, $y_{W}$, can not be measured. 
+
+%It is possible to overcome the difficulty in determining the boson rapidity
+%by extrapolating the neutrino longditudinal momentum from the lepton neutrino
+%with a \ac{MC} study. 
+
+Instead what is studied is the lepton charge asymmetry.
+
+\section{Electron Rapidity Distribution}
+
+The rapidity distriubtions of the charged lepton produced from \PW decay are
+different from the rapidity distributions of the decaying \PW. This is due to
+EW dynamics correlations and kinematic effects.
+
+%\subsection*{Electroweak blah }
+The \PW boson is a spin-1 particle, and therefore the production and the decay
+are correlated. 
+
 
 % explain that it is convolution(?) of W production, and well understood parity
 % violating decay of the W boson
+
+
+\section{Electron Charge Asymmetry}
+
+
 
 \cite{phenom} The theoretical asymmetry is given by equation
 \ref{eq:AsymThe}.
@@ -252,19 +284,4 @@ A_{exp}(\eta) &= \frac{ \frac{dN}{d\eta}(\Pelectron) -
 \frac{d\sigma}{d\eta}(\Wmenu) }
 \label{eq:AsymExpCorr}
 \end{align}
-
-
-%TODO, theoretical predictions?
-\section{Asymmetry Predctions}
-
-\subsection{\acp{PDF}}
-
-\subsection{W Rapidity Distribution}
-
-\subsection{Lepton Pseudorapidity Distribution}
-
-\subsection{Lepton Asymmetry Distribution}
-
-
-
 
