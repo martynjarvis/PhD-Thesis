@@ -1,4 +1,5 @@
-\documentclass[hyperpdf,nobind,draft,sftitles,oneside]{hepthesis}
+\documentclass[hyperpdf,nobind,sftitles,oneside]{hepthesis}
+%\documentclass[draft]{hepthesis}
 
 %% -------------------------------------
 %% Standard packages
@@ -54,14 +55,14 @@ $\sqrtS=\unit{7}{\TeV}$ with data collected by the CMS detector}
 
 %% Start the content body of the thesis
 \begin{mainmatter}
-  %\linenumbers
+  \linenumbers
   \include{chapters/introduction}
   \include{chapters/w_bosons}
-  %\include{chapters/LHC}
-  %\include{chapters/objects}
-  %\include{chapters/asymmetry_36}
-  %\include{chapters/asymmetry_840}
-  %\include{chapters/conclusion}
+  \include{chapters/LHC}
+  \include{chapters/objects}
+  \include{chapters/asymmetry_36}
+  \include{chapters/asymmetry_840}
+  \include{chapters/conclusion}
 \end{mainmatter}
 
 %% Produce the appendices
@@ -72,7 +73,7 @@ $\sqrtS=\unit{7}{\TeV}$ with data collected by the CMS detector}
 %% Produce the un-numbered back matter (e.g. colophon,
 %% bibliography, tables of figures etc., index...)
 \begin{backmatter}
-  %\input{chapters/end}
+  \input{chapters/end}
   \bibliographystyle{plain}
   \bibliography{thesis}
 \end{backmatter}
