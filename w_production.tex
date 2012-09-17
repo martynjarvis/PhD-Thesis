@@ -1,0 +1,61 @@
+\documentclass[varwidth=true, border=10pt, convert={size=640x}]{standalone}
+%\usepackage{blindtext}
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usepackage{verbatim}
+
+\begin{document}
+
+\tikzset{
+}
+
+% Define block styles
+\tikzstyle{simple} = [draw=none, fill=none]
+\tikzstyle{process} = [circle]
+\tikzstyle{line} = [draw]
+\tikzstyle{boson} = [style={decorate, decoration={snake}, draw=red}]
+\tikzstyle{fermion} = [style={draw=blue, postaction={decorate},decoration={markings,mark=at position .55 with {\arrow[draw=blue]{>}}}}]
+\tikzstyle{gluon} = [style={decorate, draw=magenta,decoration={coil,amplitude=4pt, segment length=5pt}} ]
+
+%\blindtext
+
+% Define styles for the different kind of edges in a Feynman diagram
+
+\begin{tikzpicture}[
+        thick,
+        node distance = 3cm,
+        auto
+    ]
+    % first set up nodes
+
+    \node[simple, circle] (init){};
+
+    \node[process,above left of=init](p1process){};
+    \node[simple,left of=p1process](p1start){};
+
+    \node[process,below left of=init](p2process){};
+    \node[simple,left of=p2process](p2start){};
+
+    \node[simple,right of=init](wdecay){};
+    \node[simple,above right of=wdecay](l1end){};
+    \node[simple,below right of=wdecay](l2end){};
+
+    % then paths, in the correct direction
+    \path [fermion] (p1start.base)--(p1process.base);
+    \path [fermion] (p1process.base)--(init.base);
+
+    \path [fermion] (p2start.base)--(p2process.base);
+    \path [fermion] (p2process.base)--(init.base);
+
+    \path [boson] (init.base) -- (wdecay.base);
+    \path [fermion] (wdecay.base) -- (l1end.base);
+    \path [fermion] (wdecay.base) -- (l2end.base);
+
+
+\end{tikzpicture}
+
+
+\end{document}
