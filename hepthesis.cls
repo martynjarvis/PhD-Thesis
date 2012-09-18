@@ -545,8 +545,7 @@
 %% Environment for all the junk at the end of the thesis
 \let\@oldbackmatter\backmatter
 \specialcomment{backmatter}{%
-%\@oldbackmatter%
-\@mainmatterfalse%
+  \@oldbackmatter%
   \adjustwidth{\@backmatterextramargin}{\@backmatterextramargin}%
   \begin{\@backmatterspacing}%
   \appendix%
@@ -650,7 +649,7 @@
 %% Makes a thesis title page
 \let\@oldtitlepage\titlepage
 \let\@oldendtitlepage\endtitlepage
-\DeclareRobustCommand{\titlepage}[3][]{%
+\DeclareRobustCommand{\titlepage}[2][]{%
   %\@oldtitlepage%
   \thispagestyle{empty}%
   \begingroup%
@@ -660,14 +659,10 @@
     \begin{doublespace}%
       {\Huge\textbf{\thetitle}}\\%
     \end{doublespace}%
-    \vspace*{2.5cm}%
-    {\LARGE{{\theauthor}}}\\%
     \vspace*{3cm}%
-    {\Large{{#1}}}\\
-    \vspace*{4cm}%
-    {#2}\\
-    \vspace*{1cm}
-    {#3}\\
+    {\Large{{\theauthor} \\ {#1}}}\\%
+    \vspace*{8cm}%
+    {#2}%
   \end{center}%
   \endgroup%
   %\@oldendtitlepage%
