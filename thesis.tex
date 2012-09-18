@@ -1,20 +1,13 @@
-\documentclass[hyperpdf,nobind,sftitles,oneside]{hepthesis}
-%\documentclass[draft]{hepthesis}
+\documentclass[draft]{mythesis}
+%\documentclass[12pt,chapterprefix]{scrbook}
+%\documentclass{report}
+%\documentclass[hyperpdf,nobind,sftitles,oneside]{hepthesis}
 
 %% -------------------------------------
 %% Standard packages
 %% -------------------------------------
 
-\RequirePackage{mythesis}
-\RequirePackage{mythesismath}
-\RequirePackage{cite}
-\RequirePackage{mathrsfs} % script font
-\RequirePackage{afterpage}
-\RequirePackage{verbatim}
-\RequirePackage{url}
-\RequirePackage{nicefrac}
-\RequirePackage{subfig} %% Subfigures - note subfig is incompatible with ccaption
-%\RequirePackage{tikz} %% TikZ is a marvellous drawing package
+%\usepackage{layout} 
 
 %% -------------------------------------
 %% Config
@@ -47,15 +40,14 @@ $\sqrtS=\unit{7}{\TeV}$ with data collected by the CMS detector}
 
 %% Start the document
 \begin{document}
+%\layout
 
 %% Define the un-numbered front matter (cover pages, rubrik and table of contents)
-\begin{frontmatter}
+\frontmatter
   \input{chapters/front.tex}
-\end{frontmatter}
 
 %% Start the content body of the thesis
-\begin{mainmatter}
-  \linenumbers
+\mainmatter
   \include{chapters/introduction}
   \include{chapters/w_bosons}
   \include{chapters/LHC}
@@ -63,19 +55,16 @@ $\sqrtS=\unit{7}{\TeV}$ with data collected by the CMS detector}
   \include{chapters/asymmetry_36}
   \include{chapters/asymmetry_840}
   \include{chapters/conclusion}
-\end{mainmatter}
 
 %% Produce the appendices
-\begin{appendices}
-  %\include{chapters/appendix}
-\end{appendices}
+\appendix
+  \include{chapters/appendix}
 
 %% Produce the un-numbered back matter (e.g. colophon,
 %% bibliography, tables of figures etc., index...)
-\begin{backmatter}
+\backmatter
   \input{chapters/end}
   \bibliographystyle{plain}
   \bibliography{thesis}
-\end{backmatter}
 
 \end{document}
