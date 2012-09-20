@@ -18,6 +18,7 @@ $(OUTPUT).pdf: $(INPUT).tex chapters/*.tex
 		$(TEX) $(INPUT); \
 	done \
 	)
+	cp $(OUTPUT).pdf ~/public_html/thesis_drafts/
 
 clean::
 	rm -fv *.aux chapters/*.aux *.log *.bbl *.blg *.toc *.fls *.cut *.out *.lot *.lof thesis_*.pdf
