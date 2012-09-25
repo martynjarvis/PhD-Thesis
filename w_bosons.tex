@@ -231,15 +231,14 @@ is studied is the lepton charge asymmetry.
 
 The rapidity distributions of the charged lepton produced from \PW decay are
 further complicated by the charge asymmetric decay of the \PWpm boson. 
-
 The asymmetric decay arrises due to the $V-A$ coupling of the \PW boson to the
 annihilating \HepProcess{\Pquark\APquark} pair and the decaying lepton pair.
 
 At \ac{LO} the \PWp is produced in the annihilation of a \Pup valance quark
-with a \APdown sea-quark (\EquationRef{wbos:wpprod}). If the parton masses are
-neglected the \Pup is left-handed and the \APdown is right-handed, as shown at
-the top of \FigureRef{wbos:wspin}. In the \PWp decay the a right-handed
-\Ppositron and a left-handed \Pnue.
+with a \APdown sea-quark (\EquationRef{wbos:wpprod}). 
+If the parton masses are neglected the \Pup is left-handed and the \APdown is
+right-handed, as shown at the top of \FigureRef{wbos:wspin}. 
+In the \PWp decay the \Ppositron is right-handed and the \Pnue is left-handed.
 \FigureRef{wbos:wspin} shows if the  positron is produced in the same direction
 as the incoming \APdown quark angular momentum is conserved and the decay is
 allowed.
@@ -270,7 +269,9 @@ The actual distribution of the electron from \PWpm decay is given by
 
 where $\theta_{\Plepton D}^{\ast}$ is the scattering angle of the charged
 lepton with respect to the direction of the down-type quark or antiquark, in
-the center of mass system of the two quarks.
+the center of mass system of the two quarks. The cross-section is maximised when
+$\theta_{\Plepton D}^{\ast}$ is minimised and the charged lepton is produced in
+the same direction as the down-type quark.
 
 The rapidity distribution of the electron is therefore a convolution of
 \EquationRef{wbos:lepton} with the \PW repidity described in
@@ -286,14 +287,15 @@ The rapidity distribution of the electron is therefore a convolution of
 \end{equation}
 
 In proton-proton collisions the \PWp tends to be produced in the direction
-of the \Pup. However, due to the EW correlations the lepton from the decaying
-\PWp will tend to be produced along the direction of the down type quark and
+of the \Pup, as described in the preceeding chapter. 
+
+However, due to the EW correlations the charged lepton from the decaying \PWp
+will tend to be produced along the direction of the down type quark and
 therefore will shift the rapidity distribution of the lepton to be more
 centrally.
 
-\PWm (\EquationRef{wbos:wmprod}) tend to be produced more centrally, however
-the EW correlations will shift the distribution to higher rapidities.
-
+Similarily, \PWm bosons tend to be produced more centrally, however the EW
+correlations will shift the distribution to higher rapidities.
 
 \begin{figure}[htb]
   \centering
@@ -356,6 +358,17 @@ A_{exp}(\eta) &= \frac{ \frac{dN}{d\eta}(\Pelectron) -
 \end{align}
 
 
+
+\section{Electron Charge Asymmetry Theoretical Predictions}
+
+In this section the electron charge asymmetry predictions are studied in detail.
+Predictions for the asymmetry are obtained using MCFM \cite{test} generator
+interfaced with MSTW2008NLO PDF models unless otherwise stated.
+
+\FigureRef{wbos:asym_simple} shows the electron charge asymmetry prediction for
+electron transverse momentum cuts of 25, 30 and \unit{35}{\GeV}.
+
+
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.5\textwidth]{placeholder}
@@ -365,9 +378,17 @@ A_{exp}(\eta) &= \frac{ \frac{dN}{d\eta}(\Pelectron) -
 % simple prediction to illustrate the preceeding chapter on electron charge
 % asymmetry
 
-\section{Electron Charge Asymmetry Theoretical Predictions}
 
 \subsection{Uncertainty on \acp{PDF}}
+
+The predictions of the electron charge asymmetry will have an error asociated
+with the uncertainty on the \ac{PDF}.
+The uncertainty on the \ac{PDF} originates from the experimental errors on the
+data used in the global fits.
+
+The \ac{PDF} uncertainty is propogated to the electron charge asymmetry
+measurement using the \ac{PDF} reweighting techniques\cite{}.
+%TODO add more here
 
 \begin{figure}[htb]
   \centering
@@ -375,18 +396,31 @@ A_{exp}(\eta) &= \frac{ \frac{dN}{d\eta}(\Pelectron) -
   \caption{Electron charge asymmetry (PDF uncertainty).}
   \label{wbos:asym_pdfuncert}
 \end{figure}
-% uncertainty on PDF
 
-\subsection{Theoretical Uncertainty Due To Higher Orders}
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=0.5\textwidth]{placeholder}
-  \caption{Electron charge asymmetry (LO, NLO and NNLO).}
-  \label{wbos:asym_NNLO}
-\end{figure}
+\FigureRef{wbos:asym_pdfuncert} shows the prediction for the electron charge
+asymmetry with a \PT cut of \unit{25}{\GeV} with the \ac{PDF} uncertainty shown.
+
+%TODO EVAL RESULTS
+
+% uncertainty on PDF
+% FIXME might not include this part
+
+%\subsection{Theoretical Uncertainty Due To Higher Orders}
+%\begin{figure}[htb]
+%  \centering
+%  \includegraphics[width=0.5\textwidth]{placeholder}
+%  \caption{Electron charge asymmetry (LO, NLO and NNLO).}
+%  \label{wbos:asym_NNLO}
+%\end{figure}
 % difference in NLO and NNLO give an estimate on the uncertainty on the
 % partonic subprocess
 
+\subsection{Choice of \acp{PDF}}
+
+The predictions of the electron charge asymmetry will depends on the choice of
+\ac{PDF} used. 
+\FigureRef{wbos:asym_pdf} shows the electron charge asymmetry for
+various \ac{PDF} models.
 
 \begin{figure}[htb]
   \centering
@@ -395,13 +429,15 @@ A_{exp}(\eta) &= \frac{ \frac{dN}{d\eta}(\Pelectron) -
   \label{wbos:asym_pdf}
 \end{figure}
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=0.5\textwidth]{placeholder}
-  \caption{Electron charge asymmetry (Many PDF sets ratio to MSTW with PDF
-  uncert).}
-  \label{wbos:asym_ratio}
-\end{figure}
+% statment about disagreement and how this measurement will help
+
+%\begin{figure}[htb]
+  %\centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  %\caption{Electron charge asymmetry (Many PDF sets ratio to MSTW with PDF
+  %uncert).}
+  %\label{wbos:asym_ratio}
+%\end{figure}
 
 
 

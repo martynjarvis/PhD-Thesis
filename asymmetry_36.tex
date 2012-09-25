@@ -64,6 +64,17 @@ The available unprescaled triggers constrain the electron momentum to be above
 Electrons candidates are identified using a cut based approach on an limited
 number of variables.
 
+The cuts can be split in to three categories, ID Cuts, isolation cuts and
+conversion rejection cuts. Different sets of cut values are used for electrons in the
+ECAL barrel and endcap. The cut values are obtained by simultaneous optimisation
+for electron \unit{\ET=25}{\GeV}. Although the efficiency and and the background
+rejection of the cuts is dependent on the \ET of the electron, the cut values
+obtained are found to be effective in the range \unit{15-100}{\GeV}.\cite{}
+
+\TableRef{tab:elecuts} sumarises the electron selection variables used and the
+corresponding cut values for the barrel and endcap.
+
+
 %% TODO finish ZZZzzzzz,,,,
 \begin{table}[htbp]
   \begin{center}
@@ -89,7 +100,23 @@ number of variables.
 \end{table}
 
 
+Mismeasuring the charge can lead to a diltuion of the measured charge asymmetry,
+to overcome this an additional requirement is applied to the charge of the
+reconstructed electron. 
+The electron charge is determined using three different methods based on the GSF
+electron charge, the general track charge and the supercluster charge.
 
+The charge mismeasurment can be measured at the Z peak by comparing the same
+sign \HepProcess{\PZ\to\epm\epm} yield to the oposite sign
+\HepProcess{\PZ\to\epm\emp} yield. \FigureRef{fig:charge} show these Z yields
+using only the \ac{GSF} track charge (black) and also requiring a unaminous
+asignment of charge from all three methods (red). 
+
+
+The charge mismeasurement rate from the GSF track charge is about \unit{3}{\%}.
+By requiring that all three methods for assigning the charge agree, and vetoing
+events otherwise, the mismeasurement can be reduced by a factor of 8 with only a
+\unit{5}{\%} loss in efficiency.
 
 \begin{figure}[htb]
   \begin{center}
