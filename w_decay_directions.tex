@@ -1,0 +1,51 @@
+\documentclass[border=1cm,10pt]{standalone}
+
+
+% I only need the arrows for this one.
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+%\usetikzlibrary{decorations}
+%\usetikzlibrary{decorations.pathmorphing}
+
+
+\begin{document}
+
+\begin{tikzpicture}[
+scale=0.5,
+parton/.style={->,ultra thick},
+direction/.style={->},
+spin/.style={double,->,thin}
+]
+
+% Draw the incoming partons
+\draw[parton] (0,8) node[left] {p} -- (3,8) ;
+\draw[parton] (15,8) node[right] {p} -- (12,8) ;
+
+% Draw the directions
+\draw[direction] (4,8) -- (7,8) node[midway,below] {$\bar{d}$} ;
+\draw[direction] (11,8) -- (8,8) node[midway,below] {$u$} ;
+
+\draw[direction] (7,4) -- (4,4) node[midway,below] {$\nu_e$} ;
+\draw[direction] (8,4) -- (11,4) node[midway,below] {$e^{+}$} ;
+
+\draw[direction] (7,0) -- (4,0) node[midway,below] {$e^{+}$} ;
+\draw[direction] (8,0) -- (11,0) node[midway,below] {$\nu_e$} ;
+
+% Draw the spins
+\draw[spin] (5,9) -- (6,9);
+\draw[spin] (9,9) -- (10,9);
+
+\draw[spin] (5,5) -- (6,5);
+\draw[spin] (9,5) -- (10,5);
+
+\draw[spin] (6,1) -- (5,1);
+\draw[spin] (10,1) -- (9,1);
+
+%Draw labels
+
+\node[anchor=west] (allowed) at (13,4) {Allowed};
+\node[anchor=west] (forbidden) at (13,0) {Forbidden};
+
+\end{tikzpicture}
+
+\end{document} 
