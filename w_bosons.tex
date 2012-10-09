@@ -2,14 +2,11 @@
 
 \section{Introduction}
 
-\PW boson production is an important process for physics studies at the LHC.
-
-At the \ac{LHC}, \PW bosons are produced at a high rate while offering a clean
+\PW boson production is an important process for physics studies at the LHC.  At
+the \ac{LHC}, \PW bosons are produced at a high rate while offering a clean
 experimental signal with a final state consisting of, in the case of a
-leptonically decaying \PW, a single high \PT lepton with a large ammount of
-missing transverse energy due to the neutrino in the event. \PW provide an
-important test of the \ac{SM} and accurate measurements of the \ac{SM}
-parameters. 
+leptonically decaying \PW, a single high \PT lepton with a large amount of
+missing transverse energy due to the neutrino in the event. 
 
 The production of \PW, through the \ac{DY} process, provides important
 information on the interacting partons within the colliding hadrons.
@@ -38,10 +35,10 @@ shown in \EquationRef{wbos:wprod}
 This process is shown in \FigureRef{wbos:wproddiag}. 
 The \PW boson is produced by the collision of the two incoming hadrons $h_1$
 and $h_2$ with momenta $p_1$ and $p_2$. The \PW then decays leptonically to an
-electron and its corresonding neutrino. $X$ represents the accompanying final
+electron and its corresponding neutrino. $X$ represents the accompanying final
 state.
 
-At hadron colliders the full cross section is a convolution of the crosssection
+At hadron colliders the full cross section is a convolution of the cross-section
 at the parton level, and the \acp{PDF}.
 
 \begin{multline}
@@ -58,7 +55,7 @@ at the parton level, and the \acp{PDF}.
 where $\sum\limits_{a,b}$ represents the sum over the initial parton states $a$
 and $b$, $f_a^{h}(x,Q^2)$ represents the \acp{PDF} and
 $d\hat{\sigma}_{(\HepProcess{a b \to \PWpm})}(x_1 p_1, x_2 p_2; Q^2)$
-represents the partonic sub-process crosssection.
+represents the partonic sub-process cross-section.
 
 \subsubsection*{Partonic Sub-Process}
 
@@ -73,7 +70,7 @@ and for a \PWm:
   \label{wbos:wmprod} 
 \end{equation}
 
-A tree-level feynman diagram representing this process is shown in
+A tree-level Feynman diagram representing this process is shown in
 \FigureRef{wbos:feynman}.
 
 \begin{figure}[htb]
@@ -83,13 +80,11 @@ A tree-level feynman diagram representing this process is shown in
   \label{wbos:feynman}
 \end{figure}
 
-At the \ac{LHC} (a proton-proton collider), one parton is most likely be a
+At the \ac{LHC} (a proton-proton collider), one parton is most to likely be a
 valence quark with a high fraction of the protons momentum, and the other
 parton will tend to be a sea anti-quark with a lower fraction of the momentum
-than the quark. This causes the \PW bosons to tend to be produced at higher
-rapidities than at the Tevatron (a proton-antiproton collider) where the two
-incoming partons are most likely to be valence quarks from the proton and
-antiproton respectivly.
+than the quark. The difference in momentum of the partons causes the \PW bosons 
+to tend to be produced at high rapidities. 
 
 %It follows from \EquationRef{wbos:prod} that and difference in distributions of
 %the $\Pup$ and $\Pdown$ quarks or the $\APup$ and $\APdown$ anti-quarks will
@@ -103,41 +98,32 @@ antiproton respectivly.
 \subsubsection*{\acp{PDF}} 
 The \ac{PDF} represents the number density of parton $a$ that has a momentum
 fraction $x+\mathrm{d}x$ of the colliding hadron $h$.  \acp{PDF} are obtained
-from global fits to experimental data. %TODO more?
+from global fits to experimental data.\cite{Martin:2009iq} %TODO more?
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.5\textwidth]{plot_pdf}
-  \caption{Proton PDF at $Q^2\approx M_{\PW}^2$.}
+  \includegraphics[width=\textwidth]{mstw2008nlo68cl_allpdfs}
+  \caption{Proton PDF at  $ Q^2 = \unit{ 10  }{\GeV^2} $ (left) 
+                      and $ Q^2 = \unit{ 100  }{\GeV^2} $ (right) 
+                     from \cite{Martin:2009iq}. }
   \label{wbos:pdf}
 \end{figure}
 
 \FigureRef{wbos:pdf} shows the proton PDF at $Q^2\approx M_{\PW}^2$.  The
-antiquark parton densisties $\APup(x.Q^2)$ and $\APdown(x.Q^2)$ are relatively
+anti-quark parton densities $\APup(x,Q^2)$ and $\APdown(x,Q^2)$ are relatively
 similar especially at the LHC energies, where the parton momentum fraction, x,
 tends to be small.
 
 The \ac{PDF} for the valence quarks in the proton differ, the up-type quark
 dominates over the down-type. This is mainly due to the valence quark content
-of the proton (\HepProcess{\Pup\Pup\Pdown}).  This can be seen if we take the
-ratio of the up-type and the down-type \acp{PDF}, $R_{ud}(x.Q^2)$, given by:
+of the proton (\HepProcess{\Pup\Pup\Pdown}).  This can be seen in the
+ratio of the up-type and the down-type \acp{PDF}, $R_{ud}(x,Q^2)$, given by:
 
 \begin{equation}
-  R_{ud}(x.Q^2) = \frac{\Pup(x.Q^2)}{ \Pdown(x.Q^2)} > 1
+  R_{ud}(x.Q^2) = \frac{\Pup(x,Q^2)}{ \Pdown(x,Q^2)} > 1
 \end{equation}
 
-Where $\Pup(x.Q^2)$ are the up and down quark \acp{PDF}.
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=0.5\textwidth]{plot_pdf_ratio}
-  \caption{The ratio of up-type and the down-type \acp{PDF}, $R_{ud}(x.Q^2)$,
-  in the proton at $Q^2\approx M_{\PW}^2$.}
-  \label{wbos:pdfrat}
-\end{figure}
-
-\FigureRef{wbos:pdfrat} shows the ratio of up-type and the down-type \acp{PDF},
-$R_{ud}(x.Q^2)$, in the proton at $Q^2\approx M_{\PW}^2$. 
+Where $\Pup(x,Q^2)$ are the up and down quark \acp{PDF}.  
 The ratio $R$ is a function of $x$, $R \approx 1$ for $x<<1$ and increases
 monotonically as $x$ increases.  
 % TODO why?
@@ -150,7 +136,7 @@ The rapidity distribution for \PWp and \PWm at the \ac{LHC} is shown in
 %TODO talk about how this plot was made
 The \PWm distribution is shown in the left panel and the \PWp distribution is
 shown in the right panel. The distributions are invariant with respect to the
-flipping the rapidity, $y\leftrightarrow-y$, so are show on a folded rapidity
+flipping the rapidity, $y\leftrightarrow-y$, so are shown on a folded rapidity
 axis.
 %TODO make that make sense.
 
@@ -173,7 +159,7 @@ more centrally where as the \PWp is produced at larger rapidities. This is due
 to \Pup quarks tending to carry a greater fraction of the protons momentum,
 $x$, than the \Pdown type quarks as seen in \FigureRef{wbos:pdfrat}.
 
-The momentum fraction of the interaction \Pup and \Pdown quarks is correlated
+The momentum fraction, x, of the interaction quarks is correlated
 with the rapidity of the \PW boson. The ratio of $\Pup$ and $\Pdown$ quarks as
 a function of momentum fraction, $x$, is directly related to the difference in
 cross-sections for \PWp and \PWm production as a function of the boson
@@ -181,8 +167,9 @@ rapidity.
 
 Therefore a measurement of the asymmetric production of \PW bosons, as a
 function of the rapidity of the boson, at the \ac{LHC} provides important
-information on the ratio of the up-type and down-type quark parton densities,
-$R_{ud}(x.Q^2)$, within the proton. 
+information on the ratio of the up-type and down-type quark parton densities as
+a function of x,
+$R_{ud}(x,Q^2)$, within the proton. 
 
 \section{\PW Boson Charge Asymmetry}
 
@@ -204,17 +191,20 @@ The \PWpm boson charge asymmetry is defined as:
 
 Where $y_{W}$ is the boson rapidity, and 
 $\nicefrac{ d\sigma (\PWpm) }{ dy_{W} }$ is the \PWpm production cross section
-at a fixed $y_{W}$. 
-
+at a fixed $y_{W}$.  
 If $d\sigma(\PWp) > d\sigma(\PWm) $ then $A_{W}(y_{\PW})> 0$,
 else if $d\sigma(\PWp) < d\sigma(\PWm) $ then $A_{W}(y_{\PW})< 0$,
 and for symmetric \PWpm boson production, $A_{W}(y_{\PW})= 0$,
+
+The prediction for the W boson charge asymmetry as a function of the boson
+rapidity is shown in \FigureRef{wbos:chargeasym}. $A_{W}(y_{\PW})> 0$ and
+increases as the rapidity increases.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.5\textwidth]{placeholder}
   \caption{\PW boson charge asymmetry at LHC.}
-  \label{wbos:wproddiag}
+  \label{wbos:chargeasym}
 \end{figure}
 
 \PW bosons are identified by their decay to a lepton plus neutrino, however at
@@ -226,35 +216,35 @@ is studied is the lepton charge asymmetry.
 %by extrapolating the neutrino longditudinal momentum from the lepton neutrino
 %with a \ac{MC} study. 
 
-
 \section{Electron Rapidity Distribution}
 
 The rapidity distributions of the charged lepton produced from \PW decay are
 further complicated by the charge asymmetric decay of the \PWpm boson. 
-The asymmetric decay arrises due to the $V-A$ coupling of the \PW boson to the
+The asymmetric decay arises due to the $V-A$ coupling of the \PW boson to the
 annihilating \HepProcess{\Pquark\APquark} pair and the decaying lepton pair.
 
 At \ac{LO} the \PWp is produced in the annihilation of a \Pup valance quark
 with a \APdown sea-quark (\EquationRef{wbos:wpprod}). 
 If the parton masses are neglected the \Pup is left-handed and the \APdown is
 right-handed, as shown at the top of \FigureRef{wbos:wspin}. 
+
 In the \PWp decay the \Ppositron is right-handed and the \Pnue is left-handed.
 \FigureRef{wbos:wspin} shows if the  positron is produced in the same direction
 as the incoming \APdown quark angular momentum is conserved and the decay is
 allowed.
 However the decay where the positron is produced in the same direction as the
 incoming \Pup quark, is forbidden.
-A similar arguement holds true for \PWm decays, where the \Pelectron is produced
-preferentually in the direction of the \Pdown.
+A similar argument holds true for \PWm decays, where the \Pelectron is produced
+preferentially in the direction of the \Pdown.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.5\textwidth]{placeholder}
-  \caption{Preferred directions of electrons in \Wenu decay.}
+  \includegraphics[width=0.8\textwidth]{w_decay_directions}
+  \caption{Preferred directions of electrons in \Wenu decay.\cite{TODO}}
   \label{wbos:wspin}
 \end{figure}
 
-The actual distribution of the electron from \PWpm decay is given by
+The actual distribution of the electron from \PWpm decay is given by\cite{}
 
 \begin{equation}
   \frac{1}{\sigma_{U\bar{D}}}
@@ -268,14 +258,14 @@ The actual distribution of the electron from \PWpm decay is given by
 \end{equation}
 
 where $\theta_{\Plepton D}^{\ast}$ is the scattering angle of the charged
-lepton with respect to the direction of the down-type quark or antiquark, in
-the center of mass system of the two quarks. The cross-section is maximised when
+lepton with respect to the direction of the down-type quark or anti-quark, in
+the centre of mass system of the two quarks. The cross-section is maximised when
 $\theta_{\Plepton D}^{\ast}$ is minimised and the charged lepton is produced in
 the same direction as the down-type quark.
 
-The rapidity distribution of the electron is therefore a convolution of
-\EquationRef{wbos:lepton} with the \PW repidity described in
-\SectionRef{wbos:wrapsec}:
+The rapidity distribution of the electron is therefore a convolution of the
+\ac{EWK} correlations in \EquationRef{wbos:lepton} with the \PW rapidity
+described in \SectionRef{wbos:wrapsec}:
 
 \begin{equation}
   y_{\Plepton} = 
@@ -287,15 +277,14 @@ The rapidity distribution of the electron is therefore a convolution of
 \end{equation}
 
 In proton-proton collisions the \PWp tends to be produced in the direction
-of the \Pup, as described in the preceeding chapter. 
-
-However, due to the EW correlations the charged lepton from the decaying \PWp
+of the \Pup, as described in the preceding chapter.  
+However, due to the EWK correlations the charged lepton from the decaying \PWp
 will tend to be produced along the direction of the down type quark and
 therefore will shift the rapidity distribution of the lepton to be more
-centrally.
+centrally.\cite{}
 
-Similarily, \PWm bosons tend to be produced more centrally, however the EW
-correlations will shift the distribution to higher rapidities.
+Similarly, \PWm bosons tend to be produced more centrally, however the EWK
+correlations will shift the charge lepton rapidity distribution to higher rapidities.
 
 \begin{figure}[htb]
   \centering
@@ -306,8 +295,9 @@ correlations will shift the distribution to higher rapidities.
 
 \section{Electron Charge Asymmetry}
 
-\cite{phenom} The ``theoretical electron asymmetry'' is given by equation
-\ref{eq:AsymThe}.
+The electron asymmetry is defined in \EquationRef{eq:AsymThe} analogously to the
+\PW boson asymmetry in \EquationRef{wbos:wasym}, as the difference in the
+\inclusiveWe cross-section over the total \inclusiveWe cross-section.
 
 \begin{equation}
 A_{the}(\eta)=\frac{  \frac{d\sigma}{d\eta}(\Wpenu) -
@@ -316,8 +306,9 @@ A_{the}(\eta)=\frac{  \frac{d\sigma}{d\eta}(\Wpenu) -
 \label{eq:AsymThe}
 \end{equation} 
 
-The experimentally measured asymmetry is given by equation
-\ref{eq:AsymExp}.\cite{kom}
+In an experiment, the cross-section is not measured directly, instead what is
+measured is the electron and positron yields.  The experimentally measured
+asymmetry is given by equation \ref{eq:AsymExp}.\cite{kom}
  
 \begin{equation}
 A_{exp}(\eta)=\frac{  \frac{dN}{d\eta}(\Pelectron) -
@@ -339,12 +330,13 @@ the acceptance ($\epsilon_{acc}$).
 \end{equation} 
 
 Since the asymmetry is a ratio, the luminosity, high level trigger and the
-offline efficiency can be canceled out assuming that they are not asymetric
-with respect to charge.\cite{me} The acceptance can not be cancelled
-however, since it is a function of rapidity and momentum and electrons and
-positrons will have different rapidity and momentum distributions. The
-experimentally measured asymmetry can therefore be related to the theoretical
-asymmetry by correcting for the acceptance.\cite{me}
+offline efficiency can be cancelled out assuming that they are not asymmetric
+with respect to charge.\cite{me} 
+
+The acceptance can not be cancelled however, since it is a function of rapidity and 
+these distributions will differ for \Pelectron and \APelectron.
+The experimentally measured asymmetry can therefore be related to the
+theoretical asymmetry by correcting for the acceptance.\cite{me}
 
 \begin{align} 
 A_{exp}(\eta) &= \frac{ \frac{dN}{d\eta}(\Pelectron) -
@@ -356,8 +348,6 @@ A_{exp}(\eta) &= \frac{ \frac{dN}{d\eta}(\Pelectron) -
 \frac{d\sigma}{d\eta}(\Wmenu) }
 \label{eq:AsymExpCorr}
 \end{align}
-
-
 
 \section{Electron Charge Asymmetry Theoretical Predictions}
 
@@ -378,16 +368,18 @@ electron transverse momentum cuts of 25, 30 and \unit{35}{\GeV}.
 % simple prediction to illustrate the preceeding chapter on electron charge
 % asymmetry
 
+Unlike the \PW asymmetry , the electron asymmetry turns over at $\eta\approx
+2.5$ due to the effect of the the \ac{EWK} correlations.
 
 \subsection{Uncertainty on \acp{PDF}}
 
-The predictions of the electron charge asymmetry will have an error asociated
+The predictions of the electron charge asymmetry will have an error associated
 with the uncertainty on the \ac{PDF}.
 The uncertainty on the \ac{PDF} originates from the experimental errors on the
 data used in the global fits.
 
-The \ac{PDF} uncertainty is propogated to the electron charge asymmetry
-measurement using the \ac{PDF} reweighting techniques\cite{}.
+The \ac{PDF} uncertainty is propagated to the electron charge asymmetry
+measurement using the \ac{PDF} re-weighting techniques\cite{}.
 %TODO add more here
 
 \begin{figure}[htb]
