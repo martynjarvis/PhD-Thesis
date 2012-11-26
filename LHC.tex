@@ -1,12 +1,16 @@
 \chapter{The LHC}
 \section{Large Hadron Collider}
-The Large Hadron Collider (LHC) is a proton-proton collider at CERN 100m
-underground between the border of France and Switzerland.
-It has been constructed in the tunnel that was home the LEP collider and is
-currently taking data at a centre of mass energy of \unit{8}{\TeV}. 
-When operating at its design energy and luminosity it will collide beams at a
-centre of mass energy of \unit{14}{\TeV} and a luminosity of $10^34
+The Large Hadron Collider (LHC) is a circular synchrotron with a circumference
+of \unit{27}{\kilo\meter}.
+
+It has been constructed in the existing tunnel that was home the LEP collider
+that straddles the border between France and Switzerland which lies between
+\unit{40-170}{\meter} underground.
+
+When operating at its design energy and luminosity it will collide beams or
+protons at a centre of mass energy of \unit{14}{\TeV} and a luminosity of $10^34
 cm^{-2}s^{-1}$.  
+
 It is also designed to collide two \unit{5.5}{\TeV} beams of heavy ions, such
 as lead nuclei.\cite{lhc}
 
@@ -15,6 +19,46 @@ as lead nuclei.\cite{lhc}
   \includegraphics[width=0.8\textwidth]{LHC}
   \caption{An overview of the LHC showing the position of the four main experiments.}
   \label{fig:LHC}
+\end{figure}
+
+LHC was designed to test the Standard Model at the $\TeV$ scale at high
+precision, determin the method of electroweak symmetry breaking as well as
+search for new particles predicted by theories beyond the standard model such as
+supersymmetric theories.
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{placeholder}
+  \caption{The production cross sections as a function of centre of mass energy
+for several Standard Model and new physic processes.}
+  \label{fig:LHCxsec}
+\end{figure}
+
+\FigureRef{fig:LHCxsec} shows various cross sections for several physics
+processes as a function of the centre of mass energy. The cross section for many
+physics processes of interest, such as the Higgs cross section, are several
+orders of magnitude below the total inelastic cross section and increase as a
+function of centre of mass energy. This motivates the need for a collider with a
+very large luminosity as well as a large centre of mass energy.
+
+The LHC is part of a larger accelerator complex as shown in figure
+\FigureRef{fig:LHCcomplex}. First Hydrogen gas is ionised to produce a cloud of
+protons, which are then accelerated by the LINAC2 linear accelerator to
+\unit{50}{\MeV}.
+
+Before being injected in to the Proton Syncrotron (PS) the protons are injected in to
+the Proton Syncrotron Booster (PSB) and accelerated to \unit{1.4}{\GeV}. In the
+PS the protons are formed in to bunches and the energy is increased to
+\unit{25}{\GeV}. The bunches are then accelerated in the Super Proton
+Syncrotron (SPS) to \unit{450}{\GeV} and then injected in to the LHC.
+
+%bunches?
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{placeholder}
+  \caption{The LHC complex.}
+  \label{fig:LHCcomplex}
 \end{figure}
 
 There are four main detector experiments studying the collisions at the LHC. 
@@ -26,17 +70,49 @@ ATLAS (A Toroidal Lhc ApparatuS) and CMS (Compact Muon Solenoid) are general
 purpose detectors that are designed 
 to search for a wide range of new physics.\cite{lhc}
 
-\section{CMS detector}
+\subsection{Operational History}
+In September 2008 the LHC was commissioned and the first beams were circulated.
+Before the first collisions could be delivered an interconnection
+between two of the dipole magnets failed when the magnet quenched.
+This led to a large ammount to helium evaporating which in turn led to
+considerable damage to the machine.
+
+Due to this incident it was decided that the LHC should be run at a lower centre
+of mass energy of \unit{7}{\TeV} until the quench protection system could be
+upgraded.
+
+The LHC was repaired by the end of 2009 and the first collisions at a record
+energy of \unit{2.36}{\TeV} were delivered in November. 
+From March to November 2010 The LHC operated at \unit{7}{\TeV} delivering
+\unit{46.4}{\invpb} of proton-proton collisions as shown in
+\FigureRef{fig:LHC2010}.
 
 \begin{figure}[htb!]
   \centering
-  \includegraphics[width=0.8\textwidth]{CMS_Slice}
-  \caption{A slice of the CMS detector in the transverse plane showing a
-typical response to several different particles. 
-From \cite{cmsSlice}.}
-  \label{fig:CMS_Slice}
+  \includegraphics[width=0.8\textwidth]{placeholder}
+  \caption{The luminosity delivered by LHC in 2010}
+  \label{fig:LHC2010}
 \end{figure}
 
+In November and October 2010 the LHC produced lead ion collisions at
+\unit{2.36}{\TeV}.
+
+The target for running in 2011 was to deliver \unit{1}{\invfb} of data. This was
+achieved by June. The target was changed to \unit{5}{\invfb} of data by the end
+of the yeah which was achieved by October.
+
+\subsection{Physics Goals}
+% design goals
+
+\subsection{Experimental Challenge}
+%challenges
+
+
+\section{CMS detector}
+CMS (Compact Muon Solenoid)\cite{cms} is one of the two general purpose
+detectors designed to study LHC collisions. 
+
+An overview of the detector is shown in figure 
 \begin{figure}[htb!]
   \centering
   \includegraphics[width=0.8\textwidth]{CMSnc}
@@ -44,29 +120,32 @@ From \cite{cmsSlice}.}
   \label{fig:CMSnc}
 \end{figure}
 
-CMS (Compact Muon Solenoid)\cite{cms} is one of the two general purpose
-detectors designed to study LHC collisions. 
-A diagram of a transverse slice of the detector is shown in figure
-\ref{fig:CMS_Slice}. 
-A large superconducting solenoid that produces a magnetic field of
-\unit{4}{\tesla} provides the basis for the design of the CMS detector. 
-
+Starting at the interaction point at the centre of the detector and moving
+radially outwards there is the pixel tracker, silicon tracker, lead-tungstate
+ECAL, the sampling brass-plate HCAL, the \unit{4}{\tesla} superconducting
+solenoid magnet, an outer HCAL and four muon chambers.
 
 \subsection{Magnet}
+A large superconducting solenoid that produces a magnetic field of
+\unit{4}{\tesla} provides the basis for the design of the CMS detector, and is
+the main structural support for the detector componets in the barrel region.
+
 The superconducting magnet in CMS is designed to produce a \unit{4}{\tesla}
 field in a bore of 
 \unit{6}{\meter} diameter and \unit{12.5}{\meter} length.
-While operating at full current the magnet stores \unit{2.6}{\giga\joule} of
+While operating at full current the magnet stores \unit{2.6}{\giga\joule} of 
 energy.
 A large magnetic field is needed to give CMS a large bending power and the
 ability to precisely measure the momentum of high-energy charged particles.
 The solenoid bore is large enough that the tracking detectors and the
 calorimetry can fit inside it.\cite{cms}
 
+The magnetic flux is returned through a \unit{1.8}{\meter} thick saturated iron
+yoke which is interleaved with the muon detector.
+
 \subsection{Tracking}
 The inner tracker is designed to accurately and efficiently measure the
-trajectories of charged particles produced 
-in collisions at the centre of CMS.
+trajectories of charged particles produced in collisions at the centre of CMS.
 The tracker is also required to be able to reconstruct secondary vertices
 caused by the decay of a long lived particle.
 At the design luminosity of the LHC it is expected that every 25 ns an average
@@ -74,37 +153,79 @@ of 1000 particles will traverse the
 inner detector therefore it is required that the inner tracker has a high
 granularity and a fast response while 
 resilient to radiation damage. 
-The tracker is therefore based on silicon detectors.
-The inner most part of the CMS tracker used silicon pixel detectors arranged in
-the barrel section in three layers, 
-with the closest layer being at a radius of \unit{44}{\milli\meter}, and in
-each endcap region two disks.
-The tracking detector also utilises 10 layers of silicon micro-strip detectors
-in the barrel region, 
-with the outermost layer at \unit{1.1}{\meter} radius, and in 3 plus 9 rings in
-the endcap section.
+
+Formed of silicon pixel detectors in the inner most layers where the particle
+flux is the highest.
+Outside of that the tracking detector also utilises 10 layers of silicon
+micro-strip detectors.
+
 The total active area of silicon in the CMS tracker is over
 \unit{200}{\meter\squared}.\cite{cms}
 
+\subsubsection{Pixel Tracker}
+The inner most part of the CMS tracker uses hybrid silicon pixel detectors arranged in
+the barrel section in three layers, at radii of  44 73 and \unit{102}{\mm}, and in
+each endcap region two disks at a $|Z|=340$ and \unit{465}{\mm}.
+
+Each pixel has a surface area of \unit{100x150}{\micron} with an
+average particle density of $\mathcal{O}(10^{-4})$ per crossing.
+
+The pixel tracker has $\approx 45\times 10^{6}$ readout channels which are used
+to seed the track reconstruction.
+
+\subsubsection{Strip Tracker}
+Further from the interaction point the particle flux is much reduced allowing
+for the use of silicon strip detectors. 
+
+The barrel tracker comprises two parts, the inner (TIB) and outer (TOB)
+trackers. The TIB and TOB are formed of 4 and 6 layers respectivly.
+
+The endcaps are separated in two the Tracker End Cap (TEC) and the Tracker Inner
+Disks (TID). The TEC is split in to nine disks and covers the region
+$\unit{1200}{\mm} < |Z| < \unit{2800}{\mm}$. The TID comprises three rings
+and fills the gap between the TEC and the TIB.
+
+The silicon strip detector consists of under 15400 modules with approximately 10
+million readout channels.
+
 \subsection{Electromagnetic Calorimetry}
-The electromagnetic calorimeter (ECAL) is designed to measure the energy of
+The electromagnetic calorimeter (ECAL) is 
+designed to measure the energy of
 particles with a high resolution and granularity.
-The ECAL utilises 61200 individual lead tungstate ($PbWO_{4}$) scintillation
-crystals in the barrel part and 7324 
-in each of the two endcap parts. 
+
+It is a hermetic, homogenous calorimeter comprising 61200 individual lead
+tungstate ($PbWO_{4}$) scintillation crystals in the barrel region
+($|\eta|<1.479$) closed by 7324 crystals in each of the two endcap parts
+($1.479<|\eta|<3.0$).
+
 Lead tungstate crystals are ideally suited for this since the scintillation
-decay time is similar to the LHC 
-bunch crossing time with \unit{80}{\%} of light being produced within
-\unit{25}{\nano\second} and the short 
-radiation length and high density gives a high stopping power which allows the
-ECAL to be compact.
+decay time is similar to the LHC bunch crossing time, 
+with \unit{80}{\%} of light being produced within \unit{25}{\ns}.
+They also have a short radiation lengths ($X_0=\unit{0.89}{\cm}$) 
+and Moliere length (\unit{2.2}{\cm}) as well nas being radiation hard
+(up to \unit{10}{\mrad}).
+
 A disadvantage to using lead tungstate is that the light output of the crystals
-is relatively low and changes 
-with temperature so that at \unit{18}{\celsius} 4.5 photoelectrons are
-collected per \MeV.
+is relatively low and changes with temperature. This is overcome by maintaining
+a stable temperature (within \unit{0.1}{\degreecelsius}) and the use of
+photodetectors with intrinsic gain.
+
 Silicon avalanche photodiodes (APDs) are used to detect the scintillation light
-in the barrel and vacuum 
-phototriodes (VPTs) are used in the endcap parts.
+in the barrel and vacuum phototriodes (VPTs) are used in the endcap parts.
+
+The barrel section of the ECAL (EB) surrounds the inner tracker. It is comprised
+of 36 identical supermodules that each cover a half of the length of the barrel
+($0<|\eta|<1.479$) and \unit{20}{\degree} in phi. Each supermodule contains
+1700 crystals arranged in a $\phi - \eta$ grid with each crystal mounted in a
+``semi-projective'' geometry, with each crystal set \unit{3}{\degree} off the
+nominal interaction vertex. Each crystal has a cross-section of
+\unit{$22 \times 22$}{\mm\squared} and a length of
+\unit{230}{\mm}(\unit{25.8}{X_0}).
+
+The endcaps (EE) are formed of two ``Dees'', semi-circular aluminium plates
+which support the supercrystals, 5x5 arrays of crystals. The crystals are
+mounted off the nominal interaction vertex by a small angle. Unlike the barrel
+the crysals are arranged in an x-y grid.
 Installed in front of the endcap ECAL is a preshower system which allows for
 the rejection of \Ppizero .\cite{cms}
 
@@ -140,6 +261,7 @@ and calibration errors.\cite{cms}
 % to this problem, an 
 
 \subsection{Hadronic Calorimetry}
+
 The Hadronic Calorimeter (HCAL) is important in measuring the energy of of
 hadron jets and the missing transverse energy (\met) which are important
 signatures in many New Physics searches.
