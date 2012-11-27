@@ -115,7 +115,7 @@ detectors designed to study LHC collisions.
 An overview of the detector is shown in figure 
 \begin{figure}[htb!]
   \centering
-  \includegraphics[width=0.8\textwidth]{CMSnc}
+  \includegraphics[width=0.8\textwidth]{cms}
   \caption{Diagram of the CMS detector. From \cite{cms}}
   \label{fig:CMSnc}
 \end{figure}
@@ -231,7 +231,7 @@ the rejection of \Ppizero .\cite{cms}
 
 \begin{figure}[htb!]
   \centering
-  \includegraphics[width=0.6\textwidth]{ECAL}
+  \includegraphics[width=0.6\textwidth]{ecal_performance}
   \caption{Energy resolution $\frac{\sigma}{E}$ of ECAL as a function of
   \label{fig:ECAL}
 electron energy $E$. From \cite{cms}.}
@@ -262,30 +262,38 @@ and calibration errors.\cite{cms}
 
 \subsection{Hadronic Calorimetry}
 
-The Hadronic Calorimeter (HCAL) is important in measuring the energy of of
+The Hadronic Calorimeter (HCAL) is designed to measure the energy of
 hadron jets and the missing transverse energy (\met) which are important
 signatures in many New Physics searches.
-A brass/scintillator sampling hadronic calorimeter (HCAL) surrounds the ECAL in
-the barrel ($|\eta| < 1.4$) and endcap region ($|\eta| < 3$). 
+
+The HCAL s a brass/scintillator sampling hadron calorimeter that covers the
+region up to $|\eta|<3.0$.
 The scintillation light is channelled by wavelength shifting fibres, that are
 embedded in the scintillation tiles, to hybrid photodiodes that can operate in
 the high magnetic field. \cite{cms}
 
+The HCAL comprises four components: the hadron barrel (HB), hadron outer (HO),
+hadron endcap (HE) and the hadron forward (HF).
+
+The hadron barrel covers the region ($|\eta| < 1.4$) and is positioned between
+the ECAL and inside of the solenoid magnet coil
+($\unit{1.77}{\meter}<R<\unit{2.95}{\meter}$).
+This constrains the design of the HCAL and limits the total amount of material
+to absorb the hadronic shower. 
+To overcome this limitation the outer hadronic calorimeter is
+placed outside the solenoid to complement the HCAL barrel and increases the
+effective thickness of the hadron calorimetry to over 10 interaction lengths.
+
+The hadron barrel covers the region $1.3 < |\eta| < 3.0$.
+
 In the forward region $|\eta| > 3$ energy measurements are made with an
 iron/quartz-fibre forward hadronic calorimeter where the Cherenkov light is
-detected by photodetectors.\cite{cms}
-
-In the barrel region ($|\eta| < 1.4$) the HCAL is limited in size since it must
-fit in the gap between the the ECAL and tracker within its radius (which extend
-from near the beam spot to $R = \unit{1.77}{\meter}$) and the solenoid magnet
-outside of it (which starts at $R = \unit{2.95}{\meter}$).
-Therefore the total amount of material to absorb the hadronic shower is
-limited; to overcome this an outer hadronic calorimeter is placed outside the
-solenoid to complement the HCAL barrel.\cite{cms}
+detected by photodetectors. The calorimeter needs to be radation hards as in the
+forward range the particle flux is very large.
 
 \begin{figure}[htb!]
   \centering
-  \includegraphics[width=0.8\textwidth]{HCAL}
+  \includegraphics[width=0.8\textwidth]{hcal_performance}
   \caption{Energy resolution $\frac{\sigma}{E}$ of HCAL as a function of jet
   \label{fig:HCAL}
 transverse energy for barrel jets ($|\eta| < 1.4$), endcap jets ($1.4<|\eta| <
@@ -297,8 +305,16 @@ transverse energy for barrel jets ($|\eta| < 1.4$), endcap jets ($1.4<|\eta| <
 The muon system lies outside of the CMS solenoid and the outer HCAL detectors,
 it is designed to have three functions; to identify muons, measure the momentum
 of muons and trigger on muons; to perform these functions the muon system
-consists of several different types of detectors. \cite{cms}
+consists of several different types of detectors.
 
+\begin{figure}[ht]
+  \centering
+  %\includegraphics[width=0.8\textwidth]{muon_system}
+  \caption{Muon system}
+  \label{fig:muon_system}
+\end{figure}
+
+\subsubsection{Drift Tubes}
 In the barrel region ($|\eta| < 1.2$) aluminium drift tubes (DT) are used
 arranged in four stations interspersed along the layers of the flux return
 plates. 
@@ -306,6 +322,7 @@ Each station contains 12 layers, eight to measure the coordinate in the
 $r-\phi$ plane and four to measure the $z$ direction (except the fourth station
 which only measures the $r-\phi$ plane). 
 
+\subsubsection{Cathode Strip Chambers}
 In the endcaps ($0.9<|\eta|<2.4$) cathode strip chambers (CSC) are used. The
 CSCs are arranged in to four stations in each endcap arranged so they are
 perpendicular to the beam line, and are placed between the flux return plates.
@@ -314,6 +331,7 @@ as the anode wires run perpendicular to the strips; both are read out which
 gives information on both the $r-\phi$ plane (from the cathode) and the $\eta$
 direction (from the anode). \cite{cms}
 
+\subsubsection{Resistive Plate Chambers}
 In addition to DT chambers and CSCs a complimentary trigger system is also used
 consisting of resistive plate chambers (RPC) in the endcap and barrel regions.
 The RPCs are able to provide a fast and independent trigger over a large range
@@ -331,7 +349,8 @@ The performance of the muon system and inner tracker is shown in figure
 
 \begin{figure}[htb!]
   \centering
-  \includegraphics[width=0.8\textwidth]{MS}
+  \includegraphics[width=0.8\textwidth]{muon_barrel}
+  \includegraphics[width=0.8\textwidth]{muon_endcap}
   \caption{Muon transverse momentum resolution as a function of the
   \label{fig:MS}
 transverse-momentum using only the muon system, only the tracker and both, for
@@ -341,9 +360,20 @@ left, barrel muons ($|\eta| < 0.8$) and right, endcap muons ($1.2<|\eta| <
 
 
 \subsection{Trigger and Data Acquisition}
-The Data Acquisition and CMS trigger are designed to analyse information from
-the detector at the LHC bunch crossing frequency of
-\unit{40}{\mega\hertz}\cite{lhc}.
+At design luminosity, the high bunch crossing frequency of the LHC means that
+CMS will observe a collision containing an average of 20 superimposed inelastic
+events every \unit{25}{\nano\second}, a rate of $10^{9}$ interactions per
+second.
+A zero suppresed event output from CMS is about \unit{2}{MB} so the total data
+output rate from CMS is \unit{$\approx 80$}{TB \per \second},  however data from
+only about $10^{2}$ crossings can be written to the tape storage. 
+
+The vast majority of events will contain only inelastic collisions and not be of
+interest from a physics perspective and can be discarded.  
+It is the job of the trigger to reduce the rate of events
+by a factor of $10^6$ by rejecting the uninteresting events while keeping as
+many interesting events as possible.
+
 An overview of the DAQ and trigger is shown in figure \ref{fig:CMSDAQ}.
 
 \begin{figure}[htb!]
@@ -354,15 +384,10 @@ An overview of the DAQ and trigger is shown in figure \ref{fig:CMSDAQ}.
 \cite{cms}.}
 \end{figure}
 
-The high bunch crossing frequency of the LHC means that CMS observes and event
-every \unit{25}{\nano\second}, however only a small fraction of those event
-will be of interest and the vast majority of events will contain only inelastic
-collisions.
-It is the job of the trigger to drastically reduce this rate while keeping as
-many interesting events as possible.
 The trigger is separated in to two parts the Level-1 (L1) trigger and the High
 Level Trigger (HLT).\cite{cms}
 
+\subsubsection{Level-1 Trigger}
 The Level-1 trigger is designed to reduce the event rate from the bunch
 crossing frequency of \unit{40}{\mega\hertz} to a maximum output rate of
 \unit{100}{\kilo\hertz}.
@@ -370,6 +395,7 @@ This is achieved with custom-designed fast programmable electronics that takes
 as input coarsely segmented data from the calorimeters and muon systems and
 places the high resolution data in pipelined memories.
 
+\subsubsection{High-Level Triggers}
 The high-level trigger is a software system which runs on a server farm with
 over one thousand commercial multi-core processors with access to the complete
 event data allowing it to make more complex calculations. After the L1 trigger
