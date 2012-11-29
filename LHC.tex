@@ -2,43 +2,41 @@
 \section{Large Hadron Collider}
 The Large Hadron Collider (LHC) is a circular synchrotron with a circumference
 of \unit{27}{\kilo\meter}.
-
-It has been constructed in the existing tunnel that was home the LEP collider
-that straddles the border between France and Switzerland which lies between
-\unit{40-170}{\meter} underground.
+It has been constructed in the existing tunnel 
+\unit{40-170}{\meter} beneath the border of France and Switzerland
+that was previously home the LEP collider.
 
 When operating at its design energy and luminosity it will collide beams or
 protons at a centre of mass energy of \unit{14}{\TeV} and a luminosity of $10^34
 cm^{-2}s^{-1}$.  
-
 It is also designed to collide two \unit{5.5}{\TeV} beams of heavy ions, such
 as lead nuclei.\cite{lhc}
 
-LHC was designed to test the Standard Model at the $\TeV$ scale at high
-precision, determin the method of electroweak symmetry breaking as well as
-search for new particles predicted by theories beyond the standard model such as
+The main motivation for the LHC is to determine the mecahanism by which electroweak
+symmetry is broken. 
+The LHC was also designed to test the Standard Model at the $\TeV$ scale at high
+precision and to search for new particles predicted by theories beyond the standard model such as
 supersymmetric theories.
+\FigureRef{fig:LHCxsec} shows various cross sections for several physics
+processes as a function of the centre of mass energy. The cross section for many
+physics processes of interest, such as the Higgs cross section, are several
+orders of magnitude below the total inelastic cross section and increase as a
+function of centre of mass energy. 
+The large centre of mass energy and high luminosity is motivated by the
+small cross-sections of new processes.
 
 \begin{figure}[htb!]
   \centering
   \includegraphics[width=0.8\textwidth]{xsec.png}
   \caption{The production cross sections as a function of centre of mass energy
-for several Standard Model and new physic processes.}
+for several Standard Model and new physics processes.}
   \label{fig:LHCxsec}
 \end{figure}
-
-\FigureRef{fig:LHCxsec} shows various cross sections for several physics
-processes as a function of the centre of mass energy. The cross section for many
-physics processes of interest, such as the Higgs cross section, are several
-orders of magnitude below the total inelastic cross section and increase as a
-function of centre of mass energy. This motivates the need for a collider with a
-very large luminosity as well as a large centre of mass energy.
 
 The LHC is part of a larger accelerator complex as shown in figure
 \FigureRef{fig:LHCcomplex}. First Hydrogen gas is ionised to produce a cloud of
 protons, which are then accelerated by the LINAC2 linear accelerator to
 \unit{50}{\MeV}.
-
 Before being injected in to the Proton Syncrotron (PS) the protons are injected in to
 the Proton Syncrotron Booster (PSB) and accelerated to \unit{1.4}{\GeV}. In the
 PS the protons are formed in to bunches and the energy is increased to
@@ -67,45 +65,66 @@ to search for a wide range of new physics.\cite{lhc}
 In September 2008 the LHC was commissioned and the first beams were circulated.
 Before the first collisions could be delivered an interconnection
 between two of the dipole magnets failed when the magnet quenched.
-This led to a large ammount to helium evaporating which in turn led to
+This led to a large ammount to helium rapidly evaporating which caused
 considerable damage to the machine.
-
 Due to this incident it was decided that the LHC should be run at a lower centre
 of mass energy of \unit{7}{\TeV} until the quench protection system could be
 upgraded.
 
 The LHC was repaired by the end of 2009 and the first collisions at a record
 energy of \unit{2.36}{\TeV} were delivered in November. 
-From March to November 2010 The LHC operated at \unit{7}{\TeV} delivering
-\unit{46.4}{\invpb} of proton-proton collisions as shown in
-\FigureRef{fig:LHC2010}.
+From March to November 2010 the LHC operated at \unit{7}{\TeV} delivering
+\unit{46.4}{\invpb} of proton-proton collisions.
+In November and October 2010 the LHC produced lead ion collisions at
+\unit{2.36}{\TeV}.
 
 \begin{figure}[htb!]
   \centering
   \includegraphics[width=\textwidth]{int_lumi_cumulative_pp_1.png}
-  \caption{The luminosity delivered by LHC in 2010}
+  \caption{The luminosity delivered by LHC and recorded by CMS in 2010, 2011 and 2012}
   \label{fig:LHC2010}
 \end{figure}
 
-In November and October 2010 the LHC produced lead ion collisions at
-\unit{2.36}{\TeV}.
 
 The target for running in 2011 was to deliver \unit{1}{\invfb} of data. This was
-achieved by June. The target was changed to \unit{5}{\invfb} of data by the end
+achieved by June. The target was increased to \unit{5}{\invfb} of data by the end
 of the yeah which was achieved by October.
-
-\subsection{Physics Goals}
-% design goals
-
-\subsection{Experimental Challenge}
-%challenges
-
+The luminosity delivered by LHC and recorded in CMS in 2010, 2011 and 2012 is
+shown in \FigureRef{fig:LHC2010}.
 
 \section{CMS detector}
 CMS (Compact Muon Solenoid)\cite{cms} is one of the two general purpose
 detectors designed to study LHC collisions. 
 
-An overview of the detector is shown in figure 
+% The goals of the LHC physics program are to search for the Higgs, SUSY etc
+
+The design goals of the CMS detector were: 
+
+\begin{itemize}
+  \item Good muon identification and momentum resolution and the ability to unambiguously assign charge to muons with $\PT <
+\unit{1}{\TeV}$
+  \item Good charge particle momentum resolution and reconstruction in the
+tracker.
+  \item Good electromagnetic energy resolution. 
+  \item Good \ETmiss and dijet mass resolution.
+\end{itemize}
+
+The design of CMS meets these requirements while overcoming significant
+experimental challenges. 
+
+At design luminosity, $\approx 1 $ billion inelastic events will occur in CMS
+every second, where as only $\approx 100 $ events can be stored. The detector
+must be able to reduce this rate with a trigger to only accept events that are
+interesting from a physics perspective.
+
+In addtion to this challenge each event of interest will have on average 20
+inelastic events superimposed on it. This results in around 1000 charged
+particles produced every \unit{20}{\ns}, which will require the detectors to
+have a high granularity with a good time resolution to ensure a low occupancy.
+
+The large flux of particles will also produce high radiation levels which will
+require radiation hard detectors and electronics.
+
 \begin{figure}[htb!]
   \centering
   \includegraphics[width=0.8\textwidth]{cms}
@@ -113,9 +132,10 @@ An overview of the detector is shown in figure
   \label{fig:CMSnc}
 \end{figure}
 
-Starting at the interaction point at the centre of the detector and moving
-radially outwards there is the pixel tracker, silicon tracker, lead-tungstate
-ECAL, the sampling brass-plate HCAL, the \unit{4}{\tesla} superconducting
+An overview of the detector is shown in \FigureRef{fig:CMSnc}.
+Starting at the interaction point in the center of the detector and moving
+radially outwards, CMS comprises the pixel tracker, silicon tracker, lead-tungstate
+ECAL, sampling brass-plate HCAL, \unit{4}{\tesla} superconducting
 solenoid magnet, an outer HCAL and four muon chambers.
 
 \subsection{Magnet}
