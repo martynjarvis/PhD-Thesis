@@ -127,8 +127,8 @@ require radiation hard detectors and electronics.
 
 \begin{figure}[htb!]
   \centering
-  \includegraphics[width=0.8\textwidth]{cms}
-  \caption{Diagram of the CMS detector. From \cite{cms}}
+  \includegraphics[width=0.8\textwidth]{muon.png}
+  \caption{Diagram of the CMS detector. }
   \label{fig:CMSnc}
 \end{figure}
 
@@ -139,11 +139,11 @@ ECAL, sampling brass-plate HCAL, \unit{4}{\tesla} superconducting
 solenoid magnet, an outer HCAL and four muon chambers.
 
 \subsection{Magnet}
-A large superconducting solenoid that produces a magnetic field of
-\unit{4}{\tesla} provides the basis for the design of the CMS detector, and is
-the main structural support for the detector componets in the barrel region.
+A large superconducting solenoid provides the basis for the design of the CMS
+detector, and is the main structural support for the detector componets in the
+barrel region.
 
-The superconducting magnet in CMS is designed to produce a \unit{4}{\tesla}
+The superconducting magnet in CMS produces a \unit{4}{\tesla}
 field in a bore of 
 \unit{6}{\meter} diameter and \unit{12.5}{\meter} length.
 While operating at full current the magnet stores \unit{2.6}{\giga\joule} of 
@@ -164,65 +164,81 @@ caused by the decay of a long lived particle.
 At the design luminosity of the LHC it is expected that every 25 ns an average
 of 1000 particles will traverse the 
 inner detector therefore it is required that the inner tracker has a high
-granularity and a fast response while 
-resilient to radiation damage. 
+granularity and a fast response while remaining resilient to radiation damage. 
 
-Formed of silicon pixel detectors in the inner most layers where the particle
-flux is the highest.
-Outside of that the tracking detector also utilises 10 layers of silicon
-micro-strip detectors.
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{strip.png}
+  \caption{Close up of the CMS inner tracker.}
+  \label{fig:tracker}
+\end{figure}
 
+A close up view of the inner tracker is shown in \FigureRef{fig:tracker}.
+The tracker utilises silicon pixel detectors in the inner most layers where the
+particle flux is the highest.
+Outside of that the tracking detector utilises several layers of silicon
+micro-strip detectors where the particle clux is reduced.
 The total active area of silicon in the CMS tracker is over
 \unit{200}{\meter\squared}.\cite{cms}
 
 \subsubsection{Pixel Tracker}
-The inner most part of the CMS tracker uses hybrid silicon pixel detectors arranged in
-the barrel section in three layers, at radii of  44 73 and \unit{102}{\mm}, and in
-each endcap region two disks at a $|Z|=340$ and \unit{465}{\mm}.
+The pixel tracker consists of three layers of hybrid silicon pixel detectors in
+the barrel region and two in the endcap region. 
+The barrel layers are positioned at radii 4.4, 7.3 and \unit{10.2}{\cm} and have
+a length of \unit{53}{\cm}. The two layers in the endcap are located at
+$|z|=34.5$ and \unit{46.5}{\cm} with an inner radius of \unit{6}{\cm} and an
+outer radius of \unit{15}{\cm}.
 
-Each pixel has a surface area of \unit{100x150}{\micron} with an
-average particle density of $\mathcal{O}(10^{-4})$ per crossing.
-
-The pixel tracker has $\approx 45\times 10^{6}$ readout channels which are used
-to seed the track reconstruction.
+Each pixel has a surface area of \unit{$100\times150$}{\micron} which results in
+an average particle density of $\mathcal{O}(10^{-4})$ per crossing.
 
 \subsubsection{Strip Tracker}
-Further from the interaction point the particle flux is much reduced allowing
-for the use of silicon strip detectors. 
+The strip tracker is split in to two regions according to the particle flux. In
+the region \unit{$20<r<55$}{cm} microstrip detectors with a cell size of
+$\unit{10}{\cm}\times\unit{80}{\micron}$ are used with an average occupancy of
+$\approx\unit{2-3}{\%}$.
+Outside this the flux is low enuogh to allow for the use of larger pitch silicon
+microstrips with a cell size of $\unit{25}{\cm}\times\unit{180}{\micron}$ with
+an average occupancy of $\approx\unit{1}{\%}$.
 
-The barrel tracker comprises two parts, the inner (TIB) and outer (TOB)
+The barrel strip tracker comprises two parts, the inner (TIB) and outer (TOB)
 trackers. The TIB and TOB are formed of 4 and 6 layers respectivly.
 
-The endcaps are separated in two the Tracker End Cap (TEC) and the Tracker Inner
+The endcaps are separated in to the Tracker End Cap (TEC) and the Tracker Inner
 Disks (TID). The TEC is split in to nine disks and covers the region
 $\unit{1200}{\mm} < |Z| < \unit{2800}{\mm}$. The TID comprises three rings
 and fills the gap between the TEC and the TIB.
 
-The silicon strip detector consists of under 15400 modules with approximately 10
-million readout channels.
+The silicon entire silicon strip detector consists of approximately 15400
+modules.
 
 \subsection{Electromagnetic Calorimetry}
 The electromagnetic calorimeter (ECAL) is 
 designed to measure the energy of
 particles with a high resolution and granularity.
-
 It is a hermetic, homogenous calorimeter comprising 61200 individual lead
 tungstate ($PbWO_{4}$) scintillation crystals in the barrel region
 ($|\eta|<1.479$) closed by 7324 crystals in each of the two endcap parts
 ($1.479<|\eta|<3.0$).
 
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{hcal.png}
+  \caption{Close up of the CMS calorimetry.}
+  \label{fig:calo}
+\end{figure}
+
 Lead tungstate crystals are ideally suited for this since the scintillation
 decay time is similar to the LHC bunch crossing time, 
 with \unit{80}{\%} of light being produced within \unit{25}{\ns}.
 They also have a short radiation lengths ($X_0=\unit{0.89}{\cm}$) 
-and Moliere length (\unit{2.2}{\cm}) as well nas being radiation hard
+and Moliere length (\unit{2.2}{\cm}) as well as being radiation hard
 (up to \unit{10}{\mrad}).
 
 A disadvantage to using lead tungstate is that the light output of the crystals
 is relatively low and changes with temperature. This is overcome by maintaining
-a stable temperature (within \unit{0.1}{\degreecelsius}) and the use of
-photodetectors with intrinsic gain.
-
+a stable temperature (within \unit{0.1}{\degreecelsius}) and using
+photodetectors with an intrinsic gain.
 Silicon avalanche photodiodes (APDs) are used to detect the scintillation light
 in the barrel and vacuum phototriodes (VPTs) are used in the endcap parts.
 
@@ -233,12 +249,13 @@ of 36 identical supermodules that each cover a half of the length of the barrel
 ``semi-projective'' geometry, with each crystal set \unit{3}{\degree} off the
 nominal interaction vertex. Each crystal has a cross-section of
 \unit{$22 \times 22$}{\mm\squared} and a length of
-\unit{230}{\mm}(\unit{25.8}{X_0}).
+\unit{230}{\mm} (\unit{25.8}{X_0}).
 
 The endcaps (EE) are formed of two ``Dees'', semi-circular aluminium plates
-which support the supercrystals, 5x5 arrays of crystals. The crystals are
-mounted off the nominal interaction vertex by a small angle. Unlike the barrel
-the crysals are arranged in an x-y grid.
+which support the ``supercrystals'', 5x5 arrays of crystals. The crystals are
+mounted off the nominal interaction vertex by a small angle in a similar way
+to the barrel. 
+Unlike the barrel the crysals are arranged in an x-y grid.
 Installed in front of the endcap ECAL is a preshower system which allows for
 the rejection of \Ppizero .\cite{cms}
 
@@ -277,9 +294,9 @@ and calibration errors.\cite{cms}
 
 The Hadronic Calorimeter (HCAL) is designed to measure the energy of
 hadron jets and the missing transverse energy (\met) which are important
-signatures in many New Physics searches.
+signatures in many physics studies at the LHC.
 
-The HCAL s a brass/scintillator sampling hadron calorimeter that covers the
+The HCAL is a brass/scintillator sampling hadron calorimeter that covers the
 region up to $|\eta|<3.0$.
 The scintillation light is channelled by wavelength shifting fibres, that are
 embedded in the scintillation tiles, to hybrid photodiodes that can operate in
@@ -298,7 +315,6 @@ placed outside the solenoid to complement the HCAL barrel and increases the
 effective thickness of the hadron calorimetry to over 10 interaction lengths.
 
 The hadron barrel covers the region $1.3 < |\eta| < 3.0$.
-
 In the forward region $|\eta| > 3$ energy measurements are made with an
 iron/quartz-fibre forward hadronic calorimeter where the Cherenkov light is
 detected by photodetectors. The calorimeter needs to be radation hards as in the
@@ -315,9 +331,9 @@ transverse energy for barrel jets ($|\eta| < 1.4$), endcap jets ($1.4<|\eta| <
 
 
 \subsection{Muon System}
-The muon system lies outside of the CMS solenoid and the outer HCAL detectors,
-it is designed to have three functions; to identify muons, measure the momentum
-of muons and trigger on muons; to perform these functions the muon system
+The muon system lies outside of the CMS solenoid and the outer HCAL detectors.
+It is designed to have three functions; to identify muons, measure the momentum
+of muons and trigger on muons. To perform these functions the muon system
 consists of several different types of detectors.
 
 \begin{figure}[ht]
