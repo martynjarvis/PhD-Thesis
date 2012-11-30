@@ -16,7 +16,6 @@
 %% ========================================================================
 %% Base class and packages
 %% ========================================================================
-
 \LoadClass[a4paper,12pt]{book}
 
 \RequirePackage{graphicx}
@@ -26,7 +25,6 @@
 \RequirePackage{verbatim}
 \RequirePackage{nicefrac}
 \RequirePackage{fancyhdr}
-
 
 %% Nice tables (optional) from hepthesis
 \RequirePackage{booktabs}
