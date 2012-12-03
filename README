@@ -1,12 +1,12 @@
-SCons Build Environment for LaTeX Theses
-========================================
+Thesis environment.
 
-== Directory structure of this thesis skeleton ==
-
+Overview:
 ./
  |- thesis.tex                           <- * main LaTeX document
- |- makefile                             <-   master build script
- |- README                               <-   this file
+ |- mythesis.cls                         <- * custom thesis class (based on book)
+ |- mythesis.sty                         <- * custom commands and macros
+ |- makefile                             <-   
+ |- README                               <- 
  |- chapters/                            <- * contains per chapter LaTeX
  |  |- chap01.tex                        <- * LaTeX for chap01
  |  |- chap02.tex                        <- * LaTeX for chap02
@@ -16,4 +16,5 @@ SCons Build Environment for LaTeX Theses
  `- generated/                           <- * output directory for generated images
     `- picture1.png                      <- * figure copied across
     `- picture2.pdf                      <- * figure built from tex file
+
 
