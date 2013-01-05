@@ -29,5 +29,6 @@
 *.mtc0
 *.pyc
 *.pdf
+*.tdo
 .sconsign.dblite
 *gen_figures/*
