@@ -40,11 +40,9 @@
 %\layout
 
 %% Define the un-numbered front matter (cover pages, rubrik and table of contents)
-\frontmatter
   \input{chapters/front.tex}
 
 %% Start the content body of the thesis
-\mainmatter
   \include{chapters/introduction}
   \include{chapters/theory}
   \include{chapters/w_bosons}
@@ -55,12 +53,9 @@
   \include{chapters/conclusion}
 
 %% Produce the appendices
-\appendix
-  \include{chapters/appendix}
-%
-%% Produce the un-numbered back matter (e.g. colophon,
 %% bibliography, tables of figures etc., index...)
-\backmatter
+  \appendix
+  \include{chapters/appendix}
   \input{chapters/end}
   \bibliographystyle{plain}
   \bibliography{thesis}
