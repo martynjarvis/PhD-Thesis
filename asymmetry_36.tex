@@ -74,6 +74,7 @@ obtained are found to be effective in the range \unit{15-100}{\GeV}.\cite{}
 \TableRef{tab:elecuts} sumarises the electron selection variables used and the
 corresponding cut values for the barrel and endcap.
 
+\todo{tie this in with physics objects chapter}
 
 %% TODO finish ZZZzzzzz,,,,
 \begin{table}[htbp]
@@ -179,6 +180,7 @@ $2.0<| \eta |<2.4$ &+& 18885&13239&8726&10991\\
 \end{center}
 \end{table}
 % TODO REMOVE MET CUT
+\todo{remove met cut from tables}
 
 
 The exected composition of the selected events, derived from MC simulation
@@ -264,41 +266,14 @@ antselected MC events. This is shown for each eta bin in
 The Signal \ETm shape was obtained using information from the recoil of the
 boson
 
-% \subsubsection{Ersatz}
-% from comment in AN
-% The Ersatz Missing Energy method models the missing transverse energy in
-% $\mbox{W}\rightarrow\mbox{e}\nu$ events using clearly identifiable and
-% kinematically similar $\mbox{Z}\rightarrow\m    box{ee}$ events as an
-% analogue. If these $\mbox{Z}\rightarrow\mbox{ee}$ events are recorded during
-% the same time period as the $\mbox{W}\rightarrow\mbox{e}\nu$ events and use
-% similar trigger     and identification criteria, then the method will
-% correctly model experimental effects which influence the measurement of
-% missing energy.
-% The method demands that one electron from the Z decay satisfies the same
-% identification and trigger criteria as the electron in
-% $\mbox{W}\rightarrow\mbox{e}\nu$, while the other passes onl    y loose
-% criteria necessary to reduce the background to a negligible level while
-% retaining high efficiency. An apparent missing energy is then created by
-% removing the energy of the loosely id    entified electron -- the `ersatz
-% neutrino' -- while the energy of the W-like electron is rescaled to match
-% that expected in $\mbox{W}\rightarrow\mbox{e}\nu$ events.
-% In order to ensure the ersatz \ETm is an accurate model of \ETm in
-% $\mbox{W}\rightarrow\mbox{e}\nu$ events, several corrections are made. A
-% reweighting is made to improve the match between     the kinematics of Z and
-% W events. An acceptance correction is necessary, since the ersatz neutrinos
-% are bound within the electron reconstruction acceptance, while real neutrinos
-% are not. A     further correction is also made to account for the
-% inefficiency of the ersatz neutrino reconstruction and selection, along with
-% another for any difference between the efficiencies of the ele ctron in W
-% events and its analogue in Z events.
-%TODO write
+\todo{add more information on the hoson recoil method.}
 
 \subsection{\ac{EWK} \ETm Shape}
 
 The \ac{EWK} background \ETm distributions were obtained from Pythia \ac{MC}
 simulations.
 
-%TODO write more
+\todo{add more information on the EWK template shape.}
 
 \subsection{Validation of Signal Extraction Method on Simulation}
 
@@ -424,7 +399,7 @@ A_{exp}(\eta) = \frac{
 \end{equation}
 
 The efficiency for electrons and positrons is measured using the tag and probe
-method %TODO ref 
+method \todo{reference the CMS tag and probe method paper/note}
 with a sample of \Zee events from the same datasets used in the analysis. 
 The \Zee events offer a high purity source of unbiased electrons with which to
 measure the efficiencies.
@@ -574,14 +549,14 @@ systematic uncertainty.
 
 The recoil method uses generator level \ac{MC} simulation as an input to the
 template shape. To evaluate the efect of the generator used, templates are
-generated with the CTEQ 6.6 %TODO cite
+generated with the CTEQ 6.6 \todo{cite the CTEQ guys here}
 uncertainty \acp{PDF} which contain the central \ac{PDF} and 44 error \acp{PDF}
 which contain the \unit{95}{\%} \ac{CL} for each of the 22 free parameters in
 the \ac{PDF}. The maximum change in distance with respect to the central value
 is taken as a measure of the systematic uncertainty.
 
-% TODO Energy scale
-The systematic uncertainty introduced by the electron energy scale...
+The systematic uncertainty introduced by the electron energy scale.
+\todo[inline]{electron energy scale uncertainty in the met shape}
 
 
 
@@ -735,6 +710,7 @@ and smeared by an addtional gaussian with width of
 \end{equation}
 
 %TODO figures
+\todo[inline]{Add figures to demonstrate this}
 
 The corrections are applied to the electron before the final \Pt cut so tjat
 the measured asymmetry is corrected for the energy scale.
