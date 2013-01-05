@@ -53,12 +53,13 @@
 \addtolength{\evensidemargin}{-\@bindextramargin}
 
 % not sure what to set for these
-\setlength{\headheight}{15pt}
+\setlength{\headheight}{30pt}
 \setlength{\headsep}{25pt}
 
 % not sure what to set for these
 \setlength{\marginparsep}{0pt}
-\setlength{\marginparwidth}{0pt}
+%\setlength{\marginparwidth}{0pt}
+\setlength{\marginparwidth}{2cm}
 \setlength{\marginparpush}{0pt}
 
 % for the front matter pages
