@@ -75,7 +75,7 @@ respectivly. Other symmetries and conservation laws are summarised in
 
 Symmetry operations, such as rotations, can be described by mathematical groups.
 The most common groups to physics are unitary groups, $U(n)$, which are the
-collection of all the $n\times n$ unitary ($U^{-1} = \~{U}^{*}$) matrices, and
+collection of all the $n\times n$ unitary ($U^{-1} = \tilde{U}^{*}$) matrices, and
 the special unitary groups, $SU(2)$, which have the additional requirement that
 the matrices have a determinant of 1.
 
@@ -94,11 +94,11 @@ the lagrangian is invariant under a `global' phase transformation
 \label{eq:global}
 \end{equation}
 
-where \alpha is a global arbitary parameter. The lagrangian is said to exhibit
+where $\alpha$ is a global arbitary parameter. The lagrangian is said to exhibit
 global gauge invariance. The family of transfomations, $R =
-e^{i \alpha}$, where \alpha is real and continuous, forms the unitary
+e^{i \alpha}$, where $\alpha$ is real and continuous, forms the unitary
 abelian \footnote{Abelian refers to the property that all the elements in a
-group commute, $R(\alpha)R(\beta)=R(\beta)R(\alpha)$.}
+group commute, $R(\alpha)R(\beta) = R(\beta)R(\alpha)$.}
 group $U(1)$. 
 \todo{this is all horrible}
 
@@ -108,14 +108,14 @@ More generally, the \EquationRef{eq:global} can be rewritten as
 \label{eq:local}
 \end{equation}
 
-where \alpha is now a function of the space time coordinate $x$. This is known
+where $\alpha$ is now a function of the space time coordinate $x$. This is known
 as a local phase transformation. Unfortunalty under this transformation the
 lagrangian is no longer invariant. This can be overcome by defining the
 covariant derivative as 
 \begin{equation}
 D_{\mu} \equiv \delta_{\mu} - i e A_{\mu}
 \end{equation}
-where an aditional vector field A_{\mu} has been added, that transforms as 
+where an aditional vector field $A_{\mu}$ has been added, that transforms as 
 \begin{equation}
 A_{\mu} \to A_{\mu} + \frac{1}{e} \delta_{\mu} \alpha
 \end{equation}
@@ -127,12 +127,15 @@ e \bar{psi} \gamma^{\mu} A_{\mu} \psi -
 \frac{1}{4} F_{\mu\nu} F^{\mu\nu}
 \end{equation}
 
-It is seen that the additional vector field, A_{\mu}, couples with the dirac
+It is seen that the additional vector field, $A_{\mu}$, couples with the dirac
 particle, and can be identified as the physical photon field. The additional
 term, $\frac{1}{4} F_{\mu\nu} F^{\mu\nu}$, is the kinetic
 
-
-\todo{Copy this up from notes}
+Local gauge invariance has been restored with the introduction of the photon
+field. It is also seen that the photon muset be massless, as the introduction of
+a mass term for the photon $\frac{1}{2}A_{\mu}A^{\mu}$\todo{I hope I can prove that in a viva},
+similar to the mass term in the original lagrangian for dirac particle, breaks
+the gauge invariance.
 
 \subsection{Electroweak Unification}
 \todo{Write this, state rather than derive it}
@@ -141,7 +144,57 @@ term, $\frac{1}{4} F_{\mu\nu} F^{\mu\nu}$, is the kinetic
 \todo{Write this, state rather than derive it}
 
 \subsection{QCD}
-\todo{Copy this up from notes, but simplify it}
+Quantum chromodynamics follows from similar reasoning to the QED case, but with
+the $U(1)$ symmetry group replaced with the SU(3) symmetry group of
+transformations on the quark colour fields.
 
+The local gauage phase transformation becomes
 
+\begin{equation}
+q(x) \to e^{i\alpha_a(x)T_a} q(x)
+\end{equation}
+
+Which breaks the invariance of the lagrangian. Again this is overcome by
+introducing the covariant derivative
+
+\begin{equation}
+D_{\mu} \equiv \delta_{\mu} + i g T_{a} G_{\mu}^{a}
+\end{equation}
+
+Where eight gauge fields have been introduced, instead of the single field in
+QED.
+The gauge fields transform as 
+\begin{equation}
+ G_{\mu}^{a} \to G_{\mu}^{a} 
+-\frac{1}{g}\delta_{\mu}\alpha_{a}]
+-f_{abc}\alpha_{b}G^{c}_{\mu}
+\end{equation}
+Where the additional term is to produce a gauge invariant lagrangian due to the
+non-Abelian gauge transformation.
+
+The final lagrangian for QCD can now be written.
+\begin{equation}
+\mathcal{L} = 
+\bar{q}(i\gamma^{\mu}\delta_{\mu} - m)q -
+g \bar{q} \gamma^{\mu} G_{\mu}^{a} - 
+\frac{1}{4} G_{\mu\nu}^{a} G^{\mu\nu}_{a}
+\end{equation}
+
+where the field strength tensor $G^{\mu\nu}_{a}$ is given by:
+\begin{equation}
+G^{\mu\nu}_{a} 
+= \delta{\mu} G^{a}_{\nu}
+- \delta{\nu} G^{a}_{\mu}
+-g f_{abc} G^{b}_{\mu} G^{c}_{\nu}
+\end{equation}
+
+In a simuilar way to QED, the lagrangian for interacting coloured quarks, $q$, and
+vector gluons, $G_{\mu}$, result from the simple erquirement of local colour
+phase invariance of the quark fields. Unlike the QED case, eight gauge fields
+are needed due to the three quark colour fields.  Similar to QED, the gluons are
+required to  be massless.
+
+The field strength tensor, $G^{\mu\nu}_{a}$, introduces terms that are cubic and
+quadratic in $G$. These represent three and four vertex gluon interactions that
+are a results of the non abelian nature of the $SU(3)$ group.
 
