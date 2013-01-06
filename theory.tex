@@ -2,63 +2,146 @@
 
 The standard model of particle physics is a theoretical model that describes
 almost all sub-nuclear phenomena up to an energy scale of
-$\mathcal{o}(\unit{100}{\GeV})$.
+$\mathcal{O}(\unit{100}{\GeV})$.
 
 The theory was pieced togethere in the 60s and 70s and comprises two families of
 elementary particles, called quarks and leptons, and incorporates the theories
 of quantum electrodynamics (QED), Glashow-Weinberg-Salam theory of electroweak
 dynamics and quantum chromodynamics (QCD).
 
-The Standard Model is remarkable in its accuracy, describing every exp[erimental
-test performed.
-
+The Standard Model is remarkable in its accuracy, describing every experimental
+test performed.  
 The chapter will first introduce the two families of elementary matter
 particles, the leptons and quarks, and then summarize the theoretical background
 to the standard model.
 
-\todo{here is a long to do note, this might break}
 
 %Brief history 
 
 \section{Constituents of the Standard Model}
-With only a few exceptions, all results from high energy physics experiments can
-be explained within the Standard Model of particles and their interactions.
+Within the Standard Model matter is described as being constructed from a small
+number of spin$=\nicefrac{1}{2}$ particles called fermions that interact with
+the electromagnetic, weak and strong forces. The fermions are divided in to two
+families called, leptons and quarks, according to their experimentally measured
+properties such as their charge. Each fermion varies in mass from the light
+neutrinos (\todo{neutrino mass here}) to the heavy top quark (\todo{top mass
+here}).
 
-\subsection{Fermions}
-Within the standard model all matter is formed from spin $\nicefrac{1}{2}$
-particles called fermions.  These comprise 6 leptons and 6 quarks, both split in
-to three generations.
+Each family of fermions can be further subdivided in to three generations that
+increase progressivly increase in mass. The fermions of the Standard Model and
+some of their properties are sumarised in \TableRef{}. \todo{Add table of SM
+particles.}
 
-Leptons are particles with integer charge and are summarised in \TableRef{}. The
-electon, muon and tau each have unit charge, where as the corresponding
-neutrinos are neutral. 
+Each lepton generation contains a charged lepton and a corresponding light
+neutral particle called a neutrino. leptons interact via the weak force and the
+electromagnetic force in the case of the charged lepton.  The first generation
+of leptons is the most familiar containing the electron and the electron
+neutrino.
 
-Quarks carry fractional charges of $\nicefrac{2}{3}$ and $\nicefrac{-1}{3}$ and
-are summarised in \TableRef{}. 
+Unlike leptons, quarks carry fractional charge, within each generation there is
+a quark with a charge of $\nicefrac{2}{3}$ and another with a charge of
+$\nicefrac{-1}{3}$. In  addtion to electric charge, quarks carry an additional
+charge called the colour charge. The colour charge allows the quarks to interact
+via the strong force in addition the electromagnetic and the weak forces.
+The first generation of quarks is again the most familiar, containing the up and
+down type quarks that are the constituents of the proton and neutron, which in
+turn, with the electron, form atoms and all familiar matter.
 
-% matter particles
-%% 1/2 spin 
-%% obey pauli exclusion principle
-%% 6 leptons and 6 quarks in 3 generations
-%%TABLE
+The heavier generations of quarks (strange, charm, bottom and top, or \Pstrange,
+\Pcharm, \Pbottom and \Ptop) are unstable and decay eventually to \Pup or
+\Pdown.
+The havy leptons, muon (\Pmuon) and tau (\Ptau), decay in a similar manner to
+the stable electron. 
 
-The electron, muon and tau each carry unit negative charge. 
-
-Each charged lepton has a neutral partner called the neutrino. 
-
-% Quarks charged
-\subsection{Interactions}
+Due to the instability of the heavier generations of fermions, they can only be
+found in  cosmic rays, or produced in high energy physics experiments.
 
 \section{Theoretical Background}
 
-\subsection{Gauge Invariance}
-
 \subsection{QED}
+This section will introduce quantum electrodynamics and the ideas that drive the
+theoretical background to the Standard Model.
 
-\subsection{QCD}
+\subsubsection{Symmetry and Groups}
+All intereaction are dictated by sysmetry principles. Noether's theorem states
+that for every symmetry of nature, there is a corresponding quantity that is
+conserved and conversely each conservation law is the result of some underlying
+symmetry.
+
+For example, the laws of physics are symmetrical with respect to translations in
+time ad space, and this leads directly to conservation of energy and momentum
+respectivly. Other symmetries and conservation laws are summarised in
+\TableRef{}\todo{add a table of conoservation laws.}
+
+Symmetry operations, such as rotations, can be described by mathematical groups.
+The most common groups to physics are unitary groups, $U(n)$, which are the
+collection of all the $n\times n$ unitary ($U^{-1} = \~{U}^{*}$) matrices, and
+the special unitary groups, $SU(2)$, which have the additional requirement that
+the matrices have a determinant of 1.
+
+In QED an electron can be described as a complex field and the lagrangian is
+given by
+
+
+\begin{equation}
+\mathcal{L} = i \bar{psi} \gamma_{\mu} \delta^{\mu} \psi - m \bar{\psi}\psi
+\end{equation}
+
+the lagrangian is invariant under a `global' phase transformation
+
+\begin{equation}
+\psi(x) \to e^{i\alpha} \psi(x)
+\label{eq:global}
+\end{equation}
+
+where \alpha is a global arbitary parameter. The lagrangian is said to exhibit
+global gauge invariance. The family of transfomations, $R =
+e^{i \alpha}$, where \alpha is real and continuous, forms the unitary
+abelian \footnote{Abelian refers to the property that all the elements in a
+group commute, $R(\alpha)R(\beta)=R(\beta)R(\alpha)$.}
+group $U(1)$. 
+\todo{this is all horrible}
+
+More generally, the \EquationRef{eq:global} can be rewritten as 
+\begin{equation}
+\psi(x) \to e^{i\alpha(x)} \psi(x)
+\label{eq:local}
+\end{equation}
+
+where \alpha is now a function of the space time coordinate $x$. This is known
+as a local phase transformation. Unfortunalty under this transformation the
+lagrangian is no longer invariant. This can be overcome by defining the
+covariant derivative as 
+\begin{equation}
+D_{\mu} \equiv \delta_{\mu} - i e A_{\mu}
+\end{equation}
+where an aditional vector field A_{\mu} has been added, that transforms as 
+\begin{equation}
+A_{\mu} \to A_{\mu} + \frac{1}{e} \delta_{\mu} \alpha
+\end{equation}
+And the new lagrangian becomes
+\begin{equation}
+\mathcal{L} = 
+\bar{\psi}(i\gamma^{\mu}\delta_{\mu} - m)\psi + 
+e \bar{psi} \gamma^{\mu} A_{\mu} \psi - 
+\frac{1}{4} F_{\mu\nu} F^{\mu\nu}
+\end{equation}
+
+It is seen that the additional vector field, A_{\mu}, couples with the dirac
+particle, and can be identified as the physical photon field. The additional
+term, $\frac{1}{4} F_{\mu\nu} F^{\mu\nu}$, is the kinetic
+
+
+\todo{Copy this up from notes}
 
 \subsection{Electroweak Unification}
+\todo{Write this, state rather than derive it}
 
 \subsection{Higgs Mechanism}
+\todo{Write this, state rather than derive it}
+
+\subsection{QCD}
+\todo{Copy this up from notes, but simplify it}
+
 
 
