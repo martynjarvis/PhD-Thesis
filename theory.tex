@@ -20,10 +20,7 @@ Within the Standard Model matter is described as being constructed from a small
 number of spin$=\nicefrac{1}{2}$ particles called fermions that interact with
 the electromagnetic, weak and strong forces. The fermions are divided in to two
 families called, leptons and quarks, according to their experimentally measured
-properties such as their charge. Each fermion varies in mass from the light
-neutrinos (\todo{neutrino mass here}) to the heavy top quark (\todo{top mass
-here}).
-
+properties such as their charge. 
 Each family of fermions can be further subdivided in to three generations that
 increase progressively increase in mass. The fermions of the Standard Model and
 some of their properties are summarised in \TableRef{tab:particles}.
@@ -45,8 +42,8 @@ some of their properties are summarised in \TableRef{tab:particles}.
 \end{table}\todo{add particle masses?}
 
 Each lepton generation contains a charged lepton and a corresponding light
-neutral particle called a neutrino. All leptons interact via the weak force
-where as only the charge lepton interacts with the electromagnetic force.  The
+neutral particle called a neutrino. All leptons interact via the weak force,
+whereas only the charge lepton interacts with the electromagnetic force.  The
 first generation of leptons is the most familiar containing the electron and the
 electron neutrino.
 
@@ -72,6 +69,7 @@ found in  cosmic rays, or produced in high energy physics experiments.
 An important property of a fermion is the ``handedness'' or chirality. A left
 handed particle has its spin aligned in the opposite direction to its direction
 of motion and a right handed particle is one where the are both aligned
+\todo[inline]{diagram of this}
 
 In the standard model, the strong, weak and electromagnetic interactions are
 described as the exchange of integer spin intermediate particles called bosons.
@@ -83,20 +81,20 @@ particles.
 
 \todo[inline]{more?}
 
-
 \section{Theoretical Background}
 This section will introduce some of the ideas that drive the
 theoretical background to the Standard Model.
 The first section will give a brief overview on symmetries in physics and how
-they can dictate particle interactions. In \SectionRef{}, quantum
+they can dictate particle interactions. In \SectionRef{sec:QED}, quantum
 electrodynamics is introduced along with the idea of local gauge invariance.
-\SectionRef{} details the weak interaction and the unification of the weak 
-and the electromagnetic forces. \SectionRef{} describes the Higgs mechanism
+\SectionRef{sec:EWK} details the weak interaction and the unification of the weak 
+and the electromagnetic forces. \SectionRef{sec:higgs} describes the Higgs mechanism
 which introduces the masses of the gauge bosons and fermions via spontaneous
-symmetry breaking. The final section summarises quantum chromodynamics that
-describes the strong force.
+symmetry breaking. The \SectionRef{sec:QCD} summarises the quantum
+chromodynamics theory that describes the strong force.
 
 \subsection{Symmetry and Groups}
+\label{sec:symmetry}
 Noether's theorem states that for every symmetry of nature, there is
 a corresponding quantity that is conserved and conversely each conservation law
 is the result of some underlying symmetry.
@@ -130,6 +128,7 @@ the special unitary groups, $SU(n)$, which have the additional requirement that
 the matrices have a determinant of 1.
 
 \subsection{Quantum Electrodynamics}
+\label{sec:QED}
 In quantum electrodynamics, QED, an electron can be described as a complex
 field, $\psi$. The Lagrangian is given by
 \begin{equation}
@@ -179,6 +178,7 @@ similar to the mass term in the original Lagrangian, breaks
 the gauge invariance.
 
 \subsection{Weak interaction and Electroweak Unification}
+\label{sec:EWK}
 
 The weak force can be examined in a similar way to QED, but with the non-Abelian
 $SU(2)$ symmetry group. The weak force distinguished between the chirality, or
@@ -202,7 +202,7 @@ Q = I^{3} + \frac{1}{2}Y.
 
 The electromagnetic and weak coupling constants are not independent, the means that it is
 possible to have a unified description of both the electromagnetic and weak
-forces. This is known as Electroweak Unification.
+forces. This is known as electroweak (EWK) unification.
 
 The electromagnetic and weak force can be described with a single group,
 \begin{equation}
@@ -309,9 +309,11 @@ B_{\mu\nu} &=
 The last term of $\mathbf{W}_{\mu\nu}$ is required to keep the Lagrangian invariant
 under the non-Abelian gauge transformation of the $SU(2)$ group. The term
 introduces cubic and quadratic terms in to the Lagrangian that describe the 3 and 4
-vertex interactions of the gauge boson.\todo{diagram of these vertexes?}
+vertex interactions of the gauge boson.
+\todo{diagram of these vertexes?}
 
 \subsection{Higgs Mechanism}
+\label{sec:higgs}
 The Lagrangian, as it has been written so far, does not include terms for the
 mass of any of the particles. 
 Adding in mass terms by hand will break the
@@ -405,9 +407,10 @@ where $G_{f}$ is the coupling to the Higgs field known as the Yukawa coupling
 which is proportional to the mass of the fermion. 
 \todo{summarise the main points of this section}
 
-\subsection{QCD}
+\subsection{Quantum Chromodynamics}
+\label{sec:QCD}
 The final piece of the puzzle is the strong interaction, described by quantum
-chromodynamics. 
+chromodynamics, QCD. 
 Quantum chromodynamics follows from similar reasoning to the QED case, but with
 the Abelian $U(1)$ symmetry group replaced with the non-Abelian $SU(3)$ symmetry
 group of transformations on the quark colour fields.
@@ -422,7 +425,8 @@ introducing the covariant derivative,
 D_{\mu} \equiv \partial_{\mu} + i g T_{a} G_{\mu}^{a},
 \end{equation}
 where eight gauge fields have been introduced, instead of the single field in
-QED.  \todo{what is T} The gauge fields transform as,
+QED. \todo{what is T} 
+The gauge fields transform as,
 \begin{equation}
  G_{\mu}^{a} \to G_{\mu}^{a} 
 -\frac{1}{g}\partial_{\mu}\alpha_{a}]
