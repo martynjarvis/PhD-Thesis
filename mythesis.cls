@@ -6,12 +6,11 @@
 \def\fileversion{1.4.3}
 \def\filedate{2010/05/27}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{mythesis}[\filedate\space my thesis class loosely based on hepthesis by Andy Buckley (v\fileversion)]
+\ProvidesClass{mythesis}[\filedate\space my thesis class no longer based on hepthesis]
 
 %% ========================================================================
 %% Option parsing
 %% ========================================================================
-
 
 %% ========================================================================
 %% Base class and packages
@@ -25,6 +24,7 @@
 \RequirePackage{verbatim}
 \RequirePackage{nicefrac}
 \RequirePackage{fancyhdr}
+\RequirePackage{multirow}
 
 %% Nice tables (optional) from hepthesis
 \RequirePackage{booktabs}
@@ -63,8 +63,8 @@
 %\setlength{\marginparpush}{0pt}
 
 % for the front matter pages
-\newlength{\@frontmattertopskip}
-\setlength{\@frontmattertopskip}{55pt}  % Add a little extra space at top of front matter pages
+%\newlength{\@frontmattertopskip}
+%\setlength{\@frontmattertopskip}{55pt}  % Add a little extra space at top of front matter pages
 
 %% ========================================================================
 %% Headers and footers
