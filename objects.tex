@@ -12,11 +12,37 @@ detector.}
 \end{figure}
 
 \section{Electrons}
-
+\todo[inline]{Why are electrons important phsyics objects}
 \todo[inline]{Describe path that electrons make through the detector.}
 
+\subsection{Triggering}
+
 \subsection{Reconstruction}
-The electron reconstruction proceeds by matching a track found in the CMS
+
+\subsubsection{Electron Clustering}
+As an elctron traveses the tracker region of the detector it will radiate
+bremsstrahlung photons. Instead of a single deposit of energy in the ECAL, the
+energy is spread in the azimuthal angle, $\phi$.
+\FigureRef{reco:brem} shows the fraction of energy radiated by bremsstrahlung for
+electrons of energy $10$, $30$ and \unit{$50$}{\GeV}.
+
+\begin{figure}[htb]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \missingfigure{Fraction of energy radiated by bremsstrahlung from Electron
+reconstruction in CMS}
+  \caption{Fraction of electron energy, $E^{e}$, radiated away as bremsstrahlung
+photons, $\Sum E_{brem}^{\gamma}$ for electrons of energy $10$, $30$ and
+\unit{$50$}{\GeV}. From \cite{}.}
+  \label{reco:brem}
+\end{figure}
+
+
+
+
+\subsubsection{Electron Track Reconstruction}
+\todo[inline]{Rewrite this section}
+The electron track reconstruction proceeds by matching a track found in the CMS
 tracker to an energy cluster in the ECAL.
 Due to Bremsstrahlung radiation, electron tracks may suffer from sudden changes
 in the radius of curvature. 
