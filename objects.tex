@@ -18,11 +18,14 @@ detector.}
 \subsection{Triggering}
 
 \subsection{Reconstruction}
+Electrons are reconstructed in CMS using information from the pixel detector,
+silicon strip tracker and the ECAL.
 
 \subsubsection{Electron Clustering}
-As an elctron traveses the tracker region of the detector it will radiate
-bremsstrahlung photons. Instead of a single deposit of energy in the ECAL, the
-energy is spread in the azimuthal angle, $\phi$.
+As electrons traverse the CMS tracker, the strong magnetic field causes the path
+of the electrons to be curved in the azimuthal, $\phi$, direction. The electrons
+radiate bremsstrahlung photons, so that when the electron energy reaches the
+ECAL it is spread over a narrow strip in the phi direction.
 \FigureRef{reco:brem} shows the fraction of energy radiated by bremsstrahlung for
 electrons of energy $10$, $30$ and \unit{$50$}{\GeV}.
 
@@ -32,39 +35,55 @@ electrons of energy $10$, $30$ and \unit{$50$}{\GeV}.
   \missingfigure{Fraction of energy radiated by bremsstrahlung from Electron
 reconstruction in CMS}
   \caption{Fraction of electron energy, $E^{e}$, radiated away as bremsstrahlung
-photons, $\Sum E_{brem}^{\gamma}$ for electrons of energy $10$, $30$ and
-\unit{$50$}{\GeV}. From \cite{}.}
+photons, $\Sum E_{brem}^{\gamma}$ for electrons of energy }%$10$, $30$ and \unit{$50$}{\GeV}. From \cite{}.}
   \label{reco:brem}
 \end{figure}
 
+To measure the electron energy, including the bremsstrahlung photons, the
+seperated deposits of energy need to be collected, using super-clustering
+algorithms. 
 
+In the barrel a ``hybrid'' algorithm is used. The hybrid algorithm proceeds by
+identifying several hot crystals, with energies above a certain threshold, that
+will act as seeds. The algorithm then forms $1\times3$ or $1\times5$ crystal
+``dominos'', centered on the seed crystal, depending on the energy within the
+domino. The dominos are then collected together in the $\phi$ direction, up to
+an extension of \unit{0.3}{\rad}, to form clusters of clusters. This is
+demonstrated in \FigureRef{fig:hybrid}.
 
+\begin{figure}[htb]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \missingfigure{hybrid clustering algorithm}
+  \caption{Demonstration of the clustering of dominos in the hybrid algorithm.}
+  \label{reco:hybrid}
+\end{figure}
+
+A ``multi5x5'' algorithm is used in the ECAL endcaps. Energy is collected in
+$5\times5$ matrices, which are then collected together if their position lies on
+a narrow $\phi$ road to form superclusters.
+
+\subsubsection{Electron Seeding}
+The superclusters are then used to select seeds for the track reconstruction.
+Starting with a supercluster that passes a \pt and a hadronic veto, the
+trajectory of the electron is propogated back through the magnetic field and
+matched to the trajectory seeds, pairs or triplets of hits in the inner tracker.
+If the trajectory seeds fall within a window of the supercluster path under
+either charge hypothesis, they are selected and used to seed the track
+reconstruction.
+The ECAL driven seeding is comlemented by a tracker driven seeding algorithm.
+This starts with high purity tracks and extrapolating them outwards to the ECAL.
+This is effective for lower \pt electrons.
+
+Seeds from both of the algorithms are collected and merged in to a single
+collection, which is then used to seed the electron track reconstruction.
 
 \subsubsection{Electron Track Reconstruction}
 \todo[inline]{Rewrite this section}
-The electron track reconstruction proceeds by matching a track found in the CMS
-tracker to an energy cluster in the ECAL.
-Due to Bremsstrahlung radiation, electron tracks may suffer from sudden changes
-in the radius of curvature. 
-Therefore, electron track reconstructions uses a Gaussian-Sum Filter (GSF) fit
-to allow for energy losses. 
-The first step in the GSF electron reconstruction is to construct
-superclusters.
-A seed cluster is formed from the closest ECAL cluster to the extrapolated GSF
-track. 
-Potential Bremsstrahlung photons are identified by creating a straight line in
-the ECAL from where the track enters the ECAL and the tangent to the initial
-direction of the track. 
-Any unlinked ECAL clusters that can be linked to this line are then identified
-as Bremsstrahlung photons and their energy is added to the total ECAL
-supercluster energy.\cite{eleReco}
+The track reconstruction is based on a combinatorial Kalman filter,\todo{find a
+citation for this} with the electron energy losses described using Bethe Heitler
+modelling.
 
-From the supercluster, seeds in the pixel detector are found where two hits in
-the detector are compatible with a given beam spot. The seed is then used to
-build a trajectory by extrapolating the seed to the next layers and looking for
-compatible hits using a Bethe Heitler modelling of the electron losses and a
-GSF in the forward fit. This is repeated for each new layer until the last
-layer or until no hits can be found in two consecutive layers.\cite{eleReco}
 
 \subsection{Electron Identification}
 \todo[inline]{Describe eectron id variables}
