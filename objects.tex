@@ -4,11 +4,9 @@
 
 \begin{figure}[htb]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{Add standard plot of different particles traversing the
-detector.}
+  \includegraphics[width=0.5\textwidth]{slice}
   \caption{The path of different particles through a cross section of the CMS detector.}
-  \label{phob:crosssec}
+  \label{reco:crosssec}
 \end{figure}
 
 \section{Electrons}
@@ -35,7 +33,7 @@ electrons of energy $10$, $30$ and \unit{$50$}{\GeV}.
   \missingfigure{Fraction of energy radiated by bremsstrahlung from Electron
 reconstruction in CMS}
   \caption{Fraction of electron energy, $E^{e}$, radiated away as bremsstrahlung
-photons, $\Sum E_{brem}^{\gamma}$ for electrons of energy }%$10$, $30$ and \unit{$50$}{\GeV}. From \cite{}.}
+photons, $\sum E_{brem}^{\gamma}$ for electrons of energy }%$10$, $30$ and \unit{$50$}{\GeV}. From \cite{}.}
   \label{reco:brem}
 \end{figure}
 
@@ -84,12 +82,108 @@ The track reconstruction is based on a combinatorial Kalman filter,\todo{find a
 citation for this} with the electron energy losses described using Bethe Heitler
 modelling.
 
+The track reconstruction starts with a seed, from which a tree of possible track
+candidates is built from. 
+
+%track reconstruction paper
+Throughout the track reconstruction, tracks candidates are described by a state
+vector containing information on the momentum, direction and position of the
+track.
+
+The Kalman filter is a
+two step process. In the propogation step, track states are extrapolated to
+the next layer of the detector, while taking in to account for energy losses due
+to bremsstrahlung and coulomb scattering. 
+In the update step, the extrapolated track state is 
+combined with what is observed in that layer and the track is updated. 
+
+The collected hits are passed to the GSF for a final fitting and estimation of
+the track parameters. The GSF algorithm is similar to the Kalman filter but
+energy losses are now described by a weighted sum of Gaussian distributions.
+% corrections
 
 \subsection{Electron Identification}
-\todo[inline]{Describe eectron id variables}
+Electron identifiaction is based on a limited number of variables.
+\todo{backgrounds to prompt electrons}
 
-\subsection{Electron Charge Measurement}
-\todo[inline]{Describe electron charge assigning methods}
+\subsubsection{Shape variable }
+
+$\sigma_{\eta\eta}$ is the width of the electron shower in the $\eta direction$,
+\begin{equation}
+\sigma_{\eta\eta} = 
+\sum_{\text{crystals}} \left(\eta_{i} - \eta{s}\right)^{2}
+\frac{E_{i}}{E_{\text{seed cluster}}}.
+\end{equation}
+
+\subsubsection{Hadronic Energy}
+Ratio of the energy deposited in the HCAL tower behind the electromagnetic seed
+cluster to the energy of that seed cluster.
+
+\subsubsection{Angular Separation of Track and Super Cluster}
+$\Delta\phi$ and $\Delta\eta$ represent the angular separation between the
+trajectory of the reconstucted GSF track, extrapolated to the ECAL, and the ECAL supercluster in the $\phi$
+and $\eta$ direction respectivly.
+\begin{align}
+|\Delta\eta| &\equiv |\eta_{\text{SC}} - \eta_{track}|\\
+|\Delta\phi| &\equiv |\phi_{\text{SC}} - \phi_{track}|
+\end{align}
+
+\subsubsection{Isolation}
+For the calorimeter quantities
+
+\subsubsection{Conversion Rejection}
+Three further variables are included to reject electrons that are produced from
+photon conversions. The missing hits is simply the number of layers in the inner
+tracker where an expected hit from the track reconstruction is not detected by
+the detector.
+\todo{coversion partner tracks and dist and cot}
+Coversion partner tracks are track candidates that are with in a cone of $\Delta
+R < 0.3$ around the electron candidate track, and have an opposite charge. The
+following two variables are used to detect \todo{what?} conversions.
+
+\begin{equation}
+\Delta \cot \theta \equiv \cot(\theta_{\text{KF}}) - \cot(\theta_{\text{GSF}})
+\end{equation}
+where $\theta_{KF}$ and $\theta_{GSF}$ are the polar angle of the conversion
+partner track and the GSF track of the electron respectivly.
+
+The variable, dist, is the distance between the two tracks where they are
+parralel. \FigureRef{fig:dist} describes dist.
+
+\begin{figure}[htb]
+  \centering
+  \missingfigure{Explanation of dist}
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \caption{Dist is the distance between}
+  \label{fig:dist}
+\end{figure}
+
+\subsubsection{Electron Identification Working Points}
+
+Several sets of cuts have been produced for CMS analyses with different
+efficiencies in mind. The cut values are sumarised in \TableRef{tab:electronwp}.
+\todo{table of electron working points}
+
+\subsection{Charge Identification}
+The charge of an electron can be identified by studying how the electron trajectory
+is bent in the magnetic field as the electron passes through the tracker. This
+can be made difficult by conversion of bremsstrahlung photons when they are
+radiated early. 
+
+Within CMS, three methods of charge identifaction have been developed based on
+the GSF track charge, the general track charge and the supercluster charge. The
+GSF track charge is simply the sign of the curvature of the GSF fit of the
+electron track. The general track charge is found by matching the GSF track with
+general Kalman filter track by asking for shared hits in the pixel tracker. 
+The super cluster charge is obtained by finding the sign of the phi difference
+between the supercluster position and the first hit of the electron track.
+
+At the \PZ peak, a charge mis-identification rate of \unit{3}{\%} is expected,
+when using the electron trajectory from the GSF fit.  A sample with improved
+charge identifaction can be obtained by using a majority method, that combines
+the three measurements and assigns the sign from the 2 estimates out of three
+that are in agreemenet, or by requiring that all three methods for assigning
+charge are in agreement and discarding the event otherwise.
 
 \section{Missing Energy}
 \todo[inline]{Describe how MET is measured in CMS} 
