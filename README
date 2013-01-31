@@ -3,7 +3,7 @@ Thesis environment.
 Overview:
 ./
  |- thesis.tex                           <- * main LaTeX document
- |- mythesis.cls                         <- * custom thesis class (based on book)
+ |- mythesis.cls                         <- * custom thesis class (based on report class)
  |- mythesis.sty                         <- * custom commands and macros
  |- makefile                             <-   
  |- README                               <- 
