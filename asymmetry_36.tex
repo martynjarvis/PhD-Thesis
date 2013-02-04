@@ -1,48 +1,56 @@
-\chapter[Electron Charge Asymmetry]{ 
-Measurement of the electron charge asymmetry with \unit{36}{\invpb} }
+\chapter[Electron Charge Asymmetry]{ Measurement of the electron charge asymmetry with \unit{36}{\invpb} }
 
 In this chapter the first measurement of the electron charge asymmetry in
 inclusive \inclusiveWe production with the \ac{CMS} detector is described.
-
 The analysis is performed on the full 2010 dataset, which corresponds to a
 luminosity of \unit{36.1}{\invpb}.
 
 \section{Event Selection}
 
-The event selection used in this analysis is based on a limited number of cuts.
-This is due to the limited statistics available in early data taking.
+The event selection is performed on a single electron dataset. This dataset is
+formed of events that are selected using various single photon and single
+electron triggers. From this dataset, electrons are selected that pass a limited
+number of cuts. Events that contain only a single electron are then selected for
+the analysis.
 
 \subsection{Trigger}
 
 \label{asym36:triggerdef}
 Several triggers were used to select the events, due to the increasing
 luminosity in the \ac{LHC} 2010 run.
-
 In the initial runs, events were selected using only a single photon trigger. 
 As the luminosity increased these triggers became prescaled it was
 necessary to use electron triggers to select events. 
 As the luminosity increased even further, it was necesary to use electron
-triggers that included cuts on electron ID variables.
+triggers that included cuts on certain electron ID variables.
 
 The triggers used to select the events are sumarised in \TableRef{asym36:triggers}
-where HLT\_Ele$X$ indicates a selection requiring a $\Pt > \unit{X}{\GeV}$. 
+where ``HLT\_Ele$X$'' indicates a selection requiring a $\Pt > \unit{X}{\GeV}$. 
 ``Photon'' in the name indicates that the selection was applied to ECAL
 superclusters rather than an electron. 
 ``SW'' stands for small window, where window refers to the electron
 pixel-matching window. 
- ``Cleaned'' indicates that spikes in the \ac{ECAL} have been removed. 
+ ``Cleaned'' indicates that spikes in the \ac{ECAL} have been removed.  \todo{define spikes?}
+
+In the analysis, a control region is obtained by inverting the $\Delta\phi$ and
+$\Delta\eta$ variables. To ensure that this inverted selection will select
+events, it is necesary to avoid using triggers that apply a selection on these
+variables whenever possible.
 ``CaloEleId'' and ``TightCaloIdIso'' represent increasingly tighter selection
-based on ID variables from only the \ac{ECAL}.  This is done to allow us to
-obtain a control sample by inverting other ID variables.
+based on the shower shape ID and isolation variables from only the \ac{ECAL},
+and not the $\Delta\phi$ or $\Delta\eta$ variables.
+
 ``TightCaloIdIso'' indicates a tight selection based on all ID variables. 
-This was the only trigger available for these runs, a looser prescaled
-selection has also been applied in these runs for the control sample.
+This nullifies the inverted cuts used for the control region but
+it was the only trigger available for these runs without a prescale applied.
+To compensate for the missing events in the control region, a looser prescaled
+trigger was also applied in these runs.
 
 \begin{table}[htbp]
   \centering
   \begin{tabular}{ l l }
     \toprule
-    Run Ranges & Trigger \\
+    Run Ranges & Trigger String\\
     \midrule
     132440-137028 & \verb=HLT_Photon10_L1R= \\
     138564-140401 & \verb=HLT_Photon15_Cleaned_L1R= \\
@@ -61,41 +69,32 @@ selection has also been applied in these runs for the control sample.
 \subsection{Electron Selection}
 
 The available unprescaled triggers constrain the electron momentum to be above
-\unit{25}{\GeV}.
+\unit{25}{\GeV}. The analysis shown presents the results with \pT cuts of 25, 30
+and \unit{35}{\GeV}.
 
 Electrons candidates are identified using a cut based approach on an limited
-number of variables.
+number of variables. The cut values used correspond to the \unit{80}{\%}
+working point from \TableRef{tab:electronwp}, and are summarised again in
+\TableRef{tab:elecuts}.
 
-The cuts can be split in to three categories, ID Cuts, isolation cuts and
-conversion rejection cuts. Different sets of cut values are used for electrons in the
-ECAL barrel and endcap. The cut values are obtained by simultaneous optimisation
-for electron \unit{\ET=25}{\GeV}. Although the efficiency and and the background
-rejection of the cuts is dependent on the \ET of the electron, the cut values
-obtained are found to be effective in the range \unit{15-100}{\GeV}.\cite{}
-
-\TableRef{tab:elecuts} sumarises the electron selection variables used and the
-corresponding cut values for the barrel and endcap.
-
-\todo{tie this in with physics objects chapter}
-
-%% TODO finish ZZZzzzzz,,,,
 \begin{table}[htbp]
   \begin{center}
     \leavevmode
-    \begin{tabular}{lcc} 
+    \begin{tabular}{lll} 
     \toprule
-      \multicolumn{1}{c}{Variable} & \multicolumn{1}{c}{cut value (barrel)}& \multicolumn{1}{c}{cut value (endcap)}\\
+      Selection Variable & \multicolumn{2}{c}{Cut Value}\\
+                         & Barrel & Endcap\\
       \midrule
-      \multicolumn{3}{l}{ID Cuts}\\ 
+      \multicolumn{3}{l}{\emph{ID Cuts}}\\ 
         H/E & 0.04 & 0.025 \\
         $\Delta\phi$ & 0.06 & 0.03 \\
         $\Delta\eta$ & 0.004 & 0.007  \\
         $\sigma_{\eta\eta}$ & 0.01 & 0.03 \\ \midrule
-      \multicolumn{3}{l}{Isolation Cuts}\\
+      \multicolumn{3}{l}{\emph{Isolation Cuts}}\\
         $ISO_{trk} / E_T $  & 0.09 & 0.04 \\
         $ISO_{ecal}/ E_T$  & 0.07 & 0.05 \\
         $ISO_{hcal}/ E_T$  & 0.10 & 0.025 \\ \midrule
-       \multicolumn{3}{l}{Conversion Rejection Cuts}\\ 
+      \multicolumn{3}{l}{\emph{Conversion Rejection Cuts}}\\ 
         Missing Hits  & \multicolumn{2}{c}{$\leq 0$}\\
         Dist $||$ Dcot   & \multicolumn{2}{c}{$>0.02$}\\
     \bottomrule
@@ -104,24 +103,23 @@ corresponding cut values for the barrel and endcap.
   \end{center}
 \end{table}
 
+Incorrectly assigning the charge of an electron will lead to a diltuion of the
+measured charge asymmetry, to overcome this an additional requirement is applied
+to the charge of the reconstructed electron. The methods for assigning a charge
+to an electron are described in \SectionRef{sec:charge}. The methods are based
+on the GSF electron charge, the general track charge and the supercluster
+charge.
 
-Mismeasuring the charge can lead to a diltuion of the measured charge asymmetry,
-to overcome this an additional requirement is applied to the charge of the
-reconstructed electron. 
-The electron charge is determined using three different methods based on the GSF
-electron charge, the general track charge and the supercluster charge.
-
-The charge mismeasurment can be measured at the Z peak by comparing the same
+The incorrect charge assignment rate can be measured at the Z peak by comparing the same
 sign \HepProcess{\PZ\to\Pepm\Pepm} yield to the oposite sign
 \HepProcess{\PZ\to\Pepm\Pemp} yield. \FigureRef{fig:charge} show these Z yields
 using only the \ac{GSF} track charge (black) and also requiring a unaminous
 asignment of charge from all three methods (red). 
 
-
-The charge mismeasurement rate from the GSF track charge is about \unit{3}{\%}.
-By requiring that all three methods for assigning the charge agree, and vetoing
-events otherwise, the mismeasurement can be reduced by a factor of 8 with only a
-\unit{5}{\%} loss in efficiency.
+The incorrect charge assignment rate from the GSF track charge alone is about
+\unit{3}{\%}.  By requiring that all three methods for assigning the charge
+agree, and vetoing events otherwise, the incorrect assignment rate can be
+reduced by a factor of 8 with only a \unit{5}{\%} loss in efficiency.
 
 \begin{figure}[htbp]
   \begin{center}
@@ -132,23 +130,18 @@ events otherwise, the mismeasurement can be reduced by a factor of 8 with only a
   \end{center}
 \end{figure}
 
-                     
-
 \subsection{Event Selection}
 
-An Event is selected if if contains a single electron that passes all electron
-selection.
-To removed Drell-Yan events an event is vetoed if it contains a second lepton
+An Event is selected if it contains a single electron that passes all the electron
+selection requirements.
+To remove Drell-Yan events, an event is vetoed if it contains a second lepton
 (an electron passing a loose selecton, or an isolated muon) with $\PT > 
-\unit{15}{\GeV}$
+\unit{15}{\GeV}$.
 
 The Particle Flow \ETm distribution for the events that pass the event
-selection, with $\PT > \unit{25}{\GeV}$ and $|\eta| < 2.4$ is shown in
-\FigureRef{asym36:pfmet}.
-The number of selected events that pass the event selection are shown in
-\TableRef{asym36:selectedevents}.
-
-
+selection, with an electron cut of $\PT > \unit{25}{\GeV}$ and $|\eta| < 2.4$ is
+shown in \FigureRef{asym36:pfmet}.  The number of selected events that pass the
+event selection are shown in \TableRef{asym36:selectedevents}.
 
 \begin{figure}[htbp]
   \begin{center}
