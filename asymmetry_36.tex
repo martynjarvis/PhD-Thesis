@@ -7,63 +7,7 @@ luminosity of \unit{36.1}{\invpb}.
 
 \section{Event Selection}
 
-The event selection is performed on a single electron dataset. This dataset is
-formed of events that are selected using various single photon and single
-electron triggers. From this dataset, electrons are selected that pass a limited
-number of cuts. Events that contain only a single electron are then selected for
-the analysis.
-
-\subsection{Trigger}
-
-\label{asym36:triggerdef}
-Several triggers were used to select the events, due to the increasing
-luminosity in the \ac{LHC} 2010 run.
-In the initial runs, events were selected using only a single photon trigger. 
-As the luminosity increased these triggers became prescaled, it was
-necessary to use electron triggers to select events. 
-As the luminosity increased even further, it was necesary to use electron
-triggers that included cuts on certain electron ID variables.
-
-The triggers used to select the events are sumarised in \TableRef{asym36:triggers}
-where ``HLT\_Ele$X$'' indicates a selection requiring an electron with  $\Pt > \unit{X}{\GeV}$. 
-``Photon'' in the name indicates that the selection was applied to ECAL
-superclusters rather than a reconstructed electron. 
-``SW'' stands for small window, where window refers to the electron
-pixel-matching window. 
- ``Cleaned'' indicates that spikes in the \ac{ECAL} have been removed.  \todo{define spikes?}
-
-``CaloEleId'' and ``TightCaloIdIso'' represent increasingly tighter selection
-based on the shower shape ID and isolation variables from only the \ac{ECAL},
-and not the $\Delta\phi$ or $\Delta\eta$ variables.  
-
-``TightCaloIdIso'' indicates a tight selection based on all ID variables. 
-This nullifies the inverted cuts used for the control region but
-it was the only trigger available for these runs without a prescale applied.
-To compensate for the missing events in the control region, a looser prescaled
-trigger was also applied in these runs.
-
-\begin{table}[htbp]
-  \centering
-  \begin{tabular}{ l l }
-    \toprule
-    Run Ranges & Trigger String\\
-    \midrule
-    132440-137028 & \verb=HLT_Photon10_L1R= \\
-    138564-140401 & \verb=HLT_Photon15_Cleaned_L1R= \\
-    141956-144114 & \verb=HLT_Ele15_SW_CaloEleId_L1R= \\
-    146428-147116 & \verb=HLT_Ele17_SW_CaloEleId_L1R= \\
-    147196-148102 & \verb=HLT_Ele17_SW_TightEleId_L1R= \\
-                  & \verb=HLT_Ele17_SW_L1R (prescaled)= \\ 
-    148822-149063 & \verb=HLT_Ele22_SW_TighterCaloIdIso1_L1R_v1= \\
-    149181-149442 & \verb=HLT_Ele22_SW_TighterCaloIdIso1_L1R_v2= \\
-    \bottomrule
-  \end{tabular}
-  \caption{Triggers used to select the data used in this analysis.}
-  \label{asym36:triggers}
-\end{table}
-
-\subsection{Event Selection}
-An Event is selected if it contains a single electron that passes all the electron
+Events are selected if they contain a single electron that passes all the electron
 selection requirements.
 To remove Drell-Yan events, an event is vetoed if it contains a second lepton
 (an electron passing a loose selecton, or an isolated muon) with $\PT > 

@@ -14,12 +14,75 @@ the analysis.
 
 \subsection{Trigger}
 
-\todo{I don't like this}
+Several triggers were used to select the events, due to the increasing
+luminosity in the \ac{LHC} 2010 run.
+In the initial runs, events were selected using only a single photon trigger. 
+As the luminosity increased these triggers became prescaled, it was
+necessary to use electron triggers to select events. 
+As the luminosity increased even further, it was necesary to use electron
+triggers that included cuts on certain electron ID variables.
 
-In the following analysis, a control region is obtained by inverting the $\Delta\phi$ and
-$\Delta\eta$ variables. To ensure that this inverted selection will select
-events, it is necesary to avoid using triggers that apply a selection on these
-variables whenever possible.
+The triggers used to select the events are sumarised in \TableRef{asym36:triggers}
+where ``HLT\_Ele$X$'' indicates a selection requiring an electron with  $\Pt > \unit{X}{\GeV}$. 
+``Photon'' in the name indicates that the selection was applied to ECAL
+superclusters rather than a reconstructed electron. 
+``SW'' stands for small window, where window refers to the electron
+pixel-matching window. 
+ ``Cleaned'' indicates that spikes in the \ac{ECAL} have been removed.  \todo{define spikes?}
+
+``CaloEleId'' and ``TightCaloIdIso'' represent increasingly tighter selection
+based on the shower shape ID and isolation variables from only the \ac{ECAL},
+and not the $\Delta\phi$ or $\Delta\eta$ variables.  
+
+``TightCaloIdIso'' indicates a tight selection based on all ID variables. 
+This nullifies the inverted cuts used for the control region but
+it was the only trigger available for these runs without a prescale applied.
+To compensate for the missing events in the control region, a looser prescaled
+trigger was also applied in these runs.
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{ l l }
+    \toprule
+    Run Ranges & Trigger String\\
+    \midrule
+    132440-137028 & \verb=HLT_Photon10_L1R= \\
+    138564-140401 & \verb=HLT_Photon15_Cleaned_L1R= \\
+    141956-144114 & \verb=HLT_Ele15_SW_CaloEleId_L1R= \\
+    146428-147116 & \verb=HLT_Ele17_SW_CaloEleId_L1R= \\
+    147196-148102 & \verb=HLT_Ele17_SW_TightEleId_L1R= \\
+                  & \verb=HLT_Ele17_SW_L1R (prescaled)= \\ 
+    148822-149063 & \verb=HLT_Ele22_SW_TighterCaloIdIso1_L1R_v1= \\
+    149181-149442 & \verb=HLT_Ele22_SW_TighterCaloIdIso1_L1R_v2= \\
+    \bottomrule
+  \end{tabular}
+  \caption{Triggers used to select the data used in this analysis.}
+  \label{asym36:triggers}
+\end{table}
+
+Due to the increased luminosity in the 2011 Run A, the identifaction and
+isolation cuts applied to the trigger have been tightened. The \PT cut applied
+to the electon have been increased, first to \unit{27}{\GeV} and then in later
+runs to \unit{32}{\GeV}.
+
+\begin{table}[htbp]
+  \begin{center}
+    \leavevmode
+     \begin{tabular}{ll} 
+      Run Ranges & Trigger  \\
+     \hline
+     160404-161176 & HLT\_Ele27\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v1  \\
+     161217-163261 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v1  \\
+     163270-163869 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v2  \\
+     165088-165633 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v3  \\
+     165970-166967 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v4  \\
+     \end{tabular}
+
+  \caption{Triggers used to select the data used in this measurement.}
+  \label{asym840:triggers}
+
+   \end{center}
+\end{table}
 
 \subsection{Electron Selection}
 
@@ -101,7 +164,7 @@ To remove Drell-Yan events, an event is vetoed if it contains a second lepton
 (an electron passing a loose selecton, or an isolated muon) with $\PT > 
 \unit{15}{\GeV}$.
 
-\section{Signal Yield Extraction}
+\section{Signal Yield Extraction Method}
 The number of signal and background events in each bin is extracted using a fit
 to the \ETm distribution using two templates.
 The first is the sum of the \Wenu signal and the \ac{EWK} background shapes,
@@ -249,7 +312,6 @@ integrated luminosity of \unit{36.1}{\invpb} are summarised in
   \end{center}
 \end{table}
 
-
 %For each of the pseudo-data experiments we calulated the pull on the asymmetry measurement.
 %The pull is defined as the diffence between the measured asymmetry for a pseudo-data experiment
 %and the MC true value divided by the statistical uncertainty, and represents the number of standard deviations away from the true value.
@@ -271,70 +333,32 @@ integrated luminosity of \unit{36.1}{\invpb} are summarised in
   \end{center}
 \end{figure}
 
-\section{Corrections}
+\section{Corrections to the Measured Asymmetry}
 
-The following section wil describe sources of bias in the measurement that need
-to be taken in to account and, if significant, corrected for.
-
-\subsection{Relative Efficiency}
+To compare with the theoretical value, the measured lepton asymmetry has to be
+corrected for experimental effects.
 
 If the reconstruction efficiency of electrons is different to that of positrons
-then the measured asymmetry wil be diluted and will need to be corrected for
-the relative efficiency.
-
+then a bias will be introduced in to the measured asymmetry.
+The relative detection efficiency is the ratio of electron efficiency to the
+positron efficiency,
 \begin{equation}
-A_{exp}(\eta) = \frac{
-                    \frac{dN}{d\eta}(e^+)-
-                    \frac{\epsilon^+}{\epsilon^-}\frac{dN}{d\eta}(e^-)
-                }
-                {
-                    \frac{dN}{d\eta}(e^+)+
-                    \frac{\epsilon^+}{\epsilon^-}\frac{dN}{d\eta}(e^-)
-                }
+ R = \epsilon^+/\epsilon^-
 \end{equation}
 
-The efficiency for electrons and positrons is measured using the tag and probe
-method \todo{reference the CMS tag and probe method paper/note}
-with a sample of \Zee events from the same datasets used in the analysis. 
-The \Zee events offer a high purity source of unbiased electrons with which to
-measure the efficiencies.
-
-From the sample of \Zee events a ``tag'' electron is selected with a strict
-selection criteria. 
-A ``probe'' electron is selected with the same electron selection decribed
-earlier.
-The invariant mass of the tag-probe pair is required to be
-$\unit{60}{\GeV} < M_ee < \unit{120}{\GeV}$ to ensure a high purity sample.
-
-Efficiencies can then be calculated by measuring the signal yield in events
-with one tag electron and one probe passing the selection (tag \& pass) and
-events where the probe electron fails the selection (tag \& fail).
-The signal yield is extracted using an simultaneous maximum likelihood fit to
-both the tag \& pass and the tag \& fail samples.
-
-For this analysis the efficiencies are measured in two parts:
-
-\begin{itemize}
-    \item GSF tracking efficiency
-    \item Identification efficiency, including conversion rejection, unaminous
-charge assignment and HLT request.
-\end{itemize}
-
-The main systematic errors on the efficiency measurements are the energy scale
-and the signal shape used to extract the signal yield. Fortunately, these
-errors will cancel in the calculation of the ratio $R_\epsilon$, the difference
-on  $R_\epsilon$ introduced by the energy scale and signal shape is negligable
-when compared to the statistical uncertainty of the measurement, so only the
-statistical uncertainty is propogated to the error in the ratio,
-$dR_\epsilon$.
+If the relative effiecency, $R$, is not compatible with 1 it is necesary to
+introduce a correction to the measured asymmetry.
 
 \begin{equation}
-  \label{eq:releff}
-  \sigma_{\mathcal{A}} =\mathcal{}(R_\epsilon=1) - \mathcal{A}(R_\epsilon=1\pm dR_\epsilon)  \simeq \frac{dR_\epsilon}{2}(1-\mathcal{A}^2)\simeq \frac{dR_\epsilon}{2}
+\mathcal{A}_{exp}(\eta) = \frac{
+                     \frac{dN}{d\eta}(e^+)- R\frac{dN}{d\eta}(e^-)
+                     }
+                     {
+                     \frac{dN}{d\eta}(e^+)+ R\frac{dN}{d\eta}(e^-)
+                     }
 \end{equation}
 
-\subsection{Charge Misassignment}
-
+The second experimental effect is due the charge missassignment of electrons.
 The charge misassignment rate, $\omega$, is the rate at which electrons are
 misasigned as positive charge and identified as positrons, and vice versa. The
 misassignment induces a dilution factor to the asymmetry as a function of the
@@ -345,145 +369,51 @@ electrons to positrons is the same as the rate of positrons to electrons, \ie
   \omega( \HepProcess{\APelectron \to \Pelectron} ) =
   \omega( \HepProcess{\Pelectron \to \APelectron} )
 \end{equation}
-
 then the dilution factor is given by $(1-2\omega_\eta)$ and the measured
-asymmetry must be corrected by the following relation
-
+asymmetry must be further corrected by the following relation
 \begin{equation}
-  A_{exp}(\eta) = (1-2\omega_\eta)
+  \mathcal{A}_{exp}(\eta) = (1-2\omega_\eta)
                 \frac{
                     \frac{dN}{d\eta}(e^+)-
-                    \frac{\epsilon^+}{\epsilon^-}\frac{dN}{d\eta}(e^-)
+                    R\frac{dN}{d\eta}(e^-)
                 }
                 {
                     \frac{dN}{d\eta}(e^+)+
-                    \frac{\epsilon^+}{\epsilon^-}\frac{dN}{d\eta}(e^-)
+                    R\frac{dN}{d\eta}(e^-)
                 }
 \end{equation}
-
-The rate of charge misassignment is obtained from \Zee samples selected with
-the same selection used in the analysis. The rate is measured by comparing the
-same sign \PZ\ yield (\HepProcess{\PZ\to\Pepm\Pepm}) to the opposite sign \PZ\
-yield (\HepProcess{\PZ\to\Pepm\Pemp}).
+which can be simplified to
+\begin{align*}
+  \mathcal{A}_{exp}(\eta) 
+  &=
+  \frac{1}{1-2\omega}
+  \frac{ \mathcal{A}_M\left(R+1\right) - \left(R-1\right)}
+       {\left(R+1\right)-\mathcal{A}_M \left(R-1\right)}\\
+  &\simeq 
+  \frac{1}{1-2\omega}
+  \left(\mathcal{A}_M
+ -\frac{\left(R-1\right)\left(1-\mathcal{A}_M^2\right)}{2}\right).
+\end{align*}
+where $\mathcal{A}_M$ is the uncorected measured asymmetry. The details of the
+measurements of $R$ and $\omega$  are detailed with the results in the following
+chapters.
 
 \section{Other Systematic Effects}
-This section will describe the other systematic effects that need to be
-accounted for in the measurement.
+There are several over systematic effects that must be evaluated and taken in to
+account for the measurements.
 
-\subsection{Signal Extraction Method}
-
-The systematic uncertainty due to the siganl extraction method is evaluated be
-considering the error introduced be each \ETm tempalte shape used in the fit
-separately.
-
-\subsubsection{Background \ETm Shape}
-
-The \ac{QCD} and \gjet \ETm template shape is obtained from a control sample of
-events by antiselecting electrons. This may introduce a systematic bias to the
-measurement if there is a difference between the anti-selected \ac{QCD} and \gjet
-\ETm samples and the selected \ac{QCD} and \gjet samples.
-
-The systematic uncertainty due to the \ac{QCD} and \gjet \ETm shape is evaluated by
-varying the anti-selection used to obtain the control sample and observing the
-effect that this has on the measured asymmetry.
-
-For each variation on the antiselection, 500 pseudo-data experiments are
-generated with the number of events that are expected in \unit{36.1}{\invpb} of
-data. The distribution of the measured asymmetry is then fitted with a
-gaussian.
-The effect that changing the anti-selection has on the mean of the guassian is
-studied, the maximum distance from the asymmetry measured with the nominal
-anti-selection is taken as an estimate of the systematic uncertainty.
-
-\subsubsection{Signal \ETm Shape from Boson Recoil}
-
-The signam \ETm shape is constructed using information from the boson recoil.
-There are three main sources of uncertainty due to the signal template,
-
-\begin{itemize}
-    \item the uncertainty in the recoil corrections,
-    \item the effect the energy scale has on the recoil corrections,
-    \item the uncertainty on the \ac{PDF} used to generate the events that the
-recoil corrections are applied to.
-\end{itemize}
-
-To evaluate the effect of the uncertainties of the recoil method, the upper and
-lower limits on the corrections are used to generate different tempaltes, and
-the effect on the measured asymmetry is evaluated as a measure of the
-systematic uncertainty.
-
-The recoil method uses generator level \ac{MC} simulation as an input to the
-template shape. To evaluate the efect of the generator used, templates are
-generated with the CTEQ 6.6 \todo{cite the CTEQ guys here}
-uncertainty \acp{PDF} which contain the central \ac{PDF} and 44 error \acp{PDF}
-which contain the \unit{95}{\%} \ac{CL} for each of the 22 free parameters in
-the \ac{PDF}. The maximum change in distance with respect to the central value
-is taken as a measure of the systematic uncertainty.
-
-Any differences in the energy scale of the electrons between data and \ac{MC}
-must be taken in to account to ensure accurate \ETm predictions. The \ac{MC} energy
-scale corrections were determined from \PZ data and applied to the \PZ \ac{MC}
-before calculating the recoil components \cite{recoil}.
-
-\subsubsection{\ac{EWK} \ETm Shape}
-
-The \ac{EWK} shape is also generated from \ac{MC} samples. During the fitting
-procedure, the \ac{EWK} shape is fixed to the \Wenu signal shape according to
-the cross section taken from the \ac{MC} samples. To estimate the effect of the
-uncertainty of the cross section has on the asymmetry measurement, the \ac{EWK}
-background is artificially varied by \unit{$\pm20$}{ \% } and the effect on the
-asymmetry is measured. Even with an over estimation of the uncertainty on the
-cross section, the effect on the asymmetry is found to be small.
-
-\subsection{Lepton Energy Scale and Resolution}
+The signal extraction procedure can may introduce some biases in to the measured
+asymmetry. A bias may be introduced in to the measurement if there is a
+difference between the \ETm templates used and the true \ETm distribution.  The
+systematic uncertainties due to the signal extraction method are evaluated by
+varying the templates used within certain uncertainties. The details are
+described in more detail in the following chapters.
 
 The energy resolution and scale of the electrons can introduce a systematic
 error on the asymmetry due to the effect of of the transverse momentum cut
 applied to the electrons. The largest source of electron scale bias is the
 radiation induced change to the ECAL crystal transparency.
-
 To correct fot this effect, energy scale and resolution corrrections are
-derrived using a \Zee mass distribution. The corrections are parameterised by
-six energy scale factors, $s_i$, and six resolutions, $\sigma_i$, one for each
-pseudorapidity bin in the asymmetry measurement.
-The scale factors represent the average factor each electrons \Pt in data
-should be corrected to match the expected \ac{MC} energy scale.
-The resolution factors represent the difference of the resolution in data and
-\ac{MC}. It is the additional smearing that would need to be applied to
-reconstruction level \ac{MC} to match the observed resolution in data.
-
-A sample of \Zee events is  split in to 21 categories which correspond to all
-combinations of pseudorapidity bins of the two electrons ($6+\binom{6}{2} = 21$).
-
-A mass template s obtained in each category from \ac{MC} simulation where a
-perfect \ac{ECAL} calibration is considered.
-
-A simultaneous fit to the \Zee mass is performed in each of the 21 categories
-to determine the six energy scale factors, $s_i$, and the six resolutions, 
-$\sigma_i$.
-
-In each category ($category_{ij}$) where one electron is in the $i^{th}$
-pseudorapidity bin and the other is in the $j^{th}$ bin, the \ac{MC} template
-mass shape is scaled by 
-
-\begin{equation}
-    \frac{1}{\sqrt{s_i s_j} } 
-\end{equation}
-
-and smeared by an addtional gaussian with width of 
-
-\begin{equation}
-    \sqrt{\sigma_i^2+\sigma_j^2}
-\end{equation}
-
-%TODO figures
-\todo[inline]{Add figures to demonstrate this}
-
-The corrections are applied to the electron before the final \Pt cut so that
-the measured asymmetry is corrected for the energy scale.
-
-A conservative uncertainty of \unit{1}{\% } is assigned to the electron energy
-after the scale corrections. A systematic error is then estimated by measuring
-the difference of the measured charge asymmetry with and without the additional
-\unit{1}{\% } scale factor.
+derrived using a \Zee mass distribution. Te results are presented in the
+following chapters.
 
