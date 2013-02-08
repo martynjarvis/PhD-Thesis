@@ -17,7 +17,6 @@ in the luminosity and the increase in data in the 2011 \ac{LHC} run.
 \section{Event Selection}
 \subsection{Trigger}
 
-
 \begin{table}[htbp]
   \begin{center}
     \leavevmode
@@ -37,7 +36,6 @@ in the luminosity and the increase in data in the 2011 \ac{LHC} run.
    \end{center}
 \end{table}
 
-
 The definitions of the triggers follows the same pattern as described in 
 \SectionRef{asym36:triggerdef}.
 
@@ -48,31 +46,6 @@ runs to \unit{32}{\GeV}.
 
 \subsection{Electron Selection}
 
-
- \begin{table}[htbp]
-   \begin{center}
-     \leavevmode
-     \begin{tabular}{lcc} 
-       \multicolumn{1}{c}{Variable} & \multicolumn{1}{c}{cut value (barrel)}& \multicolumn{1}{c}{cut value (endcap)}\\
-         \hline   
- \multicolumn{3}{l}{ID Cuts}\\ 
-         H/E & 0.04 & 0.025 \\
-         $\Delta\phi$ & 0.06 & 0.03 \\
-         $\Delta\eta$ & 0.004 & 0.007  \\
-         $\sigma_{\eta\eta}$ & 0.01 & 0.03 \\ \hline
- \multicolumn{3}{l}{Isolation Cuts}\\ 
-   $ISO_{trk} / E_T $  & 0.09 & 0.04 \\
-   $ISO_{ecal}/ E_T$  & 0.07 & 0.05 \\
-   $ISO_{hcal}/ E_T$  & 0.10 & 0.025 \\ \hline
- \multicolumn{3}{l}{Conversion Rejection Cuts}\\ \hline
-   Missing Hits  & \multicolumn{2}{c}{$\leq 0$}\\
-   Dist $||$ Dcot   & \multicolumn{2}{c}{$>0.02$}\\
-     \end{tabular}
-     \caption{Electron selection variables and corresponding cut values.}
-     \label{asym840:electronselection}
-   \end{center}
- \end{table}
-
 The electron transverse momentum cut is shifted up to \unit{35}{\GeV} due to
 the trigger contraints. This is the only change with respect to the 2010
 analysis on the electron selection, detailed in
@@ -82,9 +55,6 @@ analysis on the electron selection, detailed in
 The event selection remains the same with respect to the 2010 measurement.
 An Event is selected if if contains a single electron that passes all electron
 selection.
-To removed Drell-Yan events an event is vetoed if it contains a second lepton
-(an electron passing a loose selecton, or an isolated muon) with $\PT > 
-\unit{15}{\GeV}$
 
 The Particle Flow \ETm distribution for the events that pass the event
 selection, with $\PT > \unit{35}{\GeV}$ and $|\eta| < 2.4$ is shown in
@@ -92,7 +62,7 @@ selection, with $\PT > \unit{35}{\GeV}$ and $|\eta| < 2.4$ is shown in
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.5\textwidth]{pfmet}
+  \includegraphics[width=0.5\textwidth, angle=90]{pfmet}
   \caption{Particle Flow \ETm distribution for selected events.}
   \label{asym840:pfmet}
 \end{figure}
@@ -144,78 +114,7 @@ EWK Total Background & 7.8$\%$ \\
 \end{center}
 \end{table}
 
-\section{Signal Yield Extraction}
-\todo[inline]{Summary of signal yield extraction method}
-
-\subsection{QCD \ETm Shape}
-\todo[inline]{background MET shape explanation. talk about antiselections in
-some detail.}
-
-\begin{table}[htbp]
-  \begin{center}
-    \leavevmode
-    \begin{tabular}{lcc} 
-      \multicolumn{1}{c}{Variable} & \multicolumn{1}{c}{cut value (barrel)}& \multicolumn{1}{c}{cut value (endcap)}\\\hline
-        H/E & 0.04 & 0.025 \\
-        $\Delta\phi$ & $>0.06$  & $>0.04$ \\
-        $\Delta\eta$ & $>0.007$ & $>0.009$\\
-  $ISO_{trk} / E_T $ & 0.09 & 0.04 \\
-  $ISO_{ecal}/ E_T$  & 0.07 & 0.05 \\
-  $ISO_{hcal}/ E_T$  & 0.10 & 0.025\\
-    \end{tabular}
-    \caption{Electron anti-selection variables and corresponding cut values. $\Delta\phi$ and $\Delta\eta$ cuts are inverted.}
-    \label{asym840:AScuts}
-  \end{center}
-\end{table}
-
-\subsection{Signal \ETm Shape from Boson Recoil}
-\todo[inline]{Signal MET shape explanation. Quite a bit can be written here
-about the boson recoil.}
-
-\subsection{EWK \ETm Shape}
-\todo[inline]{EWK MET shape explanation}
-
-
-\subsection{Validation of Signal Extraction Method on Simulation}
-\todo[inline]{pseudo data trials}
-
 \subsection{Fit on Real Data}
-\todo[inline]{Fit applied to data and uncorrected results.}
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.95\textwidth]{data_0.pdf} \\
-    \includegraphics[width=0.95\textwidth]{data_1.pdf} \\
-    \includegraphics[width=0.95\textwidth]{data_2.pdf}
- \caption{  \label{fig:data1} The fit to \MET\ for eta bins 1,2 and 3.}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-\includegraphics[width=0.95\textwidth]{data_3.pdf} \\
-\includegraphics[width=0.95\textwidth]{data_4.pdf} \\
-\includegraphics[width=0.95\textwidth]{data_5.pdf}
- \caption{  \label{fig:data2} The fit to \MET\ for eta bins 4,5 and 6.}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-\includegraphics[width=0.95\textwidth]{data_6.pdf} \\
-\includegraphics[width=0.95\textwidth]{data_7.pdf} \\
-\includegraphics[width=0.95\textwidth]{data_8.pdf}
- \caption{  \label{fig:data3} The fit to \MET\ for eta bins 7,8 and 9.}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-\includegraphics[width=0.95\textwidth]{data_9.pdf} \\
-\includegraphics[width=0.95\textwidth]{data_10.pdf}
-  \caption{  \label{fig:data4} The fit to \MET\ for eta bins 10 and 11.}
-   \end{center}
-\end{figure}
 
 \begin{table}[htbp]
  \begin{center}

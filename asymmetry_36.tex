@@ -32,13 +32,9 @@ superclusters rather than a reconstructed electron.
 pixel-matching window. 
  ``Cleaned'' indicates that spikes in the \ac{ECAL} have been removed.  \todo{define spikes?}
 
-In the following analysis, a control region is obtained by inverting the $\Delta\phi$ and
-$\Delta\eta$ variables. To ensure that this inverted selection will select
-events, it is necesary to avoid using triggers that apply a selection on these
-variables whenever possible.
 ``CaloEleId'' and ``TightCaloIdIso'' represent increasingly tighter selection
 based on the shower shape ID and isolation variables from only the \ac{ECAL},
-and not the $\Delta\phi$ or $\Delta\eta$ variables.
+and not the $\Delta\phi$ or $\Delta\eta$ variables.  
 
 ``TightCaloIdIso'' indicates a tight selection based on all ID variables. 
 This nullifies the inverted cuts used for the control region but
@@ -66,110 +62,12 @@ trigger was also applied in these runs.
   \label{asym36:triggers}
 \end{table}
 
-\subsection{Electron Selection}
-
-The available unprescaled triggers constrain the electron momentum to be above
-\unit{25}{\GeV}. The analysis shown presents the results with the lowest \pT cut
-available of \unit{25}{\GeV}, additional cuts of \unit{30}{\GeV} and
-\unit{35}{\GeV} are also included.
-
-Electrons candidates are identified using a cut based approach on an limited
-number of variables. The cut values used correspond to the \unit{80}{\%}
-working point from \TableRef{tab:electronwp}, and are summarised again in
-\TableRef{tab:elecuts}. The \unit{80}{\%} working point was chosen as a
-compromise between ensuring suitable statistics while maintaining the purity of
-the sample.
-
-\begin{table}[htbp]
-  \begin{center}
-    \leavevmode
-    \begin{tabular}{lll} 
-    \toprule
-      Selection Variable & \multicolumn{2}{c}{Cut Value}\\
-                         & Barrel & Endcap\\
-      \midrule
-      \multicolumn{3}{l}{\emph{ID Cuts}}\\ 
-        H/E & 0.04 & 0.025 \\
-        $\Delta\phi$ & 0.06 & 0.03 \\
-        $\Delta\eta$ & 0.004 & 0.007  \\
-        $\sigma_{\eta\eta}$ & 0.01 & 0.03 \\ \midrule
-      \multicolumn{3}{l}{\emph{Isolation Cuts}}\\
-        $ISO_{trk} / E_T $  & 0.09 & 0.04 \\
-        $ISO_{ecal}/ E_T$  & 0.07 & 0.05 \\
-        $ISO_{hcal}/ E_T$  & 0.10 & 0.025 \\ \midrule
-      \multicolumn{3}{l}{\emph{Conversion Rejection Cuts}}\\ 
-        Missing Hits  & \multicolumn{2}{c}{$\leq 0$}\\
-        Dist $||$ Dcot   & \multicolumn{2}{c}{$>0.02$}\\
-    \bottomrule
-    \end{tabular}
-    \caption{\label{tab:elecuts} Electron selection variables and corresponding cut values.}
-  \end{center}
-\end{table}
-
-Incorrectly assigning the charge of an electron will lead to a diltuion of the
-measured charge asymmetry, to overcome this an additional requirement is applied
-to the charge of the reconstructed electron. The methods for assigning a charge
-to an electron are described in \SectionRef{sec:charge}. The methods are based
-on the GSF electron charge, the general track charge and the supercluster
-charge.
-
-The incorrect charge assignment rate can be measured at the Z peak by comparing the same
-sign \HepProcess{\PZ\to\Pepm\Pepm} yield to the oposite sign
-\HepProcess{\PZ\to\Pepm\Pemp} yield. \FigureRef{fig:zpeak} show these Z yields
-using only the \ac{GSF} track charge (black) and also requiring a unaminous
-asignment of charge from all three methods (red). 
-
-The incorrect charge assignment rate from the GSF track charge alone is about
-\unit{3}{\%}.  By requiring that all three methods for assigning the charge
-agree, and vetoing events otherwise, the incorrect assignment rate can be
-reduced by a factor of 8 with only a \unit{5}{\%} loss in efficiency.
-
-\begin{figure}[htbp]
-  \centering
-  \begin{subfigure}{\textwidth}
-    \centering
-    \includegraphics[width=0.85\textwidth]{zpeak_os}
-    \caption{Oposite sign \PZ.}
-    \label{fig:zpeak_os}
-  \end{subfigure}
-  \begin{subfigure}{\textwidth}
-    \centering
-    \includegraphics[width=0.85\textwidth]{zpeak_ss}
-    \caption{Same sign \PZ.}
-    \label{fig:zpeak_ss}
-  \end{subfigure}
-  \caption{ $Z\rightarrow ee$ peak. One electron is required to be in the
-barrel to pass the VBTF80 selection and to have a fraction of energy loss by
-radiation less than 0.3; the second electron is required only to pass the VBTF80
-selection.}\label{fig:zpeak} 
-\end{figure}
-
 \subsection{Event Selection}
 An Event is selected if it contains a single electron that passes all the electron
 selection requirements.
 To remove Drell-Yan events, an event is vetoed if it contains a second lepton
 (an electron passing a loose selecton, or an isolated muon) with $\PT > 
 \unit{15}{\GeV}$.
-
-\begin{table}[htbp]
-\begin{center}
-\begin{tabular}{llrrr}
-    \toprule
-& & $\PT>25$ \GeV & $\PT>30$ \GeV & $\PT>35$ \GeV  \\
-\midrule
-Signal & \HepProcess{\PW\to\Pe\Pnu} & $65.1\%$&$63.5\%$ &$60.2\%$ \\
-EWK & \HepProcess{\PZ\to\Ptau\Ptau} & $0.4\%$ &$0.3\%$  &$0.2\%$ \\
-    & \HepProcess{\PZ\to\Pe\Pe}     & $4.1\%$ &$3.5\%$  &$3.0\%$\\
-    & \HepProcess{\PW\to\Ptau\Pnu}  & $1.9\%$ &$1.1\%$  &$0.6\%$\\
-    & \HepProcess{\Ptop\APtop}      & $0.3\%$ &$0.3\%$  &$0.3\%$\\
-    & Total                         & $6.7\%$ &$5.2\%$  &$4.1\%$\\
-QCD & Total                         & $28.2\%$&$31.3\%$ &$35.7\%$\\
-    \bottomrule
-\end{tabular}
-\caption{Composition of selected events for lepton momentum cut of $\PT>25$ \GeV, $\PT>30$ \GeV and $\PT>35$ \GeV .}
-\label{asym36:selectedcomp}
-\end{center}
-\end{table}
 
 The exected composition of the selected events, derived from MC simulation
 samples, is shown in \TableRef{asym36:selectedcomp}. With a \pT cut of
@@ -228,177 +126,34 @@ event selection are shown in \TableRef{asym36:selectedevents}. To obtain a
 measurement of the asymmetry from the selected events it is necesary to extract
 the signal yield from each pseudorapidity/charge bin.
 
-\section{Signal Yield Extraction}
-The number of signal and background events in each bin is extracted using a fit
-to the \ETm distribution using two templates.
-The first is the sum of the \Wenu signal and the \ac{EWK} background shapes,
-and the second is the sum of the \ac{QCD} plus \gjet processes.
-
-\subsection{\ac{QCD} \ETm Shape}
-The \ac{QCD} and \gjet background distribution is obtained from a control sample of
-events. The control sample is selected by requiring that the electrons pass the
-isolation and H over E cuts but fail the $\Delta\phi$ and $\Delta\eta$ cuts as
-shown in \TableRef{asym36:antisel}.
-
-\begin{figure}[htbp]
-  \centering
-  \begin{subfigure}{0.45\textwidth}
-    \centering
-    \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta1.pdf}
-    \caption{test.}
-    \label{fig:qcd_met_eta1}
-  \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
-    \centering
-    \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta2.pdf}
-    \caption{test.}
-    \label{fig:qcd_met_eta2}
-  \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
-    \centering
-    \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta3.pdf}
-    \caption{test.}
-    \label{fig:qcd_met_eta3}
-  \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
-    \centering
-    \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta4.pdf}
-    \caption{test.}
-    \label{fig:qcd_met_eta4}
-  \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
-    \centering
-    \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta5.pdf}
-    \caption{test.}
-    \label{fig:qcd_met_eta5}
-  \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
-    \centering
-    \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta6.pdf}
-    \caption{test.}
-    \label{fig:qcd_met_eta6}
-  \end{subfigure}
-  \caption{The \ETm distribution on antiselected \ac{MC} simulated events and selected \ac{QCD} and \gjet events in each pseudorapidity bin.}
-  \label{asym36:antiselclosure}
-\end{figure}
-
 \begin{table}[htbp]
-  \begin{center}
-    \leavevmode
-    \begin{tabular}{lcc} 
+\begin{center}
+\begin{tabular}{llrrr}
     \toprule
-      \multicolumn{1}{c}{Variable} & \multicolumn{1}{c}{cut value (barrel)}& \multicolumn{1}{c}{cut value (endcap)}\\\midrule
-        H/E & 0.04 & 0.025 \\
-        $\Delta\phi$ & $>0.06$  & $>0.04$ \\
-        $\Delta\eta$ & $>0.007$ & $>0.009$\\
-        $ISO_{trk} / E_T $ & 0.09 & 0.04 \\
-        $ISO_{ecal}/ E_T$  & 0.07 & 0.05 \\
-        $ISO_{hcal}/ E_T$  & 0.10 & 0.025\\ 
+& & $\PT>25$ \GeV & $\PT>30$ \GeV & $\PT>35$ \GeV  \\
+\midrule
+Signal & \HepProcess{\PW\to\Pe\Pnu} & $65.1\%$&$63.5\%$ &$60.2\%$ \\
+EWK & \HepProcess{\PZ\to\Ptau\Ptau} & $0.4\%$ &$0.3\%$  &$0.2\%$ \\
+    & \HepProcess{\PZ\to\Pe\Pe}     & $4.1\%$ &$3.5\%$  &$3.0\%$\\
+    & \HepProcess{\PW\to\Ptau\Pnu}  & $1.9\%$ &$1.1\%$  &$0.6\%$\\
+    & \HepProcess{\Ptop\APtop}      & $0.3\%$ &$0.3\%$  &$0.3\%$\\
+    & Total                         & $6.7\%$ &$5.2\%$  &$4.1\%$\\
+QCD & Total                         & $28.2\%$&$31.3\%$ &$35.7\%$\\
     \bottomrule
-    \end{tabular}
-    \caption{\label{tab:AScuts}Electron anti-selection variables and corresponding cut values. $\Delta\phi$ and $\Delta\eta$ cuts are inverted.}
-  \end{center}
+\end{tabular}
+\caption{Composition of selected events for lepton momentum cut of $\PT>25$ \GeV, $\PT>30$ \GeV and $\PT>35$ \GeV .}
+\label{asym36:selectedcomp}
+\end{center}
 \end{table}
 
+The exected composition of the selected events, derived from MC simulation
+samples, is shown in \TableRef{asym36:selectedcomp}. With a \pT cut of
+\unit{25}{\GeV} it is expected that the selected events are \unit{$\approx
+65$}{\GeV} signal events, and of the remaing \unit{35}{\%} background events, the
+majority of them are \ac{QCD} background events with a small ammount of \ac{EWK}
+events. 
 
-To validate the antiselection used, \ac{QCD} \ac{MC} samples are used. The
-distribution of \ac{QCD} events passing the event selection are comapred to the
-antselected MC events. This is shown for each eta bin in
-\FigureRef{asym36:antiselclosure}.
-
-\subsection{Signal \ETm Shape from Boson Recoil}
-
-The signal \ETm shape is obtained by modeling the recoil of the W boson. 
-The recoil response and resolution in \HepProcess{\PZ\to\Plepton\Plepton} data
-events is measured as a function of the \pT of the boson. This is combined with
-information from the \PW and \PZ \ac{MC} simulation to derive a correction to
-the simulation \ETm as a function of \PW \pT.
-
-The modeling of the \HepProcess{\PW\to\Plepton\Pnu} \ETm with boson recoil is
-described in detail here \cite{NULL}, and the ntuples containing
-\HepProcess{\PW\to\Pelectron\Pnu} simulation with the recoil corrected \ETm were
-provided from here \cite{NULL}.
-
-\subsection{\ac{EWK} \ETm Shape}
-The EWK background processes that can produce a single isolated
-electron which are considered in this analysis are:
-\begin{itemize}
-\item \HepProcess{\PZ\to\Pelectron\APelectron},
-\item \HepProcess{\PZ\to\Ptauon\APtauon},
-\item \HepProcess{\PW\to\Ptau\Pnu},
-\item \HepProcess{\Ptop\APtop}.
-\end{itemize}
-
-The \ac{EWK} background \ETm distributions were obtained from Pythia \ac{MC}
-simulations for each pseudorapidity/charge bin.  The scale of the \ac{EWK} shape
-is fixed to the signal \ETm shape by the ratio obtained from \ac{MC} samples.
-
-\subsection{Validation of Signal Extraction Method on Simulation}
-
-The signal yield extraction procedure was validated using pseudodata
-experiments. 1000 pseudodata experiments were generated with the number of
-events expected in \unit{36.1}{\invpb} of data. The signal yields are extracted
-in each experiment and the asymmetry is calculated. The distribution of
-asymmetries is then fitted with a gaussian.
-
-The width of the gaussian is the statistical uncertainty on the measurement.
-The statistical uncertainty can also be estimated from the following formula
-\begin{equation}
-  \label{asym36:statuncert}
-   \frac{d\mathcal{A}_{stat}}{d\eta} =
-   \frac{2 \times \sqrt{ 
-       \left( \frac{dN^+}{d\eta} \sigma_{\frac{dN^-} {d\eta}}\right)^2 + 
-       \left( \frac{dN^-}{d\eta} \sigma_{\frac{dN^+} {d\eta}}\right)^2  }}
-   {\left(  \frac{dN^+}{d\eta} +  \frac{dN^-}{d\eta} \right)^{2} } .
-\end{equation}
-
-The uncertainty from \EquationRef{asym36:statuncert} evaulated with \ac{MC} truth
-values, and the uncertainty measured from pseudodata experiments for an
-integrated luminosity of \unit{36.1}{\invpb} are summarised in
-\TableRef{asym36:statuncertsum}.
-
-\begin{table}[htbp]
-  \begin{center}
-    \begin{tabular}{lcc}
-    \toprule
-    $|\eta|$ range & $\sigma_{A}$ from \EquationRef{asym36:statuncert}. & $\sigma_{A}$ from pseudo-data exp.\\ \midrule
-    $0.0<|\eta|<0.4$ & 0.0064 & 0.0062\\
-    $0.4<|\eta|<0.8$ & 0.0064 & 0.0064\\
-    $0.8<|\eta|<1.2$ & 0.0065 & 0.0065\\
-    $1.2<|\eta|<1.4$ & 0.0096 & 0.0104\\
-    $1.6<|\eta|<2.0$ & 0.0076 & 0.0079\\
-    $2.0<|\eta|<2.4$ & 0.0077 & 0.0077\\
-    \bottomrule
-    \end{tabular}
-  \caption{Expected statistical error as a function of pseudorapidity, for an
-  integrated luminosity of \unit{36}{\invpb}. }
-  \label{asym36:statuncertsum}
-  \end{center}
-\end{table}
-
-
-%For each of the pseudo-data experiments we calulated the pull on the asymmetry measurement.
-%The pull is defined as the diffence between the measured asymmetry for a pseudo-data experiment
-%and the MC true value divided by the statistical uncertainty, and represents the number of standard deviations away from the true value.
-%The distribution of the pulls from 1000 pseudo-data experiments are shown in figure \ref{fig:toyasym_pull}, and are fitted with a gaussian.
-%It is expected that the mean of this gaussian is zero for an unbiased measurement and the
-%sigma is one for a measurement with well understood statistical uncertainties.
-
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics*[angle=90,width=0.95\textwidth]{toyasym.pdf}
-    \caption{\label{fig:toyasym}Measured Asymmetry for 1000 pseudo-data experiments. The distribution of the measured Asymmetry is fitted with a gaussian.}
-  \end{center}
-\end{figure}
-
-\begin{figure}[htbp]
-  \begin{center}
-\includegraphics*[angle=90,width=0.95\textwidth]{pullasyTot.pdf}
-    \caption{\label{fig:toyasym_pull}Pull on the Asymmetry in 1000 pseudo-data experiments. The distribution of the pull is fitted with a gaussian.}
-  \end{center}
-\end{figure}
-
-\subsection{Fit on Real Data}
+\subsection{Fit Results}
 The results of the extended maximum liklihood fits to each pseudorapidity/charge
 bin are shown in \FigureRef{fig:fit1} and \FigureRef{fig:fit2}.
 The ratio between the fits and the data for each of the 
@@ -433,46 +188,6 @@ $2.0<| \eta |<2.4$ &+&-&-&-\\
 \caption{Signal yield}
     \label{fig:sigyield}
 \end{table}
-
-\begin{figure}
-  \begin{center}
-% bottom right top left
-\includegraphics[trim = 80mm 100mm 0mm 0mm, clip, angle=90, width=0.95\textwidth]{Dec22_data}
-\includegraphics[trim = 80mm 0mm 0mm 100mm, clip, angle=90, width=0.95\textwidth]{Dec22_data}
-\includegraphics[trim = 40mm 100mm 40mm 0mm, clip, angle=90, width=0.95\textwidth]{Dec22_data}
- \caption{  \label{fig:fit1} The fit to \ETm\ for each eta/charge bin.}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-% bottom right top left
-\includegraphics[trim = 40mm 0mm 40mm 100mm, clip, angle=90, width=0.95\textwidth]{Dec22_data}
-\includegraphics[trim = 0mm 100mm 80mm 0mm, clip, angle=90, width=0.95\textwidth]{Dec22_data}
-\includegraphics[trim = 0mm 0mm 80mm 100mm, clip, angle=90, width=0.95\textwidth]{Dec22_data}
- \caption{  \label{fig:fit2} The fit to \ETm\ for each eta/charge bin.}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-% bottom right top left
-\includegraphics[trim = 80mm 100mm 0mm 0mm, clip, angle=90, width=0.95\textwidth]{Dec22_fitratio}
-\includegraphics[trim = 80mm 0mm 0mm 100mm, clip, angle=90, width=0.95\textwidth]{Dec22_fitratio}
-\includegraphics[trim = 40mm 100mm 40mm 0mm, clip, angle=90, width=0.95\textwidth]{Dec22_fitratio}
-     \caption{\label{fig:fit1ratio}Ratio between fit and data for each eta/charge bin.}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-% bottom right top left
-\includegraphics[trim = 40mm 0mm 40mm 100mm, clip, angle=90, width=0.95\textwidth]{Dec22_fitratio}
-\includegraphics[trim = 0mm 100mm 80mm 0mm, clip, angle=90, width=0.95\textwidth]{Dec22_fitratio}
-\includegraphics[trim = 0mm 0mm 80mm 100mm, clip, angle=90, width=0.95\textwidth]{Dec22_fitratio}
-     \caption{\label{fig:fit2ratio}Ratio between fit and data for each eta/charge bin.}
-  \end{center}
-\end{figure}
 
 \begin{table}[htbp]
 \begin{center}
@@ -672,10 +387,10 @@ which contain the \unit{95}{\%} \ac{CL} for each of the 22 free parameters in
 the \ac{PDF}. The maximum change in distance with respect to the central value
 is taken as a measure of the systematic uncertainty.
 
-The systematic uncertainty introduced by the electron energy scale.
-\todo[inline]{electron energy scale uncertainty in the met shape}
-
-
+Any differences in the energy scale of the electrons between data and \ac{MC}
+must be taken in to account to ensure accurate \ETm predictions. The \ac{MC} energy
+scale corrections were determined from \PZ data and applied to the \PZ \ac{MC}
+before calculating the recoil components \cite{recoil}.
 
 \begin{table}[htbp]
 \begin{center}
@@ -759,30 +474,24 @@ the same selection used in the analysis. The rate is measured by comparing the
 same sign \PZ\ yield (\HepProcess{\PZ\to\Pepm\Pepm}) to the opposite sign \PZ\
 yield (\HepProcess{\PZ\to\Pepm\Pemp}).
 
-
-
-
-
 \begin{table}[htbp]
   \begin{center}
-\begin{tabular}{lrrrrr}
+\begin{tabular}{lrrrr}
 \toprule
-$\eta$ range        & $\omega \times 10^{-4}$  &
-\multicolumn{4}{c}{$\sigma(\mathcal{A})_{misch}\times 10^{-4}$} ($\pT>,\ETmiss>$)\\
-& & (25,0) & (30,0) & (35,0) & (25,20) \\
+$\eta$ range        & $\omega \times 10^{-4}$  & \multicolumn{3}{c}{$\sigma(\mathcal{A})_{misch}\times 10^{-4}$}\\
+& & \PT $>$ 25 \GeV & \PT $>$ 30 \GeV & \PT $>$ 35 \GeV \\
 \midrule
-$0.0<| \eta |<0.4$  & $0^{+8}$          &  2 &  2 & 2 &  2 \\ 
-$0.4<| \eta |<0.8$  & $8^{+8}_{-8}$     &  3 &  2 & 2 &  3 \\
-$0.8<| \eta |<1.2$  & $11^{+10}_{-8}$   &  3 &  3 & 3 &  3 \\
-$1.2<| \eta |<1.4$  & $34^{+21}_{-15}$  &  8 &  7 & 6 &  7 \\
-$1.6<| \eta |<2.0$  & $41^{+20}_{-15}$  &  9 &  8 & 7 &  9 \\
-$2.0<| \eta |<2.4$  & $25^{+21}_{-15}$  & 10 & 10 & 9 & 11 \\
+$0.0<| \eta |<0.4$  & $0^{+8}$          &  2 &  2 & 2 \\ 
+$0.4<| \eta |<0.8$  & $8^{+8}_{-8}$     &  3 &  2 & 2 \\
+$0.8<| \eta |<1.2$  & $11^{+10}_{-8}$   &  3 &  3 & 3 \\
+$1.2<| \eta |<1.4$  & $34^{+21}_{-15}$  &  8 &  7 & 6 \\
+$1.6<| \eta |<2.0$  & $41^{+20}_{-15}$  &  9 &  8 & 7 \\
+$2.0<| \eta |<2.4$  & $25^{+21}_{-15}$  & 10 & 10 & 9 \\
 \bottomrule
 \end{tabular}
 \caption{\label{tab:mischarge}Charge mismeasurement rate and systematic effect on the charge asymmetry.}
 \end{center}
 \end{table}
-
 
 \subsection{Lepton Energy Scale and Resolution}
 
