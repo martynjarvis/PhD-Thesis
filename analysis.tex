@@ -5,6 +5,10 @@ In this chapter the results of the mesasurement of the electron charge
 asymmetry are presented. The analysis is performed on the full 2010 dataset, which corresponds to a
 luminosity of \unit{36.1}{\invpb}.
 
+The results are presented in 5 bins of absolute value of pseudorapidity with a
+fixed witdh of 0.4. To avoid the gap between the ECAL barrel and ECAL endcap the
+region $1.4<|\eta|<1.6$ is excluded.
+
 \section{Event Selection}
 
 The event selection is performed single electron datasets. 
@@ -24,7 +28,7 @@ necessary to use electron triggers to select events.
 As the luminosity increased even further, it was necesary to use electron
 triggers that included cuts on certain electron ID variables.
 
-The triggers used to select the events are sumarised in \TableRef{asym36:triggers}
+The triggers used to select the events are sumarised in \TableRef{tab:triggers}
 where ``HLT\_Ele$X$'' indicates a selection requiring an electron with  $\Pt > \unit{X}{\GeV}$. 
 ``Photon'' in the name indicates that the selection was applied to ECAL
 superclusters rather than a reconstructed electron. 
@@ -59,7 +63,7 @@ trigger was also applied in these runs.
     \bottomrule
   \end{tabular}
   \caption{Triggers used to select the data used in this analysis.}
-  \label{asym36:triggers}
+  \label{tab:triggers}
 \end{table}
 
 \subsection{Electron Selection}
@@ -70,7 +74,7 @@ selection requirements. The results are presented with an electron \pT cut of
 Electrons candidates are identified using a cut based approach on an limited
 number of variables. The cut values used correspond to the \unit{80}{\%}
 working point from \TableRef{tab:electronwp}, and are summarised again in
-\TableRef{tab:elecuts}. The \unit{80}{\%} working point was chosen as a
+\TableRef{tab:electronselection}. The \unit{80}{\%} working point was chosen as a
 compromise between ensuring suitable statistics while maintaining the purity of
 the sample.
 
@@ -96,7 +100,7 @@ the sample.
         Dist $||$ Dcot   & \multicolumn{2}{c}{$>0.02$}\\
     \bottomrule
     \end{tabular}
-    \caption{\label{tab:elecuts} Electron selection variables and corresponding cut values.}
+    \caption{\label{tab:electronselection} Electron selection variables and corresponding cut values.}
   \end{center}
 \end{table}
 
@@ -146,7 +150,7 @@ To remove Drell-Yan events, an event is vetoed if it contains a second lepton
 \unit{15}{\GeV}$.
 
 The exected composition of the selected events, derived from MC simulation
-samples, is shown in \TableRef{asym36:selectedcomp}. With a \pT cut of
+samples, is shown in \TableRef{tab:selectedcomp}. With a \pT cut of
 \unit{25}{\GeV} it is expected that the selected events are \unit{$\approx
 65$}{\GeV} signal events, and of the remaing \unit{35}{\%} background events, the
 majority of them are \ac{QCD} background events with a small ammount of \ac{EWK}
@@ -194,11 +198,11 @@ $2.0<| \eta |<2.4$ &+& 18885&13239&8726\\
 %\end{sideways}
 \end{center}
 \caption{Number of events passing the event selection for lepton momentum cut of $\PT>25$ \GeV, $\PT>30$ \GeV and $\PT>35$ \GeV .}
-    \label{asym36:selectedevents}
+    \label{tab:selectedevents}
 \end{table}
 
 The number of selected events that pass the
-event selection are shown in \TableRef{asym36:selectedevents}. To obtain a
+event selection are shown in \TableRef{tab:selectedevents}. To obtain a
 measurement of the asymmetry from the selected events it is necesary to extract
 the signal yield from each pseudorapidity/charge bin.
 
@@ -218,12 +222,12 @@ QCD & Total                         & $28.2\%$&$31.3\%$ &$35.7\%$\\
     \bottomrule
 \end{tabular}
 \caption{Composition of selected events for lepton momentum cut of $\PT>25$ \GeV, $\PT>30$ \GeV and $\PT>35$ \GeV .}
-\label{asym36:selectedcomp}
+\label{tab:selectedcomp}
 \end{center}
 \end{table}
 
 The exected composition of the selected events, derived from MC simulation
-samples, is shown in \TableRef{asym36:selectedcomp}. With a \pT cut of
+samples, is shown in \TableRef{tab:selectedcomp}. With a \pT cut of
 \unit{25}{\GeV} it is expected that the selected events are \unit{$\approx
 65$}{\GeV} signal events, and of the remaing \unit{35}{\%} background events, the
 majority of them are \ac{QCD} background events with a small ammount of \ac{EWK}
@@ -239,7 +243,7 @@ and the second is the sum of the \ac{QCD} plus \gjet processes.
 The \ac{QCD} and \gjet background distribution is obtained from a control sample of
 events. The control sample is selected by requiring that the electrons pass the
 isolation and H over E cuts but fail the $\Delta\phi$ and $\Delta\eta$ cuts as
-shown in \TableRef{asym36:antisel}.
+shown in \TableRef{tab:antisel}.
 
 \begin{figure}[htbp]
   \centering
@@ -280,7 +284,7 @@ shown in \TableRef{asym36:antisel}.
     \label{fig:qcd_met_eta6}
   \end{subfigure}
   \caption{The \ETm distribution on antiselected \ac{MC} simulated events and selected \ac{QCD} and \gjet events in each pseudorapidity bin.}
-  \label{asym36:antiselclosure}
+  \label{tab:antiselclosure}
 \end{figure}
 
 \begin{table}[htbp]
@@ -304,7 +308,7 @@ shown in \TableRef{asym36:antisel}.
 To validate the antiselection used, \ac{QCD} \ac{MC} samples are used. The
 distribution of \ac{QCD} events passing the event selection are comapred to the
 antselected MC events. This is shown for each eta bin in
-\FigureRef{asym36:antiselclosure}.
+\FigureRef{tab:antiselclosure}.
 
 \subsection{Signal \ETm Shape from Boson Recoil}
 The signal \ETm shape is obtained by modeling the recoil of the W boson. 
@@ -345,7 +349,7 @@ asymmetries is then fitted with a gaussian.
 The width of the gaussian is the statistical uncertainty on the measurement.
 The statistical uncertainty can also be estimated from the following formula
 \begin{equation}
-  \label{asym36:statuncert}
+  \label{tab:statuncert}
    \frac{d\mathcal{A}_{stat}}{d\eta} =
    \frac{2 \times \sqrt{ 
        \left( \frac{dN^+}{d\eta} \sigma_{\frac{dN^-} {d\eta}}\right)^2 + 
@@ -353,16 +357,16 @@ The statistical uncertainty can also be estimated from the following formula
    {\left(  \frac{dN^+}{d\eta} +  \frac{dN^-}{d\eta} \right)^{2} } .
 \end{equation}
 
-The uncertainty from \EquationRef{asym36:statuncert} evaulated with \ac{MC} truth
+The uncertainty from \EquationRef{tab:statuncert} evaulated with \ac{MC} truth
 values, and the uncertainty measured from pseudodata experiments for an
 integrated luminosity of \unit{36.1}{\invpb} are summarised in
-\TableRef{asym36:statuncertsum}.
+\TableRef{tab:statuncertsum}.
 
 \begin{table}[htbp]
   \begin{center}
     \begin{tabular}{lcc}
     \toprule
-    $|\eta|$ range & $\sigma_{A}$ from \EquationRef{asym36:statuncert}. & $\sigma_{A}$ from pseudo-data exp.\\ \midrule
+    $|\eta|$ range & $\sigma_{A}$ from \EquationRef{tab:statuncert}. & $\sigma_{A}$ from pseudo-data exp.\\ \midrule
     $0.0<|\eta|<0.4$ & 0.0064 & 0.0062\\
     $0.4<|\eta|<0.8$ & 0.0064 & 0.0064\\
     $0.8<|\eta|<1.2$ & 0.0065 & 0.0065\\
@@ -373,7 +377,7 @@ integrated luminosity of \unit{36.1}{\invpb} are summarised in
     \end{tabular}
   \caption{Expected statistical error as a function of pseudorapidity, for an
   integrated luminosity of \unit{36}{\invpb}. }
-  \label{asym36:statuncertsum}
+  \label{tab:statuncertsum}
   \end{center}
 \end{table}
 
@@ -399,6 +403,7 @@ integrated luminosity of \unit{36.1}{\invpb} are summarised in
 \end{figure}
 
 \subsection{Fit Results}
+
 The results of the extended maximum liklihood fits to each pseudorapidity/charge
 bin are shown in \FigureRef{fig:fit1} and \FigureRef{fig:fit2}.
 The ratio between the fits and the data for each of the 
@@ -431,7 +436,7 @@ $2.0<| \eta |<2.4$ &+&-&-&-\\
 %\end{sideways}
 \end{center}
 \caption{Signal yield}
-    \label{fig:sigyield}
+    \label{tab:sigyield}
 \end{table}
 
 \begin{table}[htbp]
@@ -462,7 +467,12 @@ $2.0<| \eta |<2.4$ &+&  1.44\\
 \section{Corrections to the Measured Asymmetry}
 
 To compare with the theoretical value, the measured lepton asymmetry has to be
-corrected for experimental effects.
+corrected for three detector effects.
+\begin{itemize}
+\item The charge-dependent reconstrction efficiency,
+\item The incorect charge assignment rate,
+\item Electron energy resolution.
+\end{itemize}
 
 If the reconstruction efficiency of electrons is different to that of positrons
 then a bias will be introduced in to the measured asymmetry.
@@ -601,10 +611,10 @@ $\left[ 0.0,2.4 \right]$ & 98.5$\pm$0.4 & 97.8$\pm$0.4 & 1.007$\pm$0.006 & 80.3$
 \end{sideways}
 \end{center}
 \caption{ GSF tracking and identification efficiency as a function of charge.}
-\label{asym36:tagprobe}
+\label{tab:tagprobe}
 \end{table}
 
-The \TableRef{asym36:tagprobe} shows the GSF tracking effiency and identifcation 
+The \TableRef{tab:tagprobe} shows the GSF tracking effiency and identifcation 
 effiency as a function of the charge.
 
 The relative efficiency: 
@@ -789,6 +799,7 @@ $2.0<| \eta |<2.4$  & 16 & 17  & 44\\
   \end{center}
 \end{table}
 
+
 \section{Other Systematic Effects}
 There are several over systematic effects that must be evaluated and taken in to
 account for the measurements.
@@ -799,6 +810,8 @@ difference between the \ETm templates used and the true \ETm distribution.  The
 systematic uncertainties due to the signal extraction method are evaluated by
 varying the templates used within certain uncertainties. The details are
 described in more detail in the following chapters.
+
+
 
 \subsection{Signal Extraction Method}
 
@@ -924,6 +937,7 @@ $2.0<|\eta|<2.4$ & 3\\
 \caption{\label{tab:systEWK}Systematic uncertainty due to the electroweak \ETm shape used in the signal extraction method assigned to each eta bin.}
 \end{center}
 \end{table}
+
 
 \subsection{Systematic Uncertainty Summary}
 

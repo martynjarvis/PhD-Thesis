@@ -9,68 +9,77 @@ The data was collected with the \ac{CMS} detector from collisions from the
 first 2011 \ac{LHC} run (Run A) and corresponds to a 25 times increase in
 statistics over the 2010 measurement.
 
-
 The majority of the 2011 analysis is identical to the 2010 analysis,
 however small changes to the metheodolgy have been implemented due to changes
 in the luminosity and the increase in data in the 2011 \ac{LHC} run.
 
+The results are presented in 11 bins of absolute value of pseudorapidity with a
+fixed witdh of 0.2. To avoid the gap between the ECAL barrel and ECAL endcap the
+region $1.4<|\eta|<1.6$ is excluded.
+
 \section{Event Selection}
 
 \subsection{Trigger}
+
+The triggers used in the updated measurement are summarised in
+\TableRef{tab:updatedtriggers} with the run ranges to which they are applied.
 Due to the increased luminosity in the 2011 Run A, the identifaction and
 isolation cuts applied to the trigger have been tightened. The \PT cut applied
 to the electon have been increased, first to \unit{27}{\GeV} and then in later
-runs to \unit{32}{\GeV}.
+runs to \unit{32}{\GeV}. 
 
 \begin{table}[htbp]
   \begin{center}
     \leavevmode
      \begin{tabular}{ll} 
+\toprule
       Run Ranges & Trigger  \\
-     \hline
+     \midrule
      160404-161176 & HLT\_Ele27\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v1  \\
      161217-163261 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v1  \\
      163270-163869 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v2  \\
      165088-165633 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v3  \\
      165970-166967 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v4  \\
+\bottomrule
      \end{tabular}
-
   \caption{Triggers used to select the data used in this measurement.}
-  \label{asym840:triggers}
-
+  \label{tab:updatedtriggers}
    \end{center}
 \end{table}
+
 \subsection{Electron Selection}
 
-The electron transverse momentum cut is shifted up to \unit{35}{\GeV} due to
-the trigger contraints. This is the only change with respect to the 2010
-analysis on the electron selection, detailed in
-\TableRef{asym840:electronselection}.
+The electron transverse momentum cut is shifted upwards to \unit{35}{\GeV} due
+to the contraints imposed by the triggers available.  This is the only change
+with respect to the 2010 analysis on the electron selection, detailed in
+\TableRef{tab:electronselection}.
 
 \subsection{Event Selection}
 The event selection remains the same with respect to the 2010 measurement.
 An Event is selected if if contains a single electron that passes all electron
-selection.
+selection and events are vetoed if they contain a second lepton with
+$\pT>\unit{15}{\GeV}$.
 
 The Particle Flow \ETm distribution for the events that pass the event
 selection, with $\PT > \unit{35}{\GeV}$ and $|\eta| < 2.4$ is shown in
-\FigureRef{asym840:pfmet}.
+\FigureRef{fig:pfmet}.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.5\textwidth]{pfmet_new}
   \caption{Particle Flow \ETm distribution for selected events.}
-  \label{asym840:pfmet}
+  \label{fig:pfmet}
 \end{figure}
 
 The number of selected events that pass the event selection are shown in
-\TableRef{asym36:selectedevents}.
+\TableRef{tab:updatedselectedevents}. 
 
 \begin{table}[htbp]
  \begin{center}
  \begin{tabular}{lcc}
+\toprule
  $|\eta|$ range & Selected Positrons & Selected Electrons\\
- \hline
+ \midrule
  $0.0<| \eta |<0.2$ & 108235 &  90860 \\
  $0.2<| \eta |<0.4$ & 112870 &  93996 \\
  $0.4<| \eta |<0.6$ & 114148 &  94721 \\
@@ -82,20 +91,23 @@ The number of selected events that pass the event selection are shown in
  $1.8<| \eta |<2.0$ & 105596 &  80921 \\
  $2.0<| \eta |<2.2$ & 112419 &  86240 \\
  $2.2<| \eta |<2.4$ & 121224 & 102111 \\
+\bottomrule
  \end{tabular}
  \caption{Number of events passing the event selection for lepton momentum cut
  of \unit{\PT>35}{\GeV}.}
-\label{asym840:selectedevents}
+\label{tab:updatedselectedevents}
 \end{center}
 \end{table}
 
-The exected composition of the selected events, derived from MC simulation
-s, is show in \TableRef{asym840:selectedcomp}. 
+The exected composition of the selected events, derived from MC simulations, is
+show in \TableRef{tab:selectedcomp}. 
+\todo{why is this different?}
 
 \begin{table}[htbp]
 \begin{center}
 \begin{tabular}{lr}
-& \unit{\PT>35}{\GeV}\\ \hline
+\toprule
+& \unit{\PT>35}{\GeV}\\ \midrule
 $W\rightarrow e\nu$  & 76.2$\%$\\
 QCD Background       & 16.0$\%$\\
 EWK Total Background & 7.8$\%$ \\
@@ -103,49 +115,60 @@ EWK Total Background & 7.8$\%$ \\
 ~ EWK DYee          & 6.4$\%$  \\
 ~ EWK Wtaunu        & 0.8$\%$ \\
 ~ EWK ttbar         & 0.4$\%$ \\
+\bottomrule
 \end{tabular}
 \caption{Composition of selected events for lepton momentum cut of
   \unit{\PT>35}{\GeV}. Numbers are evaluated using simulation.}
- \label{asym840:selectedcomp}
+ \label{tab:selectedcomp}
 \end{center}
 \end{table}
 
+\section{Signal Yield Extraction Method}
+
+\todo{do I have anyhing else to add here?}
+
 \subsection{Fit on Real Data}
+
+The results of the extended maximum liklihood fits to each pseudorapidity/charge
+bin are shown in \FigureRef{fig:data1},\ref{data2},\ref{data3} and
+\ref{fig:data4}.
+The signal yield in each bin is summarised in \TableRef{tab:updatedsigyield} and
+the Kolmogorov-Smirnov probability of fit in \TableRef{tab:ks2}.
 
 \begin{table}[htbp]
  \begin{center}
- \begin{tabular}{lcrrrr}
-$|\eta|$ range &  Charge &  N$_{QCD}$     & N$_{W\rightarrow e \nu}$  & N$_{W\rightarrow \tau \nu}$ & KS probability \\
-               &         & fitted events & fitted events            & fitted events               & of fit \\
- \hline
-
-$0.0<| \eta |<0.2$ &  +& $12794.5 \pm 202.6$ &$89698.3\pm330.5$&$ 1264.0\pm4.7 $&0.999 \\
-                   &  -& $12926.1 \pm 194.3$ &$72369.8\pm297.6$&$ 1060.5\pm4.7 $&0.999 \\ 
-$0.2<| \eta |<0.4$ &  +& $13773.9 \pm 209.6$ &$93109.0\pm337.7$&$ 1284.3\pm4.7 $&0.999 \\
-                   &  -& $14071.4 \pm 199.8$ &$74215.4\pm302.0$&$ 1140.6\pm4.6 $&0.999 \\ 
-$0.4<| \eta |<0.6$ &  +& $14803.9 \pm 212.9$ &$93211.7\pm338.1$&$ 1264.0\pm4.6 $&0.999 \\
-                   &  -& $14554.2 \pm 203.5$ &$74360.3\pm303.4$&$ 1058.2\pm4.3 $&0.872 \\ 
-$0.6<| \eta |<0.8$ &  +& $15484.5 \pm 217.0$ &$94943.5\pm341.0$&$ 1403.0\pm5.0 $&0.999 \\
-                   &  -& $15523.8 \pm 206.4$ &$73764.2\pm302.2$&$ 1091.9\pm4.5 $&0.971 \\ 
-$0.8<| \eta |<1.0$ &  +& $17177.5 \pm 221.7$ &$92971.3\pm338.1$&$ 1281.7\pm4.7 $&0.950 \\
-                   &  -& $16871.6 \pm 210.5$ &$71476.6\pm298.3$&$ 1052.5\pm4.4 $&0.958 \\ 
-$1.0<| \eta |<1.2$ &  +& $20001.2 \pm 229.9$ &$86449.0\pm329.0$&$ 1156.7\pm4.4 $&0.770 \\
-                   &  -& $19930.1 \pm 218.4$ &$64643.8\pm286.6$&$ 957.0\pm4.2 $&0.676 \\ 
-$1.2<| \eta |<1.4$ &  +& $24214.9 \pm 243.7$ &$83718.6\pm326.6$&$ 1115.6\pm4.4 $&0.985 \\
-                   &  -& $24425.4 \pm 233.0$ &$60683.8\pm281.4$&$ 860.8\pm4.0 $&0.857 \\ 
-$1.6<| \eta |<1.8$ &  +& $15759.0 \pm 228.6$ &$68726.0\pm302.3$&$ 939.0\pm4.1 $&0.480 \\
-                   &  -& $16093.2 \pm 220.1$ &$47154.5\pm256.2$&$ 710.0\pm3.9 $&0.797 \\ 
-$1.8<| \eta |<2.0$ &  +& $23809.6 \pm 241.7$ &$73116.7\pm305.0$&$ 908.4\pm3.8 $&0.915 \\
-                   &  -& $23135.2 \pm 234.7$ &$49577.2\pm257.0$&$ 751.8\pm3.9 $&0.416 \\ 
-$2.0<| \eta |<2.2$ &  +& $33773.0 \pm 261.7$ &$69872.7\pm299.1$&$ 846.4\pm3.6 $&0.581 \\
-                   &  -& $32104.6 \pm 253.1$ &$45913.9\pm248.8$&$ 655.5\pm3.6 $&0.575 \\ 
-$2.2<| \eta |<2.4$ &  +& $61794.8 \pm 309.3$ &$52495.9\pm269.8$&$ 607.9\pm3.1 $&0.386 \\
-                   &  -& $60449.1 \pm 306.6$ &$34746.0\pm228.7$&$ 530.8\pm3.5 $&0.274 \\ 
+ \begin{tabular}{lcrrr}
+\toprule
+$|\eta|$ range &  Charge &  N$_{QCD}$     & N$_{W\rightarrow e \nu}$  & N$_{W\rightarrow \tau \nu}$ \\
+               &         & fitted events & fitted events            & fitted events                 \\
+\midrule
+$0.0<| \eta |<0.2$ &  +& $12794.5 \pm 202.6$ &$89698.3\pm330.5$&$ 1264.0\pm4.7$ \\
+                   &  -& $12926.1 \pm 194.3$ &$72369.8\pm297.6$&$ 1060.5\pm4.7$ \\ 
+$0.2<| \eta |<0.4$ &  +& $13773.9 \pm 209.6$ &$93109.0\pm337.7$&$ 1284.3\pm4.7$ \\
+                   &  -& $14071.4 \pm 199.8$ &$74215.4\pm302.0$&$ 1140.6\pm4.6$ \\ 
+$0.4<| \eta |<0.6$ &  +& $14803.9 \pm 212.9$ &$93211.7\pm338.1$&$ 1264.0\pm4.6$ \\
+                   &  -& $14554.2 \pm 203.5$ &$74360.3\pm303.4$&$ 1058.2\pm4.3$ \\ 
+$0.6<| \eta |<0.8$ &  +& $15484.5 \pm 217.0$ &$94943.5\pm341.0$&$ 1403.0\pm5.0$ \\
+                   &  -& $15523.8 \pm 206.4$ &$73764.2\pm302.2$&$ 1091.9\pm4.5$ \\ 
+$0.8<| \eta |<1.0$ &  +& $17177.5 \pm 221.7$ &$92971.3\pm338.1$&$ 1281.7\pm4.7$ \\
+                   &  -& $16871.6 \pm 210.5$ &$71476.6\pm298.3$&$ 1052.5\pm4.4$ \\ 
+$1.0<| \eta |<1.2$ &  +& $20001.2 \pm 229.9$ &$86449.0\pm329.0$&$ 1156.7\pm4.4$ \\
+                   &  -& $19930.1 \pm 218.4$ &$64643.8\pm286.6$&$  957.0\pm4.2$ \\ 
+$1.2<| \eta |<1.4$ &  +& $24214.9 \pm 243.7$ &$83718.6\pm326.6$&$ 1115.6\pm4.4$ \\
+                   &  -& $24425.4 \pm 233.0$ &$60683.8\pm281.4$&$  860.8\pm4.0$ \\ 
+$1.6<| \eta |<1.8$ &  +& $15759.0 \pm 228.6$ &$68726.0\pm302.3$&$  939.0\pm4.1$ \\
+                   &  -& $16093.2 \pm 220.1$ &$47154.5\pm256.2$&$  710.0\pm3.9$ \\ 
+$1.8<| \eta |<2.0$ &  +& $23809.6 \pm 241.7$ &$73116.7\pm305.0$&$  908.4\pm3.8$ \\
+                   &  -& $23135.2 \pm 234.7$ &$49577.2\pm257.0$&$  751.8\pm3.9$ \\ 
+$2.0<| \eta |<2.2$ &  +& $33773.0 \pm 261.7$ &$69872.7\pm299.1$&$  846.4\pm3.6$ \\
+                   &  -& $32104.6 \pm 253.1$ &$45913.9\pm248.8$&$  655.5\pm3.6$ \\ 
+$2.2<| \eta |<2.4$ &  +& $61794.8 \pm 309.3$ &$52495.9\pm269.8$&$  607.9\pm3.1$ \\
+                   &  -& $60449.1 \pm 306.6$ &$34746.0\pm228.7$&$  530.8\pm3.5$ \\ 
+\bottomrule
  \end{tabular}
- \caption{\label{tab:chi2}
+ \caption{\label{tab:updatedsigyield}
  Number of QCD events from the fitting procedure $\pm$ fit statistical uncertainty (Second column);
-   Number of signal events  (Third column), Number of $W\rightarrow \tau \nu$ events (Fourth column),
- Kolmogorov-Smirnov probability (Fifth column).
+   Number of signal events  (Third column), Number of $W\rightarrow \tau \nu$ events (Fourth column)
  The quoted uncertainty for N$_{W\rightarrow e \nu}$ and N$_{W\rightarrow \tau \nu}$
  is the statistical uncertainty assigned to N$_{sig+EWK}$
  rescaled by the expected contribution of signal and $W\rightarrow \tau \nu$ in the signal+EWK template}
@@ -153,10 +176,35 @@ $2.2<| \eta |<2.4$ &  +& $61794.8 \pm 309.3$ &$52495.9\pm269.8$&$ 607.9\pm3.1 $&
 \end{table}
 
 \begin{table}[htbp]
+ \begin{center}
+ \begin{tabular}{lrr}
+\toprule
+$|\eta|$ range &  \multicolumn{2}{c}{KS probability of fit} \\
+               & Positrons & Electrons \\
+\midrule
+$0.0<| \eta |<0.2$ & 0.999 & 0.999 \\ 
+$0.2<| \eta |<0.4$ & 0.999 & 0.999 \\ 
+$0.4<| \eta |<0.6$ & 0.999 & 0.872 \\ 
+$0.6<| \eta |<0.8$ & 0.999 & 0.971 \\ 
+$0.8<| \eta |<1.0$ & 0.950 & 0.958 \\ 
+$1.0<| \eta |<1.2$ & 0.770 & 0.676 \\ 
+$1.2<| \eta |<1.4$ & 0.985 & 0.857 \\ 
+$1.6<| \eta |<1.8$ & 0.480 & 0.797 \\ 
+$1.8<| \eta |<2.0$ & 0.915 & 0.416 \\ 
+$2.0<| \eta |<2.2$ & 0.581 & 0.575 \\ 
+$2.2<| \eta |<2.4$ & 0.386 & 0.274 \\ 
+\bottomrule
+ \end{tabular}
+ \caption{\label{tab:ks2} Kolmogorov-Smirnov probability of fit.}
+ \end{center}
+\end{table}
+
+\begin{table}[htbp]
   \begin{center}
     \begin{tabular}{lc}
+\toprule
     $|\eta|$ range & $\mathcal{A}_{exp} (\times 10^{-3})$\\
-    \hline
+    \midrule
     $0.0<|\eta|<0.4$ & 106.9 $\pm$ 2.7\\
     $0.2<|\eta|<0.4$ & 112.9 $\pm$ 2.7\\
     $0.4<|\eta|<0.6$ & 112.5 $\pm$ 2.7\\
@@ -168,6 +216,7 @@ $2.2<| \eta |<2.4$ &  +& $61794.8 \pm 309.3$ &$52495.9\pm269.8$&$ 607.9\pm3.1 $&
     $1.8<|\eta|<2.0$ & 191.8 $\pm$ 3.2\\
     $2.0<|\eta|<2.2$ & 206.9 $\pm$ 3.3\\
     $2.2<|\eta|<2.4$ & 203.4 $\pm$ 4.1\\
+\bottomrule
     \end{tabular}
   \caption{\label{tab:uncorRes}Uncorrected values ($\times 10^{-3}$) of the
   charge asymmetry  for an integrated luminosity of \unit{840}{\invpb}. }
@@ -175,17 +224,33 @@ $2.2<| \eta |<2.4$ &  +& $61794.8 \pm 309.3$ &$52495.9\pm269.8$&$ 607.9\pm3.1 $&
 \end{table}
 
 \section{Corrections}
-\todo[inline]{introduction to corrections}
+
+To compare with the theoretical value, the measured lepton asymmetry has to be
+corrected for the charge-dependent reconstrction efficiency, the incorect charge
+assignment rate and the effect of the electron energy resolution.
 
 \subsection{Relative Efficiency}
-\todo[inline]{Relative efficiency systematic}
+The reconstruction effieciency is measured using a tag and probe method\cite{}
+The \ac{GSF} tracking efficiency,
+identification efficiency and the \ac{HLT} efficiency are measured individually
+for each bin of pseudorapidity and for electrons and positrons separatly. 
 
+The \ac{GSF} tracking efficiency, identification efficiency and the \ac{HLT}
+efficiency are summarised in \TableRef{tab:updatedefficiency}.
+
+The main systematic errors on the measurement of the efficiencies are the energy
+scale and the signal shape. It was verified that these sysmteatic effects cancel
+in the measuremnt of the ratio of the efficiencies $R_{\epsilon}$ and are
+negligable with respect to the statistical error on the measurement. Only the
+statistical error on the measurement is propogated in to the error on the
+measurement of the ratio of the efficiencies $dR_{\epsilon}$.
 
 \begin{table}[htbp]
 \begin{center}
 \begin{tabular}{lcrrrr}
+\toprule
 $|\eta|$ range & Charge & $\epsilon_{GSF}$ &$\epsilon_{ID}$&$\epsilon_{HLT}$& R\\
-\hline
+\midrule
 $0.0<| \eta |<0.2$ &+& 98.5$\pm$0.2 &83.6$\pm$0.4 &97.9$\pm$0.2 &1.003$\pm$0.009\\
                    &-& 98.4$\pm$0.2 &83.5$\pm$0.5 &97.8$\pm$0.2 & \\
 $0.2<| \eta |<0.4$ &+& 98.9$\pm$0.2 &82.6$\pm$0.5 &97.9$\pm$0.2 & 0.998$\pm$0.009\\
@@ -208,31 +273,43 @@ $2.0<| \eta |<2.2$ &+& 97.5$\pm$0.3 &58.6$\pm$0.9 &98.5$\pm$0.3 & 0.966$\pm$0.02
                    &-& 97.3$\pm$0.3 &60.7$\pm$0.8 &98.6$\pm$0.3 & \\
 $2.2<| \eta |<2.4$ &+& 95.9$\pm$0.4 &55.1$\pm$1.0 &97.5$\pm$0.4 & 0.967$\pm$0.026\\
                    &-& 96.5$\pm$0.4 &56.3$\pm$1.0 &98.0$\pm$0.4 & \\
-
-\hline
+\midrule
 $0.0<| \eta |<1.4$ &+& 98.42$\pm$0.07 &82.9$\pm$0.2 &97.82$\pm$0.08 & 0.999$\pm$0.004\\
                    &-& 98.51$\pm$0.07 &82.9$\pm$0.2 &97.82$\pm$0.08 & \\
 $1.6<| \eta |<2.4$ &+& 97.12$\pm$0.15 &60.1$\pm$0.4 &97.63$\pm$0.17 & 0.987$\pm$0.010\\
                    &-& 97.12$\pm$0.15 &61.0$\pm$0.4 &97.42$\pm$0.17 & \\
-\hline
+\midrule
 $0.0<| \eta |<2.4$ &+& 98.09$\pm$0.06 &77.41$\pm$0.17 &97.76$\pm$0.07 & 0.999$\pm$0.003\\
                    &-& 98.16$\pm$0.06 &77.49$\pm$0.17 &97.73$\pm$0.07 & \\
+\bottomrule
 \end{tabular}
 \end{center}
-\caption{\label{tab:efficiency} GSF tracking, identification and HLT efficiency as a function of charge.}
+\caption{\label{tab:updatedefficiency} GSF tracking, identification and HLT efficiency as a function of charge.}
 \end{table}
 
 \subsection{Charge Misassignment}
-\todo[inline]{Misassignment of charge systermtic}
+The charge mismeasurement is measured in data from the same sign and opposite
+sign \PZ yields using the same electron selection as in the asymmetry
+measurement.
+The \HepProcess{\PZ\to\Pe\Pe} is split in to 66 subsamples, representing
+combinations of pseudorapidity bins of the two electrons ($11+\binom{11}{2} =
+66$).
+In each sample the fraction of events that have same signed electrons $R_{ij}$
+is calculated where $i,j$ are the pseudorapidity bins that the electrons are in.
+$R_{ij}$ and the charge mismeasurement rates $\omega_{i},\omega_{j}$ are related
+by,
 \begin{equation}
 R_{ij}=\omega_i \times(1-\omega_j) + \omega_j \times(1-\omega_i)
 \end{equation}
+The values of $\omega$ are extracted from a simulataneous fint to the 66 values
+of $R_{ij}$.
 
 \begin{table}[htbp]
   \begin{center}
 \begin{tabular}{lr}
+\toprule
 $\eta$ range        & $\omega \times 10^{-4}$    \\
-\hline
+\midrule
 $0.0<| \eta |<0.2$  & $ 1 \pm 1 $    \\ 
 $0.2<| \eta |<0.4$  & $ 1 \pm 1 $    \\
 $0.4<| \eta |<0.6$  & $ 1 \pm 1 $    \\
@@ -244,23 +321,74 @@ $1.6<| \eta |<1.8$  & $17 \pm 4 $    \\
 $1.8<| \eta |<2.0$  & $12 \pm 4 $    \\
 $2.0<| \eta |<2.2$  & $26 \pm 7 $    \\
 $2.2<| \eta |<2.4$  & $ 7 \pm 7 $    \\
+\bottomrule
 \end{tabular}
 \caption{\label{tab:mischarge}Charge mismeasurement rate.}
 \end{center}
 \end{table}
 
-
 \subsection{Lepton Energy Scale and Resolution}
-\todo[inline]{Lepton energy scale and resolution systematic}
+The effect of the electron energy resolution on the asymmetry measurement is
+studied using a \ac{MC} study. A correction to the asymmetry can be evaluated bt
+comparing the asymmetry measured at the generator level and the asymmetry
+measured in \ac{MC} after the simulation of detector effects.
+\todo{FSR}
 
+The correction relies on the simulation reporoducing the energy scale and
+resolution of the electrons perfectly. Unfortunatly the simulation does not take
+in to account all the detector effects present in real data, so additional
+residual corections to the simulated electon \pT distributions are necessary, an
+additioanl gaussian smaring of the \pT distribution ($\sigma_{corr}$) and an electron
+energy scale ($k_{corr}$) for each pseudorapidity bin.
 
+Values for $k_{i}$ and $\sigma_{i}$ are obtained from the
+\HepProcess{\PZ\to\Pe\Pe} mass distribution. The \HepProcess{\PZ\to\Pe\Pe}
+sample is again split in to 66 subsamples for the combinations of pseudorapidity
+bins of the two electrons ($11+\binom{11}{2} = 66$) for real data and \ac{MC}.
+The \HepProcess{\PZ\to\Pe\Pe} mass distribution is then fitted with a
+Breit-Wigner function convoluted with a Crystal Ball function that represents
+the resolution function. The width and the mass of the Berig-Wigner function are
+taken from the PDG values \cite{}. The resolution of the Crystal Ball function
+is defined,
+\begin{equation}
+\sigma_{ij} = \sqrt{\sigma_{i}^{2} + \sigma_{j}^{2}}
+\end{equation}
+where $\sigma_{i}$ is the resolution of in each individual pseudorapidity bin.
+The mean value of the Crystal Ball function is defined,
+\begin{equation}
+m_{0}_{ij} = m_{\PZ}^{PDG} 
+          \left( \sqrt{k_{i} k_{j}} - 1 \right)
+\end{equation}
+where $k_{i}$ is the scale factor in each pseudorapidity bin.  The 11 scale
+factors $k_{i}$ and the 11 additional smearing factors $\sigma_{i}$ for each
+pseudorapidity bin are obtained from a simulatenous fit to each of the mass
+distributions from 66 subsamples to both \ac{MC} and data. 
+
+To have a good agreement between data and simulation the simulated \pT
+distribution of the leptons must be smeared with a guassian of width
+\begin{equation}
+\sigma^{corr}_{i} = 
+\sqrt{
+\left(\sigma^{data}_{i}\right)^{2} -
+\left(\sigma^{MC}_{i}  \right)^{2}
+}
+\end{equation}
+and the scaled by a factor 
+\begin{equation}
+k^{corr}_i = \frac{ k^{data}_i}{k^{MC}_i}
+\end{equation}
+The values of the
+residual corrections, obtained with this method are given in
+\TableRef{tab:ResCorr}.
 
 \begin{table}[htbp]
   \begin{center}
+\begin{sideways}
     \begin{tabular}{ccccccc}
+\toprule
 $\eta$ bin & $\sigma_{DATA}$ &  $\sigma_{MC}$ & $\sigma_{corr}$ & $k_{DATA}$ &  $k_{MC}$ & $k_{corr}$ \\
 &GeV &GeV &GeV & & & \\
-\hline
+\midrule
 0.0$<|\eta|<$0.2 &1.08$\pm$ 0.03 & 0.83$\pm$ 0.03 & 0.70$\pm$ 0.06 & 1.0007$\pm$ 0.0003 & 1.0012$\pm$ 0.0003 & 0.9995$\pm$ 0.0004 \\ 
 0.2$<|\eta|<$0.4 &1.01$\pm$ 0.03 & 0.85$\pm$ 0.02 & 0.54$\pm$ 0.07 & 1.0036$\pm$ 0.0003 & 1.0020$\pm$ 0.0003 & 1.0016$\pm$ 0.0004 \\ 
 0.4$<|\eta|<$0.6 &1.16$\pm$ 0.03 & 0.95$\pm$ 0.02 & 0.67$\pm$ 0.06 & 1.0019$\pm$ 0.0003 & 1.0006$\pm$ 0.0003 & 1.0013$\pm$ 0.0004 \\ 
@@ -272,8 +400,9 @@ $\eta$ bin & $\sigma_{DATA}$ &  $\sigma_{MC}$ & $\sigma_{corr}$ & $k_{DATA}$ &  
 1.8$<|\eta|<$2.0 &2.38$\pm$ 0.04 & 1.83$\pm$ 0.03 & 1.53$\pm$ 0.07 & 0.9976$\pm$ 0.0006 & 0.9768$\pm$ 0.0005 & 1.0213$\pm$ 0.0008 \\ 
 2.0$<|\eta|<$2.2 &2.16$\pm$ 0.04 & 1.49$\pm$ 0.03 & 1.56$\pm$ 0.06 & 0.9922$\pm$ 0.0006 & 0.9837$\pm$ 0.0005 & 1.0087$\pm$ 0.0008 \\ 
 2.2$<|\eta|<$2.4 &2.21$\pm$ 0.04 & 1.39$\pm$ 0.04 & 1.72$\pm$ 0.06 & 0.9510$\pm$ 0.0008 & 0.9881$\pm$ 0.0005 & 0.9625$\pm$ 0.0009 \\ 
-
+\bottomrule
     \end{tabular}
+\end{sideways}
     \caption{\label{tab:ResCorr}Scale and residual smearing factor obtained with $Z\rightarrow ee$ }
   \end{center}
 \end{table}
@@ -289,9 +418,10 @@ $\eta$ bin & $\sigma_{DATA}$ &  $\sigma_{MC}$ & $\sigma_{corr}$ & $k_{DATA}$ &  
 \begin{table}[htbp]
   \begin{center}
     \begin{tabular}{cccccc}
+\toprule
 $\eta$ range & Correction  & Stat.   &PDF  Syst. &  FSR Syst. & Scale Syst.\\
           & factor & Error & Error   & Error  & Error  \\
-     \hline
+     \midrule
  $0.0<|\eta|<0.2$ & -1.1 & 0.1 & 0.3  &0.1 & 0.0\\
  $0.2<|\eta|<0.4$ &  0.2 & 0.1 & 0.6  &0.0 & 0.0\\
  $0.4<|\eta|<0.6$ & -0.4 & 0.1 & 0.3  &0.0 & 0.0\\
@@ -303,44 +433,12 @@ $\eta$ range & Correction  & Stat.   &PDF  Syst. &  FSR Syst. & Scale Syst.\\
  $1.8<|\eta|<2.0$ & -4.4 & 0.1 & 1.6  &0.0 & 0.0\\
  $2.0<|\eta|<2.2$ & -0.2 & 0.1 & 2.6  &0.0 & 0.1\\
  $2.2<|\eta|<2.4$ & -3.5 & 0.1 & 2.4  &0.0 & 0.2\\
+\bottomrule
     \end{tabular}
     \caption{\label{tab:acc}Bias in the charge asymmetry introduced by the the electron energy scale and resolution.
  All values are in units $\times 10^{-3}$}
   \end{center}
 \end{table}
-
-\begin{table}[htbp]
-  \begin{center}
-    \begin{tabular}{l | c c c c c c c c c c c}
-& \scriptsize{$\left[0.0,0.2\right]$}
-& \scriptsize{$\left[0.2,0.4\right]$}
-& \scriptsize{$\left[0.4,0.6\right]$}
-& \scriptsize{$\left[0.6,0.8\right]$}
-& \scriptsize{$\left[0.8,1.0\right]$}
-& \scriptsize{$\left[1.0,1.2\right]$}
-& \scriptsize{$\left[1.2,1.4\right]$}
-& \scriptsize{$\left[1.6,1.8\right]$}
-& \scriptsize{$\left[1.8,2.0\right]$}
-& \scriptsize{$\left[2.0,2.2\right]$}
-& \scriptsize{$\left[2.2,2.4\right]$} \\ \hline
-
-\scriptsize{$\left[0.0,0.2\right]$} &0.10 & 0.06 & 0.07 & 0.07 & 0.14 & 0.20 & 0.15 & 0.18 & 0.43 & 0.61 & 0.58 \\
-\scriptsize{$\left[0.2,0.4\right]$} &0.06 & 0.42 & 0.13 & 0.08 & 0.18 & 0.26 & 0.17 & 0.17 & 0.45 & 1.02 & 0.66 \\
-\scriptsize{$\left[0.4,0.6\right]$} &0.07 & 0.13 & 0.09 & 0.07 & 0.13 & 0.17 & 0.13 & 0.15 & 0.33 & 0.57 & 0.52 \\
-\scriptsize{$\left[0.6,0.8\right]$} &0.07 & 0.08 & 0.07 & 0.06 & 0.12 & 0.18 & 0.13 & 0.15 & 0.32 & 0.51 & 0.52 \\
-\scriptsize{$\left[0.8,1.0\right]$} &0.14 & 0.18 & 0.13 & 0.12 & 0.31 & 0.43 & 0.29 & 0.34 & 0.76 & 1.21 & 1.13 \\
-\scriptsize{$\left[1.0,1.2\right]$} &0.20 & 0.26 & 0.17 & 0.18 & 0.43 & 1.02 & 0.60 & 0.61 & 1.25 & 2.30 & 2.16 \\
-\scriptsize{$\left[1.2,1.4\right]$} &0.15 & 0.17 & 0.13 & 0.13 & 0.29 & 0.60 & 0.60 & 0.49 & 0.89 & 1.74 & 1.70 \\
-\scriptsize{$\left[1.6,1.8\right]$} &0.18 & 0.17 & 0.15 & 0.15 & 0.34 & 0.61 & 0.49 & 0.57 & 1.00 & 1.71 & 1.64 \\
-\scriptsize{$\left[1.8,2.0\right]$} &0.43 & 0.45 & 0.33 & 0.32 & 0.76 & 1.25 & 0.89 & 1.00 & 2.61 & 3.56 & 3.30 \\
-\scriptsize{$\left[2.0,2.2\right]$} &0.61 & 1.02 & 0.57 & 0.51 & 1.21 & 2.30 & 1.74 & 1.71 & 3.56 & 6.79 & 5.88 \\
-\scriptsize{$\left[2.2,2.4\right]$} &0.58 & 0.66 & 0.52 & 0.52 & 1.13 & 2.16 & 1.70 & 1.64 & 3.30 & 5.88 & 5.95 \\
-    \end{tabular}
-    \caption{\label{tab:covMatrix}Error Correlation Matrix ($\times 10^{-6}$).}
-  \end{center}
-\end{table}
-
-
 
 \subsection{Correction Factors}
 \todo[inline]{summary of corrections to measurment}
@@ -348,10 +446,11 @@ $\eta$ range & Correction  & Stat.   &PDF  Syst. &  FSR Syst. & Scale Syst.\\
 \begin{table}[htbp]
   \begin{center}
     \begin{tabular}{ccccc}
+\toprule
 $\eta$ range & $\mathcal{A}_M$ & Rel. Eff & Energy & $\mathcal{A}_C$ \\
 & & MisCharge & Resolution &  \\
 & & Correction  & Correction & \\
-\hline
+\midrule
  $0.0<|\eta|<0.4$ & 106.9 &-1.5$\pm$ 4.5 & -1.1$\pm$0.3 & 104.3\\ 
  $0.2<|\eta|<0.4$ & 112.9 &+1.0$\pm$ 4.4 &  0.2$\pm$0.6 & 114.1\\ 
  $0.4<|\eta|<0.6$ & 112.5 &+2.5$\pm$ 4.4 & -0.4$\pm$0.3 & 114.6\\
@@ -364,6 +463,7 @@ $\eta$ range & $\mathcal{A}_M$ & Rel. Eff & Energy & $\mathcal{A}_C$ \\
  $2.0<|\eta|<2.2$ & 206.9 &+17.4$\pm$10.1&  -0.2$\pm$2.6 & 224.1\\
  $2.2<|\eta|<2.4$ & 203.4 &+16.1$\pm$12.5 & -3.5$\pm$2.4 & 216.0\\
 
+\bottomrule
     \end{tabular}
     \caption{\label{tab:CorrectionFactors}Correction factors ($\times 10~{-3}$) applied to the measured asymmetry}
   \end{center}
@@ -383,8 +483,9 @@ $\eta$ range & $\mathcal{A}_M$ & Rel. Eff & Energy & $\mathcal{A}_C$ \\
 \begin{table}[htbp]
 \begin{center}
 \begin{tabular}{cr}
+\toprule
 $|\eta|$ range  & $\sigma(\mathcal{A}) \times 10^{-3}$\\
-\hline
+\midrule
 $0.0<|\eta|<0.2$ & 1.0\\
 $0.2<|\eta|<0.4$ & 1.9\\
 $0.4<|\eta|<0.6$ & 2.2\\
@@ -396,6 +497,7 @@ $1.6<|\eta|<1.8$ & 2.5\\
 $1.8<|\eta|<2.0$ & 1.3\\
 $2.0<|\eta|<2.2$ & 0.6\\
 $2.2<|\eta|<2.4$ & 1.6\\
+\bottomrule
 \end{tabular}
 \caption{Maximum distance between the asymmetry measured with many different antiselections
 and the asymmetry measured with the chosen antiselection in MC pseudo data and real data for each eta bin.}
@@ -409,9 +511,10 @@ and the asymmetry measured with the chosen antiselection in MC pseudo data and r
 \begin{table}[htbp]
 \begin{center}
 \begin{tabular}{crrr}
+\toprule
 $|\eta|$  & \multicolumn{3}{c}{$\sigma(\mathcal{A}) \times 10^{-3}$}\\
 range     & Recoil Corr.& PDF & Combined \\
-\hline
+\midrule
 $0.0<|\eta|<0.2$ &  0.2 &  1.5  & 1.5 \\
 $0.2<|\eta|<0.4$ &  0.4 &  1.6  & 1.7 \\
 $0.4<|\eta|<0.6$ &  0.6 &  1.3  & 1.4 \\
@@ -423,6 +526,7 @@ $1.6<|\eta|<1.8$ &  0.7 &  1.7  & 1.9 \\
 $1.8<|\eta|<2.0$ &  0.4 &  1.5  & 1.6 \\
 $2.0<|\eta|<2.2$ &  1.1 &  1.5  & 1.9 \\
 $2.2<|\eta|<2.4$ &  0.9 &  2.3  & 2.4 \\
+\bottomrule
 \end{tabular}
 \caption{\label{tab:systSIG}Systematic uncertainty due to the Signal \MET shape
 used in the signal extraction method assigned to each eta bin.}
@@ -435,10 +539,9 @@ used in the signal extraction method assigned to each eta bin.}
 \begin{table}[htbp]
 \begin{center}
 \begin{tabular}{cr}
-\hline
+\toprule
 $|\eta|$ range & $\sigma(\mathcal{A}) \times 10^{-3}$\\
-\hline
-\hline
+\midrule
 $0.0<|\eta|<0.2$ & 0.0\\
 $0.2<|\eta|<0.4$ & 0.0\\
 $0.4<|\eta|<0.6$ & 0.0\\
@@ -450,45 +553,12 @@ $1.6<|\eta|<1.8$ & 0.0\\
 $1.8<|\eta|<2.0$ & 0.0\\
 $2.0<|\eta|<2.2$ & 0.0\\
 $2.2<|\eta|<2.4$ & 0.0\\
-\hline
+\bottomrule
 \end{tabular}
 \caption{\label{tab:systEWK}Systematic uncertainty due to the electroweak \MET shape used in the signal extraction method assigned to each eta bin.}
 \end{center}
 \end{table}
 
-
-\begin{table}[htbp]
-   \begin{center}
-      \begin{tabular}{l|ccccccccccc}
-
-& \scriptsize{$\left[0.0,0.2\right]$}
-& \scriptsize{$\left[0.2,0.4\right]$}
-& \scriptsize{$\left[0.4,0.6\right]$}
-& \scriptsize{$\left[0.6,0.8\right]$}
-& \scriptsize{$\left[0.8,1.0\right]$}
-& \scriptsize{$\left[1.0,1.2\right]$}
-& \scriptsize{$\left[1.2,1.4\right]$}
-& \scriptsize{$\left[1.6,1.8\right]$}
-& \scriptsize{$\left[1.8,2.0\right]$}
-& \scriptsize{$\left[2.0,2.2\right]$}
-& \scriptsize{$\left[2.2,2.4\right]$} \\ \hline
-
-\scriptsize{$\left[0.0,0.2\right]$}& 3.33& 2.54& 2.17& 2.45& 2.60& 2.73& 2.72& 2.73& 2.33& 2.51& 3.65 \\
-\scriptsize{$\left[0.2,0.4\right]$}& 2.54& 6.42& 2.47& 2.78& 2.95& 3.07& 3.19& 3.06& 2.55& 2.90& 4.07 \\
-\scriptsize{$\left[0.4,0.6\right]$}& 2.17& 2.47& 7.14& 2.53& 2.67& 2.74& 3.03& 2.73& 2.18& 2.71& 3.58 \\
-\scriptsize{$\left[0.6,0.8\right]$}& 2.45& 2.78& 2.53& 6.17& 3.14& 3.21& 3.62& 3.15& 2.51& 3.17& 4.19 \\
-\scriptsize{$\left[0.8,1.0\right]$}& 2.60& 2.95& 2.67& 3.14& 3.63& 3.45& 3.92& 3.37& 2.68& 3.41& 4.50 \\
-\scriptsize{$\left[1.0,1.2\right]$}& 2.73& 3.07& 2.74& 3.21& 3.45& 5.79& 3.93& 3.47& 2.80& 3.45& 4.64 \\
-\scriptsize{$\left[1.2,1.4\right]$}& 2.72& 3.19& 3.03& 3.62& 3.92& 3.93& 6.78& 3.79& 2.86& 4.07& 5.04 \\
-\scriptsize{$\left[1.6,1.8\right]$}& 2.73& 3.06& 2.73& 3.15& 3.37& 3.47& 3.79& 9.67& 2.78& 3.36& 4.56 \\
-\scriptsize{$\left[1.8,2.0\right]$}& 2.33& 2.55& 2.18& 2.51& 2.68& 2.80& 2.86& 2.78& 4.04& 2.60& 3.73 \\
-\scriptsize{$\left[2.0,2.2\right]$}& 2.51& 2.90& 2.71& 3.17& 3.41& 3.45& 4.07& 3.36& 2.60& 3.86& 4.46 \\
-\scriptsize{$\left[2.2,2.4\right]$}& 3.65& 4.07& 3.58& 4.19& 4.50& 4.64& 5.04& 4.56& 3.73& 4.46& 8.67 \\
-
-      \end{tabular}
-    \end{center}
-  \caption{\label{tab_corr_fit}Error correlation matrix for the fitting procedure. All the values are given in units $\times 10^{-6}$ }
-\end{table}
 
 \subsection{Systematic Uncertainty Summary}
 \todo[inline]{Summary of systematic uncertainties for 840 measurement.}
@@ -496,8 +566,9 @@ $2.2<|\eta|<2.4$ & 0.0\\
 \begin{table}[htbp]
  \begin{center}
    \begin{tabular}{lcccc}
+\midrule
       &Signal & Energy & Charge &  Efficiency \\
-     & Yield & Scale and Res. & MisId. & Ratio \\ \hline
+     & Yield & Scale and Res. & MisId. & Ratio \\ \midrule
 $0.0<|\eta|<0.2$ & 1.8 & 0.6 & 0.0 &  4.5 \\
 $0.2<|\eta|<0.4$ & 2.5 & 0.6 & 0.0 &  4.4 \\
 $0.4<|\eta|<0.6$ & 2.7 & 0.3 & 0.0 &  4.4 \\
@@ -509,6 +580,7 @@ $1.6<|\eta|<1.8$ & 3.1 & 0.8 & 0.1 &  9.2 \\
 $1.8<|\eta|<2.0$ & 2.0 & 1.6 & 0.2 &  8.7 \\
 $2.0<|\eta|<2.2$ & 2.0 & 2.6 & 0.3 & 10.0 \\
 $2.2<|\eta|<2.4$ & 2.9 & 2.4 & 0.3 & 12.5 \\
+\bottomrule
     \end{tabular}
   \end{center}
  \caption{\label{tab:summarysyst}Summary of the systematic uncertainties. All values are in units $\times 10^{-3}$. }
@@ -518,6 +590,7 @@ $2.2<|\eta|<2.4$ & 2.9 & 2.4 & 0.3 & 12.5 \\
 \begin{table}[htbp]
    \begin{center}
       \begin{tabular}{l|ccccccccccc}
+\midrule
 & \scriptsize{$\left[0.0,0.2\right]$}
 & \scriptsize{$\left[0.2,0.4\right]$}
 & \scriptsize{$\left[0.4,0.6\right]$}
@@ -528,7 +601,7 @@ $2.2<|\eta|<2.4$ & 2.9 & 2.4 & 0.3 & 12.5 \\
 & \scriptsize{$\left[1.6,1.8\right]$}
 & \scriptsize{$\left[1.8,2.0\right]$}
 & \scriptsize{$\left[2.0,2.2\right]$}
-& \scriptsize{$\left[2.2,2.4\right]$} \\ \hline
+& \scriptsize{$\left[2.2,2.4\right]$} \\ \midrule
 
 \scriptsize{$\left[0.0,0.2\right]$} & 23.7 & 2.6 & 2.2 & 2.5 & 2.7 & 2.9 & 2.9 & 2.9 & 2.8 & 3.1 & 4.2 \\
 \scriptsize{$\left[0.2,0.4\right]$} & 2.6 & 26.2 & 2.6 & 2.9 & 3.1 & 3.3 & 3.4 & 3.2 & 3.0 & 3.9 & 4.7 \\
@@ -542,6 +615,7 @@ $2.2<|\eta|<2.4$ & 2.9 & 2.4 & 0.3 & 12.5 \\
 \scriptsize{$\left[2.0,2.2\right]$} & 3.1 & 3.9 & 3.3 & 3.7 & 4.6 & 5.7 & 5.8 & 5.1 & 6.2 & 110.7 & 10.3 \\
 \scriptsize{$\left[2.2,2.4\right]$} & 4.2 & 4.7 & 4.1 & 4.7 & 5.6 & 6.8 & 6.7 & 6.2 & 7.0 & 10.3 & 171.0 \\
 
+\bottomrule
     \end{tabular}
     \end{center}
   \caption{\label{tab_corr_tot}Correlation matrix for all the systematic errors.
@@ -564,7 +638,8 @@ $2.2<|\eta|<2.4$ & 2.9 & 2.4 & 0.3 & 12.5 \\
 \begin{table}[htbp]
 \begin{center}
 \begin{tabular}{lccccc}
-$|\eta|$ range  & Data & CTEQ & HERAPDF & MSTW & NNPDF \\ \hline
+\toprule
+$|\eta|$ range  & Data & CTEQ & HERAPDF & MSTW & NNPDF \\ \midrule
   $0.0<|\eta|<0.2$ &104$\pm$3$\pm$5 &$109^{+5}_{-5}$ &$106^{+4}_{-8}$ & $83^{+3}_{-5}$& 107$\pm$5\\
   $0.2<|\eta|<0.4$ &114$\pm$3$\pm$5 &$114^{+5}_{-5}$ &$110^{+4}_{-8}$ & $85^{+3}_{-5}$& 110$\pm$5\\
   $0.4<|\eta|<0.6$ &115$\pm$3$\pm$5 &$119^{+5}_{-5}$ &$115^{+4}_{-8}$ & $92^{+3}_{-5}$& 116$\pm$5\\
@@ -576,6 +651,7 @@ $|\eta|$ range  & Data & CTEQ & HERAPDF & MSTW & NNPDF \\ \hline
   $1.8<|\eta|<2.0$ &200$\pm$3$\pm$9 &$207^{+8}_{-10}$ &$196^{+4}_{-3}$ & $184^{+6}_{-5}$&206$\pm$4 \\
   $2.0<|\eta|<2.2$ &224$\pm$3$\pm$11 &$224^{+8}_{-11}$ &$211^{+5}_{-3}$ & $198^{+6}_{-5}$&219$\pm$4 \\
   $2.2<|\eta|<2.4$ &216$\pm$4$\pm$13 &$241^{+8}_{-12}$ &$225^{+9}_{-4}$ & $214^{+6}_{-5}$&231$\pm$5 \\
+\bottomrule
 \end{tabular}
 \caption{Measured electron charge asymmetry with predictions from CTEQ6.6 and MSTW PDFs.  36 Uncertainties on measured asymmetry are statistical and systematic respectivly and the Uncertainties on predictions are due to the uncertainties on the PDFs}
 \label{tab:results}
