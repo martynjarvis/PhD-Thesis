@@ -1,5 +1,5 @@
-\chapter[Electron Charge Asymmetry]{ 
-Measurement of the electron charge asymmetry with \unit{840}{\invpb} }
+\chapter[Electron Charge Asymmetry]{Update to the electron charge asymmetry
+measurement with \unit{840}{\invpb} }
 
 The measurement detailed in the previous chapter was performed with
 \unit{36}{\invpb} of data from the full 2010 dataset. 
@@ -15,6 +15,31 @@ however small changes to the metheodolgy have been implemented due to changes
 in the luminosity and the increase in data in the 2011 \ac{LHC} run.
 
 \section{Event Selection}
+
+\subsection{Trigger}
+Due to the increased luminosity in the 2011 Run A, the identifaction and
+isolation cuts applied to the trigger have been tightened. The \PT cut applied
+to the electon have been increased, first to \unit{27}{\GeV} and then in later
+runs to \unit{32}{\GeV}.
+
+\begin{table}[htbp]
+  \begin{center}
+    \leavevmode
+     \begin{tabular}{ll} 
+      Run Ranges & Trigger  \\
+     \hline
+     160404-161176 & HLT\_Ele27\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v1  \\
+     161217-163261 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v1  \\
+     163270-163869 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v2  \\
+     165088-165633 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v3  \\
+     165970-166967 & HLT\_Ele32\_CaloIdVT\_CaloIsoT\_TrkIdT\_TrkIsoT\_v4  \\
+     \end{tabular}
+
+  \caption{Triggers used to select the data used in this measurement.}
+  \label{asym840:triggers}
+
+   \end{center}
+\end{table}
 \subsection{Electron Selection}
 
 The electron transverse momentum cut is shifted up to \unit{35}{\GeV} due to
