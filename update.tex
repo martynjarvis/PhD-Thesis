@@ -356,7 +356,7 @@ is defined,
 where $\sigma_{i}$ is the resolution of in each individual pseudorapidity bin.
 The mean value of the Crystal Ball function is defined,
 \begin{equation}
-m_{0}_{ij} = m_{\PZ}^{PDG} 
+m_{0_{ij}} = m_{\PZ}^{PDG} 
           \left( \sqrt{k_{i} k_{j}} - 1 \right)
 \end{equation}
 where $k_{i}$ is the scale factor in each pseudorapidity bin.  The 11 scale
@@ -407,13 +407,35 @@ $\eta$ bin & $\sigma_{DATA}$ &  $\sigma_{MC}$ & $\sigma_{corr}$ & $k_{DATA}$ &  
   \end{center}
 \end{table}
 
-\begin{figure}[htbp]
-  \begin{center}
-\includegraphics*[width=0.45\textwidth]{ENSmeChargeSep.png}
-\includegraphics*[width=0.45\textwidth]{ENKfactChargeSep.png}
- \caption{\label{Scale_sep} $\sigma_{corr}$(left) and $k_{corr}$(right) for electrons and positrons.}
-\end{center}
-\end{figure}
+%\begin{figure}[htbp]
+  %\begin{center}
+%\includegraphics*[width=0.45\textwidth]{ENSmeChargeSep.png}
+%\includegraphics*[width=0.45\textwidth]{ENKfactChargeSep.png}
+ %\caption{\label{Scale_sep} $\sigma_{corr}$(left) and $k_{corr}$(right) for electrons and positrons.}
+%\end{center}
+%\end{figure}
+%% this is probably not needed here...
+
+A \ac{MC} sample of \HepProcess{\PW\to\Pe\Pnue} events is used to evalueate the
+corrections introduced by the energy scale and resolution for each
+pseudorapidity bin. The generator level electron \pT is first smeared by the
+nominal \pT resolution of the simulated sample after the simulation of detector
+effects. It is then smeared and scaled according to the residual energy
+corrections, $\sigma^{corr}$ and $k^{corr}$. The \pT cut is then applied to the
+generator and corrected samples, and the asymmetry corrections are obtained by
+comparing the number of events that pass the threshold in either sample.
+
+There are three sources of systematic uncertainty that affect the evaluated
+correction, the \ac{PDF} uncertainty on the generated \pT spectra, the modeling
+of \ac{FSR} and the uncertainty on the residual correction. The \ac{PDF}
+uncertainty is evaluated by generating a \pT spectra for each error \ac{PDF}  in
+the \ac{PDF} set and summing in quadrature the variations. The uncertainty on
+the residual correction is evaluated by scaling and smearing the \pT spectra
+within the uncertainty taking the maximum distance from a central value as the
+uncertainty. 
+
+The correction factor introduced by the elctron energy scale and resolution and
+the accompanying uncertainties are described in \TableRef{tab:energyscalecorr}.
 
 \begin{table}[htbp]
   \begin{center}
@@ -435,13 +457,16 @@ $\eta$ range & Correction  & Stat.   &PDF  Syst. &  FSR Syst. & Scale Syst.\\
  $2.2<|\eta|<2.4$ & -3.5 & 0.1 & 2.4  &0.0 & 0.2\\
 \bottomrule
     \end{tabular}
-    \caption{\label{tab:acc}Bias in the charge asymmetry introduced by the the electron energy scale and resolution.
+    \caption{\label{tab:energyscalecorr}Bias in the charge asymmetry introduced by the the electron energy scale and resolution.
  All values are in units $\times 10^{-3}$}
   \end{center}
 \end{table}
 
 \subsection{Correction Factors}
-\todo[inline]{summary of corrections to measurment}
+The summary of each of the correction factors applied to the asymmetry
+measuremend in each pseudorapidity bin is given in
+\TableRef{tab:correctionfactors}. 
+\todo{bin by bin correlations}
 
 \begin{table}[htbp]
   \begin{center}
@@ -462,23 +487,37 @@ $\eta$ range & $\mathcal{A}_M$ & Rel. Eff & Energy & $\mathcal{A}_C$ \\
  $1.8<|\eta|<2.0$ & 191.8 &+12.0$\pm$ 8.7 & -4.4$\pm$1.6 & 199.5\\
  $2.0<|\eta|<2.2$ & 206.9 &+17.4$\pm$10.1&  -0.2$\pm$2.6 & 224.1\\
  $2.2<|\eta|<2.4$ & 203.4 &+16.1$\pm$12.5 & -3.5$\pm$2.4 & 216.0\\
-
 \bottomrule
     \end{tabular}
-    \caption{\label{tab:CorrectionFactors}Correction factors ($\times 10~{-3}$) applied to the measured asymmetry}
+    \caption{\label{tab:correctionfactors}Correction factors ($\times 10~{-3}$) applied to the measured asymmetry}
   \end{center}
 \end{table}
 
 
 \section{Systematic Uncertainties}
-\todo[inline]{Systematic uncertainties for 840 measurement.}
+The systematic uncertaintues due to the relative efficiency, the incorrect
+charge assignment and the electron energy scale and resolution are inclued in
+the uncertaties on the correction factors applied to the asymmetry that were
+described in the preceeding section.
 
 \subsection{Signal Extraction Method}
-\todo[inline]{Systematic uncertainties for signal extraction method.}
+Biases may be introduced in to the measurement if there is a
+difference between the \ETm templates used and the true \ETm distribution. 
+The systematic uncertainties due to the signal extraction method are evaluated
+in a similar way to the measurement described in the preceeding chapter.  The
+template shapes used in the signal yield extraction method are varied within
+certain uncertainties. 
 
 \subsubsection{QCD \ETm Shape}
-\todo[inline]{Systematic uncertainties for qcd met shape.}
+The systematic uncertainty due to the \ac{QCD} and \gjet \ETm shape is evaluated
+by varying the anti-selection that is used to obtain the control sample. The
+effect that changing the values of the inverted $\Delta\eta$ and $\Delta\phi$
+cuts used in antiselection has on the asymmetry is observed and the maximum
+distance from the measured asymmetry with the nomnial antiselection is used as a
+measure of the systematic uncertainty.
 
+\TableRef{tab:updatedsystQCD} summarises the systematic uncertainty due to the
+\ac{QCD} \ETm shape for each pseudorapidity bin.
 
 \begin{table}[htbp]
 \begin{center}
@@ -501,12 +540,40 @@ $2.2<|\eta|<2.4$ & 1.6\\
 \end{tabular}
 \caption{Maximum distance between the asymmetry measured with many different antiselections
 and the asymmetry measured with the chosen antiselection in MC pseudo data and real data for each eta bin.}
-\label{tab:systQCD}
+\label{tab:updatedsystQCD}
 \end{center}
 \end{table}
 
 \subsubsection{Signal \ETm Shape from Boson Recoil}
-\todo[inline]{Systematic uncertainties for signal met shape.}
+
+There are three main sources of uncertainty due to the signal template from
+boson recoil,
+\begin{itemize}
+    \item the uncertainty in the recoil corrections,
+    \item the uncertainty on the \ac{PDF} used to generate the events that the
+recoil corrections are applied to.
+\end{itemize}
+
+The recoil method corrections have uncertainties that must be propogated to the
+asymmetry measurement as systematic uncertainties.
+ The corrections obtained from the recoil method vary between an
+upper and lower value\cite{}. The effect of these uncertainties on the asymmetry
+measurement us evaluated by using the upper and lower limits on the corrections
+to observe the effect that they have on the measured asymmetry, and use this as
+a measure of the systematic uncertainty.
+
+The systematic uncertainty due to the \ac{PDF} uncertainty used to genetate the
+template shapes is evaluated by considering the \ac{PDF} error sets. The CTEQ6.6
+error \ac{PDF} sets have 45 individual \acp{PDF}
+which represent the central value \ac{PDF}, 22 upper and 22 lower error \ac{PDF}
+for each of the 22 parameters the CTEQ collaboration use in their global fits to
+data.
+The uncertainty is evaluated by generating template shapes for each of the
+parameters and measuring the effect of these templates on the measured
+asymmetry. 
+
+The systematic uncertainty due to the signal \ETm signal shape is summarised in
+\TableRef{tab:updatedsystsig}.
 
 \begin{table}[htbp]
 \begin{center}
@@ -528,13 +595,22 @@ $2.0<|\eta|<2.2$ &  1.1 &  1.5  & 1.9 \\
 $2.2<|\eta|<2.4$ &  0.9 &  2.3  & 2.4 \\
 \bottomrule
 \end{tabular}
-\caption{\label{tab:systSIG}Systematic uncertainty due to the Signal \MET shape
+\caption{\label{tab:updatedsystsig} Systematic uncertainty due to the Signal \MET shape
 used in the signal extraction method assigned to each eta bin.}
 \end{center}
 \end{table}
 
 \subsubsection{EWK \ETm Shape}
-\todo[inline]{Systematic uncertainties for EWK met shape.}
+
+The \ac{EWK} shape is obtained from \ac{MC} samples. During the fitting
+procedure, the \ac{EWK} shape is fixed to the \Wenu signal shape according to
+the cross section from NLO \ac{MC}.
+
+To estimate the effect of the uncertainty of the cross section has on the
+asymmetry measurement, the \ac{EWK} background is artificially varied by the
+measured uncertainty on the relative \PW to \PZ cross sections of \unit{$\pm2$}{
+\% }. The effect on the asymmetry is measured and found to be negligable as
+shown in \TableRef{tab:updatedsystewk}.
 
 \begin{table}[htbp]
 \begin{center}
@@ -555,13 +631,18 @@ $2.0<|\eta|<2.2$ & 0.0\\
 $2.2<|\eta|<2.4$ & 0.0\\
 \bottomrule
 \end{tabular}
-\caption{\label{tab:systEWK}Systematic uncertainty due to the electroweak \MET shape used in the signal extraction method assigned to each eta bin.}
+\caption{\label{tab:updatedsystewk}Systematic uncertainty due to the electroweak \MET shape used in the signal extraction method assigned to each eta bin.}
 \end{center}
 \end{table}
 
-
 \subsection{Systematic Uncertainty Summary}
-\todo[inline]{Summary of systematic uncertainties for 840 measurement.}
+The summary of the systematic uncertainties due to the signal yield method, the
+electron energy scale and resolution, the incorrect assignment of charge and the
+relative efficiency of electrons and positrons are given in
+\TableRef{tab:updatedsummarysyst}.
+
+A full correlation matrix of the systematic errors in the measurement is
+presented in \TableRef{tab:corr_tot}.
 
 \begin{table}[htbp]
  \begin{center}
@@ -583,7 +664,7 @@ $2.2<|\eta|<2.4$ & 2.9 & 2.4 & 0.3 & 12.5 \\
 \bottomrule
     \end{tabular}
   \end{center}
- \caption{\label{tab:summarysyst}Summary of the systematic uncertainties. All values are in units $\times 10^{-3}$. }
+ \caption{\label{tab:updatedsummarysyst}Summary of the systematic uncertainties. All values are in units $\times 10^{-3}$. }
 \end{table}
                   
 
@@ -618,20 +699,23 @@ $2.2<|\eta|<2.4$ & 2.9 & 2.4 & 0.3 & 12.5 \\
 \bottomrule
     \end{tabular}
     \end{center}
-  \caption{\label{tab_corr_tot}Correlation matrix for all the systematic errors.
+  \caption{\label{tab:corr_tot}Correlation matrix for all the systematic errors.
                                All the values are given in units $\times 10^{-6}$ }
 \end{table}
 
 
 
 \section{Results}
+The results of the electron charge asymmetry with a \pT cut of \unit{35}{\GeV}
+are summarised in \TableRef{tab:updatedresults} and presented in
+\FigureRef{fig:updatedasym35}.
+In \FigureRef{fig:resFitRatio} the ratio between the experimental results and the four theory predictions is shown.
 
-\todo[inline]{Summarise results of the 840pb result.}
 
 \begin{figure}[htbp]
   \begin{center}
 \includegraphics*[width=0.80\textwidth]{Asym_35}
-  \caption{\label{fig:asym35} Measured electron charge asymmetry with predictions from CTEQ10, HERAPDF15, MSTW08NNLO and NNPDF2.2}
+  \caption{\label{fig:updatedasym35} Measured electron charge asymmetry with predictions from CTEQ10, HERAPDF15, MSTW08NNLO and NNPDF2.2}
   \end{center}
 \end{figure}
 
@@ -654,13 +738,10 @@ $|\eta|$ range  & Data & CTEQ & HERAPDF & MSTW & NNPDF \\ \midrule
 \bottomrule
 \end{tabular}
 \caption{Measured electron charge asymmetry with predictions from CTEQ6.6 and MSTW PDFs.  36 Uncertainties on measured asymmetry are statistical and systematic respectivly and the Uncertainties on predictions are due to the uncertainties on the PDFs}
-\label{tab:results}
+\label{tab:updatedresults}
 \end{center}
 \end{table}
 
-\todo[inline]{Compare 840 result to theory.}
-
-In \FigureRef{fig:resFitRatio} the ratio between the experimental results and the four theory predictions is shown.
 
 \begin{figure}[htbp]
   \begin{center}
