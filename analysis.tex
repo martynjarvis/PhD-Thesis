@@ -11,7 +11,7 @@ region $1.4<|\eta|<1.6$ is excluded.
 
 \section{Event Selection}
 
-The event selection is performed single electron datasets. 
+The event selection is performed on single electron datasets. 
 
 These datasets are formed of events that are selected using various single photon and single
 electron triggers. From these datasets, electrons are selected that pass a limited
@@ -27,6 +27,11 @@ As the luminosity increased these triggers became prescaled, it was
 necessary to use electron triggers to select events. 
 As the luminosity increased even further, it was necesary to use electron
 triggers that included cuts on certain electron ID variables.
+
+In the following analysis, a control region is obtained by inverting the
+$\Delta\phi$ and $\Delta\eta$ variables. To ensure that this inverted selection
+will select events, it is necesary to avoid using triggers that apply a
+selection on these variables whenever possible.
 
 The triggers used to select the events are sumarised in \TableRef{tab:triggers}
 where ``HLT\_Ele$X$'' indicates a selection requiring an electron with  $\Pt > \unit{X}{\GeV}$. 
@@ -152,17 +157,29 @@ To remove Drell-Yan events, an event is vetoed if it contains a second lepton
 The exected composition of the selected events, derived from MC simulation
 samples, is shown in \TableRef{tab:selectedcomp}. With a \pT cut of
 \unit{25}{\GeV} it is expected that the selected events are \unit{$\approx
-65$}{\GeV} signal events, and of the remaing \unit{35}{\%} background events, the
+65$}{\%} signal events, and of the remaing \unit{35}{\%} background events, the
 majority of them are \ac{QCD} background events with a small ammount of \ac{EWK}
 events. 
 
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics*[width=0.85\textwidth]{pfmet_dist}
-    \caption{Particle Flow transverse missing energy (PFMET) distribution for selected events.}
-  \label{fig:pfmet}
-  \end{center}
-\end{figure}
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{llrrr}
+    \toprule
+& & $\PT>25$ \GeV & $\PT>30$ \GeV & $\PT>35$ \GeV  \\
+\midrule
+Signal & \HepProcess{\PW\to\Pe\Pnu} & $65.1\%$&$63.5\%$ &$60.2\%$ \\
+EWK & \HepProcess{\PZ\to\Ptau\Ptau} & $0.4\%$ &$0.3\%$  &$0.2\%$ \\
+    & \HepProcess{\PZ\to\Pe\Pe}     & $4.1\%$ &$3.5\%$  &$3.0\%$\\
+    & \HepProcess{\PW\to\Ptau\Pnu}  & $1.9\%$ &$1.1\%$  &$0.6\%$\\
+    & \HepProcess{\Ptop\APtop}      & $0.3\%$ &$0.3\%$  &$0.3\%$\\
+    & Total                         & $6.7\%$ &$5.2\%$  &$4.1\%$\\
+QCD & Total                         & $28.2\%$&$31.3\%$ &$35.7\%$\\
+    \bottomrule
+\end{tabular}
+\caption{Composition of selected events for lepton momentum cut of $\PT>25$ \GeV, $\PT>30$ \GeV and $\PT>35$ \GeV .}
+\label{tab:selectedcomp}
+\end{center}
+\end{table}
 
 The Particle Flow \ETm distribution for the events that pass the event
 selection, with an electron cut of $\PT > \unit{25}{\GeV}$ and $|\eta| < 2.4$ is
@@ -172,6 +189,19 @@ distribution. The peak at \unit{$\ETm \approx 40$}{\GeV} is the
 \HepProcess{\PW\to\Ptau\Pnut} backgrounds. The peak at
 \unit{$\ETm\approx 10$}{\GeV} is the background region that contains the \ac{QCD}
 and \ac{DY} background events.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics*[width=0.85\textwidth]{pfmet_dist}
+    \caption{Particle Flow transverse missing energy (PFMET) distribution for selected events.}
+  \label{fig:pfmet}
+  \end{center}
+\end{figure}
+
+The number of selected events that pass the
+event selection are shown in \TableRef{tab:selectedevents}. To obtain a
+measurement of the asymmetry from the selected events it is necesary to extract
+the signal yield from each pseudorapidity/charge bin.
 
 \begin{table}[htbp]
 \begin{center}
@@ -201,37 +231,6 @@ $2.0<| \eta |<2.4$ &+& 18885&13239&8726\\
     \label{tab:selectedevents}
 \end{table}
 
-The number of selected events that pass the
-event selection are shown in \TableRef{tab:selectedevents}. To obtain a
-measurement of the asymmetry from the selected events it is necesary to extract
-the signal yield from each pseudorapidity/charge bin.
-
-\begin{table}[htbp]
-\begin{center}
-\begin{tabular}{llrrr}
-    \toprule
-& & $\PT>25$ \GeV & $\PT>30$ \GeV & $\PT>35$ \GeV  \\
-\midrule
-Signal & \HepProcess{\PW\to\Pe\Pnu} & $65.1\%$&$63.5\%$ &$60.2\%$ \\
-EWK & \HepProcess{\PZ\to\Ptau\Ptau} & $0.4\%$ &$0.3\%$  &$0.2\%$ \\
-    & \HepProcess{\PZ\to\Pe\Pe}     & $4.1\%$ &$3.5\%$  &$3.0\%$\\
-    & \HepProcess{\PW\to\Ptau\Pnu}  & $1.9\%$ &$1.1\%$  &$0.6\%$\\
-    & \HepProcess{\Ptop\APtop}      & $0.3\%$ &$0.3\%$  &$0.3\%$\\
-    & Total                         & $6.7\%$ &$5.2\%$  &$4.1\%$\\
-QCD & Total                         & $28.2\%$&$31.3\%$ &$35.7\%$\\
-    \bottomrule
-\end{tabular}
-\caption{Composition of selected events for lepton momentum cut of $\PT>25$ \GeV, $\PT>30$ \GeV and $\PT>35$ \GeV .}
-\label{tab:selectedcomp}
-\end{center}
-\end{table}
-
-The exected composition of the selected events, derived from MC simulation
-samples, is shown in \TableRef{tab:selectedcomp}. With a \pT cut of
-\unit{25}{\GeV} it is expected that the selected events are \unit{$\approx
-65$}{\GeV} signal events, and of the remaing \unit{35}{\%} background events, the
-majority of them are \ac{QCD} background events with a small ammount of \ac{EWK}
-events. 
 
 \section{Signal Yield Extraction Method}
 The number of signal and background events in each bin is extracted using a fit
@@ -292,7 +291,9 @@ shown in \TableRef{tab:antisel}.
     \leavevmode
     \begin{tabular}{lcc} 
     \toprule
-      \multicolumn{1}{c}{Variable} & \multicolumn{1}{c}{cut value (barrel)}& \multicolumn{1}{c}{cut value (endcap)}\\\midrule
+      Selection Variable & \multicolumn{2}{c}{Cut Value}\\
+                         & Barrel & Endcap\\
+    \midrule
         H/E & 0.04 & 0.025 \\
         $\Delta\phi$ & $>0.06$  & $>0.04$ \\
         $\Delta\eta$ & $>0.007$ & $>0.009$\\
@@ -301,7 +302,7 @@ shown in \TableRef{tab:antisel}.
         $ISO_{hcal}/ E_T$  & 0.10 & 0.025\\ 
     \bottomrule
     \end{tabular}
-    \caption{\label{tab:AScuts}Electron anti-selection variables and corresponding cut values. $\Delta\phi$ and $\Delta\eta$ cuts are inverted.}
+    \caption{\label{tab:antisel}Electron anti-selection variables and corresponding cut values. $\Delta\phi$ and $\Delta\eta$ cuts are inverted.}
   \end{center}
 \end{table}
 
@@ -311,18 +312,76 @@ antselected MC events. This is shown for each eta bin in
 \FigureRef{tab:antiselclosure}.
 
 \subsection{Signal \ETm Shape from Boson Recoil}
+\label{sec:recoil}
 The signal \ETm shape is obtained by modeling the recoil of the W boson. 
 The recoil response and resolution in \HepProcess{\PZ\to\Plepton\Plepton} data
 events is measured as a function of the \pT of the boson. This is combined with
 information from the \PW and \PZ \ac{MC} simulation to derive a correction to
 the simulation \ETm as a function of \PW \pT.
 
+The transverse recoil vector, $\vec{U}$, is calculated from the reconstructed
+transverse missing energy, $\vec{\ETm}$, and the electron \ET vectors,
+$\vec{\Pe_{i}}$.
+\begin{align}
+\vec{U} &= - \vec{\ETm} - \vec{\Pe},\\
+\vec{U} &= - \vec{\ETm} - \sum_i \vec{\Pe_{i}},
+\end{align}
+for \PW events and \PZ events respectivly. $\vec{U}$ is split into components
+that are parallel ($U_1$) and perpendicular ($U_2$) to the true boson \pT
+direction. 
+In real \PZ data events where the true direction of the boson \pT is not known,
+the \pT direction is reconstructed from the two electrons.
+The hadronic activity that balances the \pT of boson will lie mostly in the
+$U_1$ direction where as $U_2$ will be mostly formed from other sources.
+\FigureRef{fig:recoil} shows the decomposition of $\vec{U}$ in to $U_1$ and
+$U_2$.
+\begin{figure}
+  \begin{center}
+    %\includegraphics*[angle=90,width=0.95\textwidth]{toyasym.pdf}
+    \missingfigure{recoil}
+    \caption{The decomposition of $\vec{U}$ for \PW events.}
+    \label{fig:recoil}
+  \end{center}
+\end{figure}
+
+$U_1$ and $U_2$ are measured in \PZ data, \PZ \ac{MC} simulation and \PW \ac{MC}
+simulation and are then binned in units of the boson \pT.  In each $\pT^{Z}$ bin
+the $U_1$ and $U_2$ distributions are fitted with Gaussians.  A polynomial,
+$f_i(\pT^\PZ)$, is fit to the distribution of Gaussian the means to produce a
+response curve for both data and \ac{MC}.  A second polynomial,
+$\sigma_i(\pT^\PZ)$, is then fit to the distribution of the Gaussian widths to
+produce a resolution curve for both data and \ac{MC}.
+
+The fitting procedure results in two response functions, $f_i(\pT^\PZ)$, and two
+resolution function, $\sigma_i(\pT^\PZ)$, for \PZ data, \PZ \ac{MC} and the \PW
+\ac{MC}. The functions are then used to define a set of \PW \ac{MC} corrected
+functions, 
+
+\begin{align}
+f^{W\ corr}_i (p^{W}_T)      
+  &= \frac{ f^{Z\ data}_i (p^{Z}_T) }
+          { f^{Z\ MC}_i (p^{Z}_T) }
+          f^{W\ MC}_i (p^{W}_T) \\
+\sigma^{W\ corr}_i (p^{W}_T) 
+  &= \frac{ \sigma^{Z\ data}_i (p^{Z}_T) }
+          { \sigma^{Z\ MC}_i (p^{Z}_T) }
+          \sigma^{W\ MC}_i (p^{W}_T) 
+\end{align}
+
+The corrected recoil response and resolution curves are then used to correct the
+\PW \ac{MC} \ETm. For each \PW \ac{MC} events the real \pT of the boson is
+found, and the values of for the response, $f^{W\ corr}_i (p^{W}_T)$, and
+resolution curves, $\sigma^{W\ corr}_i (p^{W}_T) $, are looked up. A Gaussian
+defined with these values, $Gaus(f^{W\ corr}_i (p^{W}_T), \sigma^{W\ corr}_i
+(p^{W}_T) )$ is sampled from to determine new recoil components $U_i$. The
+components are then combined to form the new corrected recoil vector
+$\vec{U^{\prime}}$ which is then combined with the electron vector, $\Pe$, to
+form the corrected \ETm.
+
 The modeling of the \HepProcess{\PW\to\Plepton\Pnu} \ETm with boson recoil is
 described in detail here \cite{NULL}, and the ntuples containing
 \HepProcess{\PW\to\Pelectron\Pnu} simulation with the recoil corrected \ETm were
 provided from here \cite{NULL}.
-
-\todo{ALOT MORE}
 
 \subsection{\ac{EWK} \ETm Shape}
 The EWK background processes that can produce a single isolated

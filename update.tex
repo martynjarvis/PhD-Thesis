@@ -66,7 +66,7 @@ selection, with $\PT > \unit{35}{\GeV}$ and $|\eta| < 2.4$ is shown in
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.5\textwidth]{pfmet_new}
+  \includegraphics*[width=0.85\textwidth]{pfmet_update}
   \caption{Particle Flow \ETm distribution for selected events.}
   \label{fig:pfmet}
 \end{figure}
@@ -100,7 +100,7 @@ The number of selected events that pass the event selection are shown in
 \end{table}
 
 The exected composition of the selected events, derived from MC simulations, is
-show in \TableRef{tab:selectedcomp}. 
+show in \TableRef{tab:updatedselectedcomp}. 
 \todo{why is this different?}
 
 \begin{table}[htbp]
@@ -119,13 +119,32 @@ EWK Total Background & 7.8$\%$ \\
 \end{tabular}
 \caption{Composition of selected events for lepton momentum cut of
   \unit{\PT>35}{\GeV}. Numbers are evaluated using simulation.}
- \label{tab:selectedcomp}
+ \label{tab:updatedselectedcomp}
 \end{center}
 \end{table}
 
 \section{Signal Yield Extraction Method}
+The number of signal and background events in each bin is extracted using a fit
+to the \ETm distribution using two templates: the sum of the \Wenu signal and
+the \ac{EWK} background shapes; and the \ac{QCD} plus \gjet processes.
 
-\todo{do I have anyhing else to add here?}
+The \ac{QCD} and \gjet background distribution is obtained from a control sample of
+events that pass an antiselection described in \TableRef{tab:antisel}.
+The \ac{EWK} background \ETm distributions were obtained from Madgraph \ac{MC}
+simulations with the Z2 tune.
+The signal \ETm shape is obtained by modeling the recoil of the W boson. 
+
+\subsection{Signal \ETm Shape from Boson Recoil}
+The signal \ETm shape is obtained by modeling the recoil of the W boson.  The
+recoil response and resolution is measure in in
+\HepProcess{\PZ\to\Plepton\Plepton} data events \PW and \PZ \ac{MC} simulation
+to derive a correction to \ETm as a function of \PW \pT.
+
+The methodolgy in derriving the details is described in \SectionRef{sec:recoil}.
+The Gaussian used to fit the recoil components was modified to a double
+Gaussian.
+
+\todo{add more here}
 
 \subsection{Fit on Real Data}
 
@@ -670,6 +689,7 @@ $2.2<|\eta|<2.4$ & 2.9 & 2.4 & 0.3 & 12.5 \\
 
 \begin{table}[htbp]
    \begin{center}
+      \begin{sideways}
       \begin{tabular}{l|ccccccccccc}
 \midrule
 & \scriptsize{$\left[0.0,0.2\right]$}
@@ -683,7 +703,6 @@ $2.2<|\eta|<2.4$ & 2.9 & 2.4 & 0.3 & 12.5 \\
 & \scriptsize{$\left[1.8,2.0\right]$}
 & \scriptsize{$\left[2.0,2.2\right]$}
 & \scriptsize{$\left[2.2,2.4\right]$} \\ \midrule
-
 \scriptsize{$\left[0.0,0.2\right]$} & 23.7 & 2.6 & 2.2 & 2.5 & 2.7 & 2.9 & 2.9 & 2.9 & 2.8 & 3.1 & 4.2 \\
 \scriptsize{$\left[0.2,0.4\right]$} & 2.6 & 26.2 & 2.6 & 2.9 & 3.1 & 3.3 & 3.4 & 3.2 & 3.0 & 3.9 & 4.7 \\
 \scriptsize{$\left[0.4,0.6\right]$} & 2.2 & 2.6 & 26.6 & 2.6 & 2.8 & 2.9 & 3.2 & 2.9 & 2.5 & 3.3 & 4.1 \\
@@ -695,9 +714,9 @@ $2.2<|\eta|<2.4$ & 2.9 & 2.4 & 0.3 & 12.5 \\
 \scriptsize{$\left[1.8,2.0\right]$} & 2.8 & 3.0 & 2.5 & 2.8 & 3.4 & 4.0 & 3.7 & 3.8 & 82.4 & 6.2 & 7.0 \\
 \scriptsize{$\left[2.0,2.2\right]$} & 3.1 & 3.9 & 3.3 & 3.7 & 4.6 & 5.7 & 5.8 & 5.1 & 6.2 & 110.7 & 10.3 \\
 \scriptsize{$\left[2.2,2.4\right]$} & 4.2 & 4.7 & 4.1 & 4.7 & 5.6 & 6.8 & 6.7 & 6.2 & 7.0 & 10.3 & 171.0 \\
-
 \bottomrule
     \end{tabular}
+    \end{sideways}
     \end{center}
   \caption{\label{tab:corr_tot}Correlation matrix for all the systematic errors.
                                All the values are given in units $\times 10^{-6}$ }
