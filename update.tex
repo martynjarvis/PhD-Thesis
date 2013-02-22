@@ -6,7 +6,7 @@ The measurement detailed in the previous chapter was performed with
 In this next chapter, the update to the measurement of the electron charge asymmetry in
 inclusive \inclusiveWe production with \unit{840}{\invpb} is presented. 
 The data was collected with the \ac{CMS} detector from collisions from the
-first 2011 \ac{LHC} run (Run A) and corresponds to a 25 times increase in
+first 2011 \ac{LHC} run (Run A) and corresponds to a nearly 25 times increase in
 statistics over the 2010 measurement.
 
 The majority of the 2011 analysis is identical to the 2010 analysis,
@@ -56,13 +56,10 @@ with respect to the 2010 analysis on the electron selection, detailed in
 
 \subsection{Event Selection}
 The event selection remains the same with respect to the 2010 measurement.
-An Event is selected if if contains a single electron that passes all electron
+An event is selected if if contains a single electron that passes all electron
 selection and events are vetoed if they contain a second lepton with
 $\pT>\unit{15}{\GeV}$.
 
-The Particle Flow \ETm distribution for the events that pass the event
-selection, with $\PT > \unit{35}{\GeV}$ and $|\eta| < 2.4$ is shown in
-\FigureRef{fig:pfmet}.
 
 \begin{figure}[htbp]
   \centering
@@ -70,9 +67,6 @@ selection, with $\PT > \unit{35}{\GeV}$ and $|\eta| < 2.4$ is shown in
   \caption{Particle Flow \ETm distribution for selected events.}
   \label{fig:pfmet}
 \end{figure}
-
-The number of selected events that pass the event selection are shown in
-\TableRef{tab:updatedselectedevents}. 
 
 \begin{table}[htbp]
  \begin{center}
@@ -99,6 +93,11 @@ The number of selected events that pass the event selection are shown in
 \end{center}
 \end{table}
 
+The Particle Flow \ETm distribution for the events that pass the event
+selection, with $\PT > \unit{35}{\GeV}$ and $|\eta| < 2.4$ is shown in
+\FigureRef{fig:pfmet}.
+The number of selected events that pass the event selection are shown in
+\TableRef{tab:updatedselectedevents}. 
 The exected composition of the selected events, derived from MC simulations, is
 show in \TableRef{tab:updatedselectedcomp}. 
 \todo{why is this different?}
@@ -126,7 +125,7 @@ EWK Total Background & 7.8$\%$ \\
 \section{Signal Yield Extraction Method}
 The number of signal and background events in each bin is extracted using a fit
 to the \ETm distribution using two templates: the sum of the \Wenu signal and
-the \ac{EWK} background shapes; and the \ac{QCD} plus \gjet processes.
+the \ac{EWK} background shapes, and the \ac{QCD} plus \gjet processes.
 
 The \ac{QCD} and \gjet background distribution is obtained from a control sample of
 events that pass an antiselection described in \TableRef{tab:antisel}.
@@ -149,7 +148,7 @@ Gaussian.
 \subsection{Fit on Real Data}
 
 The results of the extended maximum liklihood fits to each pseudorapidity/charge
-bin are shown in \FigureRef{fig:data1},\ref{data2},\ref{data3} and
+bin are shown in \FigureRef{fig:data1},\ref{fig:data2},\ref{fig:data3} and
 \ref{fig:data4}.
 The signal yield in each bin is summarised in \TableRef{tab:updatedsigyield} and
 the Kolmogorov-Smirnov probability of fit in \TableRef{tab:ks2}.
@@ -348,7 +347,7 @@ $2.2<| \eta |<2.4$  & $ 7 \pm 7 $    \\
 
 \subsection{Lepton Energy Scale and Resolution}
 The effect of the electron energy resolution on the asymmetry measurement is
-studied using a \ac{MC} study. A correction to the asymmetry can be evaluated bt
+studied using a \ac{MC} study. A correction to the asymmetry can be evaluated by
 comparing the asymmetry measured at the generator level and the asymmetry
 measured in \ac{MC} after the simulation of detector effects.
 \todo{FSR}
@@ -356,11 +355,11 @@ measured in \ac{MC} after the simulation of detector effects.
 The correction relies on the simulation reporoducing the energy scale and
 resolution of the electrons perfectly. Unfortunatly the simulation does not take
 in to account all the detector effects present in real data, so additional
-residual corections to the simulated electon \pT distributions are necessary, an
+residual corections to the simulated electon \pT distributions are necessary. An
 additioanl gaussian smaring of the \pT distribution ($\sigma_{corr}$) and an electron
-energy scale ($k_{corr}$) for each pseudorapidity bin.
+energy scale correction ($k_{corr}$) for each pseudorapidity bin is applied.
 
-Values for $k_{i}$ and $\sigma_{i}$ are obtained from the
+The values for $k_{i}$ and $\sigma_{i}$ are obtained from the
 \HepProcess{\PZ\to\Pe\Pe} mass distribution. The \HepProcess{\PZ\to\Pe\Pe}
 sample is again split in to 66 subsamples for the combinations of pseudorapidity
 bins of the two electrons ($11+\binom{11}{2} = 66$) for real data and \ac{MC}.
@@ -373,7 +372,7 @@ is defined,
 \sigma_{ij} = \sqrt{\sigma_{i}^{2} + \sigma_{j}^{2}}
 \end{equation}
 where $\sigma_{i}$ is the resolution of in each individual pseudorapidity bin.
-The mean value of the Crystal Ball function is defined,
+The mean value of the Crystal Ball function is defined as,
 \begin{equation}
 m_{0_{ij}} = m_{\PZ}^{PDG} 
           \left( \sqrt{k_{i} k_{j}} - 1 \right)
@@ -392,7 +391,7 @@ distribution of the leptons must be smeared with a guassian of width
 \left(\sigma^{MC}_{i}  \right)^{2}
 }
 \end{equation}
-and the scaled by a factor 
+and then scaled by a factor 
 \begin{equation}
 k^{corr}_i = \frac{ k^{data}_i}{k^{MC}_i}
 \end{equation}
@@ -435,8 +434,8 @@ $\eta$ bin & $\sigma_{DATA}$ &  $\sigma_{MC}$ & $\sigma_{corr}$ & $k_{DATA}$ &  
 %\end{figure}
 %% this is probably not needed here...
 
-A \ac{MC} sample of \HepProcess{\PW\to\Pe\Pnue} events is used to evalueate the
-corrections introduced by the energy scale and resolution for each
+A \ac{MC} sample of \HepProcess{\PW\to\Pe\Pnue} events is used to evaluate the
+corrections introduced by the effect of the energy scale and resolution for each
 pseudorapidity bin. The generator level electron \pT is first smeared by the
 nominal \pT resolution of the simulated sample after the simulation of detector
 effects. It is then smeared and scaled according to the residual energy
@@ -565,7 +564,7 @@ and the asymmetry measured with the chosen antiselection in MC pseudo data and r
 
 \subsubsection{Signal \ETm Shape from Boson Recoil}
 
-There are three main sources of uncertainty due to the signal template from
+There are two main sources of uncertainty due to the signal template from
 boson recoil,
 \begin{itemize}
     \item the uncertainty in the recoil corrections,
@@ -733,7 +732,7 @@ In \FigureRef{fig:resFitRatio} the ratio between the experimental results and th
 
 \begin{figure}[htbp]
   \begin{center}
-\includegraphics*[width=0.80\textwidth]{Asym_35}
+\includegraphics*[width=0.80\textwidth]{updated_asym}
   \caption{\label{fig:updatedasym35} Measured electron charge asymmetry with predictions from CTEQ10, HERAPDF15, MSTW08NNLO and NNPDF2.2}
   \end{center}
 \end{figure}
