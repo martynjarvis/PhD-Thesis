@@ -1,7 +1,7 @@
 \chapter[Electron Charge Asymmetry]{Measurement of the Electron Charge Asymmetry
  with \unit{36}{\invpb} }
 
-In this chapter the results of the mesasurement of the electron charge
+In this chapter the results of the measurement of the electron charge
 asymmetry are presented. The analysis is performed on the full 2010 dataset, which corresponds to a
 luminosity of \unit{36.1}{\invpb}.
 
@@ -22,21 +22,21 @@ Several triggers were used to select the events due to the increasing luminosity
 during the \ac{LHC} 2010 run.  In the initial runs, events were selected using
 only a single photon trigger.  As the \ac{LHC} luminosity was increased and
 these triggers became prescaled, it was necessary to use electron triggers to
-select events.  As the luminosity increased even further, it was necesary to use
+select events.  As the luminosity increased even further, it was necessary to use
 electron triggers that included cuts on certain electron ID variables.
 
 In the following analysis, a control region is obtained by inverting the
 selection on the $\Delta\phi$ and $\Delta\eta$ variables. To ensure that this
-inverted selection is effective and will actually select events, it is necesary
+inverted selection is effective and will actually select events, it is necessary
 to avoid using triggers that apply a selection on these variables.
 
-The triggers used to select the events are sumarised in \TableRef{tab:triggers}
+The triggers used to select the events are summarised in \TableRef{tab:triggers}
 where ``HLT\_Ele$X$'' indicates a selection requiring an electron with  $\Pt > \unit{X}{\GeV}$. 
 ``Photon'' in the name indicates that the selection was applied to ECAL
 superclusters rather than a reconstructed electron. 
 ``SW'' stands for small window, where window refers to the electron
 pixel-matching window. 
- ``Cleaned'' indicates that spikes in the \ac{ECAL} have been removed.  \todo{define spikes?}
+ ``Cleaned'' indicates that spikes in the \ac{ECAL} have been removed.  
 
 ``CaloEleId'' and ``TightCaloIdIso'' represent increasingly tighter selection
 based on the shower shape ID and isolation variables from only the \ac{ECAL},
@@ -107,20 +107,20 @@ the sample.
   \end{center}
 \end{table}
 
-Incorrectly assigning the charge of an electron will lead to a diltuion of the
+Incorrectly assigning the charge of an electron will lead to a dilution of the
 measured charge asymmetry.  An additional requirement is applied to the charge
 of the reconstructed electron to reject events where the true charge is
 difficult to determine.  The methods for assigning a charge to an electron are
 described in \SectionRef{sec:charge}. The methods are based on the GSF electron
 charge, the general track charge and the supercluster charge.
-Electron candidates are only selected if the three methods unaminously agree on
+Electron candidates are only selected if the three methods unanimously agree on
 its charge.
 
 The incorrect charge assignment rate can be measured at the Z peak by comparing the same
-sign \HepProcess{\PZ\to\Pepm\Pepm} yield to the oposite sign
+sign \HepProcess{\PZ\to\Pepm\Pepm} yield to the opposite sign
 \HepProcess{\PZ\to\Pepm\Pemp} yield. \FigureRef{fig:zpeak} show these Z yields
-using only the \ac{GSF} track charge (red) and also requiring a unaminous
-asignment of charge from all three methods (blue). 
+using only the \ac{GSF} track charge (red) and also requiring a unanimous
+assignment of charge from all three methods (blue). 
 
 The incorrect charge assignment rate from the GSF track charge alone is about
 \unit{3}{\%}.  By requiring that all three methods for assigning the charge
@@ -132,7 +132,7 @@ reduced by a factor of 8 with only a \unit{5}{\%} loss in efficiency.
   \begin{subfigure}{\textwidth}
     \centering
     \includegraphics[width=0.85\textwidth]{zpeak_os}
-    \caption{Oposite sign \PZ.}
+    \caption{Opposite sign \PZ.}
     \label{fig:zpeak_os}
   \end{subfigure}
   \begin{subfigure}{\textwidth}
@@ -150,14 +150,14 @@ selection.}\label{fig:zpeak}
 \subsection{Event Selection}
 An event is selected if it contains a single electron that passes all the
 electron selection requirements.  To remove Drell-Yan events, an event is vetoed
-if it contains a second lepton (an electron passing a loose selecton, or an
+if it contains a second lepton (an electron passing a loose select on, or an
 isolated muon) with $\PT > \unit{15}{\GeV}$.
 
-The exected composition of the selected events, derived from MC simulation
+The expected composition of the selected events, derived from MC simulation
 samples, is shown in \TableRef{tab:selectedcomp}. With a \pT cut of
 \unit{25}{\GeV} it is expected that the selected events are \unit{$\approx
 65$}{\%} signal events, and of the remaing \unit{35}{\%} background events, the
-majority of them are \ac{QCD} background events with a small ammount of \ac{EWK}
+majority of them are \ac{QCD} background events with a small amount of \ac{EWK}
 events. 
 
 \begin{table}[htbp]
@@ -199,7 +199,7 @@ and \ac{DY} background events.
 
 The number of selected events that pass the
 event selection are shown in \TableRef{tab:selectedevents}. To obtain a
-measurement of the asymmetry from the selected events it is necesary to extract
+measurement of the asymmetry from the selected events it is necessary to extract
 the signal yield from each pseudorapidity/charge bin.
 
 \begin{table}[htbp]
@@ -306,13 +306,13 @@ shown in \TableRef{tab:antisel}.
 \end{table}
 
 To validate the antiselection used, \ac{QCD} \ac{MC} samples are used. The
-distribution of \ac{QCD} events passing the event selection are comapred to the
-antselected MC events. This is shown for each eta bin in
+distribution of \ac{QCD} events passing the event selection are compared to the
+antiselected MC events. This is shown for each eta bin in
 \FigureRef{tab:antiselclosure}.
 
 \subsection{Signal \ETm Shape from Boson Recoil}
 \label{sec:recoil}
-The signal \ETm shape is obtained by modeling the recoil of the W boson. 
+The signal \ETm shape is obtained by modelling the recoil of the W boson. 
 The recoil response and resolution in \HepProcess{\PZ\to\Plepton\Plepton} data
 events is measured as a function of the \pT of the boson. This is combined with
 information from the \PW and \PZ \ac{MC} simulation to derive a correction to
@@ -325,7 +325,7 @@ $\vec{\Pe_{i}}$.
 \vec{U} &= - \vec{\ETm} - \vec{\Pe},\\
 \vec{U} &= - \vec{\ETm} - \sum_i \vec{\Pe_{i}},
 \end{align}
-for \PW events and \PZ events respectivly. $\vec{U}$ is split into components
+for \PW events and \PZ events respectively. $\vec{U}$ is split into components
 that are parallel ($U_1$) and perpendicular ($U_2$) to the true boson \pT
 direction. 
 In real \PZ data events where the true direction of the boson \pT is not known,
@@ -344,7 +344,7 @@ $U_2$ in W events.
 
 $U_1$ and $U_2$ are measured in \PZ data, \PZ \ac{MC} simulation and \PW \ac{MC}
 simulation and are then binned in units of the boson \pT.  In each $p_T^{Z}$ bin
-the $U_1$ and $U_2$ distributions are fitted with Gaussians.  A polynomial,
+the $U_1$ and $U_2$ distributions are fitted with Gaussian.  A polynomial,
 $f_i(p_T^Z)$, is fit to the distribution of Gaussian the means to produce a
 response curve for both data and \ac{MC}.  A second polynomial,
 $\sigma_i(p_T^Z)$, is then fit to the distribution of the Gaussian widths to
@@ -379,7 +379,7 @@ The components are then combined to form the new corrected recoil vector
 $\vec{U^{\prime}}$ which is then combined with the electron vector, $\Pe$, to
 form the corrected \ETm.
 
-The modeling of the \HepProcess{\PW\to\Plepton\Pnu} \ETm with boson recoil is
+The modelling of the \HepProcess{\PW\to\Plepton\Pnu} \ETm with boson recoil is
 described in detail here \cite{NULL}, and the ntuples containing
 \HepProcess{\PW\to\Pelectron\Pnu} simulation with the recoil corrected \ETm were
 provided from here \cite{NULL}.
@@ -400,15 +400,15 @@ is fixed to the signal \ETm shape by the ratio obtained from \ac{MC} samples.
 
 \subsection{Validation of Signal Extraction Method on Simulation}
 
-The signal yield extraction procedure was validated using pseudodata
-experiments. 1000 pseudodata experiments were generated with the number of
+The signal yield extraction procedure was validated using pseudo-data
+experiments. 1000 pseudo-data experiments were generated with the number of
 events expected in \unit{36.1}{\invpb} of data. The signal yields are extracted
 in each experiment and the asymmetry is calculated. The distribution of
-asymmetries is then fitted with a gaussian.
+asymmetries is then fitted with a Gaussian.
 The measured asymmetry for 1000 pseudo-data experiments distribution for each
 pseudorapidity bin is shown in \FigureRef{fig:toyasym}.
 
-The width of the gaussian is the statistical uncertainty on the measurement.
+The width of the Gaussian is the statistical uncertainty on the measurement.
 The statistical uncertainty can also be estimated from the following formula
 \begin{equation}
   \label{tab:statuncert}
@@ -419,8 +419,8 @@ The statistical uncertainty can also be estimated from the following formula
    {\left(  \frac{dN^+}{d\eta} +  \frac{dN^-}{d\eta} \right)^{2} } .
 \end{equation}
 
-The uncertainty from \EquationRef{tab:statuncert} evaulated with \ac{MC} truth
-values, and the uncertainty measured from pseudodata experiments for an
+The uncertainty from \EquationRef{tab:statuncert} evaluated with \ac{MC} truth
+values, and the uncertainty measured from pseudo-data experiments for an
 integrated luminosity of \unit{36.1}{\invpb} are summarised in
 \TableRef{tab:statuncertsum}.
 
@@ -445,31 +445,31 @@ integrated luminosity of \unit{36.1}{\invpb} are summarised in
 
 For each pseudo-data experiment the pull on the asymmetry measurement is
 calculated. The pull is defined as the difference between the asymmetry measured
-from pseuodo-data experiments and the true MC value for the asymmetry divided by
+from pseudo-data experiments and the true MC value for the asymmetry divided by
 the statistical uncertainty. The pull is therefore the number of standard
 deviations a measurement is away from the true value such that, for an unbiased
 measurement with a well understood uncertainty, the distribution of the pulls
-will be a Gaussian centered at zero with a width of one.
-The pull distribtions from 1000 pseudo-data experiments are shown in figure
+will be a Gaussian centred at zero with a width of one.
+The pull distributions from 1000 pseudo-data experiments are shown in figure
 \ref{fig:toyasym_pull} for each pseudorapidity bin.
 
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics*[angle=90,width=0.95\textwidth]{toyasym.pdf}
-    \caption{\label{fig:toyasym}Measured Asymmetry for 1000 pseudo-data experiments. The distribution of the measured Asymmetry is fitted with a gaussian.}
+    \caption{\label{fig:toyasym}Measured Asymmetry for 1000 pseudo-data experiments. The distribution of the measured Asymmetry is fitted with a Gaussian.}
   \end{center}
 \end{figure}
 
 \begin{figure}[htbp]
   \begin{center}
 \includegraphics*[angle=90,width=0.95\textwidth]{pullasyTot.pdf}
-    \caption{\label{fig:toyasym_pull}Pull on the Asymmetry in 1000 pseudo-data experiments. The distribution of the pull is fitted with a gaussian.}
+    \caption{\label{fig:toyasym_pull}Pull on the Asymmetry in 1000 pseudo-data experiments. The distribution of the pull is fitted with a Gaussian.}
   \end{center}
 \end{figure}
 
 \subsection{Fit Results}
 
-The results of the extended maximum liklihood fits to each pseudorapidity/charge
+The results of the extended maximum likelihood fits to each pseudorapidity/charge
 bin are shown in \FigureRef{fig:fit1} and \FigureRef{fig:fit2}.
 The ratio between the fits and the data for each of the 
 bins are shown in \FigureRef{fig:fit1ratio} and \FigureRef{fig:fit2ratio}.
@@ -547,8 +547,8 @@ electrons extracted with the fitting procedure.
 To compare with the theoretical value, the measured lepton asymmetry has to be
 corrected for three detector effects.
 \begin{itemize}
-\item The charge-dependent reconstrction efficiency,
-\item The incorect charge assignment rate,
+\item The charge-dependent Reconstruction efficiency,
+\item The incorrect charge assignment rate,
 \item Electron energy resolution.
 \end{itemize}
 
@@ -557,11 +557,11 @@ that of positrons ($\epsilon^-$) then a bias will be introduced in to the
 measured asymmetry, which will need to be taken in to account in the calculation
 of the asymmetry.  
 
-The second experimental effect is due the charge missassignment of electrons.
-The charge misassignment rates, $\omega^+$ and $\omega^-$ are the rate at which electrons are
-misasigned a positive charge and identified as positrons and rate positrons are
-identified as electrons respectivly.
-The misassignment induces a dilution factor to the asymmetry as a
+The second experimental effect is due the charge miss-assignment of electrons.
+The incorrect charge assignment rates, $\omega^+$ and $\omega^-$ are the rate at which electrons are
+incorrectly assigned a positive charge and identified as positrons and rate positrons are
+identified as electrons respectively.
+The incorrect assignment induces a dilution factor to the asymmetry as a
 function of the electron pseudorapidity. 
 
 The true asymmetry at the reconstruction level is defined as
@@ -605,8 +605,9 @@ definition of the measured asymmetry, \EquationRef{eq:meas}, to obtain,
   \epsilon^+ ( ( 1 - \omega^+ ) N_{reco}^{-} + \omega^- N_{reco}^{+} )
 }
 \end{equation}
-If it is assumed that the misassignment rate of
-electrons to positrons is the same as the rate of positrons to electrons, \ie 
+If it is assumed that the rate that
+electrons are assigned a positive charge is the same as the rate of positrons
+being assigned a negative charge, \ie 
 \begin{equation}
   \omega^{+} = \omega^{-} = \omega
 \end{equation}
@@ -664,12 +665,12 @@ incorrect charge assignment rate ($\omega$).
 The measurements of the parameters $R$ and $\omega$, as well as the
 uncertainties, are detailed in the following sections.
 
-The energy resolution and scale of the electrons can alse introduce a systematic
+The energy resolution and scale of the electrons can also introduce a systematic
 bias on the asymmetry due to the effect of of the transverse momentum cut
 applied to the electrons. The largest source of electron scale bias is the
 radiation induced change to the ECAL crystal transparency.
-To correct fot this effect, energy scale and resolution corrrections are
-derrived using a \Zee mass distribution. Te results are presented in the
+To correct for this effect, energy scale and resolution corrections are
+derived using a \Zee mass distribution. Te results are presented in the
 following sections.
 
 \subsection{Relative Efficiency}
@@ -679,14 +680,14 @@ then the measured asymmetry will be diluted and will need to be corrected for
 the relative efficiency.
 
 The efficiency for electrons and positrons is measured using the tag and probe
-method \todo{reference the CMS tag and probe method paper/note}
+method \cite{tagandprobe}
 with a sample of \Zee events from the same datasets used in the analysis. 
 The \Zee events offer a high purity source of unbiased electrons with which to
 measure the efficiencies.
 
 From the sample of \Zee events a ``tag'' electron is selected with a strict
 selection criteria. 
-A ``probe'' electron is selected with the same electron selection decribed
+A ``probe'' electron is selected with the same electron selection described
 earlier.
 The invariant mass of the tag-probe pair is required to be
 $\unit{60}{\GeV} < M_{ee} < \unit{120}{\GeV}$ to ensure a high purity sample.
@@ -701,7 +702,7 @@ For this analysis the efficiencies are measured in two parts:
 
 \begin{itemize}
     \item GSF tracking efficiency
-    \item Identification efficiency, including conversion rejection, unaminous
+    \item Identification efficiency, including conversion rejection, unanimous
 charge assignment and HLT request.
 \end{itemize}
 
@@ -733,16 +734,16 @@ $\left[ 0.0,2.4 \right]$ & 98.5$\pm$0.4 & 97.8$\pm$0.4 & 1.007$\pm$0.006 & 80.3$
 \label{tab:tagprobe}
 \end{table}
 
-The \TableRef{tab:tagprobe} shows the GSF tracking effiency and identifcation 
-effiency as a function of the charge.
+The \TableRef{tab:tagprobe} shows the GSF tracking efficiency and identification 
+efficiency as a function of the charge.
 
 
 The main systematic errors on the efficiency measurements are the energy scale
 and the signal shape used to extract the signal yield. Fortunately, these
 errors will cancel in the calculation of the ratio $R_\epsilon$, such that the
-effect of the energy scale and signal shape is negligable
+effect of the energy scale and signal shape is negligible
 when compared to the statistical uncertainty of the measurement. Only the
-statistical uncertainty is therfore propogated to the error in the ratio
+statistical uncertainty is therefore propagated to the error in the ratio
 $dR_\epsilon$,
 \begin{equation}
   \label{eq:releff}
@@ -751,43 +752,42 @@ $dR_\epsilon$,
   \simeq \frac{dR_\epsilon}{2}(1-\mathcal{A}^2)
   \simeq \frac{dR_\epsilon}{2} 
 \end{equation}
-The value of $R$ is measured in each pseudorapidity bin, as well as inclusivly
+The value of $R$ is measured in each pseudorapidity bin, as well as inclusively
 across the range $0<| \eta |< 2.4$. 
 The relative efficiency is found to be statistically compatible with 1 so the
 measured asymmetry is not corrected for this effect.
-In order to reduce the systematic error due to the effect of the relaitve
+In order to reduce the systematic error due to the effect of the relative
 efficiency the statistical error on the inclusive measurement of $R$ is
-propogated to the asymmetry as a systematic error. The systematic error assigned
+propagated to the asymmetry as a systematic error. The systematic error assigned
 in each bin is therefore $0.070$.
 
 \subsection{Charge Misassignment}
 
-The charge misassignment rate, $\omega$, is the rate at which electrons are
-misasigned as positive charge and identified as positrons, and vice versa. The
-misassignment induces a dilution factor to the asymmetry as a function of the
-electron pseudorapidity. 
+The incorrect charge assignment rate, $\omega$, is the rate at which electrons are
+wrongly assigned a positive charge and identified as positrons, and vice versa.
+The effect of incorrectly assigning the charge is to dilute the measured
+asymmetry.
 
 The main mechanism responsible for the incorrect assignment of charge is the
-conversion of bremsstrahlung photons close to the initial track, which the gsf
+conversion of bremsstrahlung photons close to the initial track, which the GSF
 track reconstruction then incorrectly reconstructs.
 
-The rate of charge misassignment is obtained from \Zee samples selected from
+The rate of incorrect charge assignment is obtained from \Zee samples selected from
 real data  with the same selection used in the analysis. 
 The rate is measured by comparing the
 same sign \PZ\ yield (\HepProcess{\PZ\to\Pepm\Pepm}) to the opposite sign \PZ\
 yield (\HepProcess{\PZ\to\Pepm\Pemp}).
-It was found that the misassignment rate of electrons as poistrons is the same
-as the rate of positrons as electrons.
+It was found that the rate at which electrons are reconstructed as positrons is
+the same as the rate of positrons reconstructed as electrons.
 The total Z yield from this sample is 6834 opposite sign \PZ candidates and 21
 same sign \PZ candidates.
-The sample is split in to 21 subsamples, representing
+The sample is split in to 21 sub-samples, representing
 combinations of the 6 pseudorapidity bins of the two electrons ($6+\binom{6}{2} =
 21$).
 
 For each \PZ events with two electrons in pseudorapidity bin $i$ and $j$
-respectivly the probability of an event being same sign or oposite sign can be
+respectively the probability of an event being same sign or opposite sign can be
 written
-
 \begin{equation}
 %\[
  p(q_i q_j) =
@@ -799,14 +799,14 @@ written
   \end{cases}
 %\]
 \end{equation}
-where $ \omega_{i},\omega_{j}$ are the charge misasignment rates and $
+where $ \omega_{i},\omega_{j}$ are the incorrect charge assignment rates and $
 q_{i},q_{j}$ are the charges of the electrons.
 
-The charge misassignment rates in each of the 6 pseudorapidity bins can then be
-determined by a simultaneous fit to each of the 21 subsamples. The results are
+The incorrect charge assignment rates in each of the 6 pseudorapidity bins can then be
+determined by a simultaneous fit to each of the 21 sub-samples. The results are
 shown in \FigureRef{tab:mischarge}. The charge asymmetry is corrected for these
 values.
-The statistical error on the measurement on $\omega$ is then propogated to the
+The statistical error on the measurement on $\omega$ is then propagated to the
 charge asymmetry as a systematic uncertainty, $\sigma(\mathcal{A})_{misch}$.
 
 \begin{table}[htbp]
@@ -824,7 +824,7 @@ $1.6<| \eta |<2.0$  & $41^{+20}_{-15}$  &  9 &  8 & 7 \\
 $2.0<| \eta |<2.4$  & $25^{+21}_{-15}$  & 10 & 10 & 9 \\
 \bottomrule
 \end{tabular}
-\caption{\label{tab:mischarge}Charge mismeasurement rate and systematic effect on the charge asymmetry.}
+\caption{\label{tab:mischarge}Incorrect charge assignment rate and systematic effect on the charge asymmetry.}
 \end{center}
 \end{table}
 
@@ -836,8 +836,8 @@ applied to the electrons. The largest source of electron scale bias is the
 changing ECAL crystal transparency caused by the changing level of radiation
 during the \ac{LHC} 2010 run.
 
-To correct for this effect, a set of ad-hoc energy scale and resolution corrrections are
-derrived using a \Zee mass distribution. The corrections are parameterised by
+To correct for this effect, a set of ad-hoc energy scale and resolution corrections are
+derived using a \Zee mass distribution. The corrections are parametrised by
 six energy scale factors, $s_i$, and six resolutions, $\sigma_i$, one for each
 pseudorapidity bin in the asymmetry measurement.
 The scale factors represent the average factor each \ac{MC} electron's \Pt
@@ -857,7 +857,7 @@ $\sigma_i$.
 In each category ($category_{ij}$) where one electron is in the $i^{th}$
 pseudorapidity bin and the other is in the $j^{th}$ bin, the \ac{MC} template
 mass shape is scaled by $\frac{1}{\sqrt{s_i s_j} } $
-and smeared by an addtional gaussian with width of
+and smeared by an additional Gaussian with width of
 $\sqrt{\sigma_i^2+\sigma_j^2}$.
 
 The corrections are applied to the electron before the final \Pt cut so that
@@ -884,7 +884,7 @@ $1.6<| \eta |<2.0$  & 31  & 0.9  & 32 \\
 $2.0<| \eta |<2.4$  & 41  & 0.3  & 42\\
     \bottomrule
     \end{tabular}
-    \caption{\label{tab:acc}Systematic error for detector effects in the acceptace corrections.}
+    \caption{\label{tab:acc}Systematic error for detector effects in the acceptance corrections.}
   \end{center}
 \end{table}
 
@@ -937,14 +937,14 @@ varying the templates used within certain uncertainties.
 
 \subsection{Signal Extraction Method}
 
-The systematic uncertainty due to the siganl extraction method is evaluated be
-considering the error introduced be each \ETm tempalte shape used in the fit
+The systematic uncertainty due to the signal extraction method is evaluated be
+considering the error introduced be each \ETm template shape used in the fit
 separately.
 
 \subsubsection{Background \ETm Shape}
 
 The \ac{QCD} and \gjet \ETm template shape is obtained from a control sample of
-events by antiselecting electrons. This may introduce a systematic bias to the
+events by anti-selecting electrons. This may introduce a systematic bias to the
 measurement if there is a difference between the anti-selected \ac{QCD} and \gjet
 \ETm samples and the selected \ac{QCD} and \gjet samples.
 
@@ -955,8 +955,8 @@ effect that this has on the measured asymmetry.
 For each variation on the antiselection, 500 pseudo-data experiments are
 generated with the number of events that are expected in \unit{36.1}{\invpb} of
 data. The distribution of the measured asymmetry is then fitted with a
-gaussian.
-The effect that changing the anti-selection has on the mean of the guassian is
+Gaussian.
+The effect that changing the anti-selection has on the mean of the Gaussian is
 studied, the maximum distance from the asymmetry measured with the nominal
 anti-selection is taken as an estimate of the systematic uncertainty.
 The effect of changing the antiselection used on the result with real data is
@@ -979,7 +979,7 @@ $1.6<|\eta|<2.0$ & 6 & 10\\
 $2.0<|\eta|<2.4$ & 22& 13\\
     \bottomrule
 \end{tabular}
-\caption{Maximum distance between the asymmetry measured with many different antiselections
+\caption{Maximum distance between the asymmetry measured with many different anti-selections
 and the asymmetry measured with the chosen antiselection in MC pseudo data and real data for each eta bin.}
 \label{tab:systQCD}
 \end{center}
@@ -998,12 +998,12 @@ recoil corrections are applied to.
 \end{itemize}
 
 To evaluate the effect of the uncertainties of the recoil method, the upper and
-lower limits on the corrections are used to generate different tempaltes, and
+lower limits on the corrections are used to generate different templates, and
 the effect on the measured asymmetry is evaluated as a measure of the
 systematic uncertainty.
 
 The recoil method uses generator level \ac{MC} simulation as an input to the
-template shape. To evaluate the efect of the generator used, templates are
+template shape. To evaluate the effect of the generator used, templates are
 generated with the CTEQ 6.6 \cite{CTEQ}
 uncertainty \acp{PDF} which contain the central \ac{PDF} and 44 error \acp{PDF}
 which contain the \unit{95}{\%} \ac{CL} for each of the 22 free parameters in
@@ -1109,7 +1109,7 @@ $2.0<|\eta|<2.4$ & 70 & 52 & 25 &  9 & 94 \\
 \end{table}
 
 \section{Results}
-The measurement of the electron charge assymetry is presented with three
+The measurement of the electron charge asymmetry is presented with three
 different \pT cuts of 25, 30 and \unit{35}{\GeV}. 
 
 The results of the electron charge asymmetry with a \pT cut of \unit{25}{\GeV}
@@ -1137,7 +1137,7 @@ $1.6<|\eta|<2.0$ & 1.8 & $0.2331\pm0.0076\pm0.0085$ & $0.2672^{+0.0047}_{-0.0105
 $2.0<|\eta|<2.4$ & 2.2 & $0.2670\pm0.0077\pm0.0087$ & $0.2821^{+0.0037}_{-0.0110}$ & $0.2619^{+0.0039}_{-0.0018}$\\
     \bottomrule
 \end{tabular}
-\caption{Measured electron charge asymmetry with predictions from CTEQ6.6 and MSTW PDFs.  36 Uncertainties on measured asymmetry are statistical and systematic respectivly and the Uncertainties on predictions are due to the uncertainties on the PDFs}
+\caption{Measured electron charge asymmetry with predictions from CTEQ6.6 and MSTW PDFs.  36 Uncertainties on measured asymmetry are statistical and systematic respectively and the Uncertainties on predictions are due to the uncertainties on the PDFs}
 \label{tab:results25}
 \end{center}
 \end{table}
@@ -1170,7 +1170,7 @@ $2.0<|\eta|<2.4$ & 2.2 & $0.2451\pm0.0086\pm0.0093$ & $0.2625^{+0.0070}_{-0.0080
 \end{tabular}
 \caption{Measured electron charge asymmetry in lepton momentum $\PT>30$ \GeV
 with predictions from CTEQ6.6.  Uncertainties on measured asymmetry are
-statistical and systematic respectivly and the Uncertainties on predictions are
+statistical and systematic respectively and the Uncertainties on predictions are
 due to the uncertainties on the PDF}.
 \label{tab:results30}
 \end{center}
@@ -1203,7 +1203,7 @@ $2.0<|\eta|<2.4$ & 2.2 & $0.2220\pm0.0105\pm0.0094$ & $0.2432^{+0.0081}_{-0.0089
     \bottomrule
 \end{tabular}
 \caption{Measured electron charge asymmetry in lepton momentum $\PT>35$ \GeV with predictions from CTEQ6.6.
-Uncertainties on measured asymmetry are statistical and systematic respectivly and the
+Uncertainties on measured asymmetry are statistical and systematic respectively and the
 Uncertainties on predictions are due to the uncertainties on the PDF}
 \label{tab:results35}
 \end{center}
