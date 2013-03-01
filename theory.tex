@@ -1,8 +1,16 @@
 \chapter{Standard Model}
+\label{chap:sm}
+The \ac{SM} of particle physics is a quantum field theory that describes all
+known fundemental constituents of matter and their interactions through the
+strong, weak and electromagnetic forces.
 
-The standard model of particle physics is a theoretical model that describes
-almost all sub-nuclear phenomena up to an energy scale of
-$\mathcal{O}(\unit{100}{\GeV})$.
+The theory is based on the $SU(3)_c \otimes SU(2)_L \otimes U(1)_Y$ gauge
+group.
+
+This chapter reviews the \ac{SM} of particle physics. The first section will 
+introduce the two families of elementary matter particles, the leptons and quarks,
+ and the latter section will then summarise the theoretical background
+to the standard model.
 
 The theory was pieced together in the 60s and 70s and comprises two families of
 elementary particles, called quarks and leptons, and incorporates the theories
@@ -11,11 +19,10 @@ dynamics and quantum chromodynamics (QCD).
 
 The Standard Model is remarkable in its accuracy, describing every experimental
 test performed.  
-The chapter will first introduce the two families of elementary matter
-particles, the leptons and quarks, and then summarise the theoretical background
-to the standard model.
+\todo[inline]{MAKE THIS GOODER.}
 
 \section{Constituents of the Standard Model}
+\label{sec:matter}
 Within the Standard Model matter is described as being constructed from a small
 number of spin$=\nicefrac{1}{2}$ particles called fermions that interact with
 the electromagnetic, weak and strong forces. The fermions are divided in to two
@@ -44,12 +51,14 @@ some of their properties are summarised in \TableRef{tab:particles}.
 \label{tab:particles}
 \end{table}\todo{add particle masses?}
 
+\subsection{Leptons}
 Each lepton generation contains a charged lepton and a corresponding light
 neutral particle called a neutrino. All leptons interact via the weak force,
 whereas only the charge lepton interacts with the electromagnetic force.  The
 first generation of leptons is the most familiar containing the electron and the
 electron neutrino.
 
+\subsection{Quarks}
 Unlike leptons, quarks carry fractional charge, within each generation there is
 a quark with a charge of $\nicefrac{2}{3}$ and another with a charge of
 $\nicefrac{-1}{3}$. As well as the electric charge, quarks carry an additional
@@ -69,22 +78,206 @@ the stable electron.
 Due to the instability of the heavier generations of fermions, they can only be
 found in  cosmic rays, or produced in high energy physics experiments.
 
-An important property of a fermion is the ``handedness'' or chirality. A left
-handed particle has its spin aligned in the opposite direction to its direction
-of motion and a right handed particle is one where the are both aligned
-\todo[inline]{diagram of this}
+\section{Fundamental Forces}
+\label{sec:forces}
 
-In the standard model, the strong, weak and electromagnetic interactions are
-described as the exchange of integer spin intermediate particles called bosons.
-The electromagnetic force is mediated by the massless, chargeless photon. The
-strong force is mediated by eight massless gluons. 
-The weak force is mediated by the exchange of massive particles, the \PWpm and \PZ
-bosons. The \PWpm boson is unique in that it only interacts with left handed
-particles.
+There are, as far as is known, four fundemental forces of nature, the strong,
+weak, electromagnetic and gravitational forces.
+\TableRef{tab:forces} summarises the force in order of decreasing
+strength\footnote{The strength quoted in the table is a rough approximation as
+`strength' depends on the source and distance of a force\cite{griffiths}}
 
-\todo[inline]{more?}
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{ l l l l }
+\toprule
+Force           & Strength   & Theory   & Mediator \\
+\midrule
+Strong          & $10^{0}  $ & \acl{QCD} & Gluon \\
+Electromagnetic & $10^{-2} $ & \acl{QED} & Photon \\
+Weak            & $10^{-13}$ & \acl{EWK} & \PW and \PZ \\
+Gravitational   & $10^{-42}$ & General Theory of Relativity & Graviton? \\
+\bottomrule
+\end{tabular}
+\caption{The known four fundemental forces \cite{griffiths}.}
+\end{center}
+\label{tab:forces}
+\end{table}
+
+The \ac{SM} describes the strong, weak and electromagnetic interactions. Each
+force is mediated by exchange of integer spin intermediate particles called
+bosons.  Gravity is not included in the \ac{SM} as a complete quantum theory of
+gravity has not yet been found. The gravitational force is so weak, when
+compared to the other three forces its contribution to particle interactions is
+negligable.
+
+\subsection{Electromagnetic Force}
+The classical theory for electromagnetism was formulated by Maxwell over a
+centuary ago\cite{maxwell}, and a quantum theory of electrodynamics was
+realised by Tomonaga, Feynman and Schwinger in the 1940s \cite{qed}.
+
+The \ac{EM} force is the force that is responsible for interaction between
+charged particles. The force is mediated by the massless photon, which means
+that the \ac{EM} force is effective over infinite range.
+The fundemetal process of \ac{QED} is shown in \FigureRef{fig:qed}.
+\begin{figure}[htbp]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \missingfigure{elementary process for qed}
+  \caption{The elementary process for \ac{QED} that all electromagnetic
+interactions can be reduced to.}
+  \label{fig:qed}
+\end{figure}
+
+The fine structure constant, $\alpha$, specifys the strength of the interaction
+between charged particles and photon and is given by
+\begin{equation}
+\alpha = \frac{e^2}{4 \pi} \approx \frac{1}{137}
+\end{equation}
+
+The symmetry group for the electromagnetic interaction is $U(1)$. 
+
+\subsection{Strong Force}
+
+The strong force is the force responsible for the interaction between particles
+that carry a colour charge, quarks and gluons. Unlike the electric charge, the
+colour charge can have three posible values, conventionally called `red',
+`green' and `blue' , as well as the corresponding anti colout charges
+`anti-red', `anti-green' and `anti-blue'.
+The fundemetal quark-gluon process of the strong force is shown in
+\FigureRef{fig:qcd}.
+\begin{figure}[htbp]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \missingfigure{elementary process for qcd}
+  \caption{The quark-gluon vertex for \ac{QCD} .}
+  \label{fig:qcdquark}
+\end{figure}
+The strong force is mediated by eight massless gluons which themselves carry
+colour charge. This allows the gluons to self-interact which results gluon-gluon
+vertexes in addtion to the quark-gluon vertex.
+\begin{figure}[htbp]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \missingfigure{elementary process for qcd}
+  \caption{The gluon-gluon vertices for \ac{QCD} .}
+  \label{fig:qcdgluon}
+\end{figure}
+
+The coupling constant for the strnog force, $\alpha_s$, is given by,
+\begin{equation}
+\alpha = \frac{g_s^2}{4 \pi} \approx 1
+\end{equation}
+which is approximately 100 times stronger than the \ac{EM} force.
+As the energy of the interaction increases the strength of the strong coupling
+decreases. This is known as asymptotic freedom, at high-energy experiments
+quarks appear to behave almost as free particles. However, at lower energies 
+the coupling increases and quarks only appear in bound states, this is known as
+quark confinement.
+\todo{diagram of quark confinement here?}
+
+The symmetry group for the strong force is $SU(3)$. 
+
+\subsection{Weak Force}
+The weak interaction occurs between all fermions and is the interaction
+responsible in the radioactive decay of sub-atomic particles.  Unlike the strong
+and electromagnetic forces, the weak force is mediated by the exchange of
+massive particles, the \PWpm and \PZ bosons, which causes the weak interaction
+to have a very short range.
+
+There are two kinds of weak interactions: charged and neutral, mediated by the
+\PW and the \PZ respectivly.
+
+The fundemental vertex for the neutral vertex is shown in
+\FigureRef{fig:neutral}, where the \PZ interacts with any quark or lepton.
+The \pZ can mediate any process that can be mediated by the photon as well as
+processes involving neutrinos.
+\begin{figure}[htbp]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \missingfigure{elementary process for neutral weak}
+  \caption{The fundemental vertex of neutral weak vertex.}
+  \label{fig:neutral}
+\end{figure}
+
+The fundemental vertices for the charged current are shown in
+\FigureRef{fig:charged}. The charged current has the unique ability to chage the
+flavour of quarks and leptons by the exchange of \PW bosons. The charged current
+will only interact with fermions of the same generation
+(\HepProcess{\Pelectron\to\Pnue} but never
+\HepProcess{\Pelectron\to\Pnum}).
+\begin{figure}[htbp]
+  \centering
+  %\includegraphics[width=0.5\textwidth]{placeholder}
+  \missingfigure{elementary process for neutral weak}
+  \caption{The fundemental vertex of neutral weak vertex.}
+  \label{fig:charged}
+\end{figure}
+
+The weak interaction also violates parity ($P$) and charge conjugation ($C$). A
+well known example of parity violation in weak interactions is the Wu experiment
+\cite{wu}. In the experiment the $\beta$ decay of nuclei (Cobalt-60) polarised by an
+external magnetic is studied, 
+\begin{equation}
+\begin{matrix}
+\Rightarrow\Rightarrow \\
+^{60}\mathrm{Co} \\
+~   
+\end{matrix}
+\to
+{^{60}\mathrm{Ni}}
++
+\begin{matrix}
+\Rightarrow \\
+\Pelectron \\
+\leftarrow 
+\end{matrix}
++
+\begin{matrix}
+\Rightarrow \\
+\APnue \\
+\rightarrow 
+\end{matrix}
+\end{equation}
+The Cobalt-60 nuclei are aligned to the external magnetic field. By conservation
+of angular momentum, the neutrino and electron spins must be parallel and
+aligned with the magnetic field. By
+momentum conservation, the electron and neutrino must be produced in opposite
+directions which means that the electron and neutrino must have oposite helicity. 
+By changing the direction of the magnetic field, the system undergoes a parity
+transformation
+\begin{equation}
+\begin{matrix}
+\Leftarrow\Leftarrow \\
+^{60}\mathrm{Co} \\
+~   
+\end{matrix}
+\to
+{^{60}\mathrm{Ni}}
++
+\begin{matrix}
+\Leftarrow \\
+\Pelectron \\
+\leftarrow 
+\end{matrix}
++
+\begin{matrix}
+\Leftarrow \\
+\APnue \\
+\rightarrow 
+\end{matrix}
+\end{equation}
+If parity is conserved then the electron would have no preference in direction.
+However, what was seen was that the electron was preferentially emitted in the
+oppsoite direction to their spin, the weak interaction exhibits maximal parity
+violation.
+More generally, the \PWpm boson is unique in that it only interacts with left handed
+particles (or right handed antiparticles).
+
+The \PW and \PZ bosons also have 3 and 4 vertex couplings to each another.
 
 \section{Theoretical Background}
+\label{sec:forces}
 This section will introduce some of the ideas that drive the
 theoretical background to the Standard Model.
 The first section will give a brief overview on symmetries in physics and how

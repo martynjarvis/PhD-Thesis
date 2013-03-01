@@ -1,5 +1,6 @@
 \chapter[Electron Charge Asymmetry]{Measurement of the Electron Charge Asymmetry
  with \unit{36}{\invpb} }
+\label{chap:analysis}
 
 In this chapter the results of the measurement of the electron charge
 asymmetry are presented. The analysis is performed on the full 2010 dataset, which corresponds to a
@@ -64,7 +65,7 @@ trigger was also applied in these runs.
     149181-149442 & \verb=HLT_Ele22_SW_TighterCaloIdIso1_L1R_v2= \\
     \bottomrule
   \end{tabular}
-  \caption{Triggers used to select the data used in this analysis.}
+  \caption{The triggers used to select the data used in this analysis.}
   \label{tab:triggers}
 \end{table}
 
@@ -103,7 +104,7 @@ the sample.
         Dist $||$ Dcot   & \multicolumn{2}{c}{$>0.02$}\\
     \bottomrule
     \end{tabular}
-    \caption{\label{tab:electronselection} Electron selection variables and corresponding cut values.}
+    \caption{\label{tab:electronselection}The electron selection variables and corresponding cut values.}
   \end{center}
 \end{table}
 
@@ -132,13 +133,13 @@ reduced by a factor of 8 with only a \unit{5}{\%} loss in efficiency.
   \begin{subfigure}{\textwidth}
     \centering
     \includegraphics[width=0.85\textwidth]{zpeak_os}
-    \caption{Opposite sign \PZ.}
+    \caption{Opposite sign \PZ peak.}
     \label{fig:zpeak_os}
   \end{subfigure}
   \begin{subfigure}{\textwidth}
     \centering
     \includegraphics[width=0.85\textwidth]{zpeak_ss}
-    \caption{Same sign \PZ.}
+    \caption{Same sign \PZ peak.}
     \label{fig:zpeak_ss}
   \end{subfigure}
   \caption{ $Z\rightarrow ee$ peak. One electron is required to be in the
@@ -175,7 +176,8 @@ EWK & \HepProcess{\PZ\to\Ptau\Ptau} & $0.4\%$ &$0.3\%$  &$0.2\%$ \\
 QCD & Total                         & $28.2\%$&$31.3\%$ &$35.7\%$\\
     \bottomrule
 \end{tabular}
-\caption{Composition of selected events for lepton momentum cut of $\PT>25$ \GeV, $\PT>30$ \GeV and $\PT>35$ \GeV .}
+\caption{Composition of selected events for lepton momentum cut of $\PT>25$
+\GeV, $\PT>30$ \GeV and $\PT>35$ \GeV from \ac{MC} simulation.}
 \label{tab:selectedcomp}
 \end{center}
 \end{table}
@@ -192,7 +194,8 @@ and \ac{DY} background events.
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics*[width=0.85\textwidth]{pfmet_dist}
-    \caption{Particle Flow transverse missing energy (PFMET) distribution for selected events.}
+    \caption{\ac{PFMET} distribution for selected events with an electron cut of
+$\PT > \unit{25}{\GeV}$ and $|\eta| < 2.4$.}
   \label{fig:pfmet}
   \end{center}
 \end{figure}
@@ -226,7 +229,10 @@ $2.0<| \eta |<2.4$ &+& 18885&13239&8726\\
 \end{tabular}
 %\end{sideways}
 \end{center}
-\caption{Number of events passing the event selection for lepton momentum cut of $\PT>25$ \GeV, $\PT>30$ \GeV and $\PT>35$ \GeV .}
+\caption{Number of events passing the event selection for lepton momentum cuts of
+    \unit{$\PT>25$}{\GeV}, 
+    \unit{$\PT>30$}{\GeV} and 
+    \unit{$\PT>35$}{\GeV} .}
     \label{tab:selectedevents}
 \end{table}
 
@@ -248,37 +254,37 @@ shown in \TableRef{tab:antisel}.
   \begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta1.pdf}
-    \caption{test.}
+    \caption{$0.0<| \eta |<0.4$}
     \label{fig:qcd_met_eta1}
   \end{subfigure}
   \begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta2.pdf}
-    \caption{test.}
+    \caption{$0.4<| \eta |<0.8$}
     \label{fig:qcd_met_eta2}
   \end{subfigure}
   \begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta3.pdf}
-    \caption{test.}
+    \caption{$0.8<| \eta |<1.2$}
     \label{fig:qcd_met_eta3}
   \end{subfigure}
   \begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta4.pdf}
-    \caption{test.}
+    \caption{$1.2<| \eta |<1.4$}
     \label{fig:qcd_met_eta4}
   \end{subfigure}
   \begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta5.pdf}
-    \caption{test.}
+    \caption{$1.6<| \eta |<2.0$}
     \label{fig:qcd_met_eta5}
   \end{subfigure}
   \begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta6.pdf}
-    \caption{test.}
+    \caption{$2.0<| \eta |<2.4$}
     \label{fig:qcd_met_eta6}
   \end{subfigure}
   \caption{The \ETm distribution on antiselected \ac{MC} simulated events and selected \ac{QCD} and \gjet events in each pseudorapidity bin.}
@@ -301,7 +307,8 @@ shown in \TableRef{tab:antisel}.
         $ISO_{hcal}/ E_T$  & 0.10 & 0.025\\ 
     \bottomrule
     \end{tabular}
-    \caption{\label{tab:antisel}Electron anti-selection variables and corresponding cut values. $\Delta\phi$ and $\Delta\eta$ cuts are inverted.}
+    \caption{\label{tab:antisel}Electron anti-selection variables and
+corresponding cut values. The $\Delta\phi$ and $\Delta\eta$ cuts are inverted.}
   \end{center}
 \end{table}
 
@@ -371,9 +378,9 @@ The corrected recoil response and resolution curves are then used to correct the
 found, and the values of for the response, $f^{corr}_i (p^{W}_T)$, and
 resolution curves, $\sigma^{corr}_i (p^{W}_T) $, are looked up. A Gaussian is
 defined with these values and then sampled to determine the new recoil
-components $U_i$.
+components $U_i$,
 \begin{equation}
-U_i \sim Gaus(f^{corr}_i (p^{W}_T), \sigma^{corr}_i (p^{W}_T) )
+U_i \sim Gaus(f^{corr}_i (p^{W}_T), \sigma^{corr}_i (p^{W}_T) ).
 \end{equation}
 The components are then combined to form the new corrected recoil vector
 $\vec{U^{\prime}}$ which is then combined with the electron vector, $\Pe$, to
@@ -437,8 +444,9 @@ integrated luminosity of \unit{36.1}{\invpb} are summarised in
     $2.0<|\eta|<2.4$ & 0.0077 & 0.0077\\
     \bottomrule
     \end{tabular}
-  \caption{Expected statistical error as a function of pseudorapidity, for an
-  integrated luminosity of \unit{36}{\invpb}. }
+  \caption{Expected statistical error from \ac{MC} simulation and pseudo-data
+experiments as a function of pseudorapidity, for an integrated luminosity of
+\unit{36}{\invpb}. }
   \label{tab:statuncertsum}
   \end{center}
 \end{table}
@@ -500,7 +508,8 @@ $2.0<| \eta |<2.4$ &+&-&-&-\\
 \end{tabular}
 %\end{sideways}
 \end{center}
-\caption{Signal yield}
+\caption{The signal yield in each pseudorapidity bin after the fitting
+procedure.}
     \label{tab:sigyield}
 \end{table}
 
@@ -524,13 +533,13 @@ $2.0<| \eta |<2.4$ &+&  1.44\\
                    &-&  1.11\\
     \bottomrule
 \end{tabular}
-\caption{\label{tab:chi2}$\chi^2$/ndof of Fit.}
+\caption{\label{tab:chi2}$\chi^2$/ndof of the fits in each pseudorapidity bin.}
 \end{center}
 \end{table}
 
 
 \section{Corrections to the Measured Asymmetry}
-After the signal extraction procedure the measured asymmetry is simply 
+After the signal extraction procedure the measured asymmetry is simply ,
 \begin{equation}
 \mathcal{A}_{meas} = \frac{
 \label{eq:meas}
@@ -540,7 +549,7 @@ After the signal extraction procedure the measured asymmetry is simply
 {
   N_{meas}^{+} +
   N_{meas}^{-}
-}
+},
 \end{equation}
 where $N_{meas}^{+}$ and $N_{meas}^{-}$ are number of positrons and
 electrons extracted with the fitting procedure.
@@ -564,7 +573,7 @@ identified as electrons respectively.
 The incorrect assignment induces a dilution factor to the asymmetry as a
 function of the electron pseudorapidity. 
 
-The true asymmetry at the reconstruction level is defined as
+The true asymmetry at the reconstruction level is defined as,
 \begin{equation}
 \label{eq:reco}
 \mathcal{A}_{reco} = \frac{
@@ -574,22 +583,21 @@ The true asymmetry at the reconstruction level is defined as
 {
   N_{reco}^{+} +
   N_{reco}^{-}
-}
+},
 \end{equation}
 where $N_{reco}^{+}$ and $N_{reco}^{-}$ are the true number of positrons and
 electrons with \pT greater than the threshold. 
 $N_{meas}^{+}$, $N_{meas}^{-}$ and 
 $N_{reco}^{+}$, $N_{reco}^{-}$ are related by the efficiency of electrons and
-positrons and the incorrect charge assignment rate.
+positrons and the incorrect charge assignment rate,
 \begin{align}
   \label{eq:poscor}
   N_{meas}^{+} 
   &= \epsilon^+ \left( ( 1 - \omega^- ) N_{reco}^{+} + \omega^+ N_{reco}^{-} \right)\\
   \label{eq:negcor}
   N_{meas}^{-} 
-  &= \epsilon^+ \left( ( 1 - \omega^+ ) N_{reco}^{-} + \omega^- N_{reco}^{+} \right)
+  &= \epsilon^+ \left( ( 1 - \omega^+ ) N_{reco}^{-} + \omega^- N_{reco}^{+} \right).
 \end{align}
-
 
 \EquationRef{eq:poscor} and \EquationRef{eq:negcor} can then be inserted in to the
 definition of the measured asymmetry, \EquationRef{eq:meas}, to obtain,
@@ -603,19 +611,19 @@ definition of the measured asymmetry, \EquationRef{eq:meas}, to obtain,
 {
   \epsilon^+ ( ( 1 - \omega^- ) N_{reco}^{+} + \omega^+ N_{reco}^{-} ) +
   \epsilon^+ ( ( 1 - \omega^+ ) N_{reco}^{-} + \omega^- N_{reco}^{+} )
-}
+} .
 \end{equation}
 If it is assumed that the rate that
 electrons are assigned a positive charge is the same as the rate of positrons
-being assigned a negative charge, \ie 
+being assigned a negative charge, \ie,
 \begin{equation}
-  \omega^{+} = \omega^{-} = \omega
+  \omega^{+} = \omega^{-} = \omega ,
 \end{equation}
 then the dilution factor can be simplified to $(1-2\omega)$. A further
 simplification is to introduce the relative detection efficiency, which is
 defined as the ratio of electron efficiency to the positron efficiency,
 \begin{equation}
- R = \epsilon^+/\epsilon^-
+ R = \epsilon^+/\epsilon^- ,
 \end{equation}
 which can be substituted in to \EquationRef{eq:meas1},
 \begin{align}
@@ -730,7 +738,9 @@ $\left[ 0.0,2.4 \right]$ & 98.5$\pm$0.4 & 97.8$\pm$0.4 & 1.007$\pm$0.006 & 80.3$
 \end{tabular}
 \end{sideways}
 \end{center}
-\caption{ GSF tracking and identification efficiency as a function of charge.}
+\caption{\ac{GSF} track reconstruction and electron identification efficiency as
+a function of charge in each pseudorapidity bin. The efficiencies are also shown
+for the barrel and endcap separatly and the full inclusive range.}
 \label{tab:tagprobe}
 \end{table}
 
@@ -750,7 +760,7 @@ $dR_\epsilon$,
   \sigma_{\mathcal{A}} 
   = \mathcal{A}(R_\epsilon=1) - \mathcal{A}(R_\epsilon=1\pm dR_\epsilon)  
   \simeq \frac{dR_\epsilon}{2}(1-\mathcal{A}^2)
-  \simeq \frac{dR_\epsilon}{2} 
+  \simeq \frac{dR_\epsilon}{2} .
 \end{equation}
 The value of $R$ is measured in each pseudorapidity bin, as well as inclusively
 across the range $0<| \eta |< 2.4$. 
@@ -787,17 +797,16 @@ combinations of the 6 pseudorapidity bins of the two electrons ($6+\binom{6}{2} 
 
 For each \PZ events with two electrons in pseudorapidity bin $i$ and $j$
 respectively the probability of an event being same sign or opposite sign can be
-written
+written,
 \begin{equation}
-%\[
  p(q_i q_j) =
   \begin{cases}
 \left( 1-\omega_{i} \right) \left( 1-\omega_{j} \right) + \omega_{i} \omega_{j}
    & \text{if } q_1 q_2 =-1 \\
 \omega_{i} \left( 1-\omega_{j} \right) + \omega_{j} \left( 1-\omega_{i} \right) 
    & \text{if } q_1 q_2 =+1 \\
-  \end{cases}
-%\]
+  \end{cases} 
+,
 \end{equation}
 where $ \omega_{i},\omega_{j}$ are the incorrect charge assignment rates and $
 q_{i},q_{j}$ are the charges of the electrons.
@@ -902,7 +911,8 @@ $1.6<| \eta |<2.0$  & 32 &50 & 43\\
 $2.0<| \eta |<2.4$  & 42 &52 & 27\\
     \bottomrule
 \end{tabular}
-\caption{\label{tab:bias}Bias values due to the electron resolution for different lepton \PT cuts.}
+\caption{\label{tab:bias}Bias values due to the electron resolution for
+different electron \PT cuts.}
   \end{center}
 \end{table}
 
@@ -1104,7 +1114,7 @@ $1.6<|\eta|<2.0$ & 70 & 51 & 25 &  7 & 94 \\
 $2.0<|\eta|<2.4$ & 70 & 52 & 25 &  9 & 94 \\
 \bottomrule
 \end{tabular}
-\caption{\label{tab:summarysyst}Summary of the systematic errors}
+\caption{\label{tab:summarysyst}Summary of the systematic errors.}
 \end{center}
 \end{table}
 
@@ -1119,7 +1129,8 @@ are summarised in \TableRef{tab:results25} and shown in
 \begin{figure}[htbp]
   \begin{center}
   \includegraphics*[width=0.45\textwidth,angle=90]{Asym_25}
-  \caption{\label{fig:asym25} Measured electron charge asymmetry corrected with predictions from CTEQ10W and MSTW08NNLO.}
+  \caption{\label{fig:asym25} Measured electron charge asymmetry corrected with
+predictions from CTEQ10W and MSTW08NNLO with a \pT cut of \unit{25}{\GeV}.}
   \end{center}
 \end{figure}
 
