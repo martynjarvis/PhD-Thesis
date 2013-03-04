@@ -198,7 +198,7 @@ There are two kinds of weak interactions: charged and neutral, mediated by the
 
 The fundemental vertex for the neutral vertex is shown in
 \FigureRef{fig:neutral}, where the \PZ interacts with any quark or lepton.
-The \pZ can mediate any process that can be mediated by the photon as well as
+The \PZ can mediate any process that can be mediated by the photon as well as
 processes involving neutrinos.
 \begin{figure}[htbp]
   \centering
@@ -325,6 +325,8 @@ The \PW and \PZ bosons also have 3 and 4 vertex couplings to each another.
 \label{sec:forces}
 This section will introduce some of the ideas that drive the
 theoretical background to the Standard Model.
+
+
 The first section will give a brief overview on symmetries in physics and how
 they can dictate particle interactions. In \SectionRef{sec:QED}, quantum
 electrodynamics is introduced along with the idea of local gauge invariance.
@@ -334,89 +336,286 @@ which introduces the masses of the gauge bosons and fermions via spontaneous
 symmetry breaking. The \SectionRef{sec:QCD} summarises the quantum
 chromodynamics theory that describes the strong force.
 
-\subsection{Symmetry and Groups}
-\label{sec:symmetry}
-Noether's theorem states that for every symmetry of nature, there is
-a corresponding quantity that is conserved and conversely each conservation law
-is the result of some underlying symmetry.
-\todo[inline]{this whole section is horrible}
-
-For example, the laws of physics are symmetrical with respect to translations in
-time and space, and this leads directly to conservation of energy and momentum
-respectively. Other symmetries and conservation laws are summarised in
-\TableRef{tab:symmetry}
-
-\begin{table}[htbp]
-\begin{center}
-\begin{tabular}{ l l }
-Symmetry & Conserved Quantity \\ \hline
-Time     & Energy \\
-Space    & Momentum \\
-Rotation & Angular Momentum \\
-Gauge    & Electric Charge \\
-\end{tabular}
-\caption{Examples of symmetries and their corresponding conservation laws.
-\label{tab:symmetry}}
-\end{center}
-\end{table}
-
-It is currently believed that all particle interactions are dictated by symmetry
-principles.  In group theory symmetry operations, such as rotations, can be
-described by mathematical groups.
-The most common groups to physics are unitary groups, $U(n)$, which are the
-collection of all the $n\times n$ unitary ($U^{-1} = \tilde{U}^{*}$) matrices, and
-the special unitary groups, $SU(n)$, which have the additional requirement that
-the matrices have a determinant of 1.
+%\subsection{Symmetry and Groups}
+%\label{sec:symmetry}
+%Noether's theorem states that for every symmetry of nature, there is
+%a corresponding quantity that is conserved and conversely each conservation law
+%is the result of some underlying symmetry.
+%\todo[inline]{this whole section is horrible}
+%
+%For example, the laws of physics are symmetrical with respect to translations in
+%time and space, and this leads directly to conservation of energy and momentum
+%respectively. Other symmetries and conservation laws are summarised in
+%\TableRef{tab:symmetry}
+%
+%\begin{table}[htbp]
+%\begin{center}
+%\begin{tabular}{ l l }
+%Symmetry & Conserved Quantity \\ \hline
+%Time     & Energy \\
+%Space    & Momentum \\
+%Rotation & Angular Momentum \\
+%Gauge    & Electric Charge \\
+%\end{tabular}
+%\caption{Examples of symmetries and their corresponding conservation laws.
+%\label{tab:symmetry}}
+%\end{center}
+%\end{table}
+%
+%It is currently believed that all particle interactions are dictated by symmetry
+%principles.  In group theory symmetry operations, such as rotations, can be
+%described by mathematical groups.
+%The most common groups to physics are unitary groups, $U(n)$, which are the
+%collection of all the $n\times n$ unitary ($U^{-1} = \tilde{U}^{*}$) matrices, and
+%the special unitary groups, $SU(n)$, which have the additional requirement that
+%the matrices have a determinant of 1.
 
 \subsection{Quantum Electrodynamics}
 \label{sec:QED}
-In quantum electrodynamics, QED, an electron can be described as a complex
-field, $\psi$. The Lagrangian is given by
+
+The \ac{SM} describes all the interactions of known particles in terms of gauge
+theories. A gauge theory is a theory that is invariant under a set of local
+transformations. The first example is electromagnetism in which the gauge
+transformations are local complex phase transformations of the charge particle
+fields. Requiring gauge invariance will in turn require that a massless vector
+particle be introduced, the photon, that mediates the \ac{EM} interaction.
+
+The lagrangian densitry for a free Dirac field, $\psi$, is given by,
 \begin{equation}
 \mathcal{L} = i \bar{\psi} \gamma_{\mu} \partial^{\mu} \psi - m \bar{\psi}\psi .
 \end{equation}
-This Lagrangian is invariant under a `global' phase transformation,
+This Lagrangian is invariant under a `global' phase transformation of the
+fermion field,
 \begin{equation}
-\psi(x) \to e^{i\alpha} \psi(x),
+\psi(x) \to e^{iQ\omega} \psi(x), \quad \bar{\psi}(x) \to e^{iQ\omega}\bar{\psi}(x),
 \label{eq:global}
 \end{equation}
-where $\alpha$ is a global arbitrary parameter. The Lagrangian is said to exhibit
-global gauge invariance. The family of transformations, $R =
-e^{i \alpha}$, where $\alpha$ is real and continuous, forms the unitary
-Abelian \footnote{Abelian refers to the property that all the elements in a
-group commute, $R(\alpha)R(\beta) = R(\beta)R(\alpha)$.}
-group $U(1)$. 
+where $Q$ is the charge operator and $\omega$ is a global arbitrary parameter. 
+The Lagrangian is said to exhibit global gauge invariance. 
+
+The family of transformations, $R = e^{i \omega}$, forms the
+abelian group $U(1)$ which is the group of all unitary $1\time1$ matrices.
+Unitary refers to the property that $U^{-1} = {U}^{\dagger}$
+Abelian refers to the property that all the elements in a
+group commute, 
+\begin{equation}
+e^{-i\omega_1} 
+e^{-i\omega_2} 
+=
+e^{-i\omega_2} 
+e^{-i\omega_1} .
+\end{equation}
+
+If a infinitesimal group transformation is considered then 
+\begin{equation}
+\psi(x) 
+\to e^{iQ\omega} \psi(x)
+\approx (1+iQ\omega)\psi(x),
+\end{equation}
+and the Lagrangian is unchanged by the transformation.
+
+Global transformations introduce a problem that making a transformation requires
+that every space-time point to `know' about the transformation. It would be
+preferable to require invariance under local transformations.
 More generally, the \EquationRef{eq:global} can be rewritten as,
 \begin{equation}
-\psi(x) \to e^{i\alpha(x)} \psi(x),
+\psi(x) \to e^{i\omega(x)} \psi(x),
 \label{eq:local}
 \end{equation}
 where $\alpha$ is now a function of the space time coordinate $x$. This is known
-as a local phase transformation. Unfortunately, under this transformation, the
-Lagrangian is no longer invariant. This can be overcome by defining the
-covariant derivative as,
+as a local phase transformation. The infinitesimal transformation now becomes,
 \begin{equation}
-D_{\mu} \equiv \partial_{\mu} - i e A_{\mu},
+\psi(x) 
+\to e^{iQ\omega} \psi(x)
+\approx (1+iQ\omega)\psi(x),
 \end{equation}
-where an additional vector field $A_{\mu}$ has been added, that transforms as 
+However, under this transformation the
+Lagrangian is no longer invariant. 
+
+The gauge invariance can be restored if it is assumed that the fermion field
+interacts with a vector field, called a gauge field and denoted $A_{\mu}$, with
+an interaction,
 \begin{equation}
-A_{\mu} \to A_{\mu} + \frac{1}{e} \partial_{\mu} \alpha,
+-e\bar{\psi}\gamma^{\mu}A_{\mu}Q\psi
 \end{equation}
+where $A_\mu$ transforms under a gauge transformation as 
+\begin{align}
+-eQA_{\mu} \to & -eQ(A_{\mu}+\delta A_{\mu}(x)\\
+           =   & -e Q A_{\mu} + Q \partial_{\mu} \omega (x)
+\end{align}
 and the new Lagrangian then becomes
+\begin{align}
+\mathcal{L} 
+&= \bar{\psi}( i\gamma^{\mu} ( \partial_{\mu} +i e Q A_{\mu}) - m)\psi \\
+&= \bar{\psi}( i\gamma^{\mu} D_{\mu} - m)\psi 
+\end{align}
+where the covariant derivative has been introduced,
+\begin{equation}
+D_{\mu} \equiv \partial_{\mu} - i e A_{\mu}.
+\label{eq:covar_deriv}
+\end{equation}
+The vector field, $A_{\mu}$, couples with the electron, and can be identified as
+the physical photon field. 
+
+To complete the lagrangian a kinetic term for the photon field should be added
+which is quadratic in the derivative of the field.
+However, this term should not break the invariance under gauge trnasformations.
+This is achieved by defining the field strength tensor, $F_{\mu\nu}$,
+\begin{equation}
+F_{\mu\nu}
+= \partial_{\mu} A_{\nu} - \partial_{\nu} A_{\mu}.
+\label{eq:fieldstrengthtensor}
+\end{equation}
+which is gauge invariant. Therefore and term constructed only out of 
+ $F_{\mu\nu}$ may be added to the Lagrangian.
+A suitable term is $\frac{1}{4} F_{\mu\nu} F^{\mu\nu}$ which is quadratic in the
+derivative of the field while remaining gauge invariant,
+\begin{equation}
+\mathcal{L} = \frac{1}{4} F_{\mu\nu} F^{\mu\nu} + \bar{\psi}( i\gamma^{\mu} D_{\mu} - m)\psi 
+\end{equation}
+
+Local gauge invariance has been restored with the introduction of the photon
+field. An interesting result is that the photon is required to be massless, as
+the introduction of a mass term for the photon, for example a term $\propto
+A_{\mu}A^{\mu}$, will break the gauge invariance.
+
+\subsection{Yang-Mills Theories}
+In the 1950s Yang and Mills extended gauge invariance to include non-abelian
+transformations, such as $SU(2)$.
+
+For a general non-abelian gauge theory the fermion fields are arranged in a
+multiplet,
+\begin{equation}
+\psi = 
+ \begin{pmatrix}
+  \psi_{1} \\
+  \psi_{2} \\
+  \vdots  \\
+  \psi_{n}
+ \end{pmatrix} ,
+\end{equation}
+where the lagrangian density is now
+\begin{equation}
+\mathcal{L} 
+= \sum_{i=1}^{n}
+\bar{\psi_i} 
+(i\gamma_{\mu} \partial^{\mu} - m) 
+\psi_i 
+\end{equation}
+
+The lagrangian is invariant under a complex phase transformation fo the fermion
+fields,
+\begin{equation}
+\psi(x) \to U \psi(x), \quad 
+\bar{\psi}(x) \to \bar{\psi}(x) U^{\dagger}
+\end{equation}
+where $U$ is an $n\times n$ special, unitary matrix, \ie,
+\begin{equation}
+U U^{\dagger} = 1 \quad 
+det(U) = 1.
+\end{equation}
+The group of matrices that satisfy these conditions is called $SU(n)$. 
+Describing a complex $n\times n$ matrix fully requires $2n^{2}$ parameters.
+However, the unitary requirement imposes $n^{2}$ constraints and the $det = 1$
+constraint imposes an additional constaint. Therefore an arbitary $SU(n)$ matrix
+can be descibed with $n^{2}-1$ free parameters,
+\begin{equation}
+U  = e^{-i \sum_{a=1}^{n^{2}-1} \omega^{a}\mathbf{T}^{a}}
+\equiv e^{-i\omega^{a}\mathbf{T}^{a}}
+\end{equation}
+where $\omega^a$ are the free parameters and $\mathbf{T}^{a}$ are the generators
+of the group.
+
+Unlike the unitary $U(1)$ group, the elements of $SU(n)$ do not commute,
+\begin{equation}
+e^{-i\omega_1^{a}\mathbf{T}^{a}}
+e^{-i\omega_2^{b}\mathbf{T}^{b}}
+\neq
+e^{-i\omega_2^{b}\mathbf{T}^{b}}
+e^{-i\omega_1^{a}\mathbf{T}^{a}}.
+\end{equation}
+
+If $U$ depends on space-time, the Lagrangian is not invariant under the
+non-abelian gauge transformation
+\begin{align}
+\mathcal{L} \to & \mathcal{L} + \delta \mathcal{L} \\
+= & \mathcal{L} + \bar{\psi} U^{\dagger} \gamma^{\mu} (\partial_{\mu} U) \psi
+\end{align}
+The local gauge invariance can be restored by following the prescription for the
+abelian example in \SectionRef{sec:qed}. A covariant derivative,
+$\mathbf{D}_{\mu}$, is introduced.
+However, the covariant derivative is now a matrix
+\begin{equation}
+\mathbf{D}_{\mu} = i \mathbf{I} \partial_{\mu} - g \mathbf{A}_{\mu}
+\end{equation}
+where $\mathbf{A}_{\mu} = \mathbf{T}^{a} A^{a}_{\mu}$. When compared to 
+\EquationRef{eq:covar_deriv} it can be seen that, instead of a single gauge
+boson, $\mathbf{A}_{\mu}$ contains $n^{2}-1$ gauge bosons, $A^{a}_{\mu}$, which
+coresponds to one for each generator of the $SU(n)$ group.
+$\mathbf{A}_{\mu}$ should transform under a gauge transformation, $U$ as,
+\begin{equation}
+\mathbf{A}_{\mu} \to 
+\mathbf{U} \mathbf{A}_{\mu} \mathbf{U}^{\dagger}
++ \frac{i}{g} (\partial_{\mu} \mathbf{U}) \mathbf{U}^{\dagger}.
+\end{equation}
+which will ensure that the Lagrangian density,
+\begin{equation}
+\mathcal{L} = \bar{\psi}( i\gamma^{\mu} D_{\mu} - m)\psi 
+\end{equation}
+remains invariant under a local $SU(n)$ gauge transformation.
+
+In a similar manner to \EquationRef{eq:fieldstrengthtensor}, the kinetic terms
+for the gauge bosons can be constructed from the field strengths. However, due
+to the non-Abelian nature of the $SU(n)$ group, the field strength has an
+additional term
+\begin{equation}
+F^{a}_{\mu\nu}
+= \partial_{\mu} A_{\nu} - \partial_{\nu} A_{\mu} - g f^{abc} A^{b}_{\mu} A^{c}_{\nu}
+\label{eq:nonabelfs}
+\end{equation}
+and the kinetic term for the gauge bosons is,
+% this is all a little more complicated than this, the term should be defined in
+% terms of the comutator of the covariant derivative bf{F}, however this is gauge
+% invariant so instead what is taken is the trace of bf{F}bf{F} = FaFa, be
+% aware of that
+\begin{equation}
+-\frac{1}{4}
+F^{a}_{\mu\nu}
+F^{a~\mu\nu}
+\end{equation}
+where a sumation of $a$ is implied.
+The additional term in \EquationRef{eq:nonabelfs} leads to some additional terms in the
+Lagrangian,
+\begin{equation}
+g f^{abc} ( \partial_{\mu} A^{a}_{\nu} ) A^{b}_{\mu} A^{c}_{\nu} - 
+\frac{1}{4} g^{2} f^{abc} f^{ade} A^{b}_{\mu} A^{c}_{\nu} A^{d}_{\mu} A^{e}_{\nu}
+\end{equation}
+That represent three-vertex and four vertex gauge boson interactions, similar to
+those shown in \FigureRef{fig:weak_boson} and \FigureRef{fig:qcd_gluon}.  These
+vertices are a consequence of the non-Abelian nature of the $SU(n)$ groups.
+
+The Lagrangian for a general non-Abelian gauge theory can now be written,
 \begin{equation}
 \mathcal{L} = 
-\bar{\psi}(i\gamma^{\mu}\partial_{\mu} - m)\psi + 
-e \bar{\psi} \gamma^{\mu} A_{\mu} \psi - 
-\frac{1}{4} F_{\mu\nu} F^{\mu\nu}. 
+- \frac{1}{4} F^{a}_{\mu\nu} F^{a~\mu\nu}
++ i\bar{\psi}( \gamma^{\mu} \mathbf{D}_{\mu} - m\mathbf{I} )\psi 
 \end{equation}
-The additional vector field, $A_{\mu}$, couples with the electron,
- and can be identified as the physical photon field. The additional
-term, $\frac{1}{4} F_{\mu\nu} F^{\mu\nu}$, is the kinetic energy of the photon
-field. Local gauge invariance has been restored with the introduction of the photon
-field. An interesting result is that the photon is required to be massless, as the introduction of
-a mass term for the photon, for example a term $\propto A_{\mu}A^{\mu}$,
-similar to the mass term in the original Lagrangian, breaks
-the gauge invariance.
+Similar to the Abelian example, adding in a term for the gauge boson masses
+would lead to a term that is not invariant under gauge transformations.
+
+\subsection{Spontaneous Symmetry Breaking}
+In a gauge theory the gauge bosons are requied to be massless to ensure that the
+Lagrangian is gauge invariant.
+
+Spontaneous Symmetry Breaking is a method to break the symmetry by requiring
+that the Lagrangian of a system remains invariant under a transformation, but
+the ground state is not invariant.
+
+
+
+
+
+
 
 \subsection{Weak interaction and Electroweak Unification}
 \label{sec:EWK}
