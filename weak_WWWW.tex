@@ -1,0 +1,34 @@
+\documentclass[border=1cm,10pt]{standalone}
+
+% I only need the arrows for this one.
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{trees}
+
+\usepackage{nicefrac}
+
+\begin{document}
+
+\begin{tikzpicture}[
+  boson/.style={decorate, decoration={snake}, draw=red},
+  lepton/.style={draw=blue, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=blue]{>}}}},
+  alepton/.style={draw=blue, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=blue]{<}}}},
+  quark/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+  aquark/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+]
+
+% Draw the boson
+\draw[boson] (0,2) node[left] {$W$} -- (1,1) ;
+\draw[boson] (0,0) node[left] {$W$} -- (1,1) ;
+\draw[boson] (1,1) -- (2,0) node[right] {$W$} ;
+\draw[boson] (1,1) -- (2,2) node[right] {$W$} ;
+
+\end{tikzpicture}
+
+\end{document} 
