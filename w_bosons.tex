@@ -27,9 +27,8 @@ shown in \EquationRef{wbos:wprod},
 
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{Make a diagram of W production. Not a feynman diagram.}
-  \caption{Diagram of a W boson production at a hadron-hadron collider.}
+  \includegraphics[width=0.5\textwidth]{w_production}
+  \caption{Diagram of a W boson production and leptonic decay at a hadron-hadron collider.}
   \label{wbos:wproddiag}
 \end{figure}
 
@@ -69,17 +68,26 @@ and for a \PWm:
   \label{wbos:wmprod} 
 \end{equation}
 
-
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{Make a feynman diagram of W production, qqbar > W > l nu.}
-  \caption{Tree-level diagram of a W boson production at a hadron-hadron collider.}
-  \label{wbos:feynman}
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{w_process_wp}
+    \caption{\HepProcess{\Pup + \APdown \to \PWp \to \Pleptonplus \Pnulepton}}
+    \label{fig:w_process_wp}
+  \end{subfigure}
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{w_process_wm}
+    \caption{\HepProcess{\APup + \Pdown \to \PWm \to \Pleptonminus \APnulepton}}
+    \label{fig:w_process_wm}
+  \end{subfigure}
+  \caption{Tree-level diagrams for \PWp and \PWm boson production and electronic
+decay at a hadron-hadron collider.}\label{fig:w_process} 
 \end{figure}
 
 A tree-level Feynman diagrams representing these processes are shown in
-\FigureRef{wbos:feynman}.
+\FigureRef{fig:w_process}.
 At the \ac{LHC} (a proton-proton collider), one parton is most to likely be a
 valence quark with a high fraction of the proton's momentum, and the other
 parton will tend to be a sea anti-quark with a lower fraction of the momentum
@@ -124,10 +132,21 @@ monotonically as $x$ increases.
 
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=\textwidth]{mstw2008nlo68cl_allpdfs}
-  \missingfigure{ratio plot}
-  \caption{Ratio of up quarks to down quarks, $R_{ud}$ $ Q^2 = \unit{ 100  }{\GeV^2} $. }
-  \label{fig:pdfrat}.
+  \begin{subfigure}{\textwidth}
+    \centering
+    \includegraphics[width=0.75\textwidth]{plot_pdf}
+    \caption{PDF for \Pup and \Pdown}
+    \label{fig:plot_pdf}
+  \end{subfigure}
+  \begin{subfigure}{\textwidth}
+    \centering
+    \includegraphics[width=0.75\textwidth]{plot_pdf_ratio}
+    \caption{Ratio for \Pup and \Pdown PDF}
+    \label{fig:plot_pdf_ratio}
+  \end{subfigure}
+  \caption{Ratio of up quarks to down quarks, $R_{ud}$ $ Q^2=\unit{100}{\GeV^2}$.
+           Generated from \cite{}.}
+  \label{fig:w_process} 
 \end{figure}
 
 \subsection{\PW Boson Rapidity Distribution}
@@ -221,7 +240,7 @@ decaying leptonically.
 
 \section{W boson decay}
 \todo[inline]{describe ways in which the boson can decay}
-\section{Electron Rapidity Distribution}
+\subsection{Electron Rapidity Distribution}
 The rapidity distributions of the charged lepton produced from \PW decay are
 further complicated by the charge asymmetric decay of the \PWpm boson. 
 The asymmetric decay arises due to the $V-A$ coupling of the \PW boson to the

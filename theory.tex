@@ -122,8 +122,7 @@ that the \ac{EM} force is effective over infinite range.
 The fundemetal process of \ac{QED} is shown in \FigureRef{fig:qed}.
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{elementary process for qed}
+  \includegraphics[width=0.5\textwidth]{qed_process}
   \caption{The elementary process for \ac{QED} that all electromagnetic
 interactions can be reduced to.}
   \label{fig:qed}
@@ -148,20 +147,29 @@ The fundemetal quark-gluon process of the strong force is shown in
 \FigureRef{fig:qcd}.
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{elementary process for qcd}
+  \includegraphics[width=0.5\textwidth]{qcd_process}
   \caption{The quark-gluon vertex for \ac{QCD} .}
   \label{fig:qcdquark}
 \end{figure}
 The strong force is mediated by eight massless gluons which themselves carry
 colour charge. This allows the gluons to self-interact which results gluon-gluon
 vertexes in addtion to the quark-gluon vertex.
+
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{elementary process for qcd}
-  \caption{The gluon-gluon vertices for \ac{QCD} .}
-  \label{fig:qcdgluon}
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{qcd_3gluon}
+    \caption{Three-gluon vertex.}
+    \label{fig:qcd_3gluon}
+  \end{subfigure}
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{qcd_4gluon}
+    \caption{Four-gluon process.}
+    \label{fig:qcd_4gluon}
+  \end{subfigure}
+  \caption{Fundemental gluon-gluon vertices.}\label{fig:qcd_gluon} 
 \end{figure}
 
 The coupling constant for the strnog force, $\alpha_s$, is given by,
@@ -194,8 +202,7 @@ The \pZ can mediate any process that can be mediated by the photon as well as
 processes involving neutrinos.
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{elementary process for neutral weak}
+  \includegraphics[width=0.5\textwidth]{weak_neut_process}
   \caption{The fundemental vertex of neutral weak vertex.}
   \label{fig:neutral}
 \end{figure}
@@ -206,12 +213,50 @@ flavour of quarks and leptons by the exchange of \PW bosons. The charged current
 will only interact with fermions of the same generation
 (\HepProcess{\Pelectron\to\Pnue} but never
 \HepProcess{\Pelectron\to\Pnum}).
+
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{elementary process for neutral weak}
-  \caption{The fundemental vertex of neutral weak vertex.}
-  \label{fig:charged}
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{weak_charged_lepton_process}
+    \caption{Leptons.}
+    \label{fig:weak_charged_lepton_process}
+  \end{subfigure}
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{weak_charged_quark_process}
+    \caption{Quarks.}
+    \label{fig:weak_charged_quark_process}
+  \end{subfigure}
+  \caption{The fundemental vertices for charged weak vertex.}
+  \label{fig:weak_charged}
+\end{figure}
+
+In a similar way to \ac{QCD}, there are coupling of the \PW and \PZ to one
+another as shown in \FigureRef{fig:weak_boson}.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{weak_WWZ}
+    \caption{\HepProcess{\PW\PW\PZ}.}
+    \label{fig:weak_WWZ}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{weak_WWWW}
+    \caption{\HepProcess{\PW\PW\PW\PW}.}
+    \label{fig:weak_WWWW}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{weak_WWZZ}
+    \caption{\HepProcess{\PW\PW\PZ\PZ}.}
+    \label{fig:weak_WWZZ}
+  \end{subfigure}
+  \caption{Direct couplings of the \PW and \PZ boson to each other.}
+  \label{fig:weak_boson}
 \end{figure}
 
 The weak interaction also violates parity ($P$) and charge conjugation ($C$). A
