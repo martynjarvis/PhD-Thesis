@@ -599,11 +599,13 @@ The Lagrangian for a general non-Abelian gauge theory can now be written,
 \mathcal{L} = 
 - \frac{1}{4} F^{a}_{\mu\nu} F^{a~\mu\nu}
 + i\bar{\psi}( \gamma^{\mu} \mathbf{D}_{\mu} - m\mathbf{I} )\psi 
+\label{eq:generallagrangian}
 \end{equation}
 Similar to the Abelian example, adding in a term for the gauge boson masses
 would lead to a term that is not invariant under gauge transformations.
 
 \subsection{Spontaneous Symmetry Breaking}
+\label{sec:ssb}
 In a gauge theory the gauge bosons are requied to be massless to ensure that the
 Lagrangian is gauge invariant.
 
@@ -611,68 +613,145 @@ Spontaneous Symmetry Breaking is a method to break the symmetry by requiring
 that the Lagrangian of a system remains invariant under a transformation, but
 the ground state is not invariant.
 
+An example of \ac{SSB} is a point mass in a potential,
+\begin{equation}
+V(r) = \mu^{2} \vec{r} \cdot \vec{r} + \lambda ( \vec{r} \cdot \vec{r} )^{2}
+\end{equation}
+where $\lambda$ is positive. This potential is symmetric. 
 
+A point mass sits at $\vec{r}=0$. If $\mu^{2}>0$, as shown in
+\FigureRef{higgs_pot_mup} then $\vec{r}=0$ is the ground state and
+the mass will remain at this point.
+If $\mu^{2}<0$ then the potential will look like that given in
+\FigureRef{fig:higgs_pot_mum}. The system remains symmetric, but $\vec{r}=0$ is no longer
+the ground state. To fall to the ground state the mass has to ``choose'' a
+direction to fall. The choice will break the symmetry of the system, the
+potential remains symmetric, but the ground state is not. This is an example of
+\ac{SSB}.
 
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{higgs_pot_mup}
+    \caption{$\mu^{2}>0$.}
+    \label{fig:higgs_pot_mup}
+  \end{subfigure}
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{higgs_pot_mum}
+    \caption{$\mu^{2}<0$.}
+    \label{fig:higgs_pot_mum}
+  \end{subfigure}
+  \caption{The potential $ V(r) = \mu^{2} \vec{r} \cdot \vec{r} + \lambda (
+\vec{r} \cdot \vec{r} )^{2}$.}
+  \label{fig:higgs_pot}
+\end{figure}
 
+In the \ac{SM} the non-Abelian $SU(2)$ symmetry will need to be broken. As an
+example, the \ac{SSB} of $U(1)$ abelian case is shown. As will be shown this
+leads to a mass term for the photon.
 
+The Lagrangian for a complex scalar field with a mass term and a quartic
+self-interaction,
+\begin{equation}
+\mathcal{L} = (D_{\mu}\Phi)^{\ast} (D^{\mu}\Phi)
+            - \frac{1}{4} F_{\mu\nu} F^{\mu\nu} - V(\Phi) ,
+\end{equation}
+where the potential, $V(\Phi)$, is,
+\begin{equation}
+V(\Phi) = \mu^{2}\Phi^{\ast}\Phi 
+        + \lambda (\Phi^{\ast}\Phi )^{2}
+\end{equation}
+The Lagrangian is invariant under $U(1)$ gauge transformations. If $\mu^{2}>0$
+then the potential has a minimum at $\Phi=0$ and $\Phi$ has a zero \ac{vev}. If
+the sign on $\mu^{2}$ is reversed then there is no longer a minima at 0, instead
+it occurs at 
+\begin{equation}
+\Phi
+= e^{i\theta} \sqrt{ \frac{\mu^{2}}{2 \lambda} }
+\equiv e^{i\theta} \frac{v}{\sqrt{2}} ,
+\end{equation}
+where $\theta$ can take any value between 0 and $2\pi$, so tehre is an infinite
+number of degenerate ground states. By choosing a value of $\theta$, for
+convenience 0 is chosen here, the $U(1)$ symmetry is spontaneously broken.
+$\Phi$ has a non-zero \ac{vev},
+\begin{equation}
+\left\langle\Phi\right\rangle = \frac{v}{\sqrt{2}}
+\end{equation}
+\todo{add a sentance here}
 
+$\Phi$ can be expanded in terms of the fields $H$ and $\phi$,
+\begin{equation}
+\Phi 
+= \frac{e^{i\nicefrac{\phi}{v}}}{\sqrt{2}}
+\left( \frac{\mu}{\sqrt{\lambda}} + H \right)
+\approx \frac{1}{\sqrt{2}} \left( \frac{\mu}{\sqrt{\lambda}} + H +i\phi \right)
+\end{equation}
+The fields $H$ and $\phi$ have zero \ac{vev}.  The $H$ is identified with the
+Higgs field.  The Lagrangian can be now written in terms of the $H$ and $\phi$;
+the potential term is given by,
+\begin{equation}
+V = \mu^{2}H^{2}
++ \mu \sqrt{\lambda} (H^{3}+\phi^{2}H)
++ \frac{\lambda}{4} (H^{4}+\phi^{4} + 2H^{2}\phi^{2})
++ \frac{\mu^{4}}{4\lambda} .
+\end{equation}
+where the first term represtents a mass term for the Higgs field,
+$M_{H}=\sqrt{2}\mu$.
+The kinetic term is given by,
+\begin{align}
+(D_{\mu}\Phi)^{\ast} (D^{\mu}\Phi)
+&= \frac{1}{2}\partial_{\mu}H\partial^{\mu}H
++ \frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi
++ \frac{1}{2}g^{2}v^{2}A_{\mu}A^{\mu}
++ \frac{1}{2}g^{2}A_{\mu}A^{\mu}(H^{2}+\phi^{2}) \nonumber \\
+&\qquad {} + g^{2}A_{\mu}(\phi\partial_{\mu}H - H\partial_{\mu}\phi)
++ g v A_{\mu}\partial^{\mu}\phi
++ g^{2} v A_{\mu}A^{\mu}H.
+\end{align}
+which includes a mass term for the gauge boson
+\begin{equation}
+\nicefrac{1}{2}g^{2}v^{2}A_{\mu}A^{\mu} 
+\equiv \nicefrac{1}{2} M_{A}^{2}A_{\mu}A^{\mu} 
+\end{equation}
+where $M_{A}\equiv gv$.
+The gauge boson mass has been ``revealed'' by \ac{SSB}.
 
-\subsection{Weak interaction and Electroweak Unification}
+There is also a coupling of the gauge field to the $H$ field
+\begin{equation}
+g^{2}vA_{\mu}A^{\mu} H = 
+g M_{A} A_{\mu}A^{\mu} H 
+\end{equation}
+where the coupling is proportional to the mass of the gauge boson.
+
+\subsection{SM Lagrangian with 1 Family}
 \label{sec:EWK}
+To write down tha gauge invarian Lagrangian for the \ac{SM} it is necessary to
+pick a gauge group, then describe the matter content in the theory. 
 
-The weak force can be examined in a similar way to QED, but with the non-Abelian
-$SU(2)$ symmetry group. The weak force distinguished between the chirality, or
-handedness, of a particle.
-The handedness of a particle can be incorporated by introducing an additional
-quantum number called the weak isospin, $I$.
-For a left-handed fermion, $I=\nicefrac{1}{2}$ and the third component,
+
+The gauge group for the \ac{SM} is chosen to be,
 \begin{equation}
-I_{3} =
-  \begin{cases}
-    \frac{1}{2}  & \text{for \Pnulepton}_L,  \\
-    \frac{-1}{2} & \text{for \Plepton}_L, \\
-    0            & \text{for \Plepton}_R.
-  \end{cases}
-\end{equation}
-The isospin, hypercharge ($Y$) and electric charge ($Q$) can be related with the
-Gell-Mann-Nishijima relation,
-\begin{equation}
-Q = I^{3} + \frac{1}{2}Y.
+U(1)_{Y} \times SU(2)_{L} \times SU(3)
 \end{equation}
 
-The electromagnetic and weak coupling constants are not independent, the means that it is
-possible to have a unified description of both the electromagnetic and weak
-forces. This is known as electroweak (EWK) unification.
+The $Y$ indicates that the $U(1)$ group is not the gauge
+group of QED but is that of the hypercharge. The coupling of the 
+group is $g^{\prime}$ and the gauge boson is $B^{\mu}$.
 
-The electromagnetic and weak force can be described with a single group,
-\begin{equation}
-SU(2)_{L} \times U(1)_{Y},
-\end{equation}
-which is the cross product of the $SU(2)$ and $U(1)$ groups. The $L$ subscript
-indicates the left handed components only and the $Y$ refers to the hypercharge.
+The $L$ subscript on $SU(2)$ indicates that the weak force couples to the left
+handed particles. The group has three generators ($\mathbf{T}_{a} =
+\nicefrac{\sigma_{a}}{2}$) which leads to three gauge bosons, $W^{1}_{\mu}$,
+$W^{2}_{\mu}$, $W^{3}_{\mu}$. None of the gauge bosons are physical particles,
+The photon, \PZ and \PWpm are linear combinations of these gauge bosons.
 
-In a similar manner to how requiring U(1) local gauge invariance led to insights
-in to the QED Lagrangian, by requiring $SU(2)_{L} \times U(1)_{Y}$ local gauge
-invariance it will be possible to infer information on the EWK Lagrangian.
-The EWK Lagrangian can be written as the sum of many parts,
-\begin{equation}
-\mathcal{L}_{EWK} = 
-\mathcal{L}_{fermion}
-+ \mathcal{L}_{gauge}
-+ \mathcal{L}_{scalar}
-+ \mathcal{L}_{yukawa}.
-\end{equation}
-The first two terms have analogues with the QED case where as the second two
-terms will be introduced with the Higgs mechanism.
+$SU(3)$ is the gauge group that represents the strong force. It contains 8
+($3^{2}-1$) generators ($\mathbf{T}_s$) with 8 corresponding gauge
+bosons, the gluons. The corresponding coupling constant is $g_s$.
 
-The fermion term has a lepton and a quark part.
-\begin{equation}
-\mathcal{L}_{fermion} =
- \mathcal{L}_{lepton}
-+ \mathcal{L}_{quark}.
-\end{equation}
-In this description the left handed fermions form isospin doublets and the right
-handed fermions are singlets. For the case of the leptons $l_{L}$ is a left
+The next step is to write down the matter content of the theory. 
+For the case of the leptons $l_{L}$ is a left
 handed doublet,
 \begin{equation}
 l_{L} = \left( \begin{matrix} \nu \\ e \end{matrix} \right)_{L},
@@ -683,29 +762,99 @@ For the case of the quarks, $q_{L}$ is a left handed doublet,
 q_{L} = \left( \begin{matrix} u\\ d \end{matrix} \right)_{L},
 \end{equation}
 and there are two right handed singlets, the $u_{R}$ and the $d_{R}$.
-The quark and lepton Lagrangians can be written,
+In this
+description the left handed fermions form isospin doublets and the right
+handed fermions are singlets. 
+therefore under $SU(2)$ gauge transformations,
+\begin{align}
+e_{R} &\to e_{R}^{\prime} = e_{R}\\
+l_{L} &\to l_{L}^{\prime} = e^{-i \omega^{a} \mathbf{T}^{a} }l_{L}
+\end{align}
+where, under $SU(2)$ transformations, the $SU(2)$ singlets are invariant so do
+not couple with the corresponding gauge bosons.
+
+The matter fields transform under the $U(1)_Y$ gauge transformations as,
+\begin{equation}
+\psi \to \psi^{\prime} = e^{-i\omega Y(\psi)}\psi
+\end{equation}
+where Y is the hypercharge of the particle.
+\begin{equation}
+Y(l_{L}) = -\frac{1}{2}, \qquad Y(e_{R}) = -1,
+\end{equation}
+\begin{equation}
+Y(q_{L}) =  \frac{1}{6}, \qquad Y(u_{R}) =  \frac{2}{3}, \qquad Y(d_{R}) = -\frac{1}{3},
+\end{equation}
+
+The lepton fields are invariant under the $SU(3)$ gauge transformations so are
+represented as singlet. Quarks form triplets under $SU(3)$ transformations.
+
+The gauge groups and matter content of the theory has been written down. 
+The lagrangian can now be constructed.
+The Lagrangian will be written as the sum of many parts,
+\begin{equation}
+\mathcal{L}_{EWK} = 
+\mathcal{L}_{fermion}
++ \mathcal{L}_{gauge}
++ \mathcal{L}_{scalar}
++ \mathcal{L}_{yukawa}.
+\end{equation}
+
+\subsubsection{Gauge Boson Kinetic stuff}
+The gauge part of the Lagrangian contains the kinetic terms and self interaction
+terms for the gauge fields. By inspection of the general expression in
+\EquationRef{eq:generallagrangian},
+\begin{equation}
+\mathcal{L}_{gauge} = 
+- \frac{1}{4} B_{\mu\nu} B^{\mu\nu}
+- \frac{1}{4} F^{a}_{\mu\nu} F^{a~\mu\nu}
+- \frac{1}{4} F^{A}_{\mu\nu} F^{A~\mu\nu},
+\end{equation}
+where the first term contains the hypercharge field strength. 
+The second term 
+contains the $SU(2)$ field stregth, so a runs from 1 to 3.
+The third term is the gluon kinetic term and 
+contains the $SU(3)$ field stregth, so A runs from 1 to 8.
+
+\subsubsection{Fermion Kinetic stuff}
+The fermion term has a lepton and a quark part.
+\begin{equation}
+\mathcal{L}_{fermion} =
+ \mathcal{L}_{lepton}
++ \mathcal{L}_{quark}.
+\end{equation}
+The quark and lepton Lagrangians can be written by inspection of the general
+expression in \EquationRef{eq:generallagrangian},
 \begin{align*}
 \mathcal{L}_{lepton} &= 
-\bar{l_{L}} i \gamma^{\mu} D_{\mu} l_{L} +
-\bar{e_{R}} i \gamma^{\mu} D_{\mu} e_{R}, \\
+\bar{l}_{L} i \gamma^{\mu} D_{\mu} l_{L} +
+\bar{e}_{R} i \gamma^{\mu} D_{\mu} e_{R}, \\
 \mathcal{L}_{quark} &= 
-\bar{q_{L}} i \gamma^{\mu} D_{\mu} q_{L} +
-\bar{u_{R}} i \gamma^{\mu} D_{\mu} u_{R} +
-\bar{d_{R}} i \gamma^{\mu} D_{\mu} d_{R},
+\bar{q}_{L} i \gamma^{\mu} D_{\mu} q_{L} +
+\bar{u}_{R} i \gamma^{\mu} D_{\mu} u_{R} +
+\bar{d}_{R} i \gamma^{\mu} D_{\mu} d_{R},
 \end{align*}
-where the covariant derivative has been introduced,
+where the covariant derivative has been introduced.
+The covariant derivative depends on the fermion field. The covariant derivative
+for left-handed fermion, for example, is given by,
 \begin{equation}
-D_{\mu}
-= (\partial_{\mu} 
-- ig \mathbf{T} \cdot \mathbf{W}_{\mu}
-+ \frac{ig\prime}{2} Y B_{\mu} ) ,\\
+\mathbf{D}_\mu 
+= \partial_\mu 
++ ig\mathbf{T}^{a}W_{\mu}^{a}
++ ig^{\prime}Y(l^{L})B_{\mu}
 \end{equation}
-where $g$ and $g\prime$ are the coupling constants for the group,
-$\mathbf{T}=\mathbf{\tau}/2$ for left-handed particles and 
-$\mathbf{T}=0$ for right-handed and $\mathbf{\tau}$
-are the generators for the $SU(2)$ group. A total of four gauge fields have been
-introduced; three fields, $\mathbf{W}_{\mu}$ , corresponding to the $SU(2)_{L}$
-group and a single gauge field, $B_{\mu}$ corresponding to the $U(1)_{Y}$ group.
+where as the covariant derivative for the right-handed down quark, $d_R$,
+\begin{equation}
+\mathbf{D}_\mu 
+= \partial_\mu 
++ ig\mathbf{T}_{s}^{a}G_{\mu}^{a}
++ ig^{\prime}Y(d^{R})B_{\mu}
+\end{equation}
+where $g^\prime$, $g$ and $g_s$ are the coupling constants for the groups.
+$\mathbf{T}^{a}$ are the three generators of $SU(2)$ and $\mathbf{T}^{a}_{s}$
+are the eight generators of $SU(3)$. 
+Several gauge fields have been introduced, eight gluon fields $G^{a}_{\mu}$;
+three fields, $\mathbf{W}_{\mu}$ , corresponding to the $SU(2)_{L}$
+group and a single gauge field, $B_{\mu}$, corresponding to the $U(1)_{Y}$ group.
 The physical $\PWp$ and $\PWm$ bosons are superpositions of the $W^{1}_{\mu}$
 and $W^{2}_{\mu}$ gauge fields
 \begin{equation}
@@ -729,41 +878,21 @@ constants by
 \end{align*}
 \todo{comment on how the covariant derivative is different for L and R}
 
-The gauge part of the Lagrangian contains the kinetic terms and self interaction
-terms for the gauge fields,
-\begin{equation}
-\mathcal{L}_{gauge} = 
-- \frac{1}{4} \mathbf{W}_{\mu\nu} \cdot \mathbf{W}^{\mu\nu}
-- \frac{1}{4} B_{\mu\nu} B^{\mu\nu},
-\end{equation}
-where
-\begin{align*}
-\mathbf{W}_{\mu\nu} &=
-\partial_{\mu} \mathbf{W}_{\nu} -
-\partial_{\nu} \mathbf{W}_{\mu} +
-g \mathbf{W}_{\mu} \times \mathbf{W}_{\nu}\\
-B_{\mu\nu} &= 
-\partial_{\mu} B_{\nu}-
-\partial_{\nu} B_{\mu}.
-\end{align*}
-The last term of $\mathbf{W}_{\mu\nu}$ is required to keep the Lagrangian invariant
-under the non-Abelian gauge transformation of the $SU(2)$ group. The term
-introduces cubic and quadratic terms in to the Lagrangian that describe the 3 and 4
-vertex interactions of the gauge boson.
-\todo{diagram of these vertexes?}
+\subsubsection{Higgs Part and Gauge Boson Masses}
 
-\subsection{Higgs Mechanism}
-\label{sec:higgs}
 The Lagrangian, as it has been written so far, does not include terms for the
 mass of any of the particles. 
 Adding in mass terms by hand will break the
-gauge symmetry rendering the theory meaningless. The symmetry needs to be broken
-in some natural way.
-The Higgs mechanism is a mechanism which introduces the mass terms by
+gauge symmetry rendering the theory meaningless.
+\todo[inline]{WHY!}
+
+The symmetry needs to be broken in some natural way.
+As shown in \SectionRef{sec:ssb} \todo{smoothe this in}
+the Higgs mechanism is a mechanism which introduces the mass terms by
 spontaneous symmetry breaking.
 
 The Higgs mechanism introduces four real scalar fields, that can be arranged in a
-isospin doublet,
+doublet under $SU(2)$,
 \begin{equation}
 \Phi = \left( \begin{matrix} \phi^{+} \\ \phi^{0} \end{matrix} \right),
 \end{equation}
@@ -784,7 +913,7 @@ V(\phi) =
 \mu^{2}\phi^{\dagger}\phi + 
 \lambda^{2} \left( \phi^{\dagger} \phi \right)^{2},
 \end{equation}
-where $\lambda$ and $\mu$ are free parameters. Choosing  $\lambda>0$ and
+where $\lambda$ and $\mu$ are free parameters. As shown in \SectionRef{sec:ssb}, choosing  $\lambda>0$ and
 $\mu^{2}<0$ there is a minima at,
 \begin{equation}
 \phi^{\dagger} \phi = \frac{- \mu^{2}}{2 \lambda}.
@@ -811,15 +940,17 @@ and
 \begin{equation}
 \phi_{3} = \frac{-\mu^{2}}{\lambda} \equiv v^{2}.
 \end{equation}
-This choice of minima is motivated to ensure $U(1)_{EM}$ symmetry remains
-unbroken and
-that the photon is massless.
-Substituting this vacuum expectation value,
+which leaves results in a non-zero \ac{vev},
 \begin{equation}
 \phi_{0} = \frac{1}{\sqrt{2}}\left(\begin{matrix}0\\v\end{matrix}\right),
 \end{equation}
-in to the Lagrangian, and using \EquationRef{eq:wgauge} and
-\EquationRef{eq:bgauge}, additional terms are found\cite{},
+Substituing $\Phi$ back in to the potential results in a mass term for the Higgs
+field $H$ where $M_H = \sqrt{2}\mu$.
+
+can be substituted in to
+in to the Lagrangian,
+
+
 \begin{equation}
 \left(\frac{vg}{2}\right)^{2} W^{+}_{\mu} W^{- \mu}, 
 \left(\frac{vg}{2}\right)^{2} \frac{1}{2\cos\theta_{W}} Z_{\mu} Z^{\mu},
@@ -833,19 +964,92 @@ M_{Z} = \frac{gv}{2\cos\theta_{W}}.
 There is no mass term for the photon (for example $A_{\mu}A^{\mu}$) so it
 remains massless.
 
+\subsubsection{Fermion Masses and Yukawa Couplings}
+
 Another feature of the Higgs mechanism, is that it also provides a way to
 introduce mass terms for the fermions, in a gauge invariant way, via the Yukawa
 coupling between the leptons with the Higgs field. The Lagrangian for this
-interaction can be written as, 
+interaction for the electron can be written as, 
 \begin{equation}
-\mathcal{L}_{yukawa} = -G_{f}\bar{L}\phi R + h.c. \ ,
+\mathcal{L}_{yukawa} = -Y_{e}\bar{l}_L\Phi e_R + h.c. \ ,
 \end{equation}
-where $G_{f}$ is the coupling to the Higgs field known as the Yukawa coupling
+where $Y_{e}$ is the coupling to the Higgs field known as the Yukawa coupling
+and h.c. stands for hermitian conjugate. On substitution of $\Phi$ (from
+\EquationRef{}), the lagrangian for the Yukawa couplings becomes
 \begin{equation}
--G_{f} = \frac{\sqrt{2}m_{f}}{v}
+\mathcal{L}_{yukawa} = 
+-\frac{Y_{e}}{\sqrt{2}} v
+(\bar{e}_L e_R + \bar{e}_R e_L)
+-\frac{Y_{e}}{\sqrt{2}}
+(\bar{e}_L e_R + \bar{e}_R e_L)H
 \end{equation}
-which is proportional to the mass of the fermion. 
-\todo{summarise the main points of this section}
+and if $G_e$ is chosen such that
+\begin{equation}
+m_{e} = \frac{G_{e}v}{\sqrt{2}}
+\end{equation}
+then the lagrangian simplifies to
+\begin{equation}
+\mathcal{L}_{yukawa} = 
+- m_e \bar{e}e
+- \frac{m_e}{v} \bar{e}e H
+\end{equation}
+which represents a mass term for the electron and a coupling of the electron to
+the Higgs field proportional to the mass of the electron.
+The quark masses can be generated in a similar way \cite{halzen}.
+
+\todo[inline]{summarise the main points of this section}
+
+
+%In a similar manner to how requiring U(1) local gauge invariance led to insights
+%in to the QED Lagrangian, by requiring $SU(2)_{L} \times U(1)_{Y}$ local gauge
+%invariance it will be possible to infer information on the EWK Lagrangian.
+%The EWK Lagrangian can be written as the sum of many parts,
+
+%The weak force can be examined in a similar way to QED, but with the non-Abelian
+%$SU(2)$ symmetry group. The weak force distinguished between the chirality, or
+%handedness, of a particle.
+%The handedness of a particle can be incorporated by introducing an additional
+%quantum number called the weak isospin, $I$.
+%For a left-handed fermion, $I=\nicefrac{1}{2}$ and the third component,
+%\begin{equation}
+%I_{3} =
+  %\begin{cases}
+    %\frac{1}{2}  & \text{for \Pnulepton}_L,  \\
+    %\frac{-1}{2} & \text{for \Plepton}_L, \\
+    %0            & \text{for \Plepton}_R.
+  %\end{cases}
+%\end{equation}
+%The isospin, hypercharge ($Y$) and electric charge ($Q$) can be related with the
+%Gell-Mann-Nishijima relation,
+%\begin{equation}
+%Q = I^{3} + \frac{1}{2}Y.
+%\end{equation}
+%
+%The electromagnetic and weak coupling constants are not independent, the means that it is
+%possible to have a unified description of both the electromagnetic and weak
+%forces. This is known as electroweak (EWK) unification.
+%
+%The electromagnetic and weak force can be described with a single group,
+%\begin{equation}
+%SU(2)_{L} \times U(1)_{Y},
+%\end{equation}
+%which is the cross product of the $SU(2)$ and $U(1)$ groups. The $L$ subscript
+%indicates the left handed components only and the $Y$ refers to the hypercharge.
+%
+%In a similar manner to how requiring U(1) local gauge invariance led to insights
+%in to the QED Lagrangian, by requiring $SU(2)_{L} \times U(1)_{Y}$ local gauge
+%invariance it will be possible to infer information on the EWK Lagrangian.
+%The EWK Lagrangian can be written as the sum of many parts,
+%\begin{equation}
+%\mathcal{L}_{EWK} = 
+%\mathcal{L}_{fermion}
+%+ \mathcal{L}_{gauge}
+%+ \mathcal{L}_{scalar}
+%+ \mathcal{L}_{yukawa}.
+%\end{equation}
+%The first two terms have analogues with the QED case where as the second two
+%terms will be introduced with the Higgs mechanism.
+
 
 \subsection{Quantum Chromodynamics}
 \label{sec:QCD}
