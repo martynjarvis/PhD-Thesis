@@ -1,0 +1,39 @@
+\documentclass[border=1cm,12pt]{standalone}
+
+% I only need the arrows for this one.
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=.5] 
+
+% Draw the tracker
+\draw [gray](0,0) circle (1);
+\draw [gray](0,0) circle (2);
+\draw [gray](0,0) circle (3);
+\draw [gray](0,0) circle (4);
+\draw [gray](0,0) circle (5);
+
+% Draw the photon
+% \draw [dashed] (0,0) -- (2,2)  node[midway,below,right] {$\gamma$} ;
+
+% Draw the electron pairs
+\draw [thick,blue,->](-2,6) ++( -45 : 5.657 ) arc ( -45:10:5.657 ) node[right] {$e^{-}$} ;
+\draw [thick,blue,->](6,-2) ++( 135 : 5.657 ) arc ( 135:80:5.657 ) node[above] {$e^{+}$} ;
+
+% Draw the extrapolated path
+\draw [thick,dotted](-2,6) ++( -95 : 5.657 ) arc ( -95:-45:5.657 );
+\draw [thick,dotted](6,-2) ++( 185 : 5.657 ) arc ( 185:135:5.657 );
+
+% Draw the definition of doca 
+\draw [|<->|] (0,0) -- (-0.21,0.63)  ;
+%\draw [|-|] (0,0) -- (0.63,-0.21) ;
+
+%label
+\path[draw,-] (-5,-5) node[anchor=east] {$|d_{0}|$} to[out=15, in=190] (-0.105,0.315);
+%$\path[draw] (-5,-5) node[anchor=east] {$d_{0}$} to[out=45, in=225] (0.315,-0.105);
+\clip [use as bounding box] (-12,-12) rectangle (12,12) ;
+
+\end{tikzpicture}
+
+\end{document} 

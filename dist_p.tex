@@ -1,0 +1,35 @@
+\documentclass[border=1cm,12pt]{standalone}
+
+% I only need the arrows for this one.
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=.5] 
+
+% Draw the tracker
+%\draw [gray](0,0) circle (1);
+%\draw [gray](0,0) circle (2);
+%\draw [gray](0,0) circle (3);
+%\draw [gray](0,0) circle (4);
+%\draw [gray](0,0) circle (5);
+
+% Draw the photon
+% \draw [dashed] (0,0) -- (2,2)  node[midway,below,right] {$\gamma$} ;
+
+% Draw the electron pairs
+\draw [thick,blue,->](-5.5,0) ++( -45 : 5 ) arc ( -45:45:5 )  node[above] {$e^{-}$} ;
+\draw [thick,blue,->](5.5,0)  ++( 225 : 5 ) arc ( 225:135:5 ) node[above] {$e^{+}$} ;
+
+% Draw the definition of dist
+\draw [thick,|<->|] (-0.5,0) -- (0.5,0) ;
+
+%label
+\path[draw,-] (0,-3) node[anchor=north] {$|dist|$} to[out=90, in=270] (0,0);
+
+% hack to set size of image
+\clip [use as bounding box] (-12,-12) rectangle (12,12) ;
+
+\end{tikzpicture}
+
+\end{document} 
