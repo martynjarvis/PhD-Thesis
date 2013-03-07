@@ -254,12 +254,25 @@ they are parallel to one another in the $x-y$ plane as shown in \FigureRef{fig:d
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.7\textwidth]{dist}
-  \caption{$dist$ is the distance between points B1 and B2 where the tracks are
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[trim = 40mm 40mm 40mm 40mm, clip,width=\textwidth]{dist_m}
+    \caption{$dist<0$.}
+    \label{fig:dist_m}
+  \end{subfigure}
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[trim = 40mm 40mm 40mm 40mm, clip,width=\textwidth]{dist_p}
+    \caption{$dist>0$.}
+    \label{fig:dist_p}
+  \end{subfigure}
+  \caption{$dist$ is the distance between the the two tracks where they are
 parallel. $dist$ is defined to be negative in the case that the tracks overlap
-(left) and positive otherwise (right). From \cite{eConver}.}
-  \label{fig:dist}
+and positive otherwise. Modified from \cite{eConver}.} 
+\label{fig:dist}
 \end{figure}
+
+
 
 \subsubsection{Electron identification working points}
 
