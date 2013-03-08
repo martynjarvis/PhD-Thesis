@@ -27,7 +27,7 @@ shown in \EquationRef{wbos:wprod},
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.5\textwidth]{w_production}
+  \includegraphics[width=0.8\textwidth]{w_production}
   \caption{Diagram of a W boson production and leptonic decay at a hadron-hadron collider.}
   \label{wbos:wproddiag}
 \end{figure}
@@ -162,8 +162,7 @@ axis.
 
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{Produce a plot of W rapidity at 7TeV proton-proton}
+  \includegraphics[width=0.8\textwidth]{w-rapidity}
   \caption{The rapidity distribution for \PWp and \PWm at the LHC.}
   \label{wbos:wrapid}
 \end{figure}
@@ -222,8 +221,7 @@ increases as the rapidity increases.
 
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{Produce a plot of W asymmetry at 7TeV proton-proton}
+  \includegraphics[width=0.8\textwidth]{w-asym}
   \caption{\PW boson charge asymmetry at LHC.}
   \label{wbos:chargeasym}
 \end{figure}
@@ -312,8 +310,7 @@ rapidities.
 
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{Produce a plot of lepton rapidities at 7TeV proton-proton}
+  \includegraphics[width=0.8\textwidth]{lepton-rapidity}
   \caption{Electron and positron rapidity distributions.}
   \label{wbos:leptonrapidity}
 \end{figure}
@@ -375,19 +372,20 @@ A_{exp}(\eta) &= \frac{ \frac{dN}{d\eta}(\Pelectron) -
 
 \section{Electron Charge Asymmetry Theoretical Predictions}
 
-In this section the electron charge asymmetry predictions are studied in detail.
-Predictions for the asymmetry are obtained using MCFM \cite{test} generator
-interfaced with MSTW2008NLO PDF models unless otherwise stated.
+In this section predictions on the electron charge asymmetry are studied in detail.
+The predictions are calculated using \ac{MCFM}\cite{mcfm} \ac{MC} tools interfaced with the
+\ac{LHAPDF} package\cite{lhapdf}. 
+\ac{LHAPDF} provides an interface to many different \ac{PDF} sets. For the
+following predictions, \ac{PDF} from  the \ac{MSTW} and \ac{CTEQ} collaboration
+are used.
 
 \FigureRef{wbos:asym_simple} shows the electron charge asymmetry prediction for
-electron transverse momentum cuts of 25, 30 and \unit{35}{\GeV}.
-
+electron transverse momentum cuts of \unit{25}{\GeV}. The prediction was
+bereated using the MSTW2008NLO \ac{pdf}\cite{mstw} set.
 
 \begin{figure}[htbp]
   \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{Produce a plot of lepton charge asymmetry at 7TeV proton-proton
-cut of 25,30 and 35 GeV.}
+  \includegraphics[width=0.8\textwidth]{lepton-asym}
   \caption{Electron charge asymmetry (simple).}
   \label{wbos:asym_simple}
 \end{figure}
@@ -395,91 +393,34 @@ cut of 25,30 and 35 GeV.}
 % asymmetry
 
 Unlike the \PW asymmetry , the electron asymmetry turns over at $\eta\approx
-2.5$ due to the effect of the the \ac{EWK} correlations.
+2.25$. Ths effect is due to the \ac{EWK} correlations in the leptonic decay of
+the \PW boson.
 
-
-\subsection{Uncertainty on \acp{PDF}}
-
-The predictions of the electron charge asymmetry will have an error associated
-with the uncertainty on the \ac{PDF}.
+\subsection{Uncertainty on Theoretical Predictions}
+The theoretical predictions of the electron charge asymmetry will have an error
+associated with the uncertainty on the \ac{PDF}.
 The uncertainty on the \ac{PDF} originates from the experimental errors on the
-data used in the global fits.
+data used in the global fits performed by each of the \ac{PDF} collaborations.
 
-The \ac{PDF} uncertainty is propagated to the electron charge asymmetry
-measurement using the \ac{PDF} re-weighting techniques\cite{}.
-%TODO add more here
+Each \ac{PDF} collaboration produces a set of \acp{PDFs} that include the
+central value, or best fit to experimental data, and $2N$ error \acp{PDF}, where
+$N$ is the number of free parameters used in the global fit.\cite{bourilkov}
 
-\begin{figure}[htbp]
-  \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{Produce a plot of lepton charge asymmetry at 7TeV proton-proton
-cut of 25 GeV with PDF uncertainties.}
-  \caption{Electron charge asymmetry (PDF uncertainty).}
-  \label{wbos:asym_pdfuncert}
-\end{figure}
-
-\FigureRef{wbos:asym_pdfuncert} shows the prediction for the electron charge
-asymmetry with a \PT cut of \unit{25}{\GeV} with the \ac{PDF} uncertainty shown.
-
-%TODO EVAL RESULTS
-
-% uncertainty on PDF
-% FIXME might not include this part
-
-\subsection{Theoretical Uncertainty Due To Higher Orders of Hadronic Cross Section}
-
-\begin{figure}[htbp]
-  \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{Produce a plot of the rations of NLO/LO and NNLO/LO.}
-  \caption{Electron charge asymmetry (Many PDF sets central values...?).}
-  \label{fig:asym_order}
-\end{figure}
-
-%\begin{figure}[htbp]
-%  \centering
-%  \includegraphics[width=0.5\textwidth]{placeholder}
-%  \caption{Electron charge asymmetry (LO, NLO and NNLO).}
-%  \label{wbos:asym_NNLO}
-%\end{figure}
-% difference in NLO and NNLO give an estimate on the uncertainty on the
-% partonic subprocess
-
-\subsection{Choice of \acp{PDF}}
-
-The predictions of the electron charge asymmetry will depends on the choice of
-\ac{PDF} used. 
-\FigureRef{wbos:asym_pdf} shows the electron charge asymmetry for
-various \ac{PDF} models.
-
-\begin{figure}[htbp]
-  \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{Produce a plot of lepton charge asymmetry at 7TeV proton-proton
-cut of 25 GeV with different PDFs.}
-  \caption{Electron charge asymmetry (Many PDF sets central values...?).}
-  \label{wbos:asym_pdf}
-\end{figure}
-
-% statment about disagreement and how this measurement will help
-
-%\begin{figure}[htbp]
-  %\centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  %\caption{Electron charge asymmetry (Many PDF sets ratio to MSTW with PDF
-  %uncert).}
-  %\label{wbos:asym_ratio}
-%\end{figure}
-
-\subsection{Electron \pT Cut}
-\begin{figure}[htbp]
-  \centering
-  %\includegraphics[width=0.5\textwidth]{placeholder}
-  \missingfigure{Produce a plot with asymmetry for pt cuts of 25,30,35 and 40 GeV}
-  \caption{Electron charge asymmetry (Many PDF sets central values...?).}
-  \label{fig:asymptcuts}
-\end{figure}
-
-
+The uncertainty on the observable, in this case the lepton asymmetry, is found
+by producing $2N+1$ theoretical predictions, on for each member of the \ac{PDF}
+set. The predictions are then used to approximate the \ac{PDF} uncertainty by
+using the `master equation'.\cite{bourilkov} For the upper uncertainty,
+\begin{equation}
+\Delta A^{+}_{max}
+= \sqrt{ \sum^{N}_{i=1} \left[ max( A^{+}_i-A_{0}, A^{-}_i-A_{0}, 0 \right]^{2}}
+\end{equation}
+and for the lower uncertainty,
+\begin{equation}
+\Delta A^{-}_{max}
+= \sqrt{ \sum^{N}_{i=1} \left[ max( A_{0}-A^{+}_i, A_{0}-A^{-}_i, 0 \right]^{2}}
+\end{equation}
+where $A^{\pm}_{i}$ is the asymmetry prediction using the \ac{PDF} with the
+positive/negative fluctuation of parameter $i$ and $A_{0}$ is the prediction
+using the central value.
 
 
