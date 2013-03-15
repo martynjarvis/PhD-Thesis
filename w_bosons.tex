@@ -328,6 +328,21 @@ A_{the}(\eta)=\frac{  \frac{d\sigma}{d\eta}(\Wpenu) -
 \label{eq:AsymThe}
 \end{equation} 
 
+\FigureRef{wbos:asym_simple} shows the electron charge asymmetry prediction for
+electron transverse momentum cuts of \unit{25}{\GeV}. The prediction was
+bereated using the MSTW2008NLO \ac{pdf}\cite{mstw} set.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{lepton-asym}
+  \caption{Electron charge asymmetry (simple).}
+  \label{wbos:asym_simple}
+\end{figure}
+
+Unlike the \PW asymmetry , the electron asymmetry turns over at $\eta\approx
+2.25$. Ths effect is due to the \ac{EWK} correlations in the leptonic decay of
+the \PW boson.
+
 In an experiment, the cross-section is not measured directly, instead what is
 measured are the electron and positron yields.  The experimentally measured
 asymmetry is given by \EquationRef{eq:AsymExp},
@@ -379,23 +394,6 @@ The predictions are calculated using \ac{MCFM}\cite{mcfm} \ac{MC} tools interfac
 following predictions, \ac{PDF} from  the \ac{MSTW} and \ac{CTEQ} collaboration
 are used.
 
-\FigureRef{wbos:asym_simple} shows the electron charge asymmetry prediction for
-electron transverse momentum cuts of \unit{25}{\GeV}. The prediction was
-bereated using the MSTW2008NLO \ac{pdf}\cite{mstw} set.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{lepton-asym}
-  \caption{Electron charge asymmetry (simple).}
-  \label{wbos:asym_simple}
-\end{figure}
-% simple prediction to illustrate the preceeding chapter on electron charge
-% asymmetry
-
-Unlike the \PW asymmetry , the electron asymmetry turns over at $\eta\approx
-2.25$. Ths effect is due to the \ac{EWK} correlations in the leptonic decay of
-the \PW boson.
-
 \subsection{Uncertainty on Theoretical Predictions}
 The theoretical predictions of the electron charge asymmetry will have an error
 associated with the uncertainty on the \ac{PDF}.
@@ -412,15 +410,28 @@ set. The predictions are then used to approximate the \ac{PDF} uncertainty by
 using the `master equation'.\cite{bourilkov} For the upper uncertainty,
 \begin{equation}
 \Delta A^{+}_{max}
-= \sqrt{ \sum^{N}_{i=1} \left[ max( A^{+}_i-A_{0}, A^{-}_i-A_{0}, 0 \right]^{2}}
+= \sqrt{ \sum^{N}_{i=1} \left[ max( A^{+}_i-A_{0}, A^{-}_i-A_{0}, 0 ) \right]^{2}}
 \end{equation}
 and for the lower uncertainty,
 \begin{equation}
 \Delta A^{-}_{max}
-= \sqrt{ \sum^{N}_{i=1} \left[ max( A_{0}-A^{+}_i, A_{0}-A^{-}_i, 0 \right]^{2}}
+= \sqrt{ \sum^{N}_{i=1} \left[ max( A_{0}-A^{+}_i, A_{0}-A^{-}_i, 0 ) \right]^{2}}
 \end{equation}
 where $A^{\pm}_{i}$ is the asymmetry prediction using the \ac{PDF} with the
 positive/negative fluctuation of parameter $i$ and $A_{0}$ is the prediction
 using the central value.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{asym-uncert}
+  \caption{Electron charge asymmetry (uncert).}
+  \label{fig:asym-uncert}
+\end{figure}
+
+\FigureRef{fig:asym-uncert} shows the electron charge asymmetry theoretical
+predictions for a $\pT>\unit{25}{\GeV}$ with the \ac{PDF} uncertainties for the
+\ac{PDF} sets MSTW08NLO\cite{MSTW} and CT10W\cite{CTEQ}. The uncertainties are
+$68\%$ confidence level. The predictions are generated using the \ac{MCFM}
+\cite{mcfm} generator.
 
 
