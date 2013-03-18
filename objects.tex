@@ -13,9 +13,9 @@ detector. From \cite{cmsSlice}.}
   \label{reco:crosssec}
 \end{figure}
 
-\FigureRef{reco:crosssec} shows a cross section of \ac{CMS} superimposed with the
+\FigureRef{reco:crosssec} shows a cross section of {CMS} superimposed with the
 typical paths of several different particles and their interactions with the
-subdetectors of \ac{CMS}.  This chapter describes how the information
+subdetectors of {CMS}.  This chapter describes how the information
 from each subdetector is combined to identify and reconstruct the particles.
 
 \section{Electrons}
@@ -45,7 +45,7 @@ The photon may then undergo pair production, in the field of a nucleus to
 conserve momentum, to produce a electron-positron pair.
 As the electron traverses the CMS tracker, the strong magnetic
 field causes the path to be curved in the azimuthal, $\phi$,
-direction, so that when the electron reaches the \acs{ECAL} it is accompanied
+direction, so that when the electron reaches the s{ECAL} it is accompanied
 by a ``spray'' of electromagnetic energy spread over a narrow strip in the phi direction.
 \FigureRef{fig:brem} shows the fraction of energy radiated by bremsstrahlung for
 electrons of energy $10$, $30$ and \unit{$50$}{\GeV} \cite{eReco}.
@@ -111,8 +111,8 @@ candidates are extrapolated to the next layer of the detector, while taking into
 the update step, the extrapolated track candidate is combined with the observed
 trach hit in that layer and the track parameters are updated. 
 
-The collected hits are passed to the \ac{GSF} for a final fitting and estimation
-of the track parameters \cite{cmsgsf}. The \ac{GSF} algorithm is similar to the
+The collected hits are passed to the {GSF} for a final fitting and estimation
+of the track parameters \cite{cmsgsf}. The {GSF} algorithm is similar to the
 Kalman filter but energy losses are now described by a weighted sum of Gaussian
 distributions \cite{gsf}.
 % corrections
@@ -205,7 +205,7 @@ hadrons as some of the energy will tend to leak into the HCAL.
 
 \subsubsection{Angular separation of track and supercluster}
 $\Delta\phi$ and $\Delta\eta$ represent the angular separation between the
-trajectory of the reconstructed \ac{GSF} track, extrapolated to the ECAL, and
+trajectory of the reconstructed {GSF} track, extrapolated to the ECAL, and
 the ECAL supercluster in the $\phi$ and $\eta$ direction respectively.
 
 \begin{align}
@@ -245,10 +245,10 @@ Conversion partner tracks are track candidates that are within a cone of $\Delta
 R < 0.3$ around the electron candidate track, and have an opposite charge. 
 $\Delta\cot\theta$ is defined as,
 \begin{equation}
-\Delta \cot \theta \equiv \cot(\theta_{\text{KF}}) - \cot(\theta_{\text{\ac{GSF}}}),
+\Delta \cot \theta \equiv \cot(\theta_{\text{KF}}) - \cot(\theta_{\text{{GSF}}}),
 \end{equation}
-where $\theta_{KF}$ and $\theta_{\ac{GSF}}$ are the polar angle of the conversion
-partner track and the \ac{GSF} track of the electron respectively.
+where $\theta_{KF}$ and $\theta_{{GSF}}$ are the polar angle of the conversion
+partner track and the {GSF} track of the electron respectively.
 The $dist$ variable is the distance between the two tracks at the point where
 they are parallel to one another in the $x-y$ plane as shown in \FigureRef{fig:dist}.
 
@@ -336,15 +336,15 @@ silicon tracker. This can be made difficult by conversion of bremsstrahlung
 photons when they are radiated early.
 
 Within CMS, three methods of charge identification have been developed based on
-the \ac{GSF} track charge, the general track charge and the supercluster charge. The
-\ac{GSF} track charge is simply the sign of the curvature of the \ac{GSF} fit of the
-electron track. The general track charge is found by matching the \ac{GSF} track with
+the {GSF} track charge, the general track charge and the supercluster charge. The
+{GSF} track charge is simply the sign of the curvature of the {GSF} fit of the
+electron track. The general track charge is found by matching the {GSF} track with
 a general Kalman filter track by asking for shared hits in the pixel tracker. 
 The supercluster charge is obtained by finding the sign of the $\phi$ difference
 between the supercluster position and the first hit of the electron track.
 
 At the \PZ peak, a charge mis-identification rate of \unit{3}{\%} \cite{eReco}
-is measured when using the electron trajectory from the \ac{GSF} fit.  A sample with
+is measured when using the electron trajectory from the {GSF} fit.  A sample with
 improved charge identification can be obtained by using a majority method, that
 combines the three measurements and assigns the sign from the 2 estimates out of
 three that are in agreement, or by requiring that all three methods for

@@ -1,22 +1,24 @@
 \chapter{Standard Model}
 \label{chap:sm}
-The \ac{SM} of particle physics is a quantum field theory that describes all
+The {SM} of particle physics is a quantum field theory that describes all
 known fundemental constituents of matter and their interactions through the
 strong, weak and electromagnetic forces.
 The theory was pieced together in the 60s and 70s and comprises two families of
 elementary particles, called quarks and leptons, and incorporates the theories
 of quantum electrodynamics (QED), Glashow-Weinberg-Salam theory of electroweak
-dynamics and quantum chromodynamics (QCD).
+dynamics and quantum chromodynamics (QCD)
+\cite{t1972regularization, glashow1961partial, weinberg1967model,
+salam1968weak}.
+
 The Standard Model is remarkable in its accuracy, describing every experimental
 test performed.  
-
-This chapter reviews the \ac{SM} of particle physics. The first section will 
-introduce the two families of elementary matter particles, the leptons and quarks,
- and the latter section will then summarise the theoretical background
-to the standard model.
-
-
 \todo[inline]{MAKE THIS GOODER.}
+
+This chapter reviews the {SM} of particle physics. The first section will 
+introduce the matter constituents of the standart model; the leptons and quarks,
+and the latter section will describe the fundemental interactions. 
+The description follows the example given in \cite{ral} with additional insights
+from \cite{perkins2000introduction,griffiths2008introduction,halzen1984quarks}.
 
 \section{Constituents of the Standard Model}
 \label{sec:matter}
@@ -87,7 +89,8 @@ There are, as far as is known, four fundemental forces of nature, the strong,
 weak, electromagnetic and gravitational forces.
 \TableRef{tab:forces} summarises the forces in order of decreasing
 strength\footnote{The strength quoted in the table is a rough approximation as
-`strength' depends on the source and distance of a force\cite{griffiths}}.
+`strength' depends on the source and distance of a
+force\cite{griffiths2008introduction}}
 
 \begin{table}[htbp]
 \begin{center}
@@ -95,21 +98,21 @@ strength\footnote{The strength quoted in the table is a rough approximation as
 \toprule
 Force           & Strength   & Theory   & Mediator \\
 \midrule
-Strong          & $10^{0}  $ & \acl{QCD} & Gluon \\
-Electromagnetic & $10^{-2} $ & \acl{QED} & Photon \\
-Weak            & $10^{-13}$ & \acl{EWK} & \PW and \PZ \\
+Strong          & $10^{0}  $ & {QCD} & Gluon \\
+Electromagnetic & $10^{-2} $ & {QED} & Photon \\
+Weak            & $10^{-13}$ & {EWK} & \PW and \PZ \\
 Gravitational   & $10^{-42}$ & General Theory of Relativity & Graviton? \\
 \bottomrule
 \end{tabular}
-\caption{The known four fundemental forces \cite{griffiths}.}
+\caption{The known four fundemental forces \cite{griffiths2008introduction}.}
 \end{center}
 \label{tab:forces}
 \end{table}
 
-The \ac{SM} describes the strong, weak and electromagnetic interactions. Each
+The {SM} describes the strong, weak and electromagnetic interactions. Each
 force is mediated by exchange of integer spin intermediate particles called
 bosons.
-The boson constituent of the \ac{SM} are summarised in \TableRef{}.
+The boson constituent of the {SM} are summarised in \TableRef{}.
 
 \begin{table}[htbp]
 \begin{center}
@@ -128,7 +131,7 @@ gluon (\Pgluon)   & 0    & 0 \\
 \label{tab:boson}
 \end{table}
 
-Gravity is not included in the \ac{SM} as a complete quantum theory of gravity
+Gravity is not included in the {SM} as a complete quantum theory of gravity
 has not yet been found. However, the gravitational force is very weak when
 compared to the other three forces so its contribution to particle interactions
 is negligable.
@@ -138,14 +141,14 @@ The classical theory for electromagnetism was formulated by Maxwell over a
 centuary ago\cite{maxwell}, and a quantum theory of electrodynamics was
 realised by Tomonaga, Feynman and Schwinger in the 1940s \cite{qed}.
 
-The \ac{EM} force is the force that is responsible for interaction between
+The {EM} force is the force that is responsible for interaction between
 charged particles. The force is mediated by the massless photon, which means
-that the \ac{EM} force is effective over infinite range.
-The fundemetal process of \ac{QED} is shown in \FigureRef{fig:qed}.
+that the {EM} force is effective over infinite range.
+The fundemetal process of {QED} is shown in \FigureRef{fig:qed}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.5\textwidth]{qed_process}
-  \caption{The elementary process for \ac{QED} that all electromagnetic
+  \caption{The elementary process for {QED} that all electromagnetic
 interactions can be reduced to.}
   \label{fig:qed}
 \end{figure}
@@ -156,12 +159,12 @@ between charged particles and photon and is given by
 \alpha = \frac{e^2}{4 \pi} \approx \frac{1}{137}
 \end{equation}
 
-The \ac{SM} describes all the interactions of known particles in terms of gauge
+The {SM} describes all the interactions of known particles in terms of gauge
 theories. A gauge theory is a theory that is invariant under a set of local
 transformations.  In electromagnetism the gauge transformations are local
 complex phase transformations of the charge particle fields. Requiring gauge
 invariance will in turn require that a massless vector particle be introduced,
-the photon, that mediates the \ac{EM} interaction.
+the photon, that mediates the {EM} interaction.
 
 The lagrangian densitry for a free Dirac field, $\psi$, is given by,
 \begin{equation}
@@ -274,7 +277,7 @@ The fundemetal quark-gluon process of the strong force is shown in
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.5\textwidth]{qcd_process}
-  \caption{The quark-gluon vertex for \ac{QCD} .}
+  \caption{The quark-gluon vertex for {QCD} .}
   \label{fig:qcdquark}
 \end{figure}
 The strong force is mediated by eight massless gluons which themselves carry
@@ -302,7 +305,7 @@ The coupling constant for the strnog force, $\alpha_s$, is given by,
 \begin{equation}
 \alpha = \frac{g_s^2}{4 \pi} \approx 1
 \end{equation}
-which is approximately 100 times stronger than the \ac{EM} force.
+which is approximately 100 times stronger than the {EM} force.
 As the energy of the interaction increases the strength of the strong coupling
 decreases. This is known as asymptotic freedom, at high-energy experiments
 quarks appear to behave almost as free particles. However, at lower energies 
@@ -310,8 +313,8 @@ the coupling increases and quarks only appear in bound states, this is known as
 quark confinement.
 \todo{diagram of quark confinement here?}
 
-The strong interaction is described by the theory of \ac{QCD}.
-Quantum chromodynamics follows from similar reasoning to the \ac{QED} case, but with
+The strong interaction is described by the theory of {QCD}.
+Quantum chromodynamics follows from similar reasoning to the {QED} case, but with
 the Abelian $U(1)$ symmetry group replaced with the non-Abelian $SU(3)$ symmetry
 group of transformations on the quark colour fields.
 
@@ -418,7 +421,7 @@ will only interact with fermions of the same generation
   \label{fig:weak_charged}
 \end{figure}
 
-In a similar way to \ac{QCD}, there are coupling of the \PW and \PZ to one
+In a similar way to {QCD}, there are coupling of the \PW and \PZ to one
 another as shown in \FigureRef{fig:weak_boson}.
 
 \begin{figure}[htbp]
@@ -563,7 +566,7 @@ Y(q_{L}) =  \frac{1}{6}, \qquad Y(u_{R}) =  \frac{2}{3}, \qquad Y(d_{R}) = -\fra
 The lagrangian for the electroweak interaction can be written as the sum of the
 gauge boson and the fermion parts
 \begin{equation}
-\mathcal{L}_{EWK} = 
+\mathcal{L}_{electroweak} = 
 \mathcal{L}_{fermion}
 + \mathcal{L}_{gauge}
 \end{equation}
@@ -655,7 +658,7 @@ Breaking is a method to break the symmetry by requiring that the Lagrangian of a
 system remains invariant under a transformation, but the ground state is not
 invariant.
 
-An example of \ac{SSB} is a point mass in a potential,
+An example of {SSB} is a point mass in a potential,
 \begin{equation}
 V(r) = \mu^{2} \vec{r} \cdot \vec{r} + \lambda ( \vec{r} \cdot \vec{r} )^{2}
 \end{equation}
@@ -669,7 +672,7 @@ If $\mu^{2}<0$ then the potential will look like that given in
 the ground state. To fall to the ground state the mass has to ``choose'' a
 direction to fall. The choice will break the symmetry of the system, the
 potential remains symmetric, but the ground state is not. This is an example of
-\ac{SSB}.
+{SSB}.
 
 \begin{figure}[htbp]
   \centering
@@ -690,8 +693,13 @@ potential remains symmetric, but the ground state is not. This is an example of
   \label{fig:higgs_pot}
 \end{figure}
 
-In the \ac{SM}, the Higgs mechanism is the process used to spontaneous break the
- $SU(2)_{L} \times U(1)_{Y}$ symmetry.
+The application of {SSB} to the {SM} was studied by Higgs, Englert, Brout
+and others \cite{higgs1981broken, englert1964broken, guralnik1964global}.
+The result was a mechanism that spontaneous breaks the
+ $SU(2)_{L} \times U(1)_{Y}$ symmetry called the Higgs mechanism\footnote{or the
+Brout-Englert-Higgs mechanism, or even the
+Englert-Brout-Higgs-Guralnik-Hagen-Kibble mechanism.}.
+
 The Higgs mechanism introduces four real scalar fields, that can be arranged in a
 doublet under $SU(2)$,
 \begin{equation}
@@ -724,14 +732,6 @@ A plot of the Higgs potential with $\mu^{2}<0$ is shown in
 \FigureRef{fig:higgspot}. It is unstable to small perturbations, and will fall
 to a lower energy state. 
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.7\textwidth]{nphys1874-f1.jpg}
-  \caption{ The Higgs potential, $V(\phi)$, in the form of a 'Mexican hat',
-leads to spontaneous symmetry breaking, from \cite{}}
-  \label{fig:higgspot}
-\end{figure}
-
 The ground state does not have the same symmetry as the Lagrangian; by
 selecting a minima the symmetry has become broken. An example choice of minima
 could be,
@@ -742,7 +742,7 @@ and
 \begin{equation}
 \phi_{3} = \frac{-\mu^{2}}{\lambda} \equiv v^{2}.
 \end{equation}
-which leaves results in a non-zero \ac{vev},
+which leaves results in a non-zero {vev},
 \begin{equation}
 <0|\Phi|0> = \frac{1}{\sqrt{2}}\left(\begin{matrix}0\\v\end{matrix}\right),
 \end{equation}
@@ -759,7 +759,7 @@ e^{i\nicefrac{\sigma}{2}\phi_a}
 \left(\begin{matrix}0\\v+H\end{matrix}\right)
 \end{equation}
 where the $SU(2)$ invariance of the lagrangian allows for the choice of $\phi_i$
-to be zero.\cite{unitarygauge}
+to be zero\cite{halzen1984quarks}.
 
 The Lagrangian can be now written in terms of the $H$ field. The kinetic
 term,\cite{ral}
@@ -811,5 +811,8 @@ which represents a mass term for the electron and a coupling of the electron to
 the Higgs field proportional to the mass of the electron.
 The quark masses can also be generated in a similar way \cite{halzen}.
 
+\todo[inline]{should I include a point here about the higgs boson itself and
+then link it to the discovery?}
+\cite{aad2012observation} and \cite{chatrchyan2012observation}
 \todo[inline]{summarise the main points of this section}
 

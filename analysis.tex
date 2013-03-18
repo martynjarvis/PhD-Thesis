@@ -20,8 +20,8 @@ Events that contain only a single electron are then selected for the analysis.
 \subsection{Trigger}
 
 Several triggers were used to select the events due to the increasing luminosity
-during the \ac{LHC} 2010 run.  In the initial runs, events were selected using
-only a single photon trigger.  As the \ac{LHC} luminosity was increased and
+during the {LHC} 2010 run.  In the initial runs, events were selected using
+only a single photon trigger.  As the {LHC} luminosity was increased and
 these triggers became prescaled, it was necessary to use electron triggers to
 select events.  As the luminosity increased even further, it was necessary to use
 electron triggers that included cuts on certain electron ID variables.
@@ -38,10 +38,10 @@ where ``HLT\_Ele$X$'' indicates a selection requiring an electron with  $\Pt > \
 superclusters rather than a reconstructed electron. 
 ``SW'' stands for small window, where window refers to the electron
 pixel-matching window. 
- ``Cleaned'' indicates that spikes in the \ac{ECAL} have been removed.  
+ ``Cleaned'' indicates that spikes in the {ECAL} have been removed.  
 
 ``CaloEleId'' and ``TighterCaloIdIso'' represent increasingly tighter selection
-based on the shower shape ID and isolation variables from only the \ac{ECAL},
+based on the shower shape ID and isolation variables from only the {ECAL},
 and not the $\Delta\phi$ or $\Delta\eta$ variables.  
 
 ``TightEleId'' indicates a tight selection based on all ID variables. 
@@ -121,7 +121,7 @@ its charge.
 The incorrect charge assignment rate can be measured at the Z peak by comparing the same
 sign \HepProcess{\PZ\to\Pepm\Pepm} yield to the opposite sign
 \HepProcess{\PZ\to\Pelectron\APelectron} yield. \FigureRef{fig:zpeak} show these Z yields
-using only the \ac{GSF} track charge (red) and also requiring a unanimous
+using only the {GSF} track charge (red) and also requiring a unanimous
 assignment of charge from all three methods (blue). 
 
 The incorrect charge assignment rate from the GSF track charge alone is about
@@ -159,7 +159,7 @@ The expected composition of the selected events, derived from MC simulation
 samples, is shown in \TableRef{tab:selectedcomp}. With a \pT cut of
 \unit{25}{\GeV} it is expected that the selected events are \unit{$\approx
 65$}{\%} signal events, and of the remaing \unit{35}{\%} background events, the
-majority of them are \ac{QCD} background events with a small amount of \ac{EWK}
+majority of them are {QCD} background events with a small amount of {electroweak}
 events. 
 
 \begin{table}[htbp]
@@ -169,7 +169,7 @@ events.
 & & $\PT>25$ \GeV & $\PT>30$ \GeV & $\PT>35$ \GeV  \\
 \midrule
 Signal & \HepProcess{\PW\to\Pe\Pnu} & $65.1\%$&$63.5\%$ &$60.2\%$ \\
-EWK & \HepProcess{\PZ\to\Ptau\Ptau} & $0.4\%$ &$0.3\%$  &$0.2\%$ \\
+electroweak & \HepProcess{\PZ\to\Ptau\Ptau} & $0.4\%$ &$0.3\%$  &$0.2\%$ \\
     & \HepProcess{\PZ\to\Pe\Pe}     & $4.1\%$ &$3.5\%$  &$3.0\%$\\
     & \HepProcess{\PW\to\Ptau\Pnu}  & $1.9\%$ &$1.1\%$  &$0.6\%$\\
     & \HepProcess{\Ptop\APtop}      & $0.3\%$ &$0.3\%$  &$0.3\%$\\
@@ -179,7 +179,7 @@ QCD & Total                         & $28.2\%$&$31.3\%$ &$35.7\%$\\
 \end{tabular}
 \caption{Composition of selected events for lepton momentum cut of
 $\PT>\unit{25}{\GeV}$, $\PT>\unit{30}{\GeV}$ and $\PT>\unit{35}{\GeV}$ from
-\ac{MC} simulation.}
+{MC} simulation.}
 \label{tab:selectedcomp}
 \end{center}
 \end{table}
@@ -190,13 +190,13 @@ shown in \FigureRef{fig:pfmet}. There are two obvious peaks in the
 distribution. The peak at \unit{$\ETm \approx 40$}{\GeV} is the
 \HepProcess{\PW\to\Pe\Pnue} signal region. This region will also contain
 \HepProcess{\PW\to\Ptau\Pnut} backgrounds. The peak at
-\unit{$\ETm\approx 10$}{\GeV} is the background region that contains the \ac{QCD}
-and \ac{DY} background events.
+\unit{$\ETm\approx 10$}{\GeV} is the background region that contains the {QCD}
+and {DY} background events.
 
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics*[width=0.85\textwidth]{pfmet_dist}
-    \caption{\ac{PFMET} distribution for selected events with an electron cut of
+    \caption{{PFMET} distribution for selected events with an electron cut of
 $\PT > \unit{25}{\GeV}$ and $|\eta| < 2.4$.}
   \label{fig:pfmet}
   \end{center}
@@ -242,11 +242,11 @@ $2.0<| \eta |<2.4$ &$+$& 18885&13239&8726\\
 \section{Signal Yield Extraction Method}
 The number of signal and background events in each bin is extracted using a fit
 to the \ETm distribution using two templates.
-The first is the sum of the \Wenu signal and the \ac{EWK} background shapes,
-and the second is the sum of the \ac{QCD} plus \gjet processes.
+The first is the sum of the \Wenu signal and the {electroweak} background shapes,
+and the second is the sum of the {QCD} plus \gjet processes.
 
-\subsection{\ac{QCD} \ETm Shape}
-The \ac{QCD} and \gjet background distribution is obtained from a control sample of
+\subsection{{QCD} \ETm Shape}
+The {QCD} and \gjet background distribution is obtained from a control sample of
 events. The control sample is selected by requiring that the electrons pass the
 isolation and $H/E$ cuts but fail the $\Delta\phi$ and $\Delta\eta$ cuts as
 shown in \TableRef{tab:antisel}.
@@ -289,7 +289,7 @@ shown in \TableRef{tab:antisel}.
     \caption{$2.0<| \eta |<2.4$}
     \label{fig:qcd_met_eta6}
   \end{subfigure}
-  \caption{The \ETm distribution on antiselected \ac{MC} simulated events and selected \ac{QCD} and \gjet events in each pseudorapidity bin.}
+  \caption{The \ETm distribution on antiselected {MC} simulated events and selected {QCD} and \gjet events in each pseudorapidity bin.}
   \label{tab:antiselclosure}
 \end{figure}
 
@@ -314,8 +314,8 @@ corresponding cut values. The $\Delta\phi$ and $\Delta\eta$ cuts are inverted.}
   \end{center}
 \end{table}
 
-To validate the antiselection used, \ac{QCD} \ac{MC} samples are used. The
-distribution of \ac{QCD} events passing the event selection are compared to the
+To validate the antiselection used, {QCD} {MC} samples are used. The
+distribution of {QCD} events passing the event selection are compared to the
 antiselected MC events. This is shown for each pseudorapidity bin in
 \FigureRef{tab:antiselclosure}.
 
@@ -324,7 +324,7 @@ antiselected MC events. This is shown for each pseudorapidity bin in
 The signal \ETm shape is obtained by modelling the recoil of the W boson. 
 The recoil response and resolution in \HepProcess{\PZ\to\Plepton\Plepton} data
 events is measured as a function of the \pT of the boson. This is combined with
-information from the \PW and \PZ \ac{MC} simulation to derive a correction to
+information from the \PW and \PZ {MC} simulation to derive a correction to
 the simulation \ETm as a function of \PW \pT.
 
 The transverse recoil vector, $\vec{U}$, is calculated from the reconstructed
@@ -352,18 +352,18 @@ $U_2$ in W events.
   \end{center}
 \end{figure}
 
-$U_1$ and $U_2$ are measured in \PZ data, \PZ \ac{MC} simulation and \PW \ac{MC}
+$U_1$ and $U_2$ are measured in \PZ data, \PZ {MC} simulation and \PW {MC}
 simulation and are then binned in units of the boson \pT.  In each $p_T^{Z}$ bin
 the $U_1$ and $U_2$ distributions are fitted with a Gaussian.  A polynomial,
 $f_i(p_T^Z)$, is fit to the distribution of Gaussian the means to produce a
-response curve for both data and \ac{MC}.  A second polynomial,
+response curve for both data and {MC}.  A second polynomial,
 $\sigma_i(p_T^Z)$, is then fit to the distribution of the Gaussian widths to
-produce a resolution curve for both data and \ac{MC}.
+produce a resolution curve for both data and {MC}.
 
 The fitting procedure results in two response functions, $f_i(p_T^Z)$, and two
-resolution functions, $\sigma_i(p_T^Z)$, for \PZ data, \PZ \ac{MC} events and
-the \PW \ac{MC} events. The functions are then used to define a set of \PW
-\ac{MC} corrected functions, 
+resolution functions, $\sigma_i(p_T^Z)$, for \PZ data, \PZ {MC} events and
+the \PW {MC} events. The functions are then used to define a set of \PW
+{MC} corrected functions, 
 
 \begin{align}
 f^{corr}_i (p^{W}_T)      
@@ -377,7 +377,7 @@ f^{corr}_i (p^{W}_T)
 \end{align}
 
 The corrected recoil response and resolution curves are then used to correct the
-\PW \ac{MC} \ETm. For each \PW \ac{MC} events the real \pT of the boson is
+\PW {MC} \ETm. For each \PW {MC} events the real \pT of the boson is
 found, and the values of for the response, $f^{corr}_i (p^{W}_T)$, and
 resolution curves, $\sigma^{corr}_i (p^{W}_T) $, are looked up. A Gaussian is
 defined with these values and then sampled to determine the new reoil
@@ -394,8 +394,8 @@ described in detail here \cite{NULL}, and the ntuples containing
 \HepProcess{\PW\to\Pelectron\Pnu} simulation with the recoil corrected \ETm were
 provided from here \cite{NULL}.
 
-\subsection{\ac{EWK} \ETm Shape}
-The EWK background processes that can produce a single isolated
+\subsection{{electroweak} \ETm Shape}
+The electroweak background processes that can produce a single isolated
 electron which are considered in this analysis are:
 \begin{itemize}
 \item \HepProcess{\PZ\to\Pelectron\APelectron},
@@ -404,9 +404,9 @@ electron which are considered in this analysis are:
 \item \HepProcess{\Ptop\APtop}.
 \end{itemize}
 
-The \ac{EWK} background \ETm distributions were obtained from Pythia \ac{MC}
-simulations for each pseudorapidity/charge bin.  The scale of the \ac{EWK} shape
-is fixed to the signal \ETm shape by the ratio obtained from \ac{MC} samples.
+The {electroweak} background \ETm distributions were obtained from Pythia {MC}
+simulations for each pseudorapidity/charge bin.  The scale of the {electroweak} shape
+is fixed to the signal \ETm shape by the ratio obtained from {MC} samples.
 
 \subsection{Validation of Signal Extraction Method on Simulation}
 
@@ -429,7 +429,7 @@ The statistical uncertainty can also be estimated from the following formula
    {\left(  \frac{dN^+}{d\eta} +  \frac{dN^-}{d\eta} \right)^{2} } .
 \end{equation}
 
-The uncertainty from \EquationRef{tab:statuncert} evaluated with \ac{MC} truth
+The uncertainty from \EquationRef{tab:statuncert} evaluated with {MC} truth
 values, and the uncertainty measured from pseudo-data experiments for an
 integrated luminosity of \unit{36.1}{\invpb} are summarised in
 \TableRef{tab:statuncertsum}.
@@ -447,7 +447,7 @@ integrated luminosity of \unit{36.1}{\invpb} are summarised in
     $2.0<|\eta|<2.4$ & 0.0077 & 0.0077\\
     \bottomrule
     \end{tabular}
-  \caption{Expected statistical error from \ac{MC} simulation and pseudo-data
+  \caption{Expected statistical error from {MC} simulation and pseudo-data
 experiments as a function of pseudorapidity, for an integrated luminosity of
 \unit{36}{\invpb}. }
   \label{tab:statuncertsum}
@@ -740,7 +740,7 @@ $\left[ 0.0,2.4 \right]$ & 98.5$\pm$0.4 & 97.8$\pm$0.4 & 1.007$\pm$0.006 & 80.3$
 \end{tabular}
 \end{sideways}
 \end{center}
-\caption{\ac{GSF} track reconstruction and electron identification efficiency as
+\caption{{GSF} track reconstruction and electron identification efficiency as
 a function of charge in each pseudorapidity bin. The efficiencies are also shown
 for the barrel and endcap separatly and the full inclusive range.}
 \label{tab:tagprobe}
@@ -849,28 +849,28 @@ The energy resolution and scale of the electrons can introduce a systematic
 error on the asymmetry due to the effect of the transverse momentum cut
 applied to the electrons. The largest source of electron scale bias is the
 changing ECAL crystal transparency caused by the changing level of radiation
-during the \ac{LHC} 2010 run.
+during the {LHC} 2010 run.
 
 To correct for this effect, a set of ad-hoc energy scale and resolution corrections are
 derived using a \Zee mass distribution. The corrections are parametrised by
 six energy scale factors, $s_i$, and six resolutions, $\sigma_i$, one for each
 pseudorapidity bin in the asymmetry measurement.
-The scale factors represent the average factor each \ac{MC} electron's \Pt
+The scale factors represent the average factor each {MC} electron's \Pt
 should be corrected to match what is observed in data.
 The resolution factors represent the difference of the resolution in data and
-\ac{MC}. It is the additional smearing that would need to be applied to
-reconstruction level \ac{MC} to match the observed resolution in data.
+{MC}. It is the additional smearing that would need to be applied to
+reconstruction level {MC} to match the observed resolution in data.
 
 A sample of \Zee events is  split into 21 categories which correspond to all
 combinations of pseudorapidity bins of the two electrons ($6+\binom{6}{2} =
-21$).  A mass template s obtained in each category from \ac{MC} simulation where
-the \ac{ECAL} calibration is taken to be perfect.
+21$).  A mass template s obtained in each category from {MC} simulation where
+the {ECAL} calibration is taken to be perfect.
 A simultaneous fit to the \Zee mass is performed in each of the 21 categories
 to determine the six energy scale factors, $s_i$, and the six resolutions, 
 $\sigma_i$.
 
 In each category ($category_{ij}$) where one electron is in the $i^{th}$
-pseudorapidity bin and the other is in the $j^{th}$ bin, the \ac{MC} template
+pseudorapidity bin and the other is in the $j^{th}$ bin, the {MC} template
 mass shape is scaled by $\frac{1}{\sqrt{s_i s_j} } $
 and smeared by an additional Gaussian with width of
 $\sqrt{\sigma_i^2+\sigma_j^2}$.
@@ -962,12 +962,12 @@ separately.
 \subsubsection{Background \ETm Shape}
 \todo[inline]{more detail needed here}
 
-The \ac{QCD} and \gjet \ETm template shape is obtained from a control sample of
+The {QCD} and \gjet \ETm template shape is obtained from a control sample of
 events by anti-selecting electrons. This may introduce a systematic bias to the
-measurement if there is a difference between the anti-selected \ac{QCD} and \gjet
-\ETm samples and the selected \ac{QCD} and \gjet samples.
+measurement if there is a difference between the anti-selected {QCD} and \gjet
+\ETm samples and the selected {QCD} and \gjet samples.
 
-The systematic uncertainty due to the \ac{QCD} and \gjet \ETm shape is evaluated by
+The systematic uncertainty due to the {QCD} and \gjet \ETm shape is evaluated by
 \todo{explain how this is done} varying the anti-selection used to obtain the control sample and observing the
 effect that this has on the measured asymmetry.
 
@@ -1013,7 +1013,7 @@ There are three main sources of uncertainty due to the signal template,
 \begin{itemize}
     \item the uncertainty in the recoil corrections,
     \item the effect the energy scale has on the recoil corrections,
-    \item the uncertainty on the \ac{PDF} used to generate the events that the
+    \item the uncertainty on the {PDF} used to generate the events that the
 recoil corrections are applied to.
 \end{itemize}
 
@@ -1022,18 +1022,18 @@ lower limits on the corrections are used to generate different templates, and
 the effect on the measured asymmetry is evaluated as a measure of the
 systematic uncertainty.
 
-The recoil method uses generator level \ac{MC} simulation as an input to the
+The recoil method uses generator level {MC} simulation as an input to the
 template shape. To evaluate the effect of the generator used, templates are
 generated with the CTEQ 6.6 \cite{CTEQ}
-uncertainty \acp{PDF} which contain the central \ac{PDF} and 44 error \acp{PDF}
-which contain the \unit{95}{\%} \ac{CL} for each of the 22 free parameters in
-the \ac{PDF}. The maximum change in distance with respect to the central value
+uncertainty PDF set which contain the central PDF and 44 error PDFs
+which contain the \unit{95}{\%} {CL} for each of the 22 free parameters in
+the {PDF}. The maximum change in distance with respect to the central value
 for each parameter is summed in quadrature and taken as a measure of the
 systematic uncertainty.
 
-Any differences in the energy scale of the electrons between data and \ac{MC}
-must be taken in to account to ensure accurate \ETm predictions. The \ac{MC} energy
-scale corrections were determined from \PZ data and applied to the \PZ \ac{MC}
+Any differences in the energy scale of the electrons between data and {MC}
+must be taken in to account to ensure accurate \ETm predictions. The {MC} energy
+scale corrections were determined from \PZ data and applied to the \PZ {MC}
 before calculating the recoil components \cite{recoil}. 
 
 The systematic uncertanities due to the signal \ETm shape used in the signal
@@ -1059,18 +1059,18 @@ extraction method assigned to each eta bin.}
 \end{center}
 \end{table}
 
-\subsubsection{\ac{EWK} \ETm Shape}
+\subsubsection{{electroweak} \ETm Shape}
 
-The \ac{EWK} shape is also generated from \ac{MC} samples. During the fitting
-procedure, the \ac{EWK} shape is fixed to the \Wenu signal shape according to
-the cross section taken from the \ac{MC} samples. To estimate the effect of the
-uncertainty of the cross section has on the asymmetry measurement, the \ac{EWK}
+The {electroweak} shape is also generated from {MC} samples. During the fitting
+procedure, the {electroweak} shape is fixed to the \Wenu signal shape according to
+the cross section taken from the {MC} samples. To estimate the effect of the
+uncertainty of the cross section has on the asymmetry measurement, the {electroweak}
 background is artificially varied by $\pm20\%$ and the effect on the
 asymmetry is measured. Even with an over estimation of the uncertainty on the
 cross section, the effect on the asymmetry is found to be small.
 
 The systematic uncertanities due to the electroweak \ETm shape used in the signal
-extraction method are summarised in \TableRef{tab:systEWK}.
+extraction method are summarised in \TableRef{tab:systelectroweak}.
 
 \begin{table}[htbp]
 \begin{center}
@@ -1086,7 +1086,7 @@ $1.6<|\eta|<2.0$ & 0.0\\
 $2.0<|\eta|<2.4$ & 0.3\\
     \bottomrule
 \end{tabular}
-\caption{\label{tab:systEWK}Systematic uncertainty due to the electroweak \ETm shape used in the signal extraction method assigned to each eta bin.}
+\caption{\label{tab:systelectroweak}Systematic uncertainty due to the electroweak \ETm shape used in the signal extraction method assigned to each eta bin.}
 \end{center}
 \end{table}
 
