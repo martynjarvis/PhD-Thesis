@@ -1,17 +1,17 @@
 \chapter{The LHC}
 \label{chap:LHC}
 \section{Large Hadron Collider}
-The Large Hadron Collider (LHC) is a circular synchrotron with a circumference
-of \unit{27}{\kilo\meter}.  It has been constructed in the existing tunnel
-\unit{40-170}{\meter} beneath the border of France and Switzerland that was
-previously home to the LEP collider \cite{myers1990design}.
+The Large Hadron Collider (LHC)\cite{lhc} is a circular synchrotron with a
+circumference of \unit{27}{\kilo\meter}.  It has been constructed in the
+existing tunnel \unit{40-170}{\meter} beneath the border of France and
+Switzerland that was previously home to the LEP collider \cite{myers1990design}.
 
 When operating at its design energy and luminosity it will collide beams of
 protons at a centre of mass energy of \unit{14}{\TeV} and a luminosity of
-\unit{$ 10^{34} $}{\rpsquare\cm\reciprocal\second} .  It is also designed to
+\unit{$ 10^{34} $}{\rpsquare\cm\reciprocal\second}.  It is also designed to
 collide two \unit{5.5}{\TeV} beams of heavy ions, such as lead nuclei\cite{lhc}.
 \TableRef{tab:lhcparam} sumarises the machine parameters relevent to the {CMS}
-detectors.
+detector.
 
 \begin{table}[htbp]
 \begin{center}
@@ -59,7 +59,8 @@ for several Standard Model processes such as the b quark production cross
 section, $\sigma_{b}$, and the Higgs boson production cross sections,
 $\sigma_{tot}$ is the total inelastic cross section.
 $\sigma_{Higgs}$. The cross sections that are of relevence to this thesis
-analysis are the \PW and \PZ boson cross sections.
+analysis are the \PW and \PZ boson cross sections $\sigma_{\PW}$ and
+$\sigma_{\PZ}$ respectivly.
 From \cite{campbell2006hard}.}
   \label{fig:LHCxsec}
 \end{figure}
@@ -84,13 +85,13 @@ LHC.
 There are four main detector experiments studying the collisions at the
 {LHC}.  
 ALICE\footnote{A Large Ion Collider Experiment.} is designed to study the quark
-gluon plasma that will be produced in the heavy ion collisions.
-\cite{aamodt2008alice}
+gluon plasma that will be produced in the heavy ion collisions
+\cite{aamodt2008alice}.
 The LHCb\footnote{Large Hadron Collider beauty.} experiment is designed to study
-B-meson decays to measure CP violation.  \cite{alves2008lhcb}
+B-meson decays to measure CP violation \cite{alves2008lhcb}.
 ATLAS\footnote{A Toroidal LHC Apparatus.} and CMS\footnote{Compact Muon
 Solenoid.} are general purpose detectors that are designed to search for a wide
-range of new physics.  \cite{chatrchyan2008cms,aad2008atlas}
+range of new physics \cite{chatrchyan2008cms,aad2008atlas}.
 
 In addition there are two smaller special-purpose detectors.
 The LHCf \footnote{Large Hadron Collider forward.} is an experiment designed to
@@ -115,9 +116,9 @@ the quench protection system could be upgraded \cite{myers2010lhc}.
 The {LHC} was repaired by the end of 2009 and the first collisions at a record
 energy of \unit{2.36}{\TeV} were delivered in November.  From March to November
 2010 the {LHC} operated at \unit{7}{\TeV} delivering \unit{46.4}{\invpb} of
-proton-proton collisions of which \unit{36.1}{\invpb} was certified for
-analysis.  In November and October 2010 the {LHC} produced lead ion collisions
-at \unit{2.36}{\TeV}.
+proton-proton collisions of which \unit{36.1}{\invpb} was certified for analysis
+\cite{myers1990design}.  In November and October 2010 the {LHC} produced lead
+ion collisions at \unit{2.36}{\TeV}
 
 \begin{figure}[htbp]
   \centering
@@ -141,7 +142,7 @@ data from  2010 and \unit{840}{\invpb} of data from the first half of 2011.
 \section{CMS Detector}
 {CMS} is one of the two general purpose
 detectors designed to study LHC collisions. The main design parameters for the
-{CMS} detectors  are listed in \TableRef{tab:cmsparam}
+{CMS} detectors  are listed in \TableRef{tab:cmsparam}.
 
 \begin{table}[htbp]
 \begin{center}
@@ -177,13 +178,13 @@ tracker.
 \end{itemize}
 
 The design of CMS meets these requirements while overcoming significant
-experimental challenges.  At design luminosity, $\approx 1 $ billion inelastic
-events will occur in CMS every second, whereas CMS is limited to storing the
-data of only $\approx 100 $ events within that time.  The detector must be able to
-reduce this rate with a trigger to accept events that are interesting from a
-physics perspective and reject events otherwise.
+experimental challenges.  At design luminosity of approximatly 1 billion
+inelastic events will occur in CMS every second, whereas CMS is limited to
+storing the data of only $\approx 100 $ events within that time.  The detector
+must be able to reduce this rate with a trigger to accept events that are
+interesting from a physics perspective and reject events otherwise.
 
-In addition to this challenge each event of interest will have on average 20
+In addition to this challenge, each event of interest will have on average 20
 inelastic events superimposed on it. This results in around 1000 charged
 particles produced every \unit{25}{\ns}, which require the detectors to
 have a high granularity with a good time resolution to ensure a low occupancy.
@@ -199,9 +200,9 @@ required radiation hard detectors and electronics.
 
 An overview of the detector is shown in \FigureRef{fig:CMSnc}.  Starting at the
 interaction point in the centre of the detector and moving radially outwards,
-CMS comprises the pixel tracker, silicon microstip tracker, lead-tungstate ECAL,
-sampling brass-plate HCAL, \unit{4}{\tesla} superconducting solenoid magnet, an
-outer HCAL and four muon chambers.
+CMS comprises the pixel tracker, the silicon microstip tracker, the
+lead-tungstate ECAL, the sampling brass-plate HCAL, a \unit{4}{\tesla}
+superconducting solenoid magnet, an outer HCAL and four muon chambers.
 
 \subsection{Magnet}
 A large superconducting solenoid provides the basis for the design of the CMS
@@ -282,18 +283,16 @@ Disks (TID). The TEC is split in to nine disks and covers the region
 $\unit{120}{\cm} < |z| < \unit{280}{\cm}$. The TID comprises three rings
 and fills the gap between the TEC and the TIB.
 
-\subsubsection{Performance}
-\todo[inline]{section on the performance of the tracking detectors}
+%\subsubsection{Performance}
+%\todo[inline]{section on the performance of the tracking detectors}
 
 \subsection{Electromagnetic Calorimeter}
 The electromagnetic calorimeter (ECAL) is designed to measure the energy of
 electrons and photons with a high resolution.  It has a fine lateral granularity
-to help with shower separation.  A close up view of the CMS calorimetry is shown
-in \FigureRef{fig:calo}, where the ECAL is shown in green.  It is a hermetic,
-homogeneous calorimeter comprising 61200 individual lead tungstate ($PbWO_{4}$)
-scintillation crystals in the barrel region ($|\eta|<1.479$) closed by 7324
-crystals in each of the two endcap parts ($1.479<|\eta|<3.0$)
-\cite{ecal1997technical}.
+to help with shower separation.  It is a hermetic, homogeneous calorimeter
+comprising 61200 individual lead tungstate ($PbWO_{4}$) scintillation crystals
+in the barrel region ($|\eta|<1.479$) closed by 7324 crystals in each of the two
+endcap parts ($1.479<|\eta|<3.0$) \cite{ecal1997technical}.
 
 Lead tungstate crystals are ideally suited for this since the scintillation
 decay time is similar to the LHC bunch crossing time, 
@@ -314,12 +313,12 @@ identical supermodules that each cover a half length of the barrel
 ($0<|\eta|<1.479$) and \unit{20}{\degree} in phi. Each supermodule contains 1700
 crystals arranged in a $\phi - \eta$ grid with each crystal mounted in a
 ``semi-projective'' geometry, and aligned \unit{3}{\degree} off the nominal
-interaction vertex.  The alignments in $\phi$ and $\eta$ are shown in
-\FigureRef{fig:crystaltilt} and \FigureRef{fig:crystaltilt} respectivly. The
-non-poiting geometry prevents particles escaping throught the gaps between the
-crystals \cite{ecal1997technical}.  Each crystal has a cross-section of
-\unit{$22 \times 22$}{\mm\squared} and a length of \unit{230}{\mm}
-(\unit{25.8}{X_0}).
+interaction vertex.  The alignments in the transverse and longditudinal planes
+are shown in \FigureRef{fig:crystaltilt} and \FigureRef{fig:crystallong}
+respectivly. The non-pointing geometry prevents particles escaping throught the
+gaps between the crystals \cite{ecal1997technical}.  Each crystal has a
+cross-section of \unit{$22 \times 22$}{\mm\squared} and a length of
+\unit{230}{\mm} (\unit{25.8}{X_0}).
 
 \begin{figure}[htbp]
   \centering
@@ -370,9 +369,9 @@ as non-uniform signal generation and calibration errors \cite{chatrchyan2008cms}
 \end{figure}
 
 \subsection{Hadronic Calorimeter}
-The {HCAL}, in addition to the electromagnetic calorimeter,
+The hadronic calorimeter (HCAL), in addition to the electromagnetic calorimeter,
 is designed to measure the energy of hadron jets and the missing transverse
-energy (\met)\todo{define this?} which are important signatures in many physics studies at the LHC.
+energy (\met) which are important signatures in many physics studies at the LHC.
 %A close up view of the CMS calorimetry is shown in \FigureRef{calo}, where the
 %HCAL is shown in yellow.
 
@@ -385,7 +384,7 @@ the high axial magnetic field \cite{chatrchyan2008cms}.
 The barrel hadron calorimeter (HB) covers the region ($|\eta| < 1.4$)
 and the hadron endcap covers the region $1.3 < |\eta| < 3.0$.
 
-THe barrel hadron calorimter is
+The barrel hadron calorimter is
 positioned between the ECAL and inside of the solenoid magnet coil
 ($\unit{1.77}{\meter}<r<\unit{2.95}{\meter}$).
 The strong constraints imposed by the dimensions of the solenoid magnet results
@@ -403,10 +402,10 @@ region of the HCAL is such that the resolution is similar in each.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{hcal_performance}
-  \label{fig:hcalperform}
   \caption{Energy resolution $\nicefrac{\sigma}{E}$ of HCAL as a function of jet
 transverse energy for barrel jets ($|\eta| < 1.4$), endcap jets ($1.4<|\eta| <
 3$) and forward jets ($3<|\eta| < 5$). From \cite{chatrchyan2008cms}. }
+  \label{fig:hcalperform}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -441,9 +440,9 @@ measurement and to tag jets in the forward direction.
 
 The forward hadronic calorimeter is an iron/quartz-fibre calorimeter where the
 Cherenkov light is detected by photodetectors.  The calorimeter needs to be
-radiation hard due to the very large flux in the forward region. However it is
-expected that after 10 years of operation the lightn output will be reduced by
-about \unit{30}{\%} due to the level of radiation.
+radiation hard due to the very large flux in the forward region. However, it is
+still expected that after 10 years of operation the light output will be reduced by
+about \unit{30}{\%} due to the level of radiation \cite{chatrchyan2008cms}. 
 
 \subsection{Muon System}
 The muon system lies outside of the CMS solenoid and the outer HCAL detectors.
@@ -495,8 +494,8 @@ ensure an accurate and high resolution measurement of the muon
 momentum.\cite{chatrchyan2008cms}
 
 \subsubsection{Performance}
-The performance of the muon system and inner tracker is shown in figure
-\ref{fig:muon_performance}. The best momentum resolution for low-momentum muons
+The performance of the muon system and inner tracker is shown in 
+\FigureRef{fig:muon_performance}. The best momentum resolution for low-momentum muons
 is obtained from the measurement in the silicon tracker. However, as the momentum
 increases the muon momentum resolution is best measured by combining information
 from both the inner tracker and the muon detector.
@@ -507,13 +506,13 @@ from both the inner tracker and the muon detector.
     \centering
     \includegraphics[width=\textwidth]{muon_barrel}
     \caption{Barrel.}
-    \label{fig:met_res}
+    \label{fig:muon_barrel}
   \end{subfigure}
   \begin{subfigure}{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{muon_endcap}
     \caption{Endcap.}
-    \label{fig:met_mean}
+    \label{fig:muon_endcap}
   \end{subfigure}
   \caption{Muon transverse momentum resolution as a function of the
   transverse-momentum using only the muon system, only the tracker and both, for
@@ -527,12 +526,11 @@ At design luminosity, the high bunch crossing frequency of the LHC means that
 each crossing will contain an average of 20 superimposed inelastic
 events every \unit{25}{\nano\second}, a rate of $10^{9}$ interactions per
 second.
-The size of an event is approximatly \unit{1}{MB} after zero-suppresion.
-The total data output rate from CMS is \unit{$\approx 80$}{\tera \bel \per
-\second}.
+The size of an event is approximatly \unit{1}{\mega\bel} after zero-suppresion.
+The total data output rate from CMS is \unit{$\approx 80$}{\tera\bel\per\second}.
 These figures are many orders of magnitude larger that the storage and offline
 processing capability available to CMS, which corresponds to about
-\unit{250}{MB\per\second} or about $\approx 10^{2}$ crossings written to the tape
+\unit{250}{\mega\bel\per\second} or about $\approx 10^{2}$ crossings written to the tape
 storage every second. 
 
 The vast majority of events will contain only glancing inelastic collisions and
@@ -601,13 +599,13 @@ contains only the reconstructed objects. This is the format that is used to
 preform physics analyses.
 \end{itemize}
 
-CMS utilizes a distributed computing model called the ``Grid''.
-The Grid consists of several clusters of computer distributed around the world
-and organised in to several tiers \cite{grandi2004cms}.
-Events that pass the {HLT} are sent to the primary Tier-0 centre where the
-are stored on tape and undergo prompt reconstruction. The reconstructed data is
-distributed to Tier-1 and Tier-2 centres at national laboratories and
-universites around the world. The role of the Tier-1 and Tier-2 sites are to run
-the physics analyses and to reprocess the data when updated calibrations are
-available. This is typeically done once or twice a year.
+CMS utilizes a distributed computing model called the ``Grid''.  The Grid
+consists of several clusters of computer distributed around the world and
+organised in to several tiers \cite{grandi2004cms}.  Events that pass the {HLT}
+are sent to the primary Tier-0 centre where the raw data are stored on tape
+before undergoing prompt reconstruction. The reconstructed data are distributed
+to Tier-1 and Tier-2 centres at national laboratories and universites around the
+world. The role of the Tier-1 and Tier-2 sites are to run the physics analyses
+and to reprocess the data when updated calibrations are available. This is
+typically done once or twice a year.
 
