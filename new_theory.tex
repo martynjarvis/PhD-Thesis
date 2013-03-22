@@ -1,20 +1,19 @@
 \chapter{Standard Model}
 \label{chap:sm}
-The {SM} of particle physics is a quantum field theory that describes all
-known fundemental constituents of matter and their interactions through the
-strong, weak and electromagnetic forces.
-The theory was pieced together in the 60s and 70s and comprises two families of
-elementary particles, called quarks and leptons, and incorporates the theories
-of quantum electrodynamics (QED), Glashow-Weinberg-Salam theory of electroweak
-dynamics and quantum chromodynamics (QCD)
-\cite{t1972regularization, glashow1961partial, weinberg1967model,
-salam1968weak}.
+The Standard Model (SM) of particle physics is a quantum field theory that
+describes all known fundemental constituents of matter and their interactions
+through the strong, weak and electromagnetic forces.  The theory was pieced
+together in the 60s and 70s and comprises two families of elementary particles,
+called quarks and leptons, and incorporates the theories of quantum
+electrodynamics (QED), Glashow-Weinberg-Salam theory of electroweak dynamics and
+quantum chromodynamics (QCD) \cite{t1972regularization, glashow1961partial,
+weinberg1967model, salam1968weak}.
 
 The Standard Model is remarkable in its accuracy, describing every experimental
 test performed.  
-\todo[inline]{MAKE THIS GOODER.}
+\todo[inline]{Expand on this point. Give an example of an accurate prediction.}
 
-This chapter reviews the {SM} of particle physics. The first section will 
+This chapter reviews the Standard Model of particle physics. The first section will 
 introduce the matter constituents of the standart model; the leptons and quarks,
 and the latter section will describe the fundemental interactions. 
 The description follows the example given in \cite{ral} with additional insights
@@ -60,36 +59,45 @@ some of their properties are summarised in \TableRef{tab:particles}.
 
 \subsection{Leptons}
 Each lepton generation contains a charged lepton and a corresponding light
-neutral particle called a neutrino.  For each leptron there is a corresponding 
-anti-lepton with opposite charge, for example the positivly charged positron.
-Therefore, in total there are 12 leptons.  All leptons interact via the weak
-force, whereas only the charged leptons interact with the electromagnetic force.
+neutral particle called a neutrino.  The charged leptons are the electron
+(\Pelectron), the muon (\Pmuon) and the tauon (\Ptauon).  The neutrinos are the
+electron neutrino (\Pnue), the muon neutrino (\Pnum) and the tau neutrino
+(\Pnut).  For each leptron there is a corresponding anti-lepton with opposite
+charge, for example the positivly charged positron.  Therefore, in total there
+are 12 leptons.  All leptons interact via the weak force, whereas only the
+charged leptons interact with the electromagnetic force.
 
 The first generation of leptons is the most familiar containing the electron and
 the electron neutrino.
 
 \subsection{Quarks}
 There are six flavours of quark arranged in to three generations.
+The first generation contains the up (\Pup) and the down (\Pdown) quarks, the
+second generation contains the charm (\Pcharm) and strange (\Pstrange) quarks
+and the third generation, the top (\Ptop) and bottom (\Pbottom) quarks, often
+called the truth and beauty quarks.
 Unlike leptons, quarks carry fractional charge, within each generation there is
 a quark with a charge of $\nicefrac{2}{3}$ and another with a charge of
-$\nicefrac{-1}{3}$. As well as the electric charge, quarks carry an additional
+$\nicefrac{-1}{3}$.
+
+ As well as the electric charge, quarks carry an additional
 charge called the colour charge. The colour charge allows the quarks to interact
 via the strong force in addition the electromagnetic and the weak forces.
 For each quark, there is a corresponding anti-quark which has opposite charge
 and colour charge. Including the anti-quarks there are a total of 12 quarks.
 
 The first generation of quarks is again the most familiar, containing the up and
-down type quarks that are the constituents of the proton and neutron, which in
-turn, with the electron, form atoms and all familiar matter.
+down type quarks that are the constituents of the proton and neutron, which with
+the electron, form atoms and all familiar matter.
 
 \section{Fundamental Forces}
 \label{sec:forces}
 
 There are, as far as is known, four fundemental forces of nature, the strong,
-weak, electromagnetic and gravitational forces.
-\TableRef{tab:forces} summarises the forces in order of decreasing
-strength\footnote{The strength quoted in the table is a rough approximation as
-`strength' depends on the source and distance of a
+weak, electromagnetic and gravitational forces.  \TableRef{tab:forces}
+summarises the interactions and the the theory that describes them in order of
+decreasing strength\footnote{The strength quoted in the table is a rough
+approximation as the `strength' will depend on the source and distance of a
 force\cite{griffiths2008introduction}}
 
 \begin{table}[htbp]
@@ -98,9 +106,9 @@ force\cite{griffiths2008introduction}}
 \toprule
 Force           & Strength   & Theory   & Mediator \\
 \midrule
-Strong          & $10^{0}  $ & {QCD} & Gluon \\
-Electromagnetic & $10^{-2} $ & {QED} & Photon \\
-Weak            & $10^{-13}$ & {EWK} & \PW and \PZ \\
+Strong          & $10^{0}  $ & Quantum Chromodynamics  & Gluon \\
+Electromagnetic & $10^{-2} $ & Quantum Electrodynamics & Photon \\
+Weak            & $10^{-13}$ & Electroweak Dynamics    & \PW and \PZ \\
 Gravitational   & $10^{-42}$ & General Theory of Relativity & Graviton? \\
 \bottomrule
 \end{tabular}
@@ -109,10 +117,11 @@ Gravitational   & $10^{-42}$ & General Theory of Relativity & Graviton? \\
 \label{tab:forces}
 \end{table}
 
-The {SM} describes the strong, weak and electromagnetic interactions. Each
+The {Standard Model} describes the strong, weak and electromagnetic interactions. Each
 force is mediated by exchange of integer spin intermediate particles called
 bosons.
-The boson constituent of the {SM} are summarised in \TableRef{}.
+The boson constituent of the {Standard Model} are summarised in
+\TableRef{tab:boson}.
 
 \begin{table}[htbp]
 \begin{center}
@@ -120,13 +129,14 @@ The boson constituent of the {SM} are summarised in \TableRef{}.
 \toprule
 name & mass & charge \\
 \midrule
-Photon (\Pphoton) & 0    & 0 \\
-\PWpm             & 80.4 & $\pm1$ \\
-\PZ               & 91.2 & 0 \\
-gluon (\Pgluon)   & 0    & 0 \\
+Photon (\Pphoton) & 0            & 0 \\
+\PWpm             & 80.4         & $\pm1$ \\
+\PZ               & 91.2         & 0 \\
+gluon (\Pgluon)   & 0            & 0 \\
+Higgs (\PHiggs)   & $\approx125$ & 0 \\
 \bottomrule
 \end{tabular}
-\caption{The boson of the Standard Model.}
+\caption{The boson content of the Standard Model.}
 \end{center}
 \label{tab:boson}
 \end{table}
@@ -136,15 +146,16 @@ has not yet been found. However, the gravitational force is very weak when
 compared to the other three forces so its contribution to particle interactions
 is negligable.
 
-\subsection{QED}
+\subsection{Quantum Electro Dynamics}
 The classical theory for electromagnetism was formulated by Maxwell over a
-centuary ago\cite{maxwell}, and a quantum theory of electrodynamics was
-realised by Tomonaga, Feynman and Schwinger in the 1940s \cite{qed}.
+centuary ago\cite{maxwell}\todo{cite maxwell}, and a quantum theory of electrodynamics was
+realised by Tomonaga, Feynman and Schwinger in the 1940s \cite{qed}\todo{cite
+feynman}.
 
-The {EM} force is the force that is responsible for interaction between
-charged particles. The force is mediated by the massless photon, which means
-that the {EM} force is effective over infinite range.
-The fundemetal process of {QED} is shown in \FigureRef{fig:qed}.
+The electromagnetic interaction is responsible for the interaction between
+charged particles. The interaction is mediated by the massless photon, which means
+that the {electromagnetic} interaction is effective over an infinite range.
+The fundemental process of Quantum Electrodynamics (QED) is shown in \FigureRef{fig:qed}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.5\textwidth]{qed_process}
@@ -152,19 +163,18 @@ The fundemetal process of {QED} is shown in \FigureRef{fig:qed}.
 interactions can be reduced to.}
   \label{fig:qed}
 \end{figure}
-
 The fine structure constant, $\alpha$, specifys the strength of the interaction
-between charged particles and photon and is given by
+between charged particles and photon, and is given by
 \begin{equation}
-\alpha = \frac{e^2}{4 \pi} \approx \frac{1}{137}
+\alpha = \frac{e^2}{4 \pi} \approx \frac{1}{137}.
 \end{equation}
 
-The {SM} describes all the interactions of known particles in terms of gauge
+The {Standard Model} describes all the interactions of known particles in terms of gauge
 theories. A gauge theory is a theory that is invariant under a set of local
 transformations.  In electromagnetism the gauge transformations are local
 complex phase transformations of the charge particle fields. Requiring gauge
-invariance will in turn require that a massless vector particle be introduced,
-the photon, that mediates the {EM} interaction.
+invariance will require that a massless vector particle be introduced,
+the photon, that mediates the electromagnetic interaction.
 
 The lagrangian densitry for a free Dirac field, $\psi$, is given by,
 \begin{equation}
@@ -173,10 +183,10 @@ The lagrangian densitry for a free Dirac field, $\psi$, is given by,
 This Lagrangian is invariant under a `global' phase transformation of the
 fermion field,
 \begin{equation}
-\psi(x) \to e^{iQ\omega} \psi(x), \quad \bar{\psi}(x) \to e^{iQ\omega}\bar{\psi}(x),
+\psi(x) \to e^{i\omega} \psi(x), \quad \bar{\psi}(x) \to e^{i\omega}\bar{\psi}(x),
 \label{eq:global}
 \end{equation}
-where $Q$ is the charge operator and $\omega$ is a global arbitrary parameter. 
+where $\omega$ is a global arbitrary parameter. 
 The Lagrangian is said to exhibit global gauge invariance. 
 
 The family of transformations, $R = e^{i \omega}$, forms the
@@ -192,13 +202,14 @@ e^{-i\omega_2}
 e^{-i\omega_1} .
 \end{equation}
 
-If a infinitesimal group transformation is considered then 
+If an infinitesimal group transformation is considered then 
 \begin{equation}
 \psi(x) 
-\to e^{iQ\omega} \psi(x)
-\approx (1+iQ\omega)\psi(x),
+\to e^{i\omega} \psi(x)
+\approx (1+i\omega)\psi(x),
 \end{equation}
-and the Lagrangian is unchanged by the transformation.
+and it can be shown that the Lagrangian is unchanged by the
+transformation\cite{halzen1984quarks}.
 
 Global transformations introduce a problem that making a transformation requires
 that every space-time point to `know' about the transformation. It would be
@@ -212,27 +223,26 @@ where $\alpha$ is now a function of the space time coordinate $x$. This is known
 as a local phase transformation. The infinitesimal transformation now becomes,
 \begin{equation}
 \psi(x) 
-\to e^{iQ\omega} \psi(x)
-\approx (1+iQ\omega)\psi(x),
+\to e^{i\omega(x)} \psi(x)
+\approx (1+i\omega(x))\psi(x),
 \end{equation}
-However, under this transformation the
-Lagrangian is no longer invariant. 
+However, under this transformation the Lagrangian is now no longer invariant. 
 
 The gauge invariance can be restored if it is assumed that the fermion field
 interacts with a vector field, called a gauge field and denoted $A_{\mu}$, with
 an interaction,
 \begin{equation}
--e\bar{\psi}\gamma^{\mu}A_{\mu}Q\psi
+-e\bar{\psi}\gamma^{\mu}A_{\mu}\psi
 \end{equation}
 where $A_\mu$ transforms under a gauge transformation as 
 \begin{align}
--eQA_{\mu} \to & -eQ(A_{\mu}+\delta A_{\mu}(x)\\
-           =   & -e Q A_{\mu} + Q \partial_{\mu} \omega (x)
+-eA_{\mu} \to & -e(A_{\mu}+\delta A_{\mu}(x)\\
+           =   & -e A_{\mu} + \partial_{\mu} \omega (x)
 \end{align}
 and the new Lagrangian then becomes
 \begin{align}
 \mathcal{L} 
-&= \bar{\psi}( i\gamma^{\mu} ( \partial_{\mu} +i e Q A_{\mu}) - m)\psi \\
+&= \bar{\psi}( i\gamma^{\mu} ( \partial_{\mu} +i e A_{\mu}) - m)\psi \\
 &= \bar{\psi}( i\gamma^{\mu} D_{\mu} - m)\psi 
 \end{align}
 where the covariant derivative has been introduced,
@@ -267,13 +277,15 @@ A_{\mu}A^{\mu}$, will break the gauge invariance.
 
 \subsection{Quantum Chromodynamics}
 \label{sec:QCD}
+\todo[inline]{might be nice to include a section about the history of the
+interaction}
 The strong force is the force responsible for the interaction between particles
 that carry a colour charge, quarks and gluons. Unlike the electric charge, the
 colour charge can have three posible values, conventionally called `red',
-`green' and `blue' , as well as the corresponding anti colout charges
+`green' and `blue' , as well as the corresponding anti-colour charges
 `anti-red', `anti-green' and `anti-blue'.
-The fundemetal quark-gluon process of the strong force is shown in
-\FigureRef{fig:qcd}.
+The fundemental quark-gluon process of the strong force is shown in
+\FigureRef{fig:qcdquark}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.5\textwidth]{qcd_process}
@@ -282,7 +294,8 @@ The fundemetal quark-gluon process of the strong force is shown in
 \end{figure}
 The strong force is mediated by eight massless gluons which themselves carry
 colour charge. This allows the gluons to self-interact which results gluon-gluon
-vertexes in addtion to the quark-gluon vertex.
+vertexes in addtion to the quark-gluon vertex which are shown in
+\FigureRef{fig:qcd_gluon}.
 
 \begin{figure}[htbp]
   \centering
@@ -305,23 +318,22 @@ The coupling constant for the strnog force, $\alpha_s$, is given by,
 \begin{equation}
 \alpha = \frac{g_s^2}{4 \pi} \approx 1
 \end{equation}
-which is approximately 100 times stronger than the {EM} force.
-As the energy of the interaction increases the strength of the strong coupling
-decreases. This is known as asymptotic freedom, at high-energy experiments
-quarks appear to behave almost as free particles. However, at lower energies 
-the coupling increases and quarks only appear in bound states, this is known as
-quark confinement.
-\todo{diagram of quark confinement here?}
+which is approximately 100 times stronger than the {electromagnetic} force.
+
+A unique property of the strong force is that as the energy of the interaction
+increases the strength of the strong coupling decreases. This is known as
+asymptotic freedom; at high-energy experiments quarks appear to behave almost as
+free particles. However, at lower energies the coupling increases and quarks
+only appear in bound states. This phenomenon is known as quark confinement.  \todo{diagram
+of quark confinement here?}
 
 The strong interaction is described by the theory of {QCD}.
-Quantum chromodynamics follows from similar reasoning to the {QED} case, but with
+Quantum chromodynamics follows from similar reasoning to {QED}, but with
 the Abelian $U(1)$ symmetry group replaced with the non-Abelian $SU(3)$ symmetry
 group of transformations on the quark colour fields.
 
-\todo{show triplets here}
 Quarks form colour triplets under $SU(3)$ transformations for each quark
 flavour,
-
 \begin{equation}
 q_{f} =
 \left(\begin{matrix} 
@@ -334,21 +346,22 @@ The local gauge phase transformation under $SU(3)$,
 \begin{equation}
 q(x) \to e^{i\alpha_a(x)T_a} q(x),
 \end{equation}
-which breaks the invariance of the Lagrangian. Again this is overcome by
-introducing the covariant derivative,
+where $T_a$ are the generators of the SU(3) group. The transformation breaks
+the invariance of the Lagrangian. In a similar way to the U(1) transformation of
+QED, the gauge invariance can be restored by introducing the covariant
+derivative,
 \begin{equation}
 D_{\mu} \equiv \partial_{\mu} + i g T_{a} G_{\mu}^{a},
 \end{equation}
 where eight gauge fields have been introduced, instead of the single field in
-QED. \todo{what is T} 
-The gauge fields transform as,
+QED.  The gauge fields transform as,
 \begin{equation}
  G_{\mu}^{a} \to G_{\mu}^{a} 
 -\frac{1}{g}\partial_{\mu}\alpha_{a}
 -f_{abc}\alpha_{b}G^{c}_{\mu},
 \end{equation}
 where last additional term has been added is to produce a gauge invariant
-Lagrangian due to the non-Abelian gauge transformation.
+Lagrangian due to the non-Abelian gauge transformation of SU(3).
 
 The final Lagrangian for QCD can now be written,
 \begin{equation}
@@ -373,8 +386,9 @@ required to  be massless.
 
 The field strength tensor, $G^{\mu\nu}_{a}$, introduces terms that are cubic and
 quadratic in $G$. These represent three and four vertex gluon interactions
-(\FigureRef{fig:qcd_gluon}) that are a result of the non Abelian nature of the $SU(3)$ group.
- 
+(\FigureRef{fig:qcd_gluon}) and are a result of the non Abelian nature of the
+$SU(3)$ group.
+
 \subsection{Weak Force}
 The weak interaction occurs between all fermions and is the interaction
 responsible in the radioactive decay of sub-atomic particles.  Unlike the strong
@@ -448,10 +462,11 @@ another as shown in \FigureRef{fig:weak_boson}.
   \label{fig:weak_boson}
 \end{figure}
 
-The weak interaction also violates parity ($P$) and charge conjugation ($C$). A
+The weak interaction violates parity ($P$) and charge conjugation ($C$). A
 well known example of parity violation in weak interactions is the Wu experiment
-\cite{wu}. In the experiment the $\beta$ decay of nuclei (Cobalt-60) polarised by an
-external magnetic is studied, 
+\cite{wu1957experimental}.
+In the experiment, the $\beta$ decay of nuclei (Cobalt-60) polarised by an
+external magnetic was studied, 
 \begin{equation}
 \begin{matrix}
 \Rightarrow\Rightarrow \\
@@ -471,15 +486,14 @@ external magnetic is studied,
 \Rightarrow \\
 \APnue \\
 \rightarrow 
-\end{matrix}
+\end{matrix}.
 \end{equation}
-The Cobalt-60 nuclei are aligned to the external magnetic field. By conservation
-of angular momentum, the neutrino and electron spins must be parallel and
-aligned with the magnetic field. By
-momentum conservation, the electron and neutrino must be produced in opposite
-directions which means that the electron and neutrino must have oposite helicity. 
-By changing the direction of the magnetic field, the system undergoes a parity
-transformation
+The Cobalt-60 nuclei were aligned to the external magnetic field. By
+conservation of angular momentum, the neutrino and electron spins must be
+parallel and aligned with the magnetic field. By momentum conservation, the
+electron and neutrino must be produced in opposite directions which means that
+the electron and neutrino must have oposite helicity.  By changing the direction
+of the magnetic field, the system undergoes a parity transformation
 \begin{equation}
 \begin{matrix}
 \Leftarrow\Leftarrow \\
@@ -499,25 +513,22 @@ transformation
 \Leftarrow \\
 \APnue \\
 \rightarrow 
-\end{matrix}
+\end{matrix}.
 \end{equation}
-If parity is conserved then the electron would have no preference in direction.
+If parity was conserved then the electron would have no preference in direction.
 However, what was seen was that the electron was preferentially emitted in the
 oppsoite direction to their spin, the weak interaction exhibits maximal parity
 violation.
 More generally, the \PWpm boson is unique in that it only interacts with left handed
 particles (or right handed antiparticles).
-The \PW and \PZ bosons also have 3 and 4 vertex couplings to each
-another.\todo{refer to diagram this}
 
+\subsection{Electroweak Interaction}
 The electromagnetic and weak interactions can be described by a unified theory
 known as the electroweak theory.
-
 The gauge group for the electroweak theory is given by,
 \begin{equation}
-U(1)_{Y} \times SU(2)_{L} 
+U(1)_{Y} \times SU(2)_{L} .
 \end{equation}
-
 The $L$ subscript on $SU(2)$ indicates that the weak force couples to the left
 handed particles. 
 The $Y$ indicates that the $U(1)$ group is not the gauge
@@ -525,7 +536,7 @@ group of QED but is that of the hypercharge which is connected to the electric
 charge ($Q$) and the charge associated with the weak interaction, called weak
 isospin ($I$), by the Gell-Mann-Nishikima relation,
 \begin{equation}
-Q = I_{3}+ \frac{1}{2}Y
+Q = I_{3}+ \frac{1}{2}Y.
 \end{equation}
 
 The next step is to write down the matter content of the theory. 
@@ -540,16 +551,14 @@ For the case of the quarks, $q_{L}$ is a left handed doublet,
 q_{L} = \left( \begin{matrix} u\\ d \end{matrix} \right)_{L},
 \end{equation}
 and there are two right handed singlets, the $u_{R}$ and the $d_{R}$.
-In this
-description the left handed fermions form isospin doublets and the right
-handed fermions are singlets. 
-therefore under $SU(2)$ gauge transformations,
+In this description the left handed fermions form isospin doublets and the right
+handed fermions are singlets. Therefore, under $SU(2)$ gauge transformations,
 \begin{align}
 e_{R} &\to e_{R}^{\prime} = e_{R}\\
-l_{L} &\to l_{L}^{\prime} = e^{-i \omega^{a} \mathbf{T}^{a} }l_{L}
+l_{L} &\to l_{L}^{\prime} = e^{-i \omega^{a} {T}^{a} }l_{L}
 \end{align}
-where, under $SU(2)$ transformations, the $SU(2)$ singlets are invariant so do
-not couple with the corresponding gauge bosons.
+where $T^{a}$ are the generators of $SU(2)$.  The $SU(2)$ singlets are invariant
+so do not couple with the corresponding gauge bosons.
 
 The matter fields transform under the $U(1)_Y$ gauge transformations as,
 \begin{equation}
@@ -564,22 +573,20 @@ Y(q_{L}) =  \frac{1}{6}, \qquad Y(u_{R}) =  \frac{2}{3}, \qquad Y(d_{R}) = -\fra
 \end{equation}
 
 The lagrangian for the electroweak interaction can be written as the sum of the
-gauge boson and the fermion parts
+gauge boson and the fermion parts,
 \begin{equation}
 \mathcal{L}_{electroweak} = 
 \mathcal{L}_{fermion}
-+ \mathcal{L}_{gauge}
++ \mathcal{L}_{gauge}.
 \end{equation}
 
-
-The fermion term has a lepton and a quark part.
+The fermion term has a lepton and a quark part,
 \begin{equation}
 \mathcal{L}_{fermion} =
  \mathcal{L}_{lepton}
 + \mathcal{L}_{quark}.
 \end{equation}
-The quark and lepton Lagrangians can be written by inspection of the general
-expression in \EquationRef{eq:generallagrangian},
+The quark and lepton Lagrangians are given by,
 \begin{align*}
 \mathcal{L}_{lepton} &= 
 \bar{l}_{L} i \gamma^{\mu} \mathbf{D}_{\mu} l_{L} +
@@ -589,44 +596,44 @@ expression in \EquationRef{eq:generallagrangian},
 \bar{u}_{R} i \gamma^{\mu} D_{\mu} u_{R} +
 \bar{d}_{R} i \gamma^{\mu} D_{\mu} d_{R},
 \end{align*}
-where the covariant derivative has been introduced.
-The covariant derivative depends on the fermion field. The covariant derivative
+where the covariant derivative has again been introduced.
+The covariant derivative depends on the fermion field on which it acts. The covariant derivative
 for left-handed fermion, for example, is given by,
 \begin{equation}
 \mathbf{D}_\mu 
 = \partial_\mu 
 + ig\mathbf{T}^{a}W_{\mu}^{a}
-+ ig^{\prime}Y(l^{L})B_{\mu}
++ ig^{\prime}Y(l^{L})B_{\mu},
 \end{equation}
-where as the covariant derivative for the right-handed fermion, for example a
+whereas the covariant derivative for the right-handed fermion, for example a
 down quark, $d_R$,
 \begin{equation}
-D_\mu = \partial_\mu + ig^{\prime}Y(d^{R})B_{\mu}
+D_\mu = \partial_\mu + ig^{\prime}Y(d^{R})B_{\mu},
 \end{equation}
-where $g^\prime$ and $g$ and are the two coupling constantsa and
-$\mathbf{T}^{a}$ are the three generators of $SU(2)$ group.
+where $g^\prime$ and $g$ and are the two coupling constants,
+$\mathbf{T}^{a}$ are the three generators of $SU(2)$ group and $W^{a}_{\mu}$ are
+the three gauge fields in the theory.
 
 The gauge part of the Lagrangian contains the kinetic terms and self interaction
-terms for the gauge fields. By inspection of the general expression in
-\EquationRef{eq:generallagrangian},
+terms for the gauge fields,
 \begin{equation}
 \mathcal{L}_{gauge} = 
 - \frac{1}{4} B_{\mu\nu} B^{\mu\nu}
 - \frac{1}{4} W^{a}_{\mu\nu} W^{a~\mu\nu}
 \end{equation}
 where the first term contains the hypercharge field strength and the second term 
-contains the $SU(2)$ field stregth, so the index, $a$, runs from 1 to 3.
+contains the $SU(2)$ field stregth where the index, $a$, runs from 1 to 3.
 \begin{align*}
 B^{\mu\nu}     &= \partial^{\mu} B^{\nu} - \partial^{\nu} B^{\mu},\\
 W_{a}^{\mu\nu} &= \partial^{\mu} W_{a}^{\nu} - \partial^{\nu} W_{a}^{\mu} 
                 + g \epsilon_{abc} W_{b}^{\mu} W_{c}^{\nu}.
 \end{align*}
 
-Several gauge fields have been introduced, eight gluon fields $G^{a}_{\mu}$;
-three fields, $\mathbf{W}_{\mu}$ , corresponding to the $SU(2)_{L}$
+Four gauge fields have been introduced, 
+three fields, ${W}^{a}_{\mu}$ , corresponding to the $SU(2)_{L}$
 group and a single gauge field, $B_{\mu}$, corresponding to the $U(1)_{Y}$ group.
 The physical $\PWp$ and $\PWm$ bosons are superpositions of the $W^{1}_{\mu}$
-and $W^{2}_{\mu}$ gauge fields
+and $W^{2}_{\mu}$ gauge fields,
 \begin{equation}
 W^{\pm}_{\mu} = \frac{1}{\sqrt{2}} \left(W^{1}_{\mu} \mp W^{1}_{\mu}\right),
 \label{eq:wgauge}
@@ -647,25 +654,25 @@ constants by
 \cos\theta_{W} &= \frac{g}{\sqrt{g^{2}+g\prime^{2}}}.
 \end{align*}
 
-\subsubsection{Higgs}
+\subsubsection{Higgs Mechanism}
 
 The Lagrangian, as it has been written so far, does not include terms for the
 mass of any of the particles.  Adding in mass terms by hand will break the gauge
-symmetry rendering the theory meaningless.  \todo[inline]{WHY!}
+invariance rendering the theory meaningless.  \todo[inline]{I could include an
+example of why adding the mass terms in by hand will break gauge invariance}
 
-The symmetry needs to be broken in some natural way.  Spontaneous Symmetry
-Breaking is a method to break the symmetry by requiring that the Lagrangian of a
+The symmetry needs to be broken in some natural way.  Spontaneous symmetry
+breaking (SSB) is a method to break the symmetry by requiring that the Lagrangian of a
 system remains invariant under a transformation, but the ground state is not
 invariant.
 
-An example of {SSB} is a point mass in a potential,
+An example of spontaneous symmetry breaking is a point mass in a potential,
 \begin{equation}
 V(r) = \mu^{2} \vec{r} \cdot \vec{r} + \lambda ( \vec{r} \cdot \vec{r} )^{2}
 \end{equation}
 where $\lambda$ is positive. This potential is symmetric. 
-
 A point mass sits at $\vec{r}=0$. If $\mu^{2}>0$, as shown in
-\FigureRef{higgs_pot_mup} then $\vec{r}=0$ is the ground state and
+\FigureRef{fig:higgs_pot_mup} then $\vec{r}=0$ is the ground state and
 the mass will remain at this point.
 If $\mu^{2}<0$ then the potential will look like that given in
 \FigureRef{fig:higgs_pot_mum}. The system remains symmetric, but $\vec{r}=0$ is no longer
@@ -728,10 +735,8 @@ $\mu^{2}<0$ there is a minima at,
 \begin{equation}
 \Phi^{\dagger} \Phi = \frac{- \mu^{2}}{2 \lambda}.
 \end{equation}
-A plot of the Higgs potential with $\mu^{2}<0$ is shown in
-\FigureRef{fig:higgspot}. It is unstable to small perturbations, and will fall
-to a lower energy state. 
-
+The potential is unstable to small perturbations, and will fall
+to a lower energy ground state. 
 The ground state does not have the same symmetry as the Lagrangian; by
 selecting a minima the symmetry has become broken. An example choice of minima
 could be,
@@ -742,14 +747,14 @@ and
 \begin{equation}
 \phi_{3} = \frac{-\mu^{2}}{\lambda} \equiv v^{2}.
 \end{equation}
-which leaves results in a non-zero {vev},
+which leaves results in a non-zero vacuum-expectation value,
 \begin{equation}
 <0|\Phi|0> = \frac{1}{\sqrt{2}}\left(\begin{matrix}0\\v\end{matrix}\right),
 \end{equation}
-
 $\Phi$ can then be expanded around the vacuum minimum in terms of the four real
 field $H$ and $\phi_1$, $\phi_2$ and $\phi_3$.
 \begin{equation}
+\label{eq:phi}
 \Phi = 
 \frac{1}{\sqrt{2}}
 e^{i\nicefrac{\sigma}{2}\phi_a}
@@ -759,17 +764,16 @@ e^{i\nicefrac{\sigma}{2}\phi_a}
 \left(\begin{matrix}0\\v+H\end{matrix}\right)
 \end{equation}
 where the $SU(2)$ invariance of the lagrangian allows for the choice of $\phi_i$
-to be zero\cite{halzen1984quarks}.
+to be zero\cite{halzen1984quarks,ral}.
 
 The Lagrangian can be now written in terms of the $H$ field. The kinetic
 term,\cite{ral}
 \begin{align}
 \left(D_{\mu}\Phi\right) \left(D^{\mu}\Phi\right) 
-= \frac{1}{2} \left(\partial_{\mu}H\right) \left(\partial^{\mu}H\right)
-+ \frac{g^{2}v^{2}}{4} W_{\mu}^{+} W^{-~\mu}
-+ \frac{g^{2}v^{2}}{8 \cos^{2}\theta_{W}} Z_{\mu} Z^{\mu}
-+ 0 A_{\mu} A^{\mu}
-+ \text{~ interaction terms},
+&= \frac{1}{2} \left(\partial_{\mu}H\right) \left(\partial^{\mu}H\right) 
+         + \frac{g^{2}v^{2}}{4} W_{\mu}^{+} W^{-~\mu} \nonumber \\
+&\qquad{}+ \frac{g^{2}v^{2}}{8 \cos^{2}\theta_{W}} Z_{\mu} Z^{\mu} + 0 A_{\mu} A^{\mu} \nonumber \\
+&\qquad{}+ \text{~ interaction terms},
 \end{align}
 now includes mass terms for the gauge bosons,
 \begin{equation}
@@ -777,6 +781,9 @@ M_{W} = \frac{1}{2}gv, \qquad
 M_{Z} = \frac{1}{2}\frac{gv}{8\cos^{2}\theta_{W}} .
 \end{equation}
 while the photon remains massless, $M_{A}=0$.
+
+The mechanism also introduces an additional boson with a mass
+$\sqrt{-2\mu^{2}}$, called the Higgs boson.
 
 \subsubsection{Fermion Masses and Yukawa Couplings}
 
@@ -789,7 +796,7 @@ interaction for the electron can be written as,
 \end{equation}
 where $Y_{e}$ is the coupling to the Higgs field known as the Yukawa coupling
 and h.c. stands for hermitian conjugate. On substitution of $\Phi$ (from
-\EquationRef{}), the lagrangian for the Yukawa couplings becomes
+\EquationRef{eq:phi}), the lagrangian for the Yukawa couplings becomes,
 \begin{equation}
 \mathcal{L}_{yukawa} = 
 -\frac{Y_{e}}{\sqrt{2}} v
@@ -797,11 +804,11 @@ and h.c. stands for hermitian conjugate. On substitution of $\Phi$ (from
 -\frac{Y_{e}}{\sqrt{2}}
 (\bar{e}_L e_R + \bar{e}_R e_L)H
 \end{equation}
-and if $G_e$ is chosen such that
+and if $G_e$ is chosen such that,
 \begin{equation}
 m_{e} = \frac{G_{e}v}{\sqrt{2}}
 \end{equation}
-then the lagrangian simplifies to
+then the lagrangian simplifies to,
 \begin{equation}
 \mathcal{L}_{yukawa} = 
 - m_e \bar{e}e
@@ -811,8 +818,27 @@ which represents a mass term for the electron and a coupling of the electron to
 the Higgs field proportional to the mass of the electron.
 The quark masses can also be generated in a similar way \cite{halzen}.
 
-\todo[inline]{should I include a point here about the higgs boson itself and
-then link it to the discovery?}
-\cite{aad2012observation} and \cite{chatrchyan2012observation}
-\todo[inline]{summarise the main points of this section}
+\subsubsection{Higgs Boson Observation}
+On the fourth of July 2012, the two LHC experiments ATLAS and CMS both announced
+the discovery of a new boson that is compatible with the Standard Model Higgs
+boson \cite{aad2012observation,chatrchyan2012observation}. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.97\textwidth]{higgs}
+  \caption{The diphoton invariant mass distribution in CMS.  Each event has been
+catagorised and then weighted by the S/(S + B) value of its category, the inset
+is the unweighted invariant mass distribution. A peak in the region of \unit{125}{\GeV} can
+clearly be seen. From \cite{chatrchyan2012observation}. }
+  \label{fig:hgg}
+\end{figure}
+
+The Higgs search was performed in many different decay channels in the
+low-mass range from 110 up to \unit{160}{\GeV}. A significant channel is the
+diphoton channel, where the Higgs decays to a pair of photons via a top loop.
+\FigureRef{fig:hgg} shows the diphoton invariant mass distribution measured in CMS.
+A peak in the region of \unit{125}{\GeV} can clearly be seen. 
+After combining the observations in each of the channels, an excess of events
+was observed above what would be expected from only background events, with a
+local signiﬁcance of \unit{5.0}{\sigma} at a mass near 125 GeV.
 
