@@ -1,4 +1,4 @@
-\chapter{The LHC}
+\chapter{The LHC and the CMS Detector}
 \label{chap:LHC}
 \section{Large Hadron Collider}
 The Large Hadron Collider (LHC)\cite{lhc} is a circular synchrotron with a
@@ -9,8 +9,8 @@ Switzerland that was previously home to the LEP collider \cite{myers1990design}.
 When operating at its design energy and luminosity it will collide beams of
 protons at a centre of mass energy of \unit{14}{\TeV} and a luminosity of
 \unit{$ 10^{34} $}{\rpsquare\cm\reciprocal\second}.  It is also designed to
-collide two \unit{5.5}{\TeV} beams of heavy ions, such as lead nuclei\cite{lhc}.
-\TableRef{tab:lhcparam} sumarises the machine parameters relevent to the {CMS}
+collide two \unit{5.5}{\TeV} beams of lead ions, and other species\cite{lhc}.
+\TableRef{tab:lhcparam} summarises the machine parameters relevant to the {CMS}
 detector.
 
 \begin{table}[htbp]
@@ -33,8 +33,8 @@ Number of collisions/crossing & 20 & - \\
 \bottomrule
 \end{tabular}
 \caption{The machine parameters relevant for the LHC detectors. From \cite{chatrchyan2008cms}}
-\end{center}
 \label{tab:lhcparam}
+\end{center}
 \end{table}
 
 The main motivation for the LHC is to determine the mechanism that is
@@ -45,11 +45,11 @@ theories beyond the standard model such as supersymmetric theories and theories
 involving extra dimensions.  \FigureRef{fig:LHCxsec} shows various cross
 sections for several physics processes as a function of the centre of mass
 energy. The cross section for many physics processes of interest, such as the
-Higgs cross section, $\sigma_{Higgs}$, are several orders of magnitude below the
+Higgs cross section, $\sigma_{Higgs}$, are many orders of magnitude lower than the
 total inelastic cross section, $\sigma_{tot}$, and increase as a function of
 centre of mass energy.  The large centre of mass energy and high luminosity of
-the LHC is needed to be able to probe the small cross sections of new physics
-processes of interest.
+the LHC is needed to be able to probe the physics processes of interest with
+small cross sections.
 
 \begin{figure}[htbp]
   \centering
@@ -58,9 +58,9 @@ processes of interest.
 for several Standard Model processes such as the b quark production cross
 section, $\sigma_{b}$, and the Higgs boson production cross sections,
 $\sigma_{tot}$ is the total inelastic cross section.
-$\sigma_{Higgs}$. The cross sections that are of relevence to this thesis
+$\sigma_{Higgs}$. The cross sections that are of relevance to this thesis
 analysis are the \PW and \PZ boson cross sections $\sigma_{\PW}$ and
-$\sigma_{\PZ}$ respectivly.
+$\sigma_{\PZ}$ respectively.
 From \cite{campbell2006hard}.}
   \label{fig:LHCxsec}
 \end{figure}
@@ -68,11 +68,11 @@ From \cite{campbell2006hard}.}
 The LHC is part of a larger accelerator complex as shown in figure
 \FigureRef{fig:LHCcomplex}. Hydrogen gas is first ionised to produce a cloud of
 protons, which are then accelerated by the LINAC2 linear accelerator to
-\unit{50}{\MeV}.  Before being injected in to the Proton Synchrotron (PS) the
-protons are injected in to the Proton Synchrotron Booster (PSB) and accelerated
-to \unit{1.4}{\GeV}. In the PS the protons are formed in to bunches and the
+\unit{50}{\MeV}.  Before being injected into the Proton Synchrotron (PS) the
+protons are injected into the Proton Synchrotron Booster (PSB) and accelerated
+to \unit{1.4}{\GeV}. In the PS the protons are grouped into bunches and the
 energy is increased to \unit{25}{\GeV}. The bunches are then accelerated in the
-Super Proton Synchrotron (SPS) to \unit{450}{\GeV} and then injected in to the
+Super Proton Synchrotron (SPS) to \unit{450}{\GeV} and then injected into the
 LHC.
 
 \begin{figure}[htbp]
@@ -82,7 +82,7 @@ LHC.
   \label{fig:LHCcomplex}
 \end{figure}
 
-There are four main detector experiments studying the collisions at the
+There are four main experiments studying the collisions at the
 {LHC}.  
 ALICE\footnote{A Large Ion Collider Experiment.} is designed to study the quark
 gluon plasma that will be produced in the heavy ion collisions
@@ -101,15 +101,16 @@ interactions models that are used in the study of Extremely High-Energy
 Cosmic-Rays \cite{adriani2008lhcf}.
 The goal of the TOTEM\footnote{TOTal Elastic and diffractive cross section
 Measurement.} experiment is to measure the total proton-proton
-cross-section and studt the elastic and diffractive scattering at the LHC. The
-detetctor is located at either side of the CMS detector \cite{anelli2008totem}.
+cross section and study the elastic and diffractive scattering at the LHC. The
+detector is located at either side of the CMS detector \cite{anelli2008totem}.
 
 \subsection{Operational History}
 In September 2008 the {LHC} was commissioned and the first beams were
 circulated.  Before the first collisions could be delivered an interconnection
-between two of the dipole magnets failed when the magnet quenched.  This led to
+between two of the dipole magnets failed. This led to
 a large amount to helium rapidly evaporating which caused considerable damage to
-the machine \cite{lebrun2009sector}.  Due to this incident it was decided that
+the machine \cite{lebrun2009sector}.  Due to this incident it was decided that,
+after the repairs,
 the {LHC} should be run at a lower centre of mass energy of \unit{7}{\TeV} until
 the quench protection system could be upgraded \cite{myers2010lhc}.
 
@@ -122,15 +123,14 @@ ion collisions at \unit{2.36}{\TeV}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\textwidth]{int_lumi_cumulative_pp_1.pdf}
+  \includegraphics[width=\textwidth]{int_lumi_cumulative_pp_1}
   \caption{The luminosity delivered by LHC and recorded by CMS in 2010, 2011 and
 2012. From \cite{intlumi}.}
   \label{fig:LHC2010}
 \end{figure}
 
 The target for running in 2011 was to deliver \unit{1}{\invfb} of data. This was
-achieved by June. The target was increased to \unit{5}{\invfb} of data by the end
-of the yeah which was achieved by October. 
+achieved by June. The target was increased to \unit{5}{\invfb} of data for 2011 which was achieved by October. 
 In 2012 the {LHC} was operated at a centre of mass energy of \unit{8}{\TeV}
 and a total of \unit{22.1}{\invfb} of data was collected by December.
 The luminosity delivered by LHC and recorded in CMS in 2010, 2011 and 2012 is
@@ -162,9 +162,8 @@ Total cost (CHF)                    & $550\times 10 ^{6}$  \\
 \bottomrule
 \end{tabular}
 \caption{Main design parameters of the CMS detectors. From
-\cite{froidevaux2006general}.}
+\cite{froidevaux2006general}.\label{tab:cmsparam}}
 \end{center}
-\label{tab:cmsparam}
 \end{table}
 
 The design goals of the CMS detector are:\cite{chatrchyan2008cms}
@@ -178,7 +177,7 @@ tracker.
 \end{itemize}
 
 The design of CMS meets these requirements while overcoming significant
-experimental challenges.  At design luminosity of approximatly 1 billion
+experimental challenges.  At design luminosity of approximately 1 billion
 inelastic events will occur in CMS every second, whereas CMS is limited to
 storing the data of only $\approx 100 $ events within that time.  The detector
 must be able to reduce this rate with a trigger to accept events that are
@@ -193,14 +192,14 @@ required radiation hard detectors and electronics.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.98\textwidth]{cms_120918_02.pdf}
+  \includegraphics[width=0.98\textwidth]{cms_120918_02}
   \caption{Diagram of the CMS detector. From \cite{SketchUpCMSGallery}.}
   \label{fig:CMSnc}
 \end{figure}
 
 An overview of the detector is shown in \FigureRef{fig:CMSnc}.  Starting at the
 interaction point in the centre of the detector and moving radially outwards,
-CMS comprises the pixel tracker, the silicon microstip tracker, the
+CMS comprises the pixel tracker, the silicon microstrip tracker, the
 lead-tungstate ECAL, the sampling brass-plate HCAL, a \unit{4}{\tesla}
 superconducting solenoid magnet, an outer HCAL and four muon chambers.
 
@@ -226,7 +225,7 @@ trajectories of charged particles produced in collisions at the centre of CMS.
 The tracker is also required to be able to reconstruct secondary vertices from
 the decay of a long lived particle.  At the design luminosity of the LHC it
 is expected that every \unit{25}{\ns} an average of 1000 particles will traverse
-the inner detector therefore it is required that the tracker has a high
+the inner detector; therefore, it is required that the tracker has a high
 granularity and a fast response while remaining resilient to radiation damage. 
 
 \begin{figure}[htbp]
@@ -262,11 +261,11 @@ outer radius of \unit{15}{\cm}.
 
 A close up view of the pixel tracker is shown in \FigureRef{fig:pixel}.  
 Each pixel has a surface area of \unit{$100\times150$}{\micron} which results in
-an average particle ocupancy of $\mathcal{O}(10^{-4})$ per pixel per crossing.
+an average particle occupancy of $\mathcal{O}(10^{-4})$ per pixel per crossing.
 
 \subsubsection{Strip Tracker}
 The barrel strip tracker comprises two parts, the inner (TIB) and outer (TOB)
-trackers.  The TIB is made of 4 layers and covers the longditudinal region $|z|
+trackers.  The TIB is made of 4 layers and covers the longitudinal region $|z|
 < \unit{65}{\cm}$ and the region \unit{$20<r<55$}{\cm} in the radial direction.
 The TIB utilises microstrip detectors with a cell size of
 $\unit{10}{\cm}\times\unit{80}{\micron}$ are used with an average occupancy of
@@ -278,8 +277,8 @@ silicon microstrips with a cell size of
 $\unit{25}{\cm}\times\unit{180}{\micron}$ with an average occupancy of
 $\approx\unit{1}{\%}$.
 
-The endcaps are separated in to the Tracker End Cap (TEC) and the Tracker Inner
-Disks (TID). The TEC is split in to nine disks and covers the region
+The endcaps are separated into the Tracker End Cap (TEC) and the Tracker Inner
+Disks (TID). The TEC is split into nine disks and covers the region
 $\unit{120}{\cm} < |z| < \unit{280}{\cm}$. The TID comprises three rings
 and fills the gap between the TEC and the TIB.
 
@@ -313,17 +312,17 @@ identical supermodules that each cover a half length of the barrel
 ($0<|\eta|<1.479$) and \unit{20}{\degree} in phi. Each supermodule contains 1700
 crystals arranged in a $\phi - \eta$ grid with each crystal mounted in a
 ``semi-projective'' geometry, and aligned \unit{3}{\degree} off the nominal
-interaction vertex.  The alignments in the transverse and longditudinal planes
+interaction vertex.  The alignments in the transverse and longitudinal planes
 are shown in \FigureRef{fig:crystaltilt} and \FigureRef{fig:crystallong}
-respectivly. The non-pointing geometry prevents particles escaping throught the
+respectively. The non-pointing geometry prevents particles escaping through the
 gaps between the crystals \cite{ecal1997technical}.  Each crystal has a
-cross-section of \unit{$22 \times 22$}{\mm\squared} and a length of
+cross section of \unit{$22 \times 22$}{\mm\squared} and a length of
 \unit{230}{\mm} (\unit{25.8}{X_0}).
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{crystallong}
-  \caption{The crystal alignment in the longditinal view. From \cite{ecal1997technical}.}
+  \caption{The crystal alignment in the longitudinal view. From \cite{ecal1997technical}.}
   \label{fig:crystallong}
 \end{figure}
 
@@ -372,8 +371,6 @@ as non-uniform signal generation and calibration errors \cite{chatrchyan2008cms}
 The hadronic calorimeter (HCAL), in addition to the electromagnetic calorimeter,
 is designed to measure the energy of hadron jets and the missing transverse
 energy (\met) which are important signatures in many physics studies at the LHC.
-%A close up view of the CMS calorimetry is shown in \FigureRef{calo}, where the
-%HCAL is shown in yellow.
 
 The {HCAL} is a brass/scintillator
 sampling hadron calorimeter that covers the region up to $|\eta|<3.0$.  The
@@ -384,7 +381,7 @@ the high axial magnetic field \cite{chatrchyan2008cms}.
 The barrel hadron calorimeter (HB) covers the region ($|\eta| < 1.4$)
 and the hadron endcap covers the region $1.3 < |\eta| < 3.0$.
 
-The barrel hadron calorimter is
+The barrel hadron calorimeter is
 positioned between the ECAL and inside of the solenoid magnet coil
 ($\unit{1.77}{\meter}<r<\unit{2.95}{\meter}$).
 The strong constraints imposed by the dimensions of the solenoid magnet results
@@ -432,7 +429,7 @@ The performance of the missing transverse energy (\ETm) is shown in
 $\sigma(\ETm) \approx 1.0 \sqrt \ET$ and the average \ETm is 
 $\langle \ETm \rangle \approx 1.25 \sqrt \ET$ \cite{chatrchyan2008cms}.
 
-\subsection{The Forward Calorimter}
+\subsection{The Forward Calorimeter}
 In the forward region ($|\eta| > 3$) energy measurements are made with the
 forward hadronic calorimeter, situated \unit{11}{\meter} from the interaction
 point. The main role of the forward calorimeter is to improve the \ETm
@@ -455,7 +452,7 @@ The layout of the {CMS} muon system is shown in \FigureRef{fig:muon_system}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.98\textwidth]{muon_system}
-  \caption{The layout of a quater of the CMS muon system. From \cite{chatrchyan2008cms}.}
+  \caption{The layout of a quarter of the CMS muon system. From \cite{chatrchyan2008cms}.}
   \label{fig:muon_system}
 \end{figure}
 
@@ -517,8 +514,7 @@ from both the inner tracker and the muon detector.
   \caption{Muon transverse momentum resolution as a function of the
   transverse-momentum using only the muon system, only the tracker and both, for
   barrel muons ($|\eta| < 0.8$) and endcap muons ($1.2<|\eta| < 2.4$). From
-  \cite{chatrchyan2008cms}.} 
-  \label{fig:muon_perfomance} 
+  \cite{chatrchyan2008cms}.\label{fig:muon_performance}}
 \end{figure}
 
 \subsection{Trigger and Data Acquisition}
@@ -526,7 +522,7 @@ At design luminosity, the high bunch crossing frequency of the LHC means that
 each crossing will contain an average of 20 superimposed inelastic
 events every \unit{25}{\nano\second}, a rate of $10^{9}$ interactions per
 second.
-The size of an event is approximatly \unit{1}{\mega\bel} after zero-suppresion.
+The size of an event is approximately \unit{1}{\mega\bel} after zero-suppression.
 The total data output rate from CMS is \unit{$\approx 80$}{\tera\bel\per\second}.
 These figures are many orders of magnitude larger that the storage and offline
 processing capability available to CMS, which corresponds to about
@@ -556,30 +552,30 @@ Level Trigger (HLT).\cite{chatrchyan2008cms}
 The Level-1 trigger (L1) is designed to reduce the event rate from the bunch
 crossing frequency of \unit{40}{\mega\hertz} to a maximum output rate of
 \unit{100}{\kilo\hertz}.
-The L1 trigger is implemented with custom designed fast programmable electronics
+The L1 trigger is implemented with custom-designed fast programmable electronics
  that takes as input coarse data from the calorimeters and muon systems and
-places the high resolution data in pipelined memories. The reduced resolution
+places the high resolution data in pipe-lined memories. The reduced resolution
 and granularity data are used to form ``trigger primitives'', such as isolated
 high energy electromagnetic deposits that pass a certain \PT or \ET threshold,
-which the L1 Trigger uses to base its decision. It also recieves information on
-event wide variables such as the total sum of transverse energy and the missing
+which the L1 Trigger uses to base its decision. It also receives information on
+event-wide variables such as the total sum of transverse energy and the missing
 transverse energy.
 
 \subsubsection{High-Level Triggers}
 After a fixed time interval of \unit{3.2}{\micro\second} the high resolution
 event data held in the pipeline memories is either read out or discarded
-depending the decision at the Level-1 trigger.  The data are transfered to a
+depending the decision at the Level-1 trigger.  The data are transferred to a
 processor running the high-level trigger software.
 
 The high-level trigger (HLT) is a software system which runs on a server farm
 with over one thousand commercial multicore processors with access to the
 complete event data allowing it to make more complex calculations. 
 Objects are reconstructed in the HLT as they are needed and events are discarded
-as soon as possible to avoid wasted processing time.
+as soon as possible to avoid wasting processing time.
 The decision to accept an event is based on the the requirements on the datasets
 used in {CMS} analyses. A typical data-set requires a high \pT
-HLT-reconstructed object or a ammount of missing transverse energy in the event,
-for example, the data-set relevent to the analyses that follow in later chapters
+HLT-reconstructed object or a amount of missing transverse energy in the event,
+for example, the data-set relevant to the analyses that follow in later chapters
 requires a single high \pT electron.
 
 \subsubsection{Computing}
@@ -589,7 +585,7 @@ different levels of details \cite{grandi2004cms},
 \begin{itemize}
 \item Raw data, is the output of the events that pass the {HLT}. The files
 contain the detector data, the {L1} trigger results, the {HLT} trigger
-results and the higher-level objects that are created durint the {HLT}
+results and the higher-level objects that are created during the {HLT}
 process.
 \item Reconstructed (RECO) data, is the output of the reconstruction process.
 The files contain the reconstructed physics objects and reconstructed hits and
@@ -599,12 +595,12 @@ contains only the reconstructed objects. This is the format that is used to
 preform physics analyses.
 \end{itemize}
 
-CMS utilizes a distributed computing model called the ``Grid''.  The Grid
+CMS utilises a distributed computing model called the ``Grid''.  The Grid
 consists of several clusters of computer distributed around the world and
-organised in to several tiers \cite{grandi2004cms}.  Events that pass the {HLT}
+organised into several tiers \cite{grandi2004cms}.  Events that pass the {HLT}
 are sent to the primary Tier-0 centre where the raw data are stored on tape
 before undergoing prompt reconstruction. The reconstructed data are distributed
-to Tier-1 and Tier-2 centres at national laboratories and universites around the
+to Tier-1 and Tier-2 centres at national laboratories and universities around the
 world. The role of the Tier-1 and Tier-2 sites are to run the physics analyses
 and to reprocess the data when updated calibrations are available. This is
 typically done once or twice a year.
