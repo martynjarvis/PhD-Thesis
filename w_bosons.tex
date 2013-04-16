@@ -6,7 +6,7 @@ the {LHC}, \PW bosons are produced at a high rate while offering a clean
 experimental signal with a final state consisting of, in the case of a
 leptonically decaying \PW, a single high \PT lepton with a large amount of
 missing transverse energy due to the neutrino in the event. 
-The production of \PW, provides important
+The production of \PW bosons provides important
 information on the interacting partons within the colliding
 hadrons\cite{catani,kom}.
 
@@ -85,7 +85,7 @@ and for a \PWm:
     \caption{\HepProcess{\APup + \Pdown \to \PWm \to \Pleptonminus \APnulepton}}
     \label{fig:w_process_wm}
   \end{subfigure}
-  \caption{Tree-level diagrams for \PWp and \PWm boson production and electronic
+  \caption{Tree-level diagrams for \PWp and \PWm boson production and electron
 decay at a hadron-hadron collider.}\label{fig:w_process} 
 \end{figure}
 
@@ -116,37 +116,35 @@ $Q^2\approx M_{\PW}^2$ from the MSTW group.  The anti-quark parton densities
 $\APup(x,Q^2)$ and $\APdown(x,Q^2)$ are relatively similar especially at the LHC
 energies, where the parton momentum fraction, x, tends to be small.
 However, the {PDF} for the valence quarks in the proton differ, 
-\FigureRef{fig:plot_pdf} shows the up and down
-type quark PDF from the MSTW collaboration \cite{martin2009parton}.
-The up-type quark dominates over the down-type quark.
-This is due to the excess of up type valence quarks with respect to down type
+the up-type quark dominates over the down-type quark.
+This is due to the excess of up-type valence quarks with respect to down-type
 valence quarks in the proton (\HepProcess{\Pup\Pup\Pdown}). 
 This can be seen in the ratio of the up-type and the down-type {PDFs},
 \begin{equation}
   R_{ud}(x,Q^2) = \frac{\Pup(x,Q^2)}{ \Pdown(x,Q^2)} > 1,
 \end{equation}
 where $\Pup(x,Q^2)$ are the up and down quark {PDFs}.
-\FigureRef{fig:plot_pdf_ratio} shows the ratio of the up-type and down-type
+\FigureRef{fig:pdf_plots} shows the ratio of the up-type and down-type
 quarks.  The ratio $R$ changes as a function of $x$, $R \approx 1$ for $x \ll 1$
 and increases monotonically as $x$ increases.  The up-type quark will have a
 greater fraction of the proton's momentum than the down-type quark.
 
 \begin{figure}[htbp]
   \centering
-  \begin{subfigure}{\textwidth}
-    \centering
-    \includegraphics[width=0.75\textwidth]{plot_pdf}
-    \caption{PDF for \Pup and \Pdown}
-    \label{fig:plot_pdf}
-  \end{subfigure}
-
-  \begin{subfigure}{\textwidth}
-    \centering
-    \includegraphics[width=0.75\textwidth]{plot_pdf_ratio}
-    \caption{Ratio for \Pup and \Pdown PDF}
-    \label{fig:plot_pdf_ratio}
-  \end{subfigure}
-  \caption{Ratio of up quarks to down quarks, $R_{ud}$ $ Q^2=\unit{100}{\GeV^2}$.
+  %\begin{subfigure}{\textwidth}
+    %\centering
+    %\includegraphics[width=0.75\textwidth]{plot_pdf}
+    %\caption{PDF for \Pup and \Pdown}
+    %\label{fig:plot_pdf}
+  %\end{subfigure}
+  %\begin{subfigure}{\textwidth}
+    %\centering
+    %\includegraphics[width=0.75\textwidth]{plot_pdf_ratio}
+    %\caption{Ratio for \Pup and \Pdown PDF}
+    %\label{fig:plot_pdf_ratio}
+  %\end{subfigure}
+  \includegraphics[width=0.75\textwidth]{plot_pdf_ratio}
+  \caption{Ratio of up quarks to down quarks, $R_{ud}$ at $Q^2=\unit{100}{\GeV^2}$.
            Generated from \cite{hepdata} using the MSTW200nlo PDFs \cite{martin2009parton}.}
   \label{fig:pdf_plots} 
 \end{figure}
@@ -154,29 +152,36 @@ greater fraction of the proton's momentum than the down-type quark.
 \subsection{\PW Boson Rapidity Distribution}
 \label{wbos:wrapsec}
 
+The rapidity of a particle is defined as,
+\begin{equation}
+    y = \frac{1}{2} \ln \left(\frac{E+p_\text{L}}{E-p_\text{L}}\right),
+\end{equation}
+where $p_{L}$ is the longditudianl component (the component along the beam axis)
+of the momentum of the particle. It represents the boost along the beam axis
+required to go from the lab frame to the frame where the particle is produced
+perpendicular to the beam axis.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{w-rapidity}
   \caption{The rapidity distribution for \PWp and \PWm at the LHC $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions. 
-Generated with the MSTW2008nlo PDF\cite{martin2009parton} interfaced with the
-and the MCFM generator tool \cite{campbellmcfm}.}
+Generated with the MSTW2008nlo PDF\cite{martin2009parton} interfaced with the MCFM generator tool \cite{campbellmcfm}.}
   \label{wbos:wrapid}
 \end{figure}
 
-The rapidity distributions for \PWp and \PWm at the {LHC} are shown in
-\FigureRef{wbos:wrapid}. 
-In \FigureRef{wbos:wrapid} the \PWp cross section is greater than the \PWm
-cross section. This is a consequence of the different production processes for
-\PWp (\EquationRef{wbos:wpprod}) and \PWm (\EquationRef{wbos:wmprod}) and the
-{PDF} for the valence quarks in the proton differing as seen in
-\FigureRef{fig:plot_pdf}. The up-type quark {PDF} dominates over the
-down-type which leads to a greater \PWp production rate than \PWm.
+The rapidity distributions, $y_W$, for \PWp and \PWm bosons produced at the
+{LHC} are shown in \FigureRef{wbos:wrapid}.  The \PWp cross section is greater
+than the \PWm cross section.  This is a consequence of the different production
+processes for \PWp and \PWm (shown in \EquationRef{wbos:wpprod} and
+\EquationRef{wbos:wmprod} respectivly) and the {PDF} for the valence quarks in
+the proton differing as seen in \FigureRef{fig:pdf_plots}. The up-type quark
+{PDF} dominates over the down-type which leads to a greater \PWp production rate
+than \PWm.
 
 It is also seen in \FigureRef{wbos:wrapid} that the \PWm tends to be produced
-more centrally whereas the \PWp is produced at larger rapidities. This is due
-to \Pup quarks tending to carry a greater fraction of the proton's momentum,
-$x$, than the \Pdown type quarks as seen in \FigureRef{fig:plot_pdf_ratio}.
+more centrally whereas the \PWp can be produced at larger rapidities. This is due
+to up-type quarks tending to carry a greater fraction of the proton's momentum,
+$x$, than the down-type quarks as seen in \FigureRef{fig:pdf_plots}.
 
 The momentum fraction, $x$, of the interaction quarks is correlated with the
 rapidity of the \PW boson. Therefore, the ratio of $\Pup$ and $\Pdown$ quarks as
@@ -191,7 +196,6 @@ $R_{ud}(x,Q^2)$, within the proton\cite{kom}.
 
 \subsection{\PW Boson Charge Asymmetry}
 
-% formalised def of w asymmetry
 The \PWpm boson charge asymmetry is defined as,
 \begin{equation}
   A_{W}(y_{\PW})=
@@ -237,10 +241,10 @@ decaying leptonically.
 %with a {MC} study. 
 
 \section{W Boson Decay}
-The \PW boson will decay to either a lepton and neutrino , or a pair of up and
+The \PW boson will decay to either a lepton and neutrino, or a pair of up and
 down quarks. The branching fractions for the various decays are shown in
 \TableRef{tab:w_decay}.
-This thesis will consider the electronic decay of the \PW boson which will occur
+This thesis will consider the electron decay of the \PW boson which will occur
 in approximately $11\%$ of \PW decays.
 
 \begin{table}[htbp]
@@ -255,12 +259,12 @@ in approximately $11\%$ of \PW decays.
 hadrons         & $67.60\pm0.27$ \\
 \bottomrule
 \end{tabular}
-\caption{The \PWp decay modes. The decay modes of \PWm are the charge conjugates
+\caption{Experimentally measured \PWp decay modes. The decay modes of \PWm are the charge conjugates
 of the \PWp. From \cite{beringer2012review}.\label{tab:w_decay}} 
 \end{center}
 \end{table}
 
-\subsection{Electron Rapidity Distribution}
+\subsection{Electron Pseudorapidity Distribution}
 The rapidity distributions of the charged leptons produced from \PWpm decay are
 further complicated by the charge asymmetric decay of the \PWpm boson. 
 The asymmetric decay arises due to the $V-A$ coupling of the \PW boson to the
@@ -272,7 +276,7 @@ If the parton masses, are neglected the \Pup is left-handed and the \APdown is
 right-handed, as shown at the top of \FigureRef{wbos:wspin}. 
 
 In the \PWp decay the \Ppositron is right-handed and the \Pnue is left-handed.
-\FigureRef{wbos:wspin} shows if the  positron is produced in the same direction
+\FigureRef{wbos:wspin} shows that if the  positron is produced in the same direction
 as the incoming \APdown quark angular momentum is conserved and the decay is
 allowed.
 However the decay where the positron is produced in the same direction as the
@@ -283,24 +287,27 @@ preferentially in the direction of the \Pdown quark.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{w_decay_directions}
-  \caption{Preferred directions of electrons in 
-    \HepProcess{\PWplus\to\APelectron\Pnue} decay. Modified from \cite{aitchison2004gauge}. }
+  \caption{Preferred directions of electron spins in \HepProcess{\PWplus\to\APelectron\Pnue} decay. 
+The heavy arrows show the directions of the incoming protons, the thin arrows
+show the directions of the incoming quarks and the outgoing electron and
+neutrino. The double arrows show the spins. 
+Modified from \cite{aitchison2004gauge}. }
   \label{wbos:wspin}
 \end{figure}
 
 The distribution of the electron from \PWpm decay in the massless limit
 is given by\cite{perkins2000introduction,aitchison2004gauge},
 \begin{equation}
-  \frac{1}{\sigma_{U\bar{D}}}
-  \frac{d \sigma_{U\bar{D}}}{d \cos \theta_{\Plepton D}^{\ast}}
+  \frac{1}{\sigma_{u\bar{d}}}
+  \frac{d \sigma_{u\bar{d}}}{d \cos \theta_{\Plepton d}^{\ast}}
   =
-  \frac{1}{\sigma_{D\bar{U}}}
-  \frac{d \sigma_{D\bar{U}}}{d \cos \theta_{\Plepton D}^{\ast}}
+  \frac{1}{\sigma_{d\bar{u}}}
+  \frac{d \sigma_{d\bar{u}}}{d \cos \theta_{\Plepton d}^{\ast}}
   \propto
-  (1+\cos \theta_{\Plepton D}^{\ast})^2
+  (1+\cos \theta_{\Plepton d}^{\ast})^2
   \label{wbos:lepton}
 \end{equation}
-where $\theta_{\Plepton D}^{\ast}$ is the scattering angle of the charged
+where $\theta_{\Plepton d}^{\ast}$ is the scattering angle of the charged
 lepton with respect to the direction of the down-type quark or anti-quark, in
 the centre of mass system of the two quarks. The cross section is maximised when
 $\theta_{\Plepton D}^{\ast}$ is minimised and the charged lepton is produced in
@@ -311,20 +318,29 @@ The rapidity distribution of the electron is therefore a convolution of the
 described in \SectionRef{wbos:wrapsec}.  In proton-proton collisions the \PWp
 tends to be produced in the direction of the \Pup.  However, due to the
 electroweak correlations the charged lepton from the decaying \PWp will tend to
-be produced along the direction of the down type quark and therefore will shift
+be produced along the direction of the down-type quark and therefore will shift
 the rapidity distribution of the lepton to be more central. Similarly, \PWm
 bosons tend to be produced more centrally, however the electroweak correlations
 will shift the charge lepton rapidity distribution to higher rapidities.
 
-\FigureRef{fig:leptonrapidity} shows the {MC} generated rapidity distribution
+\FigureRef{fig:leptonrapidity} shows the Monte Carlo (MC) generated pseudorapidity distribution
 of electrons and positrons produced in $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions. 
+The pseudorapidity is defined as 
+\begin{equation}
+    \eta = -\ln\left[\tan\left(\frac{\theta}{2}\right)\right], 
+\end{equation}
+where $\theta$ is the angle between the particle direction and the beam axis.
+In the massless approximation, this is equal to the rapidity of the electron.
+
+\todo{e+ and e- PT distributions?}
+\todo{$\eta$ or $\eta_e$}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{lepton-rapidity}
-  \caption{Electron and positron rapidity distributions in $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions. 
+  \caption{Electron and positron pseudorapidity, $\eta_e$, distributions in $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions. 
 Generated with the MSTW2008nlo PDF\cite{martin2009parton} interfaced with the
-and the MCFM generator tool \cite{campbellmcfm}.}
+MCFM generator tool \cite{campbellmcfm}.}
   \label{fig:leptonrapidity}
 \end{figure}
 
@@ -348,7 +364,7 @@ collisions by the CDF and D0 experiments at the Fermilab Tevatron collider
 \FigureRef{wbos:asym_simple} shows the electron charge asymmetry prediction for
 electron transverse momentum cuts of \unit{25}{\GeV}. The prediction was
 produced using the MSTW2008NLO PDF\cite{martin2009parton} set.
-Unlike the \PW asymmetry , the electron asymmetry turns over at $\eta\approx
+Unlike the \PW asymmetry, the electron asymmetry turns over at $\eta\approx
 2.25$. This effect is due to the electroweak correlations in the leptonic decay of
 the \PW boson.
 
@@ -357,7 +373,7 @@ the \PW boson.
   \includegraphics[width=0.8\textwidth]{lepton-asym}
   \caption{Electron charge asymmetry at LHC in $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions. 
 Generated with the MSTW2008nlo PDF\cite{martin2009parton} interfaced with the
-and the MCFM generator tool \cite{campbellmcfm}.}
+MCFM generator tool \cite{campbellmcfm}.}
   \label{wbos:asym_simple}
 \end{figure}
 
@@ -386,11 +402,11 @@ As the asymmetry is a ratio, the luminosity, high level trigger and the
 offline efficiency can be cancelled out assuming that they are not asymmetric
 with respect to charge. 
 
-The acceptance cannot be cancelled, since it is a function of rapidity and these
-distributions will differ for \Pelectron and \APelectron. A correction due to
-acceptance effect could be included, but would be highly dependent on the choice
-of PDF used to generate the corrections \cite{cdfWAsym}.  The measurements
-presented in this thesis do not correct for acceptance effects.
+The acceptance cannot be cancelled, it is a function of transverse momentum of
+the electron, and these distributions will differ for \Pelectron and \APelectron.
+A correction due to acceptance effect could be included, but would be highly
+dependent on the choice of PDF used to generate the corrections \cite{cdfWAsym}.
+The measurements presented in this thesis do not correct for acceptance effects.
 
 %\begin{align} 
 %A_{exp}(\eta) &= \frac{ \frac{dN}{d\eta}(\Pelectron) -
@@ -419,13 +435,17 @@ associated with the uncertainty on the {PDF}.
 The uncertainty on the {PDF} originates from the experimental errors on the
 data used in the global fits performed by each of the {PDF} collaborations.
 
+
+
 Each {PDF} collaboration produces a set of {PDFs} that include the
 central value, or best fit to experimental data, and $2N$ error {PDFs}, where
 $N$ is the number of free parameters used in the global
 fit\cite{Bourilkov:2006cj}.
+For each free parameters there is a PDF produced with the parameter at its upper
+error and another with the parameter at its lower error. 
 
 The uncertainty on the observable, in this case the lepton asymmetry, is found
-by producing $2N+1$ theoretical predictions, on for each member of the {PDF}
+by producing $2N+1$ theoretical predictions, one for each member of the {PDF}
 set. The predictions are then used to approximate the {PDF} uncertainty by
 using the `master equation'\cite{Bourilkov:2006cj,campbell2006hard}.
 For the upper uncertainty,
@@ -443,7 +463,7 @@ where $A^{\pm}_{i}$ is the asymmetry prediction using the {PDF} with the
 positive/negative fluctuation of parameter $i$ and $A_{0}$ is the prediction
 using the central value.
 
-\subsection{Prediction of the Electron Charge Asymmetry at \unit{25}{\GeV}}
+\subsection{Prediction of the Electron Charge Asymmetry above \unit{25}{\GeV}}
 
 \begin{figure}[htbp]
   \centering
@@ -456,14 +476,15 @@ predictions are generated using the {MCFM} \cite{campbellmcfm} generator.}
   \label{fig:asym-uncert}
 \end{figure}
 
-\FigureRef{fig:asym-uncert} shows the electron charge asymmetry theoretical
-predictions for a $\pT>\unit{25}{\GeV}$ with the {PDF} uncertainties with PDFs
+\FigureRef{fig:asym-uncert} shows the theoretical predictions for the electron charge asymmetry 
+for $\pT>\unit{25}{\GeV}$ with PDFs
 from the MSTW collaboration\cite{martin2009parton} and the CTEQ collaboration\cite{lai2010vv}.
+The uncertainty due to the PDFs is included.
 The predictions show a disagreement with the asymmetry at low rapidities. The
 CTEQ tends to be higher and the MSTW lower. The disagreement is greater than the
 PDF uncertainty on the measurement.
 
-\subsection{Prediction of the Electron Charge Asymmetry at \unit{30}{\GeV}}
+\subsection{Prediction of the Electron Charge Asymmetry above \unit{30}{\GeV}}
 
 \begin{figure}[htbp]
   \centering
@@ -476,8 +497,8 @@ predictions are generated using the {MCFM} \cite{campbellmcfm} generator.}
   \label{fig:asym-uncert-30}
 \end{figure}
 
-\FigureRef{fig:asym-uncert-30} shows the electron charge asymmetry theoretical
-predictions for a $\pT>\unit{30}{\GeV}$ with the {PDF} uncertainties with PDFs
+\FigureRef{fig:asym-uncert-30} shows the theoretical predictions for the electron charge asymmetry 
+for $\pT>\unit{30}{\GeV}$ with PDFs
 from the MSTW collaboration\cite{martin2009parton} and the CTEQ
 collaboration\cite{lai2010vv}.  Similar disagreement between the asymmetry
 predictions at low rapidities is seen.

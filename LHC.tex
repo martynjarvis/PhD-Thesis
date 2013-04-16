@@ -17,10 +17,10 @@ detector.
 \begin{center}
 \begin{tabular}{ l l l }
 \toprule
-Parameter & p-p & pb-pb \\
+Parameter & p-p & Pb-Pb \\
 \midrule
 Energy per nucleon ($\TeV$)& 7 & 2.36 \\
-Dipole ﬁeld at \unit{7}{\TeV} ($\tesla$)& 8.33 & 8.33\\
+Dipole field at \unit{7}{\TeV} ($\tesla$)& 8.33 & 8.33\\
 Design luminosity ($\lumiunits$)& $10^{34}$ & $10^{27}$ \\
 Bunch separation ($\ns$)& 25 & 100\\
 No. of bunches & 2808 & 592 \\
@@ -29,10 +29,11 @@ No. particles per bunch& $1.15\times10^{11}$ & $1.15\times10^{11}$\\
 $\beta$-value at IP ($\metre$)& 0.55 & 0.5 \\
 RMS beam radius at IP ($\micron$)& 16.7 & 15.9 \\
 Luminosity lifetime (hr)& 15 & 6 \\
-Number of collisions/crossing & 20 & - \\
+Average number of collisions/crossing & 20 & - \\
 \bottomrule
 \end{tabular}
-\caption{The machine parameters relevant for the LHC detectors. From \cite{chatrchyan2008cms}}
+\caption{The machine parameters relevant for the LHC detectors. From
+\cite{chatrchyan2008cms}.}
 \label{tab:lhcparam}
 \end{center}
 \end{table}
@@ -41,7 +42,7 @@ The main motivation for the LHC is to determine the mechanism that is
 responsible for electroweak symmetry breaking, of which the most favoured is the
 Higgs mechanism.  The LHC is also designed to test the Standard Model at the
 $\TeV$ scale at high precision and to search for new particles predicted by
-theories beyond the standard model such as supersymmetric theories and theories
+theories beyond the Standard Model such as supersymmetric theories and theories
 involving extra dimensions.  \FigureRef{fig:LHCxsec} shows various cross
 sections for several physics processes as a function of the centre of mass
 energy. The cross section for many physics processes of interest, such as the
@@ -57,15 +58,16 @@ small cross sections.
   \caption{The theoretical production cross sections as a function of centre of mass energy
 for several Standard Model processes such as the b quark production cross
 section, $\sigma_{b}$, and the Higgs boson production cross sections,
+$\sigma_{Higgs}$.
 $\sigma_{tot}$ is the total inelastic cross section.
-$\sigma_{Higgs}$. The cross sections that are of relevance to this thesis
+The cross sections that are of relevance to this thesis
 analysis are the \PW and \PZ boson cross sections $\sigma_{\PW}$ and
 $\sigma_{\PZ}$ respectively.
 From \cite{campbell2006hard}.}
   \label{fig:LHCxsec}
 \end{figure}
 
-The LHC is part of a larger accelerator complex as shown in figure
+The LHC is part of a larger accelerator complex as shown in 
 \FigureRef{fig:LHCcomplex}. Hydrogen gas is first ionised to produce a cloud of
 protons, which are then accelerated by the LINAC2 linear accelerator to
 \unit{50}{\MeV}.  Before being injected into the Proton Synchrotron (PS) the
@@ -97,8 +99,8 @@ In addition there are two smaller special-purpose detectors.
 The LHCf \footnote{Large Hadron Collider forward.} is an experiment designed to
 measure the neutral particles emitted in the very forward region of LHC
 collisions.  The goal of the experiment is to provide data for hadron
-interactions models that are used in the study of Extremely High-Energy
-Cosmic-Rays \cite{adriani2008lhcf}.
+interactions models that are used in the study of extremely high-energy
+cosmic-rays \cite{adriani2008lhcf}.
 The goal of the TOTEM\footnote{TOTal Elastic and diffractive cross section
 Measurement.} experiment is to measure the total proton-proton
 cross section and study the elastic and diffractive scattering at the LHC. The
@@ -118,8 +120,8 @@ The {LHC} was repaired by the end of 2009 and the first collisions at a record
 energy of \unit{2.36}{\TeV} were delivered in November.  From March to November
 2010 the {LHC} operated at \unit{7}{\TeV} delivering \unit{46.4}{\invpb} of
 proton-proton collisions of which \unit{36.1}{\invpb} was certified for analysis
-\cite{myers1990design}.  In November and October 2010 the {LHC} produced lead
-ion collisions at \unit{2.36}{\TeV}
+\cite{myers1990design}.  In November and December 2010 the {LHC} produced lead
+ion collisions at \unit{2.36}{\TeV}.
 
 \begin{figure}[htbp]
   \centering
@@ -136,8 +138,8 @@ and a total of \unit{22.1}{\invfb} of data was collected by December.
 The luminosity delivered by LHC and recorded in CMS in 2010, 2011 and 2012 is
 shown in \FigureRef{fig:LHC2010} \cite{intlumi}.
 
-The analysis presented in the following chapters is based on the \unit{36.1} of
-data from  2010 and \unit{840}{\invpb} of data from the first half of 2011.
+The analysis presented in the following chapters is based on the
+\unit{36.1}{\invpb} of data from  2010 and \unit{840}{\invpb} of data from the first half of 2011.
 
 \section{CMS Detector}
 {CMS} is one of the two general purpose
@@ -173,11 +175,11 @@ unambiguously assign charge to muons with $\PT < \unit{1}{\TeV}$
   \item Good charged particle momentum resolution and reconstruction in the
 tracker.
   \item Good electromagnetic energy resolution. 
-  \item Good \ETmiss and dijet mass resolution.
+  \item Good resolution of missing transverse energy and dijet mass.
 \end{itemize}
 
 The design of CMS meets these requirements while overcoming significant
-experimental challenges.  At design luminosity of approximately 1 billion
+experimental challenges.  At design luminosity, approximately 1 billion
 inelastic events will occur in CMS every second, whereas CMS is limited to
 storing the data of only $\approx 100 $ events within that time.  The detector
 must be able to reduce this rate with a trigger to accept events that are
@@ -200,8 +202,9 @@ required radiation hard detectors and electronics.
 An overview of the detector is shown in \FigureRef{fig:CMSnc}.  Starting at the
 interaction point in the centre of the detector and moving radially outwards,
 CMS comprises the pixel tracker, the silicon microstrip tracker, the
-lead-tungstate ECAL, the sampling brass-plate HCAL, a \unit{4}{\tesla}
-superconducting solenoid magnet, an outer HCAL and four muon chambers.
+lead-tungstate electromagnetic calorimeter, the sampling brass-plate hadronic
+calorimter, a \unit{4}{\tesla} superconducting solenoid magnet, an outer
+hadronic calorimeter and four muon chambers.
 
 \subsection{Magnet}
 A large superconducting solenoid provides the basis for the design of the CMS
@@ -223,7 +226,7 @@ yoke which is interleaved with the muon detector.
 The inner tracker is designed to accurately and efficiently measure the
 trajectories of charged particles produced in collisions at the centre of CMS.
 The tracker is also required to be able to reconstruct secondary vertices from
-the decay of a long lived particle.  At the design luminosity of the LHC it
+the decay of long-lived particles.  At the design luminosity of the LHC it
 is expected that every \unit{25}{\ns} an average of 1000 particles will traverse
 the inner detector; therefore, it is required that the tracker has a high
 granularity and a fast response while remaining resilient to radiation damage. 
@@ -238,7 +241,7 @@ tracker. From \cite{cmsgsf}.}
 
 A quadrant of the cross sections of the barrel part of the {CMS}
 tracker is shown in \FigureRef{fig:tracker}.
-The tracker utilises silicon pixel detectors in the inner most layers where the
+The tracker utilises silicon pixel detectors in the innermost layers where the
 particle flux is the highest.  Outside of the pixel detector, the tracking
 detector comprises several layers of silicon microstrip detectors where the
 particle flux is smaller.  The total active area of silicon in the CMS tracker
@@ -268,7 +271,7 @@ The barrel strip tracker comprises two parts, the inner (TIB) and outer (TOB)
 trackers.  The TIB is made of 4 layers and covers the longitudinal region $|z|
 < \unit{65}{\cm}$ and the region \unit{$20<r<55$}{\cm} in the radial direction.
 The TIB utilises microstrip detectors with a cell size of
-$\unit{10}{\cm}\times\unit{80}{\micron}$ are used with an average occupancy of
+$\unit{10}{\cm}\times\unit{80}{\micron}$ with an average occupancy of
 $\approx\unit{2-3}{\%}$.
 
 The TOB is formed of 6 layers with a half-length of $|z| < \unit{110}{\cm}$. In
@@ -287,15 +290,15 @@ and fills the gap between the TEC and the TIB.
 
 \subsection{Electromagnetic Calorimeter}
 The electromagnetic calorimeter (ECAL) is designed to measure the energy of
-electrons and photons with a high resolution.  It has a fine lateral granularity
-to help with shower separation.  It is a hermetic, homogeneous calorimeter
+electrons and photons with a high resolution. It has a fine lateral granularity
+to help with shower separation. It is a hermetic, homogeneous calorimeter
 comprising 61200 individual lead tungstate ($PbWO_{4}$) scintillation crystals
 in the barrel region ($|\eta|<1.479$) closed by 7324 crystals in each of the two
 endcap parts ($1.479<|\eta|<3.0$) \cite{ecal1997technical}.
 
 Lead tungstate crystals are ideally suited for this since the scintillation
 decay time is similar to the LHC bunch crossing time, 
-with \unit{80}{\%} of light being produced within \unit{25}{\ns}.
+with $80\%$ of light being produced within \unit{25}{\ns}.
 They also have a short radiation length ($X_0=\unit{0.89}{\cm}$) 
 and Moliere radius (\unit{2.2}{\cm}) as well as being radiation hard
 (up to \unit{10}{\mrad}).
@@ -312,7 +315,7 @@ identical supermodules that each cover a half length of the barrel
 ($0<|\eta|<1.479$) and \unit{20}{\degree} in phi. Each supermodule contains 1700
 crystals arranged in a $\phi - \eta$ grid with each crystal mounted in a
 ``semi-projective'' geometry, and aligned \unit{3}{\degree} off the nominal
-interaction vertex.  The alignments in the transverse and longitudinal planes
+interaction vertex.  The alignments in the longitudinal and transverse planes
 are shown in \FigureRef{fig:crystaltilt} and \FigureRef{fig:crystallong}
 respectively. The non-pointing geometry prevents particles escaping through the
 gaps between the crystals \cite{ecal1997technical}.  Each crystal has a
@@ -322,14 +325,18 @@ cross section of \unit{$22 \times 22$}{\mm\squared} and a length of
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{crystallong}
-  \caption{The crystal alignment in the longitudinal view. From \cite{ecal1997technical}.}
+  \caption{The crystal alignment in the longitudinal view. The dotted lines show
+the alignment of the edge of the crystals. A single supermodule is shown. From
+\cite{ecal1997technical}.}
   \label{fig:crystallong}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{crystaltilt}
-  \caption{The tilt of the ECAL crystals in the transverse plane. From \cite{ecal1997technical}.}
+  \caption{The tilt of the ECAL crystals in the transverse plane (left) and the
+alignment of the supermodules (right). The dotted lines show the alignment of
+the crystal edges.  From \cite{ecal1997technical}.}
   \label{fig:crystaltilt}
 \end{figure}
 
@@ -353,12 +360,12 @@ found to be\cite{chatrchyan2008cms},
 \left(\frac{\unit{124}{\MeV}}{E}\right)^{2} + 
 \left(\unit{0.26}{\%}\right)^{2}  
 \end{align}
-where $S$ is the stochastic, $N$ is the noise and $C$ is the constant terms.
-The {ECAL} energy resolution is shown in \FigureRef{fig:ECAL}.  The
+where $S$ is the stochastic term, $N$ is the noise term and $C$ is the constant
+term. The {ECAL} energy resolution is shown in \FigureRef{fig:ECAL}. The
 stochastic term is due to the statistical fluctuations in the particles produced
 in the electromagnetic shower. The noise term is due to electronic noise and
-pile-up. The constant term is due to errors that are independent of energy, such
-as non-uniform signal generation and calibration errors \cite{chatrchyan2008cms}.
+pile-up. The constant term is due to errors such as non-uniform signal
+generation and calibration errors \cite{chatrchyan2008cms}.
 
 \begin{figure}[htbp]
   \centering
@@ -382,24 +389,37 @@ The barrel hadron calorimeter (HB) covers the region ($|\eta| < 1.4$)
 and the hadron endcap covers the region $1.3 < |\eta| < 3.0$.
 
 The barrel hadron calorimeter is
-positioned between the ECAL and inside of the solenoid magnet coil
+positioned between the ECAL and the inside of the solenoid magnet coil
 ($\unit{1.77}{\meter}<r<\unit{2.95}{\meter}$).
 The strong constraints imposed by the dimensions of the solenoid magnet results
-in the HB having insufficient amount of material to absorb the hadronic shower. 
+in the HB having an insufficient amount of material to absorb the hadronic shower. 
 To overcome this limitation the outer hadronic calorimeter (HO) or tail catcher,
 has been added around the solenoid magnet to increase the
 effective thickness of the hadron calorimetry to over 10 interaction lengths.
-This provides better protection against punch through to the muon system.
+This provides better protection against punch-through to the muon system.
+
+\subsubsection{The Forward Calorimeter}
+In the forward region ($|\eta| > 3$) energy measurements are made with the
+forward hadronic calorimeter, situated \unit{11}{\meter} from the interaction
+point. The main role of the forward calorimeter is to improve the \ETm
+measurement and to tag jets in the forward direction.
+
+The forward hadronic calorimeter is an iron/quartz-fibre calorimeter where the
+Cherenkov light is detected by photodetectors.  The calorimeter needs to be
+radiation hard due to the very large flux in the forward region. However, it is
+still expected that after 10 years of operation the light output will be reduced by
+about $30\%$ due to the level of radiation \cite{chatrchyan2008cms}. 
 
 \subsubsection{Performance}
 
 \FigureRef{fig:hcalperform} shows the jet energy resolution for three parts of
 the {HCAL} measured in test beams. The granularity of the sampling in each
 region of the HCAL is such that the resolution is similar in each.
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{hcal_performance}
-  \caption{Energy resolution $\nicefrac{\sigma}{E}$ of HCAL as a function of jet
+  \caption{The jet transverse energy resolution as a function of jet
 transverse energy for barrel jets ($|\eta| < 1.4$), endcap jets ($1.4<|\eta| <
 3$) and forward jets ($3<|\eta| < 5$). From \cite{chatrchyan2008cms}. }
   \label{fig:hcalperform}
@@ -420,7 +440,7 @@ transverse energy for barrel jets ($|\eta| < 1.4$), endcap jets ($1.4<|\eta| <
     \label{fig:met_mean}
   \end{subfigure}
   \caption{ The missing transverse energy performance as a function of the
-           $\sqrt{E_T}$ for QCD events with pile-up. From \cite{chatrchyan2008cms}. }
+           $\sum E_T$ for QCD events with pile-up. From \cite{chatrchyan2008cms}. }
   \label{fig:met_performance} 
 \end{figure}
 
@@ -428,18 +448,7 @@ The performance of the missing transverse energy (\ETm) is shown in
 \FigureRef{fig:met_performance} in QCD events. The \ETm resolution is
 $\sigma(\ETm) \approx 1.0 \sqrt \ET$ and the average \ETm is 
 $\langle \ETm \rangle \approx 1.25 \sqrt \ET$ \cite{chatrchyan2008cms}.
-
-\subsection{The Forward Calorimeter}
-In the forward region ($|\eta| > 3$) energy measurements are made with the
-forward hadronic calorimeter, situated \unit{11}{\meter} from the interaction
-point. The main role of the forward calorimeter is to improve the \ETm
-measurement and to tag jets in the forward direction.
-
-The forward hadronic calorimeter is an iron/quartz-fibre calorimeter where the
-Cherenkov light is detected by photodetectors.  The calorimeter needs to be
-radiation hard due to the very large flux in the forward region. However, it is
-still expected that after 10 years of operation the light output will be reduced by
-about \unit{30}{\%} due to the level of radiation \cite{chatrchyan2008cms}. 
+\todo{UNDERSTAND THIS, should etmiss be 0?}
 
 \subsection{Muon System}
 The muon system lies outside of the CMS solenoid and the outer HCAL detectors.
@@ -458,7 +467,7 @@ The layout of the {CMS} muon system is shown in \FigureRef{fig:muon_system}.
 
 \subsubsection{Drift Tubes}
 In the barrel region ($|\eta| < 1.2$)
-where the background rate is low and the residual magnetic field is reduced
+where the background rate is low and the residual magnetic field is reduced,
  aluminium drift tubes (DT) are used,
 arranged in four stations interleaved in the flux return
 plates. 
@@ -512,7 +521,7 @@ from both the inner tracker and the muon detector.
     \label{fig:muon_endcap}
   \end{subfigure}
   \caption{Muon transverse momentum resolution as a function of the
-  transverse-momentum using only the muon system, only the tracker and both, for
+  muon momentum using only the muon system, only the tracker and both, for
   barrel muons ($|\eta| < 0.8$) and endcap muons ($1.2<|\eta| < 2.4$). From
   \cite{chatrchyan2008cms}.\label{fig:muon_performance}}
 \end{figure}
@@ -564,7 +573,7 @@ transverse energy.
 \subsubsection{High-Level Triggers}
 After a fixed time interval of \unit{3.2}{\micro\second} the high resolution
 event data held in the pipeline memories is either read out or discarded
-depending the decision at the Level-1 trigger.  The data are transferred to a
+depending on the decision at the Level-1 trigger.  The data are transferred to a
 processor running the high-level trigger software.
 
 The high-level trigger (HLT) is a software system which runs on a server farm
@@ -572,10 +581,10 @@ with over one thousand commercial multicore processors with access to the
 complete event data allowing it to make more complex calculations. 
 Objects are reconstructed in the HLT as they are needed and events are discarded
 as soon as possible to avoid wasting processing time.
-The decision to accept an event is based on the the requirements on the datasets
+The decision to accept an event is based on the requirements on the datasets
 used in {CMS} analyses. A typical data-set requires a high \pT
-HLT-reconstructed object or a amount of missing transverse energy in the event,
-for example, the data-set relevant to the analyses that follow in later chapters
+HLT-reconstructed object or an amount of missing transverse energy in the event.
+For example, the data-set relevant to the analyses that follow in later chapters
 requires a single high \pT electron.
 
 \subsubsection{Computing}
@@ -592,11 +601,11 @@ The files contain the reconstructed physics objects and reconstructed hits and
 clusters.
 \item Analysis Object Data (AOD), is the reduced event representation and
 contains only the reconstructed objects. This is the format that is used to
-preform physics analyses.
+perform physics analyses.
 \end{itemize}
 
 CMS utilises a distributed computing model called the ``Grid''.  The Grid
-consists of several clusters of computer distributed around the world and
+consists of several clusters of computers distributed around the world and
 organised into several tiers \cite{grandi2004cms}.  Events that pass the {HLT}
 are sent to the primary Tier-0 centre where the raw data are stored on tape
 before undergoing prompt reconstruction. The reconstructed data are distributed

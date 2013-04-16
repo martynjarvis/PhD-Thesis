@@ -51,19 +51,20 @@ electrons of energy $10$, $30$ and \unit{$50$}{\GeV}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{brem}
-  \caption{Average fraction of electron energy, $E^{e}$, radiated away as bremsstrahlung
+  \caption{Distribution of the fraction of electron energy, $E^{e}$, radiated away as bremsstrahlung
 photons, $\sum E_{brem}^{\gamma}$ for electrons of energy 10, 30 and
 \unit{50}{\GeV}. From \cite{baffioni2007electron}. } 
 \label{fig:brem}
 \end{figure}
+\todo{Arbitary Units spell out}
 
 To measure the electron energy, the separated deposits of energy need to be
 collected together, using ``super-clustering'' algorithms. 
 
 In the barrel a ``hybrid'' algorithm is used. The hybrid algorithm proceeds by
 identifying crystals with energies above a certain threshold, that will act as
-seeds. The algorithm then forms $1\times3$ or $1\times5$ crystal ``dominos'' in
-the $\eta\times\phi$ respectively, centred on the seed crystal, depending on the
+seeds. The algorithm then forms $5\times1$ or $3\times1$ crystal ``dominos'' in
+$\eta\times\phi$, centred on the seed crystal, depending on the
 energy within the domino. The dominos are then collected together in the $\phi$
 direction, up to an angle of \unit{0.3}{\rad}, to form clusters of dominos.
 This is demonstrated in \FigureRef{fig:hybrid} \cite{meschi2001electron}.
@@ -73,8 +74,8 @@ This is demonstrated in \FigureRef{fig:hybrid} \cite{meschi2001electron}.
   \includegraphics[width=0.95\textwidth]{hybridalgo}
   \caption{Demonstration of the clustering of dominos in the hybrid algorithm.
 From \cite{meschi2001electron}. The algorithm starts on the seed crystal and clusters
-$1\times3$ and $1\times5$ dominos to form the first subcluster. The algorithm continues to search
-by stepping in phi and identifies a second subcluster.}
+$3\times1$ and $5\times1$ dominos to form the first subcluster. The algorithm continues to search
+by stepping in $\phi$ and identifies a second subcluster.}
   \label{fig:hybrid}
 \end{figure}
 
@@ -196,7 +197,7 @@ direction,
 \frac{E_{i}}{E_{\text{seed cluster}}}.
 \end{equation}
 where $\eta_{i}$ and $\eta{s}$ are the crystal indices in the $\eta$
-direction or the $i^{\mathrm{th}}$ crystal and the seed crystal respectively.
+direction of the $i^{\mathrm{th}}$ crystal and the seed crystal respectively.
 $E_i$ is the energy deposited in the $i^{\mathrm{th}}$ crystal.  This variable
 discriminates between electrons and jets, as a hadronic shower from a jet or a
 pair of photons from a \Ppizero will tend to produce a wider electromagnetic
@@ -272,7 +273,7 @@ they are parallel to one another in the $x-y$ plane as shown in
     \caption{$dist>0$.}
     \label{fig:dist_p}
   \end{subfigure}
-  \caption{$dist$ is the distance between the the two tracks where they are
+  \caption{$dist$ is the distance between the two tracks where they are
 parallel. $dist$ is defined to be negative in the case that the tracks overlap
 and positive otherwise. Modified from \cite{barge2009conversion}. } 
 \label{fig:dist}
@@ -283,15 +284,14 @@ and positive otherwise. Modified from \cite{barge2009conversion}. }
 Several sets of cuts have been produced for CMS analyses. Each set of cuts has
 been optimised for a specific efficiency value, or working point in mind
 \cite{nikos,daskalakis2009data,simplecutbasedeleid}.  The cut values are
-summarised in \TableRef{tab:electronwp} The cuts can be split into three
+summarised in \TableRef{tab:electronwp}. The cuts can be split into three
 categories, ID Cuts, isolation cuts and conversion rejection cuts. Different
 sets of cut values are used for electrons in the ECAL barrel and endcap. The cut
 values are obtained by simultaneous optimisation for an electron with
 $\ET=\unit{25}{\GeV}$. Although the efficiency and background rejection of the
 cuts is dependent on the \ET of the electron, the cut values obtained are found
-to be effective in the range \unit{15-100}{\GeV}
+to be effective in the range \unit{15-100}{\GeV} \cite{nikos,daskalakis2009data}.
 
-\cite{nikos,daskalakis2009data}.
 \begin{table}[htbp]
   \begin{center}
     \begin{tabular}{lllllll} 
@@ -300,8 +300,8 @@ Efficiencies& $95\%$& $90\%$& $85\%$& $80\%$& $70\%$& $60\%$\\
 \midrule
 \multicolumn{7}{l}{\emph{Conversion Rejection Cuts}}\\ 
 Missing Hits $\leq$& 1& 1& 1& 0& 0& 0\\
-|Dist|& N/A& 0.02& 0.02& 0.02& 0.02& 0.02\\
-|$\Delta\cot\theta$|& N/A& 0.02& 0.02& 0.02& 0.02& 0.02\\
+$\vert \text{Dist} \vert$ (cm) & N/A& 0.02& 0.02& 0.02& 0.02& 0.02\\
+$\vert\Delta\cot\theta\vert$& N/A& 0.02& 0.02& 0.02& 0.02& 0.02\\
 \midrule
 \multicolumn{7}{l}{Barrel}\\ 
 \multicolumn{7}{l}{\emph{Relative Isolation Cuts}} \\
@@ -354,13 +354,13 @@ At the \PZ peak, an incorrect charge identification rate of \unit{3}{\%}
 \cite{adam2009electron} is measured when using the electron trajectory from the
 {GSF} fit.  A sample with improved charge identification can be obtained by
 using a majority method, that combines the three measurements and assigns the
-sign from the 2 estimates out of three that are in agreement.  A sample with
+sign from the two estimates out of three that are in agreement.  A sample with
 even greater improved charge identification can be obtained by requiring that
 all three methods for assigning charge are in agreement and discarding the event
 otherwise \cite{adam2009electron}.
 
 \section{Muons and Taus}
-Muons and taus are not used in much detail throughout the analyses presented in
+Muons and taus are not used in the analyses presented in
 this thesis. Their reconstruction is only be briefly described here.  Muons are
 reconstructed from information in the muon chambers and the silicon tracker.
 Full details of the muon reconstruction are described in
@@ -382,17 +382,18 @@ particles. This is called the missing energy in the event.
 Unfortunately, the initial longitudinal momentum of the event is not known in a
 hadron collider. So, instead only the transverse plane is
 considered. This is the missing transverse energy, \ETm, and is defined as
-the negative vector sum of all final state particles in an event,
+the magnitude of the negative vector sum of all final state particles in an event,
 \begin{equation}
-\vec{E}^{\text{miss}}_{\text{T}} = -\sum_i^{\text{particles}} \vec{p}_{T}^{i}.
+\vec{E}^{\text{miss}}_{\text{T}} = -\sum_i^{\text{particles}} \vec{p}_{T}^{i},
 \end{equation}
-
+where ${E}^{\text{miss}}_{\text{T}} = \vert \vec{E}^{\text{miss}}_{\text{T}}
+\vert $.
 There are several ways of measuring missing transverse energy.
 Calo \ETm is measured by creating pseudo-particles from the energies and
 direction of the deposits in the calorimeter towers. The muons are included by
 adding their \Pt to the calculation and removing their energy deposited in the
 calorimeters. The calo \ETm is then the sum of the transverse energy of the
-pseudo particles.
+pseudo-particles.
 Track \ETm extends calo \ETm to include the track \Pt in the calculation.  The
 corresponding energy deposited in the calorimeters by each track is removed.
 Particle flow \ETm (PFMET) is the sum of the transverse energies of all the
@@ -402,10 +403,10 @@ reconstructed particle flow particles (see \SectionRef{sec:pf}) \cite{PF}.
 \label{sec:pf}
 
 The particle-flow event reconstruction attempts to reconstruct and identify all
-stable particles in an event by combining information from all CMS
+semi-stable particles in an event by combining information from all CMS
 sub-detectors. The particle reconstruction and identification starts with
 collecting information from each sub-detector to form elements such as tracks
-and energy clusters in the calorimeters. These basic 'elements' are then
+and energy clusters in the calorimeters. These basic `elements' are then
 combined to form blocks which are then interpreted in terms of particles by the
 particle flow algorithm. A list of individual particles is then returned from
 the algorithm which can be used to study the event in greater detail by,
