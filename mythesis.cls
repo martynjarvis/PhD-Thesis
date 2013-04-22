@@ -72,10 +72,11 @@
 
 \pagestyle{fancy}
 
-%% Normal headers and footers (headers are all like RH pages for oneside)
 \fancyhead[RO,R]{\bfseries\thepage}%
 \fancyhead[LO,L]{\bfseries\leftmark}%
 \fancyfoot{}%
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}} 
 
 %% Headers and footers for plain (blank) pages
 %\fancypagestyle{plain}{%
