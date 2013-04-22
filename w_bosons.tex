@@ -1,8 +1,10 @@
-\chapter[W Bosons]{W Bosons at the LHC}
+\chapter{W Bosons at the LHC}
 \label{chap:wboson}
 
-\PW boson production is an important process for physics studies at the LHC.  At
-the {LHC}, \PW bosons are produced at a high rate while offering a clean
+\PW boson production is an important process for physics studies at the LHC, not
+only for accurate measurements of the Standard Model, but also as a background
+to many processes from new physics. 
+At the {LHC}, \PW bosons are produced at a high rate while offering a clean
 experimental signal with a final state consisting of, in the case of a
 leptonically decaying \PW, a single high \PT lepton with a large amount of
 missing transverse energy due to the neutrino in the event. 
@@ -10,7 +12,7 @@ The production of \PW bosons provides important
 information on the interacting partons within the colliding
 hadrons\cite{catani,kom}.
 
-This chapter will first describe the asymmetric production of \PW bosons.
+This chapter will first describe the asymmetric production of \PWp and \PWm bosons.
 The next section will describe the leptonic decay of the \PW and describe the electron
 charge asymmetry observable. The final section will show some theoretical
 predictions of the electron charge asymmetry.
@@ -18,7 +20,7 @@ predictions of the electron charge asymmetry.
 \section{W Boson Production}
 
 The dominant production process for a \PW boson at a proton-proton collider is
-described in \EquationRef{wbos:wprod},
+given in \EquationRef{wbos:wprod},
 and shown in \FigureRef{wbos:wproddiag}. 
 \begin{equation}
   h_1(p_1) + h_2(p_2)
@@ -29,9 +31,10 @@ and shown in \FigureRef{wbos:wproddiag}.
   \label{wbos:wprod}
 \end{equation}
 
-The \PW boson is produced by the collision of the two incoming hadrons $h_1$ and
-$h_2$ with momenta $p_1$ and $p_2$.  $X$ represents the accompanying final
-state.
+The \PW boson is produced in the collision of a quark and an anti-quark from the
+two incoming protons, $h_1$ and $h_2$, with momenta $p_1$ and $p_2$\footnote{in
+this thesis, $p_1 = p_2 = \unit{7}{\TeV}. $}.  $X$ represents the accompanying
+final state.
 
 \begin{figure}[htbp]
   \centering
@@ -40,9 +43,9 @@ state.
   \label{wbos:wproddiag}
 \end{figure}
 
-At proton-proton colliders the full \PW production cross section is a
-convolution of the cross section at the parton level, and the proton parton
-distribution functions (PDF),
+At proton-proton colliders the \PW production cross section is given by the
+convolution of the cross section at the parton level, and the parton
+distribution functions (PDF) of the protons,
 \begin{multline}
   d\sigma_{(\HepProcess{h_1 h_2 \to \PWpm})}(p_1,p_2;Q^{2}) = \\
   \sum\limits_{a,b}
@@ -105,13 +108,14 @@ $h$.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth]{mstw2008nlo68cl_allpdfs}
-  \caption{Proton PDF at  $ Q^2 = \unit{ 10  }{\GeV^2} $ (left) and $ Q^2 =
+  \caption[Proton PDF at  $ Q^2 = \unit{ 10  }{\GeV^2} $ and $ Q^2 = \unit{ 100
+}{\GeV^2} $.] {Proton PDF at  $ Q^2 = \unit{ 10  }{\GeV^2} $ (left) and $ Q^2 =
 \unit{ 100  }{\GeV^2} $ (right) from \cite{martin2009parton}.}
   \label{wbos:pdf}
 \end{figure}
 
 The {PDFs} are obtained from global fits to experimental data
-\cite{martin2009parton}.  \FigureRef{wbos:pdf} shows the proton PDF at
+\cite{martin2009parton}.  \FigureRef{wbos:pdf} (right) shows the proton PDF at
 $Q^2\approx M_{\PW}^2$ from the MSTW group.  The anti-quark parton densities
 $\APup(x,Q^2)$ and $\APdown(x,Q^2)$ are relatively similar especially at the LHC
 energies, where the parton momentum fraction, x, tends to be small.
@@ -144,28 +148,28 @@ greater fraction of the proton's momentum than the down-type quark.
     %\label{fig:plot_pdf_ratio}
   %\end{subfigure}
   \includegraphics[width=0.75\textwidth]{plot_pdf_ratio}
-  \caption{Ratio of up quarks to down quarks, $R_{ud}$ at $Q^2=\unit{100}{\GeV^2}$.
-           Generated from \cite{hepdata} using the MSTW200nlo PDFs \cite{martin2009parton}.}
+  \caption[Ratio of up quarks to down quarks, $R_{ud}$ at
+$Q^2=\unit{100}{\GeV^2}$.] {Ratio of up quarks to down quarks, $R_{ud}$ at
+$Q^2=\unit{100}{\GeV^2}$.  Generated from \cite{hepdata} using the MSTW200nlo
+PDFs \cite{martin2009parton}.}
   \label{fig:pdf_plots} 
 \end{figure}
 
 \subsection{\PW Boson Rapidity Distribution}
 \label{wbos:wrapsec}
 
-The rapidity of a particle is defined as,
-\begin{equation}
-    y = \frac{1}{2} \ln \left(\frac{E+p_\text{L}}{E-p_\text{L}}\right),
-\end{equation}
-where $p_{L}$ is the longditudianl component (the component along the beam axis)
-of the momentum of the particle. It represents the boost along the beam axis
-required to go from the lab frame to the frame where the particle is produced
-perpendicular to the beam axis.
+The rapidity of a particle is defined in \EquationRef{eq:rapidity}.  It
+represents the boost along the beam axis required to go from the lab frame to
+the frame where the particle is produced perpendicular to the beam axis.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{w-rapidity}
-  \caption{The rapidity distribution for \PWp and \PWm at the LHC $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions. 
-Generated with the MSTW2008nlo PDF\cite{martin2009parton} interfaced with the MCFM generator tool \cite{campbellmcfm}.}
+  \caption[The rapidity distribution for \PWp and \PWm at the LHC
+$\sqrtS=\unit{7}{\TeV}$ proton-proton collisions.] {The rapidity distribution
+for \PWp and \PWm at the LHC $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions.
+Generated with the MSTW2008nlo PDF\cite{martin2009parton} interfaced with the
+MCFM generator tool \cite{campbellmcfm}.}
   \label{wbos:wrapid}
 \end{figure}
 
@@ -224,9 +228,11 @@ increases as the rapidity increases.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{w-asym}
-  \caption{\PW boson charge asymmetry at LHC in $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions. 
-Generated with the MSTW2008nlo PDF\cite{martin2009parton} interfaced with the
-and the MCFM generator tool \cite{campbellmcfm}.}
+  \caption[\PW boson charge asymmetry at LHC in $\sqrtS=\unit{7}{\TeV}$
+proton-proton collisions.] {\PW boson charge asymmetry at LHC in
+$\sqrtS=\unit{7}{\TeV}$ proton-proton collisions.  Generated with the
+MSTW2008nlo PDF\cite{martin2009parton} interfaced with the and the MCFM
+generator tool \cite{campbellmcfm}.}
   \label{wbos:chargeasym}
 \end{figure}
 
@@ -259,8 +265,9 @@ in approximately $11\%$ of \PW decays.
 hadrons         & $67.60\pm0.27$ \\
 \bottomrule
 \end{tabular}
-\caption{Experimentally measured \PWp decay modes. The decay modes of \PWm are the charge conjugates
-of the \PWp. From \cite{beringer2012review}.\label{tab:w_decay}} 
+\caption[Experimentally measured \PWp decay modes.] {Experimentally measured
+\PWp decay modes. The decay modes of \PWm are the charge conjugates of the \PWp.
+From \cite{beringer2012review}.\label{tab:w_decay}} 
 \end{center}
 \end{table}
 
@@ -287,11 +294,12 @@ preferentially in the direction of the \Pdown quark.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{w_decay_directions}
-  \caption{Preferred directions of electron spins in \HepProcess{\PWplus\to\APelectron\Pnue} decay. 
-The heavy arrows show the directions of the incoming protons, the thin arrows
-show the directions of the incoming quarks and the outgoing electron and
-neutrino. The double arrows show the spins. 
-Modified from \cite{aitchison2004gauge}. }
+  \caption[Preferred directions of electron spins in
+\HepProcess{\PWplus\to\APelectron\Pnue} decay.] {Preferred directions of
+electron spins in \HepProcess{\PWplus\to\APelectron\Pnue} decay.  The heavy
+arrows show the directions of the incoming protons, the thin arrows show the
+directions of the incoming quarks and the outgoing electron and neutrino. The
+double arrows show the spins.  Modified from \cite{aitchison2004gauge}. }
   \label{wbos:wspin}
 \end{figure}
 
@@ -323,14 +331,11 @@ the rapidity distribution of the lepton to be more central. Similarly, \PWm
 bosons tend to be produced more centrally, however the electroweak correlations
 will shift the charge lepton rapidity distribution to higher rapidities.
 
-\FigureRef{fig:leptonrapidity} shows the Monte Carlo (MC) generated pseudorapidity distribution
-of electrons and positrons produced in $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions. 
-The pseudorapidity is defined as 
-\begin{equation}
-    \eta = -\ln\left[\tan\left(\frac{\theta}{2}\right)\right], 
-\end{equation}
-where $\theta$ is the angle between the particle direction and the beam axis.
-In the massless approximation, this is equal to the rapidity of the electron.
+\FigureRef{fig:leptonrapidity} shows the Monte Carlo (MC) generated
+pseudorapidity distribution of electrons and positrons produced in
+$\sqrtS=\unit{7}{\TeV}$ proton-proton collisions.  The pseudorapidity is defined
+in \EquationRef{eq:pseudorapidity}. In the massless approximation, the
+pseudorapidity of the electron is equal to the rapidity.
 
 \todo{e+ and e- PT distributions?}
 \todo{$\eta$ or $\eta_e$}
@@ -338,9 +343,11 @@ In the massless approximation, this is equal to the rapidity of the electron.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{lepton-rapidity}
-  \caption{Electron and positron pseudorapidity, $\eta_e$, distributions in $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions. 
-Generated with the MSTW2008nlo PDF\cite{martin2009parton} interfaced with the
-MCFM generator tool \cite{campbellmcfm}.}
+  \caption[Electron and positron pseudorapidity, $\eta_e$, distributions in
+$\sqrtS=\unit{7}{\TeV}$ proton-proton collisions.] {Electron and positron
+pseudorapidity, $\eta_e$, distributions in $\sqrtS=\unit{7}{\TeV}$ proton-proton
+collisions.  Generated with the MSTW2008nlo PDF\cite{martin2009parton}
+interfaced with the MCFM generator tool \cite{campbellmcfm}.}
   \label{fig:leptonrapidity}
 \end{figure}
 
@@ -371,9 +378,11 @@ the \PW boson.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{lepton-asym}
-  \caption{Electron charge asymmetry at LHC in $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions. 
-Generated with the MSTW2008nlo PDF\cite{martin2009parton} interfaced with the
-MCFM generator tool \cite{campbellmcfm}.}
+  \caption[Electron charge asymmetry at LHC in $\sqrtS=\unit{7}{\TeV}$
+proton-proton collisions.] {Electron charge asymmetry at LHC in
+$\sqrtS=\unit{7}{\TeV}$ proton-proton collisions.  Generated with the
+MSTW2008nlo PDF\cite{martin2009parton} interfaced with the MCFM generator tool
+\cite{campbellmcfm}.}
   \label{wbos:asym_simple}
 \end{figure}
 
@@ -422,7 +431,7 @@ The measurements presented in this thesis do not correct for acceptance effects.
 \section{Electron Charge Asymmetry Theoretical Predictions}
 \label{sec:asymuncert}
 
-In this section predictions on the electron charge asymmetry are studied in
+In this section predictions for the electron charge asymmetry are investigated in
 detail.  The predictions are calculated using MCFM\cite{campbellmcfm} {MC} tools
 interfaced with the LHAPDF package\cite{whalley2005houches}.  LHAPDF provides an
 interface to many different {PDF} sets. For the following predictions, PDFs from
@@ -441,7 +450,7 @@ Each {PDF} collaboration produces a set of {PDFs} that include the
 central value, or best fit to experimental data, and $2N$ error {PDFs}, where
 $N$ is the number of free parameters used in the global
 fit\cite{Bourilkov:2006cj}.
-For each free parameters there is a PDF produced with the parameter at its upper
+For each of the free parameters there is a PDF produced with the parameter at its upper
 error and another with the parameter at its lower error. 
 
 The uncertainty on the observable, in this case the lepton asymmetry, is found
@@ -468,7 +477,8 @@ using the central value.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{asym-uncert}
-  \caption{The theoretical electron charge
+  \caption[The theoretical electron charge asymmetry for a $\pT>\unit{25}{\GeV}$
+with the {PDF} uncertainties.] {The theoretical electron charge
 asymmetry\cite{monchenault2011predictions} for a $\pT>\unit{25}{\GeV}$ with the
 {PDF} uncertainties for the {PDF} sets MSTW08NLO\cite{martin2009parton} and
 CT10W\cite{lai2010vv}. The uncertainties are $68\%$ confidence level. The
@@ -489,7 +499,8 @@ PDF uncertainty on the measurement.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{asym-uncert-30}
-  \caption{The theoretical electron charge
+  \caption[The theoretical electron charge asymmetry for a $\pT>\unit{25}{\GeV}$
+with the {PDF} uncertainties.] {The theoretical electron charge
 asymmetry\cite{monchenault2011predictions} for a $\pT>\unit{30}{\GeV}$ with the
 {PDF} uncertainties for the {PDF} sets MSTW08NLO\cite{martin2009parton} and
 CT10W\cite{lai2010vv}. The uncertainties are $68\%$ confidence level. The

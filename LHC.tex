@@ -32,8 +32,8 @@ Luminosity lifetime (hr)& 15 & 6 \\
 Average number of collisions/crossing & 20 & - \\
 \bottomrule
 \end{tabular}
-\caption{The machine parameters relevant for the LHC detectors. From
-\cite{chatrchyan2008cms}.}
+\caption[The machine parameters relevant for the LHC detectors.]
+{The machine parameters relevant for the LHC detectors. From \cite{chatrchyan2008cms}.}
 \label{tab:lhcparam}
 \end{center}
 \end{table}
@@ -55,15 +55,15 @@ small cross sections.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.85\textwidth]{xsec.png}
-  \caption{The theoretical production cross sections as a function of centre of mass energy
-for several Standard Model processes such as the b quark production cross
-section, $\sigma_{b}$, and the Higgs boson production cross sections,
-$\sigma_{Higgs}$.
-$\sigma_{tot}$ is the total inelastic cross section.
-The cross sections that are of relevance to this thesis
-analysis are the \PW and \PZ boson cross sections $\sigma_{\PW}$ and
-$\sigma_{\PZ}$ respectively.
-From \cite{campbell2006hard}.}
+  \caption[The theoretical production cross sections as a function of centre of
+mass energy for several Standard Model processes.] {The theoretical production
+cross sections as a function of centre of mass energy for several Standard Model
+processes such as the b quark production cross section, $\sigma_{b}$, and the
+Higgs boson production cross sections, $\sigma_{Higgs}$.  $\sigma_{tot}$ is the
+total inelastic cross section.  The cross sections that are of relevance to this
+thesis analysis are the \PW and \PZ boson cross sections $\sigma_{\PW}$ and
+$\sigma_{\PZ}$ respectively.  From \cite{campbell2006hard}.}
+
   \label{fig:LHCxsec}
 \end{figure}
 
@@ -114,7 +114,8 @@ a large amount to helium rapidly evaporating which caused considerable damage to
 the machine \cite{lebrun2009sector}.  Due to this incident it was decided that,
 after the repairs,
 the {LHC} should be run at a lower centre of mass energy of \unit{7}{\TeV} until
-the quench protection system could be upgraded \cite{myers2010lhc}.
+the quench protection system could be upgraded and the interconnections
+thoroughly verified for higher currents \cite{myers2010lhc}.
 
 The {LHC} was repaired by the end of 2009 and the first collisions at a record
 energy of \unit{2.36}{\TeV} were delivered in November.  From March to November
@@ -126,7 +127,8 @@ ion collisions at \unit{2.36}{\TeV}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth]{int_lumi_cumulative_pp_1}
-  \caption{The luminosity delivered by LHC and recorded by CMS in 2010, 2011 and
+  \caption[The luminosity delivered by LHC and recorded by CMS in 2010, 2011 and
+2012.] {The luminosity delivered by LHC and recorded by CMS in 2010, 2011 and
 2012. From \cite{intlumi}.}
   \label{fig:LHC2010}
 \end{figure}
@@ -142,7 +144,7 @@ The analysis presented in the following chapters is based on the
 \unit{36.1}{\invpb} of data from  2010 and \unit{840}{\invpb} of data from the first half of 2011.
 
 \section{CMS Detector}
-{CMS} is one of the two general purpose
+{CMS}\cite{chatrchyan2008cms} is one of the two general purpose
 detectors designed to study LHC collisions. The main design parameters for the
 {CMS} detectors  are listed in \TableRef{tab:cmsparam}.
 
@@ -163,12 +165,12 @@ Solid angle for precision measurements ($\Delta\phi \times \Delta\eta$)
 Total cost (CHF)                    & $550\times 10 ^{6}$  \\
 \bottomrule
 \end{tabular}
-\caption{Main design parameters of the CMS detectors. From
-\cite{froidevaux2006general}.\label{tab:cmsparam}}
+\caption[Main design parameters of the CMS detector.]{Main design parameters of
+the CMS detector. From \cite{froidevaux2006general}.\label{tab:cmsparam}}
 \end{center}
 \end{table}
 
-The design goals of the CMS detector are:\cite{chatrchyan2008cms}
+The design goals of the CMS detector are:
 \begin{itemize}
   \item Good muon identification and momentum resolution and the ability to
 unambiguously assign charge to muons with $\PT < \unit{1}{\TeV}$
@@ -195,7 +197,8 @@ required radiation hard detectors and electronics.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.98\textwidth]{cms_120918_02}
-  \caption{Diagram of the CMS detector. From \cite{SketchUpCMSGallery}.}
+  \caption[Diagram of the CMS detector.] {Diagram of the CMS detector. From
+\cite{SketchUpCMSGallery}.}
   \label{fig:CMSnc}
 \end{figure}
 
@@ -205,6 +208,7 @@ CMS comprises the pixel tracker, the silicon microstrip tracker, the
 lead-tungstate electromagnetic calorimeter, the sampling brass-plate hadronic
 calorimter, a \unit{4}{\tesla} superconducting solenoid magnet, an outer
 hadronic calorimeter and four muon chambers.
+
 
 \subsection{Magnet}
 A large superconducting solenoid provides the basis for the design of the CMS
@@ -234,7 +238,8 @@ granularity and a fast response while remaining resilient to radiation damage.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{tracker}
-  \caption{A quadrant of the cross sections of the barrel part of the {CMS}
+  \caption[A quadrant of the cross section of the barrel part of the {CMS}
+tracker.]{A quadrant of the cross section of the barrel part of the {CMS}
 tracker. From \cite{cmsgsf}.}
   \label{fig:tracker}
 \end{figure}
@@ -245,7 +250,7 @@ The tracker utilises silicon pixel detectors in the innermost layers where the
 particle flux is the highest.  Outside of the pixel detector, the tracking
 detector comprises several layers of silicon microstrip detectors where the
 particle flux is smaller.  The total active area of silicon in the CMS tracker
-is over \unit{200}{\meter\squared}.\cite{chatrchyan2008cms}
+is over \unit{200}{\meter\squared} \cite{chatrchyan2008cms}.
 
 \subsubsection{Pixel Tracker}
 The pixel tracker consists of three layers of hybrid silicon pixel detectors in
@@ -258,7 +263,8 @@ outer radius of \unit{15}{\cm}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.98\textwidth]{pixel}
-  \caption{The layout of pixel detector in the CMS tracker. From \cite{chatrchyan2008cms}.}
+  \caption[The layout of pixel detector in the CMS tracker.]
+  {The layout of pixel detector in the CMS tracker. From \cite{chatrchyan2008cms}.}
   \label{fig:pixel}
 \end{figure}
 
@@ -304,15 +310,16 @@ and Moliere radius (\unit{2.2}{\cm}) as well as being radiation hard
 (up to \unit{10}{\mrad}).
 
 A disadvantage to using lead tungstate is that the light output of the crystals
-is relatively low and changes with temperature. This is overcome by maintaining
-a stable temperature (within \unit{0.1}{\degreecelsius}) and using
-photodetectors with an intrinsic gain.
+is relatively low and changes with temperature. This is overcome by using
+photodetectors with an intrinsic gain and maintaining a stable temperature
+(within \unit{0.1}{\degreecelsius}).
+
 Silicon avalanche photodiodes (APDs) are used to detect the scintillation light
 in the barrel and vacuum phototriodes (VPTs) are used in the endcap parts.
 
 The barrel section of the ECAL (EB) surrounds the inner tracker. It comprises 36
 identical supermodules that each cover a half length of the barrel
-($0<|\eta|<1.479$) and \unit{20}{\degree} in phi. Each supermodule contains 1700
+($0<|\eta|<1.479$) and \unit{20}{\degree} in $\phi$. Each supermodule contains 1700
 crystals arranged in a $\phi - \eta$ grid with each crystal mounted in a
 ``semi-projective'' geometry, and aligned \unit{3}{\degree} off the nominal
 interaction vertex.  The alignments in the longitudinal and transverse planes
@@ -325,18 +332,19 @@ cross section of \unit{$22 \times 22$}{\mm\squared} and a length of
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{crystallong}
-  \caption{The crystal alignment in the longitudinal view. The dotted lines show
-the alignment of the edge of the crystals. A single supermodule is shown. From
-\cite{ecal1997technical}.}
+  \caption[The crystal alignment in the longitudinal view.]{The crystal
+alignment in the longitudinal view. The dotted lines show the alignment of the
+edge of the crystals. A single supermodule is shown. From \cite{ecal1997technical}.}
   \label{fig:crystallong}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{crystaltilt}
-  \caption{The tilt of the ECAL crystals in the transverse plane (left) and the
-alignment of the supermodules (right). The dotted lines show the alignment of
-the crystal edges.  From \cite{ecal1997technical}.}
+  \caption[The tilt of the ECAL crystals in the transverse plane and the
+alignment of the supermodules.] {The tilt of the ECAL crystals in the transverse
+plane (left) and the alignment of the supermodules (right). The dotted lines
+show the alignment of the crystal edges. From \cite{ecal1997technical}.}
   \label{fig:crystaltilt}
 \end{figure}
 
@@ -361,7 +369,7 @@ found to be\cite{chatrchyan2008cms},
 \left(\unit{0.26}{\%}\right)^{2}  
 \end{align}
 where $S$ is the stochastic term, $N$ is the noise term and $C$ is the constant
-term. The {ECAL} energy resolution is shown in \FigureRef{fig:ECAL}. The
+term. The measured {ECAL} energy resolution is shown in \FigureRef{fig:ECAL}. The
 stochastic term is due to the statistical fluctuations in the particles produced
 in the electromagnetic shower. The noise term is due to electronic noise and
 pile-up. The constant term is due to errors such as non-uniform signal
@@ -370,8 +378,10 @@ generation and calibration errors \cite{chatrchyan2008cms}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{ecal_performance}
-  \caption{Energy resolution $\nicefrac{\sigma}{E}$ of ECAL as a function of
-\label{fig:ECAL} electron energy $E$. From \cite{chatrchyan2008cms}.}
+  \caption[Energy resolution $\nicefrac{\sigma}{E}$ of ECAL as a function of
+electron energy $E$]{Energy resolution $\nicefrac{\sigma}{E}$ of ECAL as a
+function of \label{fig:ECAL} electron energy $E$. From
+\cite{chatrchyan2008cms}.}
 \end{figure}
 
 \subsection{Hadronic Calorimeter}
@@ -386,17 +396,17 @@ embedded in the scintillation tiles, to hybrid photodiodes that can operate in
 the high axial magnetic field \cite{chatrchyan2008cms}.
 
 The barrel hadron calorimeter (HB) covers the region ($|\eta| < 1.4$)
-and the hadron endcap covers the region $1.3 < |\eta| < 3.0$.
+and the hadron endcap covers the region $1.4 < |\eta| < 3.0$.
 
-The barrel hadron calorimeter is
-positioned between the ECAL and the inside of the solenoid magnet coil
-($\unit{1.77}{\meter}<r<\unit{2.95}{\meter}$).
-The strong constraints imposed by the dimensions of the solenoid magnet results
-in the HB having an insufficient amount of material to absorb the hadronic shower. 
-To overcome this limitation the outer hadronic calorimeter (HO) or tail catcher,
-has been added around the solenoid magnet to increase the
-effective thickness of the hadron calorimetry to over 10 interaction lengths.
-This provides better protection against punch-through to the muon system.
+The barrel hadron calorimeter is positioned between the ECAL and the inside of
+the solenoid magnet coil ($\unit{1.77}{\meter}<r<\unit{2.95}{\meter}$).  The
+strong constraints imposed by the dimensions of the solenoid magnet results in
+the HB having an insufficient amount of material to absorb the hadronic shower
+in the central region.  To overcome this limitation the outer hadronic
+calorimeter (HO) or tail catcher, has been added around the solenoid magnet to
+increase the effective thickness of the hadron calorimetry to over 10
+interaction lengths.  This provides better protection against punch-through to
+the muon system.
 
 \subsubsection{The Forward Calorimeter}
 In the forward region ($|\eta| > 3$) energy measurements are made with the
@@ -405,7 +415,7 @@ point. The main role of the forward calorimeter is to improve the \ETm
 measurement and to tag jets in the forward direction.
 
 The forward hadronic calorimeter is an iron/quartz-fibre calorimeter where the
-Cherenkov light is detected by photodetectors.  The calorimeter needs to be
+Cherenkov light is detected by photomultipliers.  The calorimeter needs to be
 radiation hard due to the very large flux in the forward region. However, it is
 still expected that after 10 years of operation the light output will be reduced by
 about $30\%$ due to the level of radiation \cite{chatrchyan2008cms}. 
@@ -419,9 +429,10 @@ region of the HCAL is such that the resolution is similar in each.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{hcal_performance}
-  \caption{The jet transverse energy resolution as a function of jet
-transverse energy for barrel jets ($|\eta| < 1.4$), endcap jets ($1.4<|\eta| <
-3$) and forward jets ($3<|\eta| < 5$). From \cite{chatrchyan2008cms}. }
+  \caption[The jet transverse energy resolution as a function of jet transverse
+energy.] {The jet transverse energy resolution as a function of jet transverse
+energy for barrel jets ($|\eta| < 1.4$), endcap jets ($1.4<|\eta| < 3$) and
+forward jets ($3<|\eta| < 5$). From \cite{chatrchyan2008cms}. }
   \label{fig:hcalperform}
 \end{figure}
 
@@ -439,8 +450,9 @@ transverse energy for barrel jets ($|\eta| < 1.4$), endcap jets ($1.4<|\eta| <
     \caption{Average reconstructed \ETm.}
     \label{fig:met_mean}
   \end{subfigure}
-  \caption{ The missing transverse energy performance as a function of the
-           $\sum E_T$ for QCD events with pile-up. From \cite{chatrchyan2008cms}. }
+  \caption[The missing transverse energy performance as a function of the $\sum
+E_T$ for QCD events.] { The missing transverse energy performance as a function
+of the $\sum E_T$ for QCD events with pile-up. From \cite{chatrchyan2008cms}. }
   \label{fig:met_performance} 
 \end{figure}
 
@@ -461,13 +473,14 @@ The layout of the {CMS} muon system is shown in \FigureRef{fig:muon_system}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.98\textwidth]{muon_system}
-  \caption{The layout of a quarter of the CMS muon system. From \cite{chatrchyan2008cms}.}
+  \caption[The layout of a quarter of the CMS muon system.] {The layout of a
+quarter of the CMS muon system. From \cite{chatrchyan2008cms}.}
   \label{fig:muon_system}
 \end{figure}
 
 \subsubsection{Drift Tubes}
 In the barrel region ($|\eta| < 1.2$)
-where the background rate is low and the residual magnetic field is reduced,
+where the background rate is low and the residual magnetic field is small,
  aluminium drift tubes (DT) are used,
 arranged in four stations interleaved in the flux return
 plates. 
@@ -494,6 +507,7 @@ The RPCs are able to provide a fast and independent trigger over a large range
 the first 2 muon stations and 1 in each of the last 2 stations. In the endcap
 there is a layer of RPCs in each of the first 3 stations.
 
+\subsubsection{Alignment}
 An optical alignment system, that uses lasers and LEDs, measures the position
 of each muon station with respect to each other and the CMS inner tracker to
 ensure an accurate and high resolution measurement of the muon
@@ -520,10 +534,11 @@ from both the inner tracker and the muon detector.
     \caption{Endcap.}
     \label{fig:muon_endcap}
   \end{subfigure}
-  \caption{Muon transverse momentum resolution as a function of the
-  muon momentum using only the muon system, only the tracker and both, for
-  barrel muons ($|\eta| < 0.8$) and endcap muons ($1.2<|\eta| < 2.4$). From
-  \cite{chatrchyan2008cms}.\label{fig:muon_performance}}
+  \caption[Muon transverse momentum resolution as a function of the muon
+momentum.] {Muon transverse momentum resolution as a function of the muon
+momentum using only the muon system, only the tracker and both, for barrel muons
+($|\eta| < 0.8$) and endcap muons ($1.2<|\eta| < 2.4$). From
+\cite{chatrchyan2008cms}.\label{fig:muon_performance}}
 \end{figure}
 
 \subsection{Trigger and Data Acquisition}
@@ -551,8 +566,8 @@ Level Trigger (HLT).\cite{chatrchyan2008cms}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.98\textwidth]{CMSDAQ}
-  \caption{Overview of the architecture of the CMS DAQ and trigger. From
-  \label{fig:CMSDAQ}
+  \caption[Overview of the architecture of the CMS DAQ and trigger.] {Overview
+of the architecture of the CMS DAQ and trigger. From \label{fig:CMSDAQ}
 \cite{chatrchyan2008cms}.}
 \end{figure}
 
@@ -560,15 +575,15 @@ Level Trigger (HLT).\cite{chatrchyan2008cms}
 
 The Level-1 trigger (L1) is designed to reduce the event rate from the bunch
 crossing frequency of \unit{40}{\mega\hertz} to a maximum output rate of
-\unit{100}{\kilo\hertz}.
-The L1 trigger is implemented with custom-designed fast programmable electronics
- that takes as input coarse data from the calorimeters and muon systems and
-places the high resolution data in pipe-lined memories. The reduced resolution
-and granularity data are used to form ``trigger primitives'', such as isolated
-high energy electromagnetic deposits that pass a certain \PT or \ET threshold,
-which the L1 Trigger uses to base its decision. It also receives information on
-event-wide variables such as the total sum of transverse energy and the missing
-transverse energy.
+\unit{100}{\kilo\hertz}.  The L1 trigger is implemented with custom-designed
+fast programmable electronics that takes as input coarse data from the
+calorimeters and muon systems; the high resolution data are placed in pipe-lined
+memories awaiting a Level-1 decision. The reduced resolution and granularity data are used to form ``trigger
+primitives'', such as isolated high energy electromagnetic deposits that pass a
+certain \PT or \ET threshold, which the L1 Trigger uses to base its decision. It
+also receives information on event-wide variables such as the total sum of
+transverse energy and the missing transverse energy.
+\todo{trigger tables?}
 
 \subsubsection{High-Level Triggers}
 After a fixed time interval of \unit{3.2}{\micro\second} the high resolution
@@ -586,6 +601,7 @@ used in {CMS} analyses. A typical data-set requires a high \pT
 HLT-reconstructed object or an amount of missing transverse energy in the event.
 For example, the data-set relevant to the analyses that follow in later chapters
 requires a single high \pT electron.
+\todo{good to add a table or point to selection of W}
 
 \subsubsection{Computing}
 
