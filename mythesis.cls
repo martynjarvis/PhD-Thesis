@@ -15,7 +15,7 @@
 %% ========================================================================
 %% Base class and packages
 %% ========================================================================
-\LoadClass[a4paper,12pt]{report}
+\LoadClass[twoside,openright,a4paper,12pt]{report}
 
 \RequirePackage{graphicx}
 \RequirePackage{mythesis} %% my custom .sty packages
@@ -40,11 +40,11 @@
 %\setlength{\topmargin}{0pt}
 %\setlength{\textheight}{648pt}
 %\setlength{\footskip}{36pt}
-%\setlength{\textwidth}{446pt}
+\setlength{\textwidth}{451pt}
 
 % equal margins
-%\setlength{\oddsidemargin}{2pt}
-%\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{\oddsidemargin}
 
 %% Increase inner margins for binding
 %\newlength{\@bindextramargin}
@@ -72,83 +72,37 @@
 
 \pagestyle{fancy}
 
-\fancyhead[RO,R]{\bfseries\thepage}%
-\fancyhead[LO,L]{\bfseries\leftmark}%
-\fancyfoot{}%
+\fancyhead[RO,LE]{\bfseries\thepage}% two side
+\fancyhead[LO,RE]{\bfseries\leftmark}% two side
 
+%\fancyhead[RO,R]{\bfseries\thepage}% one side
+%\fancyhead[LO,L]{\bfseries\leftmark}% one side
+
+\fancyfoot{}% 
+
+%% remove "CHAPTER #1"  from header, becomes just #1.
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}} 
 
 %% Headers and footers for plain (blank) pages
-%\fancypagestyle{plain}{%
-  %\fancyhf{}%
-  %\fancyfoot[C]{\bfseries \thepage}%
-  %\renewcommand{\headrulewidth}{0pt}%
-  %\renewcommand{\footrulewidth}{0pt}%
-%}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\bfseries \thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
 
 %% Treat forced blank pages in the same way as chapter title pages
-%\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else%
-  %\hbox{}%
-  %\thispagestyle{plain}%
-  %\newpage%
-  %\if@twocolumn\hbox{}\newpage\fi\fi\fi}%
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else%
+  \hbox{}%
+  \thispagestyle{plain}%
+  \newpage%
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}%
 
 
 %% ========================================================================
 %% Environments 
 %% ========================================================================
 
-% frontmatter environments
-%\newenvironment{abstract}[1][Abstract]{%defaults to title Abstract
-  %\cleardoublepage%
-  %\vspace*{\@frontmattertopskip}%
-  %\thispagestyle{plain}%
-  %\begin{center}%
-    %{\LARGE\textbf{#1}}%
-  %\end{center}%
-  %\vspace*{1cm}%
-%}{ }
-%
-%\newenvironment{declaration}{%
-  %\cleardoublepage%
-  %\vspace*{\@frontmattertopskip}%
-  %\thispagestyle{plain}%
-  %\begin{center}%
-    %{\LARGE\textbf{Declaration}}%
-  %\end{center}%
-  %\vspace*{1cm}%
-%}{ }
-%
-%\newenvironment{acknowledgements}{%
-  %\cleardoublepage%
-  %\vspace*{\@frontmattertopskip}%
-  %\thispagestyle{plain}%
-  %\begin{center}%
-    %{\LARGE\textbf{Acknowledgements}}%
-  %\end{center}%
-  %\vspace*{1cm}%
-%}{ }
-%
-%\newenvironment{preface}{%
-  %\cleardoublepage%
-  %\vspace*{\@frontmattertopskip}%
-  %\thispagestyle{plain}%
-  %\begin{center}%
-    %{\LARGE\textbf{Preface}}%
-  %\end{center}%
-  %\vspace*{1cm}%
-%}{ }
-%
-%\DeclareRobustCommand{\dedication}[1]{%
-  %\cleardoublepage%
-  %\vspace*{\stretch{2}}%
-  %\thispagestyle{plain}%
-  %\begin{center}%
-    %\noindent\textsl{#1}%
-  %\end{center}%
-  %\vspace*{\stretch{4}}%
-%}
-%
 %% ========================================================================
 %% Commands
 %% ========================================================================

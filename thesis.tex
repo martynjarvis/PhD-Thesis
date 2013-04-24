@@ -4,13 +4,11 @@
 %% Standard packages
 %% -------------------------------------
 
-%\usepackage{layout} 
-\usepackage{todonotes}
-%\usepackage[disable]{todonotes}
+\usepackage[disable]{todonotes}
 \usepackage[parfill]{parskip}
-%\usepackage{glossary}
-%\makeglossary
 \usepackage{longtable}
+\usepackage{url}
+\usepackage{changepage}
 
 %% -------------------------------------
 %% Config
@@ -42,25 +40,24 @@
 
 %% Start the document
 \begin{document}
-%\layout
 
 %% Define the un-numbered front matter (cover pages, rubrik and table of contents)
   \input{chapters/front.tex}
 
 %% Start the content body of the thesis
-  \include{chapters/introduction}
-  \include{chapters/new_theory}
-  \include{chapters/w_bosons}
-  \include{chapters/LHC}
-  \include{chapters/objects}
-  \include{chapters/analysis}
-  \include{chapters/update}
-  \include{chapters/conclusion}
+  \input{chapters/introduction}
+  \input{chapters/new_theory}
+  \input{chapters/w_bosons}
+  \input{chapters/LHC}
+  \input{chapters/objects}
+  \input{chapters/analysis}
+  \input{chapters/update}
+  \input{chapters/conclusion}
 
 %% Produce the appendices
 %% bibliography, tables of figures etc., index...)
   \appendix
-  \include{chapters/appendix}
+  \input{chapters/appendix}
   \input{chapters/end}
   \bibliographystyle{unsrt}
   \bibliography{thesis}
