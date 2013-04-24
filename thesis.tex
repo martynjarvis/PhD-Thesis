@@ -5,10 +5,12 @@
 %% -------------------------------------
 
 \usepackage[disable]{todonotes}
-\usepackage[parfill]{parskip}
+%\usepackage[parfill]{parskip}
 \usepackage{longtable}
 \usepackage{url}
 \usepackage{changepage}
+\usepackage{setspace}
+\onehalfspacing
 
 %% -------------------------------------
 %% Config
@@ -18,7 +20,7 @@
 \makeatletter
 \@ifpackageloaded{hyperref}{%
   \hypersetup{%
-    pdftitle = {Electron Charge Asymmetry},
+    pdftitle = {Measurement of the Electron Charge Asymmetry},
     pdfsubject = {Electron Charge Asymmetry},
     pdfkeywords = {physics, LHC},
     pdfauthor = {Martyn Jarvis}
@@ -30,7 +32,9 @@
 \graphicspath{{figures/}{gen_figures/}}
 
 %% Define the thesis title and author
-\title{A Measurement of the Electron Charge Asymmetry in Inclusive W Boson Production at the CMS Detector}
+\title{Measurement of the electron charge asymmetry in inclusive \PW production
+in $pp$ collisions at $\sqrt{s} = \unit{7}{\TeV}$ in the CMS experiment.}
+
 %%\title{t}
 \author{Martyn Jarvis}
 

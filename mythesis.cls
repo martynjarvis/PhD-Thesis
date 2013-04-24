@@ -29,10 +29,13 @@
 %% Nice tables (optional) from hepthesis
 \RequirePackage{booktabs}
 
+% spacing
+
 %% ========================================================================
 %% Length definitions
 %% ========================================================================
 % use \layout to print example layout page
+
 
 % from hepthesis
 %\setlength{\parindent}{17pt}          % tweak the initial indent in paras
@@ -59,7 +62,7 @@
 % not sure what to set for these
 %\setlength{\marginparsep}{0pt}
 %\setlength{\marginparwidth}{0pt}
-\setlength{\marginparwidth}{75pt}
+%\setlength{\marginparwidth}{75pt}
 %\setlength{\marginparpush}{0pt}
 
 % for the front matter pages
