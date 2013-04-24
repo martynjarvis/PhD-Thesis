@@ -1,8 +1,8 @@
 \chapter{Common Definitions and Conventions}
 
 \section{Coordinate Conventions}
-The coordinate system of CMS is centered on the nominal interaction point. The
-$x$-axis points towards the center of the LHC ring, the $y$-axis points certically
+The coordinate system of CMS is centred on the nominal interaction point. The
+$x$-axis points towards the centre of the LHC ring, the $y$-axis points vertically
 upwards and the $z$-axis points along the direction of the beamline, in the
 anti-clockwise direction when the LHC is viewed from above. 
 The azimuth angle, $\phi$, is the angle in the $x$-$y$ plane with respect to the
@@ -13,7 +13,7 @@ The rapidity of a particle is defined as,
     y = \frac{1}{2} \ln \left(\frac{E+p_\text{L}}{E-p_\text{L}}\right),
 \label{eq:rapidity}
 \end{equation}
-where $p_{L}$ is the longditudianl component (the component along the beam axis)
+where $p_{L}$ is the longitudinal component (the component along the beam axis)
 of the momentum of the particle. It represents the boost along the beam axis
 required to go from the lab frame to the frame where the particle is produced
 perpendicular to the beam axis.
@@ -25,10 +25,10 @@ The pseudorapidity is defined as
 where $\theta$ is the polar angle.  In the massless approximation, this is equal
 to the rapidity.
 
-In CMS the initial longditudinal momentum in the event is not known. Many of the
-kinematical quantaties are considered only in the transverse plane and denoted
-with a `T' subscript, for example the transverse missing energy, \ETm, and the
-transverse momentum, \pT.
+In CMS the initial longitudinal momentum in the event is not known. Many of the
+kinematic quantities are considered only in the transverse ($x$-$y$) plane and
+denoted with a `T' subscript, for example the transverse missing energy, \ETm,
+and the transverse momentum, \pT.
 
 \section{List of Acronyms}
 \begin{center}
@@ -37,7 +37,7 @@ ALICE\dotfill & A Large Ion Collider Experiment\\
 APD\dotfill & Avalanche Photodiode\\
 AS\dotfill & Anti-Selection\\
 ATLAS\dotfill & A Toroidal LHC ApparatuS\\
-CERN\dotfill & European Organization for Nuclear Research.\\
+CERN\dotfill & European Organisation for Nuclear Research.\\
 CMS\dotfill & Compact Muon Solenoid\\
 CPU\dotfill & Central Processing Unit\\
 CSC\dotfill & Cathode Strip Chamber\\
@@ -76,8 +76,8 @@ PSB\dotfill & Proton Synchrotron Booster\\
 PS\dotfill & Proton Synchrotron\\
 PU\dotfill & Pile Up\\
 PV\dotfill & Primary Vertex\\
-QCD\dotfill & Quantum Chromo Dynamics\\
-QED\dotfill & Quantum Electro Dynamics\\
+QCD\dotfill & Quantum ChromoDynamics\\
+QED\dotfill & Quantum ElectroDynamics\\
 RPC\dotfill & Resistive Plate Chamber\\
 SM\dotfill & Standard Model\\
 SPS\dotfill & Super Proton Synchrotron\\
@@ -92,10 +92,14 @@ VPT\dotfill & Vacuum Phototriode\\
 \end{longtable}
 \end{center}
 
-
-
 \chapter{Fits to the \ETm Distributions}
 \section{\unit{36}{\invpb}}
+
+The following plots show the results of the fits to the \ETm for each
+pseudorapidity/charge bin with \unit{36}{\invpb} of data. The $x$-axis is the
+particle flow \ETm (GeV) and the $y$-axis is the number of events. The results
+are for the $\Pt > \unit{25}{\GeV}$ cut.
+
 \begin{figure}
 \begin{center}
 % bottom right top left
@@ -147,13 +151,16 @@ number of events ($2\GeV^{-1}$).}
 \clearpage
 
 \section{\unit{840}{\invpb}}
+The following plots show the results of the fits to the \ETm distribution in
+each pseudorapidity/charge bin with \unit{840}{\invpb} of data. A \pT cut of
+\unit{35}{\GeV} is applied. The $x$-axis is the particle flow \ETm (GeV) and the
+$y$-axis is the number of events ($\GeV^{-1}$).
 
-\begin{figure}
+\begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.95\textwidth]{data_0.pdf} \\
 \includegraphics[width=0.95\textwidth]{data_1.pdf} \\
-\includegraphics[width=0.95\textwidth]{data_2.pdf}
-\caption[The fit to \MET for pseudorapidity bins 1,2 and 3.]
+\caption[The fit to \MET for pseudorapidity bins 1 and 2.]
 {\label{fig:data1} The fit to \MET\ for pseudorapidity bins 1,2 and
 3.  The $x$-axis is the particle flow \ETm (GeV) and the $y$-axis is the number
 of events ($\GeV^{-1}$).}
@@ -162,10 +169,10 @@ of events ($\GeV^{-1}$).}
 
 \begin{figure}
 \begin{center}
+\includegraphics[width=0.95\textwidth]{data_2.pdf}
 \includegraphics[width=0.95\textwidth]{data_3.pdf} \\
 \includegraphics[width=0.95\textwidth]{data_4.pdf} \\
-\includegraphics[width=0.95\textwidth]{data_5.pdf}
-\caption[The fit to \MET for pseudorapidity bins 4,5 and 6.]
+\caption[The fit to \MET for pseudorapidity bins 3,4 and 5.]
 {\label{fig:data2} The fit to \MET\ for pseudorapidity bins 4,5 and
 6.  The $x$-axis is the particle flow \ETm (GeV) and the $y$-axis is the number
 of events ($\GeV^{-1}$).}
@@ -174,10 +181,10 @@ of events ($\GeV^{-1}$).}
 
 \begin{figure}
 \begin{center}
+\includegraphics[width=0.95\textwidth]{data_5.pdf}
 \includegraphics[width=0.95\textwidth]{data_6.pdf} \\
 \includegraphics[width=0.95\textwidth]{data_7.pdf} \\
-\includegraphics[width=0.95\textwidth]{data_8.pdf}
-\caption[The fit to \MET for pseudorapidity bins 7,8 and 9.]
+\caption[The fit to \MET for pseudorapidity bins 6,7 and 8.]
 {\label{fig:data3} The fit to \MET\ for pseudorapidity bins 7,8 and
 9.  The $x$-axis is the particle flow \ETm (GeV) and the $y$-axis is the number
 of events ($\GeV^{-1}$).}
@@ -186,9 +193,10 @@ of events ($\GeV^{-1}$).}
 
 \begin{figure}
 \begin{center}
+\includegraphics[width=0.95\textwidth]{data_8.pdf}
 \includegraphics[width=0.95\textwidth]{data_9.pdf} \\
 \includegraphics[width=0.95\textwidth]{data_10.pdf}
-\caption[The fit to \MET for pseudorapidity bins 10,11 and 12.]
+\caption[The fit to \MET for pseudorapidity bins 9,10 and 11.]
 {\label{fig:data4} The fit to \MET\ for pseudorapidity bins 10 and
 11.  The $x$-axis is the particle flow \ETm (GeV) and the $y$-axis is the number
 of events ($\GeV^{-1}$).}

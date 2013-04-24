@@ -206,7 +206,7 @@ An overview of the detector is shown in \FigureRef{fig:CMSnc}.  Starting at the
 interaction point in the centre of the detector and moving radially outwards,
 CMS comprises the pixel tracker, the silicon microstrip tracker, the
 lead-tungstate electromagnetic calorimeter, the sampling brass-plate hadronic
-calorimter, a \unit{4}{\tesla} superconducting solenoid magnet, an outer
+calorimeter, a \unit{4}{\tesla} superconducting solenoid magnet, an outer
 hadronic calorimeter and four muon chambers.
 
 
@@ -237,7 +237,7 @@ granularity and a fast response while remaining resilient to radiation damage.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.7\textwidth]{tracker}
+  \includegraphics[width=0.6\textwidth]{tracker}
   \caption[A quadrant of the cross section of the barrel part of the {CMS}
 tracker.]{A quadrant of the cross section of the barrel part of the {CMS}
 tracker. From \cite{cmsgsf}.}
@@ -262,7 +262,7 @@ outer radius of \unit{15}{\cm}.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.98\textwidth]{pixel}
+  \includegraphics[width=0.75\textwidth]{pixel}
   \caption[The layout of pixel detector in the CMS tracker.]
   {The layout of pixel detector in the CMS tracker. From \cite{chatrchyan2008cms}.}
   \label{fig:pixel}
@@ -320,7 +320,7 @@ in the barrel and vacuum phototriodes (VPTs) are used in the endcap parts.
 The barrel section of the ECAL (EB) surrounds the inner tracker. It comprises 36
 identical supermodules that each cover a half length of the barrel
 ($0<|\eta|<1.479$) and \unit{20}{\degree} in $\phi$. Each supermodule contains 1700
-crystals arranged in a $\phi - \eta$ grid with each crystal mounted in a
+crystals arranged in a $\phi$-$\eta$ grid with each crystal mounted in a
 ``semi-projective'' geometry, and aligned \unit{3}{\degree} off the nominal
 interaction vertex.  The alignments in the longitudinal and transverse planes
 are shown in \FigureRef{fig:crystaltilt} and \FigureRef{fig:crystallong}
@@ -329,18 +329,18 @@ gaps between the crystals \cite{ecal1997technical}.  Each crystal has a
 cross section of \unit{$22 \times 22$}{\mm\squared} and a length of
 \unit{230}{\mm} (\unit{25.8}{X_0}).
 
-\begin{figure}[htbp]
+\begin{figure}[p]
   \centering
-  \includegraphics[width=0.8\textwidth]{crystallong}
+  \includegraphics[width=0.7\textwidth]{crystallong}
   \caption[The crystal alignment in the longitudinal view.]{The crystal
 alignment in the longitudinal view. The dotted lines show the alignment of the
 edge of the crystals. A single supermodule is shown. From \cite{ecal1997technical}.}
   \label{fig:crystallong}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[p]
   \centering
-  \includegraphics[width=0.8\textwidth]{crystaltilt}
+  \includegraphics[width=0.7\textwidth]{crystaltilt}
   \caption[The tilt of the ECAL crystals in the transverse plane and the
 alignment of the supermodules.] {The tilt of the ECAL crystals in the transverse
 plane (left) and the alignment of the supermodules (right). The dotted lines
@@ -352,7 +352,7 @@ The endcaps (EE) are formed of two ``Dees'', semi-circular aluminium plates
 which support the ``supercrystals'', $5\times5$ arrays of crystals. The crystals are
 mounted to point away from the nominal interaction vertex by a small angle in a similar way
 to the barrel. 
-Unlike the barrel the crystals are arranged in an $x-y$ grid.
+Unlike the barrel the crystals are arranged in an $x$-$y$ grid.
 Installed in front of the endcap ECAL is a preshower system which helps with
 the rejection of \Ppizero \cite{chatrchyan2008cms}.
 
@@ -460,7 +460,6 @@ The performance of the missing transverse energy (\ETm) is shown in
 \FigureRef{fig:met_performance} in QCD events. The \ETm resolution is
 $\sigma(\ETm) \approx 1.0 \sqrt \ET$ and the average \ETm is 
 $\langle \ETm \rangle \approx 1.25 \sqrt \ET$ \cite{chatrchyan2008cms}.
-\todo{UNDERSTAND THIS, should etmiss be 0?}
 
 \subsection{Muon System}
 The muon system lies outside of the CMS solenoid and the outer HCAL detectors.
@@ -472,7 +471,7 @@ The layout of the {CMS} muon system is shown in \FigureRef{fig:muon_system}.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.98\textwidth]{muon_system}
+  \includegraphics[width=0.8\textwidth]{muon_system}
   \caption[The layout of a quarter of the CMS muon system.] {The layout of a
 quarter of the CMS muon system. From \cite{chatrchyan2008cms}.}
   \label{fig:muon_system}
@@ -485,8 +484,8 @@ where the background rate is low and the residual magnetic field is small,
 arranged in four stations interleaved in the flux return
 plates. 
 Each station contains 12 layers, eight to measure the coordinate in the
-$r-\phi$ plane and four to measure the $z$ direction (except the fourth station
-which only measures the $r-\phi$ plane). 
+$r$-$\phi$ plane and four to measure the $z$ direction (except the fourth station
+which only measures the $r$-$\phi$ plane). 
 
 \subsubsection{Cathode Strip Chambers}
 In the endcaps ($0.9<|\eta|<2.4$), where the muon and background rate is high and
@@ -496,7 +495,7 @@ CSCs are arranged in four stations in each endcap. Their faces are perpendicular
 to the beam line, and are placed between the flux return plates.  The cathode
 strips of each chamber run radially away from the beam line whereas the anode
 wires run perpendicular to the strips; both are read out which gives information
-on both the $r-\phi$ plane (from the cathode) and the $\eta$ direction (from the
+on both the $r$-$\phi$ plane (from the cathode) and the $\eta$ direction (from the
 anode). \cite{chatrchyan2008cms}
 
 \subsubsection{Resistive Plate Chambers}
@@ -565,7 +564,7 @@ Level Trigger (HLT).\cite{chatrchyan2008cms}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.98\textwidth]{CMSDAQ}
+  \includegraphics[width=0.85\textwidth]{CMSDAQ}
   \caption[Overview of the architecture of the CMS DAQ and trigger.] {Overview
 of the architecture of the CMS DAQ and trigger. From \label{fig:CMSDAQ}
 \cite{chatrchyan2008cms}.}
@@ -583,7 +582,6 @@ primitives'', such as isolated high energy electromagnetic deposits that pass a
 certain \PT or \ET threshold, which the L1 Trigger uses to base its decision. It
 also receives information on event-wide variables such as the total sum of
 transverse energy and the missing transverse energy.
-\todo{trigger tables?}
 
 \subsubsection{High-Level Triggers}
 After a fixed time interval of \unit{3.2}{\micro\second} the high resolution
@@ -599,9 +597,9 @@ as soon as possible to avoid wasting processing time.
 The decision to accept an event is based on the requirements on the datasets
 used in {CMS} analyses. A typical data-set requires a high \pT
 HLT-reconstructed object or an amount of missing transverse energy in the event.
-For example, the data-set relevant to the analyses that follow in later chapters
-requires a single high \pT electron.
-\todo{good to add a table or point to selection of W}
+For example, the data-sets relevant to this thesis require a single high \pT
+electron, as is described in \SectionRef{sec:trigger1} and
+\SectionRef{sec:trigger2}.
 
 \subsubsection{Computing}
 

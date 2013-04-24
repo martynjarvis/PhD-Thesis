@@ -32,13 +32,13 @@ and shown in \FigureRef{wbos:wproddiag}.
 \end{equation}
 
 The \PW boson is produced in the collision of a quark and an anti-quark from the
-two incoming protons, $h_1$ and $h_2$, with momenta $p_1$ and $p_2$\footnote{in
+two incoming protons, $h_1$ and $h_2$, with momenta $p_1$ and $p_2$\footnote{In
 this thesis, $p_1 = p_2 = \unit{7}{\TeV}. $}.  $X$ represents the accompanying
 final state.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{w_production}
+  \includegraphics[width=0.6\textwidth]{w_production}
   \caption{Diagram of a W boson production and leptonic decay at a hadron-hadron collider.}
   \label{wbos:wproddiag}
 \end{figure}
@@ -158,10 +158,14 @@ PDFs \cite{martin2009parton}.}
 \subsection{\PW Boson Rapidity Distribution}
 \label{wbos:wrapsec}
 
-The rapidity of a particle is defined in \EquationRef{eq:rapidity}.  It
-represents the boost along the beam axis required to go from the lab frame to
-the frame where the particle is produced perpendicular to the beam axis.
-
+The rapidity of a particle is defined as,
+\begin{equation}
+    y = \frac{1}{2} \ln \left(\frac{E+p_\text{L}}{E-p_\text{L}}\right),
+\end{equation}
+where $p_{L}$ is the longitudinal component (the component along the beam axis)
+of the momentum of the particle. It represents the boost along the beam axis
+required to go from the lab frame to the frame where the particle is produced
+perpendicular to the beam axis.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{w-rapidity}
@@ -177,7 +181,7 @@ The rapidity distributions, $y_W$, for \PWp and \PWm bosons produced at the
 {LHC} are shown in \FigureRef{wbos:wrapid}.  The \PWp cross section is greater
 than the \PWm cross section.  This is a consequence of the different production
 processes for \PWp and \PWm (shown in \EquationRef{wbos:wpprod} and
-\EquationRef{wbos:wmprod} respectivly) and the {PDF} for the valence quarks in
+\EquationRef{wbos:wmprod} respectively) and the {PDF} for the valence quarks in
 the proton differing as seen in \FigureRef{fig:pdf_plots}. The up-type quark
 {PDF} dominates over the down-type which leads to a greater \PWp production rate
 than \PWm.
@@ -333,12 +337,13 @@ will shift the charge lepton rapidity distribution to higher rapidities.
 
 \FigureRef{fig:leptonrapidity} shows the Monte Carlo (MC) generated
 pseudorapidity distribution of electrons and positrons produced in
-$\sqrtS=\unit{7}{\TeV}$ proton-proton collisions.  The pseudorapidity is defined
-in \EquationRef{eq:pseudorapidity}. In the massless approximation, the
+$\sqrtS=\unit{7}{\TeV}$ proton-proton collisions.  
+in \EquationRef{eq:pseudorapidity}.  The pseudorapidity is defined as 
+\begin{equation}
+    \eta = -\ln\left[\tan\left(\frac{\theta}{2}\right)\right], 
+\end{equation}
+where $\theta$ is the polar angle.  In the massless approximation, the
 pseudorapidity of the electron is equal to the rapidity.
-
-\todo{e+ and e- PT distributions?}
-\todo{$\eta$ or $\eta_e$}
 
 \begin{figure}[htbp]
   \centering

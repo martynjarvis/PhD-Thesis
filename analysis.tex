@@ -18,6 +18,7 @@ these datasets, electrons are selected that pass a limited number of cuts.
 Events that contain only a single electron are then selected for the analysis.
 
 \subsection{Trigger}
+\label{sec:trigger1}
 
 Several high-level triggers (HLT) were used to select the events due to the
 increasing luminosity during the {LHC} 2010 run.  In the initial runs, events
@@ -81,7 +82,6 @@ curve the electron \PT is required to be
 greater than \unit{25}{\GeV} in the analysis. 
 The results are presented with an electron \pT cut of 25, 30
 and \unit{35}{\GeV}.
-\todo{what fraction of electrons fail this cut?}
 
 Electron candidates are identified using a cut-based approach on a limited
 number of variables \cite{daskalakis2009data}.  The cut values used correspond
@@ -143,13 +143,13 @@ factor of 8 with only a $5\%$ loss in efficiency \cite{baisini2010electron}.
   \centering
   \begin{subfigure}{\textwidth}
     \centering
-    \includegraphics[width=0.85\textwidth]{zpeak_os}
+    \includegraphics[width=0.75\textwidth]{zpeak_os}
     \caption{Opposite sign \PZ peak.}
     \label{fig:zpeak_os}
   \end{subfigure}
   \begin{subfigure}{\textwidth}
     \centering
-    \includegraphics[width=0.85\textwidth]{zpeak_ss}
+    \includegraphics[width=0.75\textwidth]{zpeak_ss}
     \caption{Same sign \PZ peak.}
     \label{fig:zpeak_ss}
   \end{subfigure}
@@ -206,7 +206,7 @@ and {DY} background events.
 
 \begin{figure}[htbp]
   \begin{center}
-    \includegraphics*[width=0.85\textwidth]{pfmet_dist}
+    \includegraphics*[width=0.8\textwidth]{pfmet_dist}
     \caption[Particle Flow \ETm distribution for selected events.]{Particle Flow
 \ETm distribution for selected events with an electron cut of $\PT >
 \unit{25}{\GeV}$ and $|\eta| < 2.4$\cite{baisini2010electron}.\label{fig:pfmet_dist_36}}
@@ -267,37 +267,37 @@ shown in \TableRef{tab:antisel}.
 
 \begin{figure}[htbp]
   \centering
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta1.pdf}
     \caption{$0.0<| \eta |<0.4$}
     \label{fig:qcd_met_eta1}
   \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta2.pdf}
     \caption{$0.4<| \eta |<0.8$}
     \label{fig:qcd_met_eta2}
   \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta3.pdf}
     \caption{$0.8<| \eta |<1.2$}
     \label{fig:qcd_met_eta3}
   \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta4.pdf}
     \caption{$1.2<| \eta |<1.4$}
     \label{fig:qcd_met_eta4}
   \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta5.pdf}
     \caption{$1.6<| \eta |<2.0$}
     \label{fig:qcd_met_eta5}
   \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics*[trim = 0mm 0mm 15mm 0mm, clip, width=\textwidth, angle=90]{MetCompare_anti_eta6.pdf}
     \caption{$2.0<| \eta |<2.4$}
@@ -310,7 +310,6 @@ events and selected {QCD} and \gjet background MC simulated events in each
 pseudorapidity bin\cite{baisini2010electron}.}
   \label{tab:antiselclosure}
 \end{figure}
-\todo{labels on axes}
 
 \begin{table}[htbp]
   \begin{center}
@@ -339,7 +338,6 @@ To validate the anti-selection used, {QCD} Monte Carlo (MC) simulation samples a
 distribution of {QCD} MC events passing the event selection are compared to the
 anti-selected MC events. This is shown for each pseudorapidity bin in
 \FigureRef{tab:antiselclosure}.
-\todo{why not show anti-selected data distributions}
 
 \subsection{Signal \ETm Shape from Boson Recoil}
 \label{sec:recoil}
@@ -445,10 +443,10 @@ is fixed to the signal \ETm shape by the ratio obtained from MC samples.
 
 The results of the extended maximum likelihood fits to each pseudorapidity/charge
 bin are shown the appendix in \FigureRef{fig:fit1} and \FigureRef{fig:fit2}.
-The ratio between the fits and the data for each of the 
-bins are shown in \FigureRef{fig:fit1ratio} and \FigureRef{fig:fit2ratio}.
 The signal yield in each bin is summarised in \TableRef{tab:sigyield} and 
 the $\chi^2$ of each fit is noted in \TableRef{tab:chi2}.
+%The ratio between the fits and the data for each of the 
+%bins are shown in \FigureRef{fig:fit1ratio} and \FigureRef{fig:fit2ratio}.
 
 \begin{table}[htbp]
 \begin{center}
@@ -558,7 +556,7 @@ experiments as a function of pseudorapidity, for an integrated luminosity of
   \end{center}
 \end{table}
 
-The distributions of the asymmetry measurements in each pseudo-data exeriment
+The distributions of the asymmetry measurements in each pseudo-data experiment
 are shown in \FigureRef{fig:toyasym}. The true MC value of the asymmetry is
 shown with a vertical line, and the Gaussian fit is also shown.
 The Gaussian fit for an unbiased measurement will have a mean equal to the true MC value.
@@ -603,6 +601,7 @@ Gaussian\cite{baisini2010electron}.}
 %\end{figure}
 
 \section{Corrections to the Measured Asymmetry}
+\label{sec:corrections1}
 After the signal extraction procedure the measured asymmetry is simply,
 \begin{equation}
 \mathcal{A}_{meas} = \frac{
@@ -659,7 +658,7 @@ assignment rates ($\omega^{+}$ and $\omega^{-}$),
   &= \epsilon^+ \left( ( 1 - \omega^- ) N_{reco}^{+} + \omega^+ N_{reco}^{-} \right)\\
   \label{eq:negcor}
   N_{meas}^{-} 
-  &= \epsilon^+ \left( ( 1 - \omega^+ ) N_{reco}^{-} + \omega^- N_{reco}^{+} \right).
+  &= \epsilon^- \left( ( 1 - \omega^+ ) N_{reco}^{-} + \omega^- N_{reco}^{+} \right).
 \end{align}
 
 The \EquationRef{eq:poscor} and \EquationRef{eq:negcor} can then be inserted
@@ -777,43 +776,64 @@ charge assignment and HLT request, $\epsilon_{ID}$.
 The ratios $R_{GSF} = \nicefrac{\epsilon^{+}_{GSF}}{\epsilon^{-}_{GSF}}$ and
 $R_{ID} = \nicefrac{\epsilon^{+}_{ID}}{\epsilon^{-}_{ID}}$ are found and the
 overall efficiency ratio is given by $R = R_{GSF} R_{ID}$.
+\TableRef{tab:tagprobe} shows the GSF tracking efficiency and identification 
+efficiency as a function of the charge.
 
 \begin{table}[htbp]
 \begin{center}
-\begin{sideways}
-\begin{tabular}{cccccccc}
-    \toprule
-$|\eta|$  & \multicolumn{3}{c}{GSF tracking } & \multicolumn{3}{c}{ID } & $R$ \\
-region    & $\epsilon_{GSF}^+$ (\%) &$\epsilon_{GSF}^-$ (\%) & $R_{\epsilon_{GSF}}$ 
-                                              & $\epsilon_{ID}^+$ (\%) &$\epsilon_{ID}^-$ (\%) & $R_{\epsilon_{ID}}$ &  \\
+\begin{tabular}{lcrrrr}
+\toprule
+$|\eta|$ range & Charge & $\epsilon_{GSF}$ &$\epsilon_{ID}$& R\\
 \midrule
-$\left[ 0.0,0.4 \right]$ & 95.7$\pm$1.1 & 97.5$\pm$1.0 & 0.982$\pm$0.015 & 71.2$\pm$1.5 & 68.4$\pm$1.5 & 1.04$\pm$0.03 &1.02$\pm$0.035  \\
-$\left[ 0.4,0.8 \right]$ & 98.8$\pm$ 1.0& 98.5$\pm$1.1 & 1.003$\pm$0.015 & 72.5$\pm$1.7 & 75.6$\pm$1.6 & 0.96$\pm$0.04 &0.96$\pm$ 0.04 \\
-$\left[ 0.8,1.2 \right]$ & 97.6$\pm$ 1.0& 98.4$\pm$1.0 & 0.992$\pm$0.015 & 77.4$\pm$1.5 & 74.4$\pm$1.7 & 1.04$\pm$0.04 &1.03$\pm$ 0.04 \\
-$\left[ 1.2,1.4 \right]$ & 96.2$\pm$ 1.5& 96.3$\pm$1.5 & 0.999$\pm$0.022 & 69.3$\pm$2.7 & 73.0$\pm$2.6 & 0.95$\pm$0.05 &0.95$\pm$0.05  \\
-$\left[ 1.6,2.0 \right]$ & 96.8$\pm$ 1.2& 96.9$\pm$1.0 & 0.999$\pm$0.015 & 61.9$\pm$2.0 & 63.6$\pm$2.0 & 0.97$\pm$0.05 &0.97$\pm$0.05  \\
-$\left[ 2.0,2.4 \right]$ & 96.4$\pm$ 1.1& 97.0$\pm$1.0 & 0.994$\pm$0.015 & 58.2$\pm$2.1 & 56.7$\pm$2.1 & 1.03$\pm$0.05 &1.02$\pm$0.05  \\
+$0.0<| \eta |<1.4$ &$+$& $98.8\pm0.5$ &$84.1\pm0.8$ & $1.007\pm0.015$\\
+                   &$-$& $98.4\pm0.5$ &$83.8\pm0.8$ & \\
+$1.6<| \eta |<2.4$ &$+$& $98.3\pm0.7$ &$70.7\pm1.4$ & $0.99\pm0.03$\\
+                   &$-$& $97.8\pm0.7$ &$71.5\pm1.4$ & \\
 \midrule
-$\left[ 0.0,1.4 \right]$ & 98.8$\pm$0.5 & 98.4 $\pm$0.5 & 1.004$\pm$0.007 & 84.1$\pm$0.8 & 83.8$\pm$0.8 & 1.003$\pm$0.014 & 1.007$\pm$ 0.015 \\
-$\left[ 1.6,2.4 \right]$ & 98.3$\pm$0.7 & 97.8 $\pm$0.7 & 1.005$\pm$0.010 & 70.7$\pm$1.4 & 71.5$\pm$1.4 & 0.99$\pm$0.03 &0.99$\pm$ 0.03 \\
-\midrule 
-$\left[ 0.0,2.4 \right]$ & 98.5$\pm$0.4 & 97.8$\pm$0.4 & 1.007$\pm$0.006 & 80.3$\pm$0.7 & 80.3$\pm$0.7 & 1.000$\pm$0.012 &1.007$\pm$0.014  \\
-    \bottomrule
+$0.0<| \eta |<2.4$ &$+$& $98.5\pm0.4$ &$80.3\pm0.7$ & $1.007\pm0.014$\\
+                   &$-$& $97.8\pm0.4$ &$80.3\pm0.7$ & \\
+\bottomrule
 \end{tabular}
-\end{sideways}
 \end{center}
-
 \caption[GSF track reconstruction and electron identification efficiency as a
-function of charge in each pseudorapidity bin.]{GSF track reconstruction and
-electron identification efficiency as a function of charge in each
-pseudorapidity bin. The efficiencies are also shown for the barrel and endcap
+function of charge.]{GSF track reconstruction and
+electron identification efficiency as a function of charge in the barrel and endcap
 separately and the full inclusive range\cite{baisini2010electron}.}
-
 \label{tab:tagprobe}
 \end{table}
 
-\TableRef{tab:tagprobe} shows the GSF tracking efficiency and identification 
-efficiency as a function of the charge.
+%\begin{table}[htbp]
+%\begin{center}
+%\begin{sideways}
+%\begin{tabular}{cccccccc}
+    %\toprule
+%$|\eta|$  & \multicolumn{3}{c}{GSF tracking } & \multicolumn{3}{c}{ID } & $R$ \\
+%region    & $\epsilon_{GSF}^+$ (\%) &$\epsilon_{GSF}^-$ (\%) & $R_{\epsilon_{GSF}}$ 
+                                              %& $\epsilon_{ID}^+$ (\%) &$\epsilon_{ID}^-$ (\%) & $R_{\epsilon_{ID}}$ &  \\
+%\midrule
+%$\left[ 0.0,0.4 \right]$ & 95.7$\pm$1.1 & 97.5$\pm$1.0 & 0.982$\pm$0.015 & 71.2$\pm$1.5 & 68.4$\pm$1.5 & 1.04$\pm$0.03 &1.02$\pm$0.035  \\
+%$\left[ 0.4,0.8 \right]$ & 98.8$\pm$ 1.0& 98.5$\pm$1.1 & 1.003$\pm$0.015 & 72.5$\pm$1.7 & 75.6$\pm$1.6 & 0.96$\pm$0.04 &0.96$\pm$ 0.04 \\
+%$\left[ 0.8,1.2 \right]$ & 97.6$\pm$ 1.0& 98.4$\pm$1.0 & 0.992$\pm$0.015 & 77.4$\pm$1.5 & 74.4$\pm$1.7 & 1.04$\pm$0.04 &1.03$\pm$ 0.04 \\
+%$\left[ 1.2,1.4 \right]$ & 96.2$\pm$ 1.5& 96.3$\pm$1.5 & 0.999$\pm$0.022 & 69.3$\pm$2.7 & 73.0$\pm$2.6 & 0.95$\pm$0.05 &0.95$\pm$0.05  \\
+%$\left[ 1.6,2.0 \right]$ & 96.8$\pm$ 1.2& 96.9$\pm$1.0 & 0.999$\pm$0.015 & 61.9$\pm$2.0 & 63.6$\pm$2.0 & 0.97$\pm$0.05 &0.97$\pm$0.05  \\
+%$\left[ 2.0,2.4 \right]$ & 96.4$\pm$ 1.1& 97.0$\pm$1.0 & 0.994$\pm$0.015 & 58.2$\pm$2.1 & 56.7$\pm$2.1 & 1.03$\pm$0.05 &1.02$\pm$0.05  \\
+%\midrule
+%$\left[ 0.0,1.4 \right]$ & 98.8$\pm$0.5 & 98.4 $\pm$0.5 & 1.004$\pm$0.007 & 84.1$\pm$0.8 & 83.8$\pm$0.8 & 1.003$\pm$0.014 & 1.007$\pm$ 0.015 \\
+%$\left[ 1.6,2.4 \right]$ & 98.3$\pm$0.7 & 97.8 $\pm$0.7 & 1.005$\pm$0.010 & 70.7$\pm$1.4 & 71.5$\pm$1.4 & 0.99$\pm$0.03 &0.99$\pm$ 0.03 \\
+%\midrule 
+%$\left[ 0.0,2.4 \right]$ & 98.5$\pm$0.4 & 97.8$\pm$0.4 & 1.007$\pm$0.006 & 80.3$\pm$0.7 & 80.3$\pm$0.7 & 1.000$\pm$0.012 &1.007$\pm$0.014  \\
+    %\bottomrule
+%\end{tabular}
+%\end{sideways}
+%\end{center}
+%\caption[GSF track reconstruction and electron identification efficiency as a
+%function of charge in each pseudorapidity bin.]{GSF track reconstruction and
+%electron identification efficiency as a function of charge in each
+%pseudorapidity bin. The efficiencies are also shown for the barrel and endcap
+%separately and the full inclusive range\cite{baisini2010electron}.}
+%\label{tab:tagprobe}
+%\end{table}
+
 
 The main systematic errors on the efficiency measurements are the energy scale
 and the signal shape used to extract the signal yield. Fortunately, these
@@ -823,7 +843,12 @@ when compared to the statistical uncertainty of the measurement. Only the
 statistical uncertainty is therefore propagated to the error in the ratio
 $\sigma_R$.
 
-The value of $R$ is measured in each pseudorapidity bin, as well as inclusively
+%The value of $R$ is measured in each pseudorapidity bin, as well as inclusively
+%across the range $0<| \eta |< 2.4$. 
+%The relative efficiency is found to be statistically compatible with 1 so the
+%measured asymmetry is not corrected for this effect.
+
+The value of $R$ is measured in the barrel and endcap separately as well as inclusively
 across the range $0<| \eta |< 2.4$. 
 The relative efficiency is found to be statistically compatible with 1 so the
 measured asymmetry is not corrected for this effect.

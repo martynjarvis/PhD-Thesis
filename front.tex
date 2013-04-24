@@ -1,9 +1,31 @@
 %% Title
-\maketitle
+\begin{titlepage}
+\begin{center}
+\vspace{5cm}
+~
+\\[2cm]
+\Large{\textbf{A Measurement of the Electron Charge Asymmetry in Inclusive W Boson Production at the CMS Detector}}
+\\[2cm]
+\large{Martyn Jarvis}
+\\[1cm]
+\large{Blackett Laboratory\\Imperial College London}
+\vfill
+\normalsize{Thesis submitted to Imperial College London\\
+       for the degree of Doctor of Philosophy\\
+       and the Diploma of Imperial College}
+\\[1cm]
+\normalsize{Spring 2013}
+
+\end{center}
+\end{titlepage}
+
+\cleardoublepage
 
 %% Abstract
 \begin{abstract}
-   %\thispagestyle{empty}
+\thispagestyle{plain}
+\setcounter{page}{3}
+\begin{adjustwidth}{25pt}{25pt}
 In this thesis, two measurements of the electron charge asymmetry in inclusive W
 boson production with the CMS detector are presented. The measurements are
 obtained from proton-proton collision data with $\sqrtS=\unit{7}{\TeV}$. The
@@ -38,26 +60,57 @@ of data in the second measurement allows the results to be presented in 11 bins
 of absolute value of the electron's pseudo-rapidity. The statistical error has
 been reduced and ranges from 0.003 to 0.004 and the global error in the range
 0.006 to 0.014. 
+\end{adjustwidth}
 \end{abstract}
 
+\setcounter{page}{4}
+\cleardoublepage
+
 \chapter*{Declaration}
-\thispagestyle{empty}
-  Declaration goes here.
+\begin{adjustwidth}{50pt}{50pt}
+
+This thesis contains the work for two measurements of the electron charge
+asymmetry that were performed with data from the CMS experiment taken in 2010
+and 2011. The results of the measurements were approved for the CMS
+collaboration and are published in \cite{asym36} and \cite{asym840}. The
+measurements are also documented in the analysis notes
+\cite{bendavid2011electron} and \cite{baisini2010electron}. 
+
+The work in \ChapterRef{chap:analysis} and \ChapterRef{chap:update} is mine
+with the exception of \SectionRef{sec:recoil} which was provided to me and
+\SectionRef{sec:corrections1} and \SectionRef{sec:corrections2} which was
+either performed by others or in collaboration with others.
+  %\vspace*{3cm}
+%The copyright of this thesis rests with the author and is made available under a
+%Creative Commons Attribution Non-Commercial No Derivatives licence. Researchers
+%are free to copy, distribute or transmit the thesis on the condition that they
+%attribute it, that they do not use it for commercial purposes and that they do
+%not alter, transform or build upon it. For any reuse or redistribution,
+%researchers must make clear to others the licence terms of this work’
+
   \vspace*{1cm}
   \begin{flushright}
-    My Name
+    Martyn Jarvis
   \end{flushright}
+\end{adjustwidth}
 \clearpage
 
 \chapter*{Acknowledgements}
-\thispagestyle{empty}
-Acknowledgements go here\dots
+\begin{adjustwidth}{50pt}{50pt}
+%\thispagestyle{empty}
+I would like to thank my supervisor, Jim Virdee, for his guidance and
+suggestions through out my PhD.  I would also like to thank Michele Pioppi for
+his supervision, motivation and patience, and Paul Dauncey for his
+help in the preparation of this thesis.
+
+Finally, I am grateful for the support my family have given me and I would like to thank
+Ju and all her support and patience throughout the past three years.
+\end{adjustwidth}
 \clearpage
 
-\chapter*{Preface}
-\thispagestyle{empty}
-Preface goes here\dots
-\clearpage
+%\chapter*{Preface}
+%\thispagestyle{empty}
+%\clearpage
 
 % Todo list
 \listoftodos

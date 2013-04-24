@@ -52,15 +52,15 @@ electrons of energy $10$, $30$ and \unit{$50$}{\GeV}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{brem}
-  \caption{Distribution of the fraction of electron energy, $E^{e}$, radiated
-away as bremsstrahlung photons, $\sum E_{brem}^{\gamma}$.}
+  \caption[Distribution of the fraction of electron energy radiated away as
+bremsstrahlung photons.] {Distribution of the fraction of electron energy,
+$E^{e}$, radiated away as bremsstrahlung photons, $\sum E_{brem}^{\gamma}$. From
+\cite{baffioni2007electron}.}
 \label{fig:brem}
 \end{figure}
-\todo{Arbitary Units spell out}
 
 To measure the electron energy, the separated deposits of energy need to be
 collected together, using ``super-clustering'' algorithms. 
-
 In the barrel a ``hybrid'' algorithm is used. The hybrid algorithm proceeds by
 identifying crystals with energies above a certain threshold, that will act as
 seeds. The algorithm then forms $5\times1$ or $3\times1$ crystal ``dominos'' in
@@ -71,7 +71,7 @@ This is demonstrated in \FigureRef{fig:hybrid} \cite{meschi2001electron}.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.95\textwidth]{hybridalgo}
+  \includegraphics[width=0.85\textwidth]{hybridalgo}
   \caption[Demonstration of the clustering of dominos in the hybrid algorithm.]
 {Demonstration of the clustering of dominos in the hybrid algorithm.  From
 \cite{meschi2001electron}. The algorithm starts on the seed crystal and clusters
@@ -393,7 +393,7 @@ particles.
 This is called the missing energy in the event.
 
 In a hadron collider, the initial longitudinal momentum in the event is not
-known, so only the kinematic quantaties in the transverse place are usually
+known, so only the kinematic quantities in the transverse place are usually
 considered.  One of these is the missing transverse energy, \ETm, and is defined
 as the magnitude of the negative vector sum of all final state particles in an
 event,
@@ -415,8 +415,6 @@ reconstructed particle flow particles (see \SectionRef{sec:pf}) \cite{PF}.
 
 \subsection{Particle Flow at CMS}
 \label{sec:pf}
-\todo{kinda unclear here, perhaps a diagram to explain it?}
-
 The particle-flow event reconstruction attempts to reconstruct and identify all
 semi-stable particles in an event by combining information from all CMS
 sub-detectors. The particle reconstruction and identification starts with

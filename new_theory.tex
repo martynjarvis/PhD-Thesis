@@ -44,8 +44,8 @@ some of their properties are summarised in \TableRef{tab:particles}.
 & 1st gen. & 2nd gen. & 3rd gen. & $Q$ & colour \\ 
 \midrule
 \multirow{2}{*}{quarks} 
-& \Pup   & \Pstrange & \Ptop & $\nicefrac{+2}{3}e$ & \multirow{2}{*}{$R,G,B$} \\
-& \Pdown & \Pcharm   & \Pbottom & $\nicefrac{-1}{3}e$ & \\ 
+& \Pup   & \Pstrange & \Ptop & $\nicefrac{+2}{3}\ e$ & \multirow{2}{*}{$R,G,B$} \\
+& \Pdown & \Pcharm   & \Pbottom & $\nicefrac{-1}{3}\ e$ & \\ 
 \multirow{2}{*}{leptons} 
 & \Pnue      & \Pnum  & \Pnut & $0$ & \multirow{2}{*}{-} \\
 & \Pelectron & \Pmuon & \Ptau & $-1e$ & \\ 
@@ -77,8 +77,8 @@ second generation contains the charm (\Pcharm) and strange (\Pstrange) quarks
 and the third generation, the top (\Ptop) and bottom (\Pbottom) quarks, often
 called the truth and beauty quarks.
 Unlike leptons, quarks carry fractional charge; within each generation there is
-a quark with a charge of $\nicefrac{2}{3}e$ and the other with a charge of
-$\nicefrac{-1}{3}e$.
+a quark with a charge of $\nicefrac{2}{3}\ e$ and the other with a charge of
+$\nicefrac{-1}{3}\ e$.
 
 As well as the electric charge, quarks carry an additional
 charge called the colour charge. The colour charge allows the quarks to interact
@@ -191,7 +191,7 @@ where $\omega$ is a global arbitrary parameter.
 The Lagrangian is said to exhibit global gauge invariance. 
 
 The family of transformations, $R = e^{i \omega}$, forms the
-Abelian group $U(1)$ which is the group of all unitary $1\time1$ matrices.
+Abelian group $U(1)$ which is the group of all unitary $1\times 1$ matrices.
 Unitary refers to the property that $U^{-1} = {U}^{\dagger}$.
 Abelian refers to the property that all the elements in a
 group commute, 
@@ -228,8 +228,7 @@ as a local phase transformation. The infinitesimal transformation now becomes,
 \approx (1+i\omega(x))\psi(x),
 \end{equation}
 However, under this transformation the Lagrangian is now no longer
-invariant\todo{WHY, EXPLAIN BREIFLY.} 
-
+invariant \cite{halzen1984quarks}.
 The gauge invariance can be restored if it is assumed that the fermion field
 interacts with a vector field, called a gauge field and denoted $A_{\mu}$, with
 an interaction,
@@ -279,12 +278,10 @@ A_{\mu}A^{\mu}$, will break the gauge invariance.
 
 \subsection{Quantum Chromodynamics}
 \label{sec:QCD}
-\todo[inline]{might be nice to include a section about the history of the
-interaction}
 The strong force is the force responsible for the interaction between particles
-that carry a colour charge, quarks and gluons. Unlike the electric charge, the
+that carry a colour charge: quarks and gluons. Unlike the electric charge, the
 colour charge can have three possible values, conventionally called `red',
-`green' and `blue' , as well as the corresponding anti-colour charges
+`green' and `blue', as well as the corresponding anti-colour charges
 `anti-red', `anti-green' and `anti-blue'.
 The fundamental quark-gluon process of the strong force is shown in
 \FigureRef{fig:qcdquark}.
@@ -318,7 +315,7 @@ vertexes in addition to the quark-gluon vertex which are shown in
 
 The coupling constant for the strong force, $\alpha_s$, is given by,
 \begin{equation}
-\alpha = \frac{g_s^2}{4 \pi} \approx 1
+\alpha_s = \frac{g_s^2}{4 \pi} \approx 1,
 \end{equation}
 which is approximately 100 times stronger than the {electromagnetic} force.
 
@@ -328,8 +325,8 @@ asymptotic freedom; at high-energy experiments quarks appear to behave almost as
 free particles. However, at lower energies the coupling increases and quarks
 only appear in bound states. This phenomenon is known as quark confinement. 
 
-The strong interaction is described by the theory of {QCD}.
-Quantum chromodynamics follows from similar reasoning to {QED}, but with
+The strong interaction is described by the theory of quantum chromodynamics
+(QCD). QCD follows from similar reasoning to {QED}, but with
 the Abelian $U(1)$ symmetry group replaced with the non-Abelian $SU(3)$ symmetry
 group of transformations on the quark colour fields.
 
@@ -581,40 +578,6 @@ gauge boson and the fermion parts,
 + \mathcal{L}_{gauge}.
 \end{equation}
 
-The fermion term has a lepton and a quark part,
-\begin{equation}
-\mathcal{L}_{fermion} =
- \mathcal{L}_{lepton}
-+ \mathcal{L}_{quark}.
-\end{equation}
-The quark and lepton Lagrangians are given by,
-\begin{align*}
-\mathcal{L}_{lepton} &= 
-\bar{l}_{L} i \gamma^{\mu} \mathbf{D}_{\mu} l_{L} +
-\bar{e}_{R} i \gamma^{\mu} D_{\mu} e_{R}, \\
-\mathcal{L}_{quark} &= 
-\bar{q}_{L} i \gamma^{\mu} \mathbf{D}_{\mu} q_{L} +
-\bar{u}_{R} i \gamma^{\mu} D_{\mu} u_{R} +
-\bar{d}_{R} i \gamma^{\mu} D_{\mu} d_{R},
-\end{align*}
-where the covariant derivative has again been introduced.
-The covariant derivative depends on the fermion field on which it acts. The covariant derivative
-for left-handed fermion, for example, is given by,
-\begin{equation}
-\mathbf{D}_\mu 
-= \partial_\mu 
-+ ig{T}^{a}W_{\mu}^{a}
-+ ig^{\prime}Y(l^{L})B_{\mu},
-\end{equation}
-whereas the covariant derivative for the right-handed fermion, for example a
-down quark, $d_R$,
-\begin{equation}
-D_\mu = \partial_\mu + ig^{\prime}Y(d^{R})B_{\mu},
-\end{equation}
-where $g^\prime$ and $g$ and are the two coupling constants,
-${T}^{a}$ are the three generators of $SU(2)_L$ group and $W^{a}_{\mu}$ are
-the three gauge fields in the theory.
-
 The gauge part of the Lagrangian contains the kinetic terms and self interaction
 terms for the gauge fields,
 \begin{equation}
@@ -655,13 +618,45 @@ constants by
 \cos\theta_{W} &= \frac{g}{\sqrt{g^{2}+{g^{\prime}}^{2}}}.
 \end{align*}
 
+The fermion term has a lepton and a quark part,
+\begin{equation}
+\mathcal{L}_{fermion} =
+ \mathcal{L}_{lepton}
++ \mathcal{L}_{quark}.
+\end{equation}
+The quark and lepton Lagrangians are given by,
+\begin{align*}
+\mathcal{L}_{lepton} &= 
+\bar{l}_{L} i \gamma^{\mu} \mathbf{D}_{\mu} l_{L} +
+\bar{e}_{R} i \gamma^{\mu} D_{\mu} e_{R}, \\
+\mathcal{L}_{quark} &= 
+\bar{q}_{L} i \gamma^{\mu} \mathbf{D}_{\mu} q_{L} +
+\bar{u}_{R} i \gamma^{\mu} D_{\mu} u_{R} +
+\bar{d}_{R} i \gamma^{\mu} D_{\mu} d_{R},
+\end{align*}
+where the covariant derivative has again been introduced.
+The covariant derivative depends on the fermion field on which it acts. The covariant derivative
+for left-handed fermion, for example, is given by,
+\begin{equation}
+\mathbf{D}_\mu 
+= \partial_\mu 
++ ig{T}^{a}W_{\mu}^{a}
++ ig^{\prime}Y(l^{L})B_{\mu},
+\end{equation}
+whereas the covariant derivative for the right-handed fermion, for example a
+down quark, $d_R$,
+\begin{equation}
+D_\mu = \partial_\mu + ig^{\prime}Y(d^{R})B_{\mu},
+\end{equation}
+where $g^\prime$ and $g$ and are the two coupling constants, ${T}^{a}$ are the
+three generators of $SU(2)_L$ group and $W^{a}_{\mu}$ and $B_{\mu}$ are the four
+gauge fields in the theory.
+
 \subsubsection{Higgs Mechanism}
 
 The Lagrangian, as it has been written so far, does not include terms for the
 mass of any of the particles.  Adding in mass terms by hand will break the gauge
-invariance rendering the theory meaningless.  \todo[inline]{I could include an
-example of why adding the mass terms in by hand will break gauge invariance}
-
+invariance rendering the theory meaningless \cite{ral}.
 The symmetry needs to be broken in some natural way.  Spontaneous symmetry
 breaking (SSB) is a method to break the symmetry by requiring that the Lagrangian of a
 system remains invariant under a transformation, but the ground state is not
@@ -768,8 +763,6 @@ e^{i\nicefrac{\sigma}{2}\phi_a}
 \end{equation}
 where the $SU(2)$ invariance of the Lagrangian allows for the choice of $\phi_i$
 to be zero\cite{halzen1984quarks,ral}.
-\todo{EXPLAIN MORE}
-
 The Lagrangian can be now written in terms of the $H$ field. The kinetic
 term,\cite{ral}
 \begin{align}
@@ -829,7 +822,7 @@ boson \cite{aad2012observation,chatrchyan2012observation}.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.97\textwidth]{higgs}
+  \includegraphics[width=0.8\textwidth]{higgs}
   \caption[The diphoton invariant mass distribution observed in CMS data.] {The
 diphoton invariant mass distribution observed in CMS data.  Each event has been
 categorised and then weighted by the S/(S + B) value of its category. The inset
