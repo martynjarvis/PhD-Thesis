@@ -99,7 +99,7 @@ In addition there are two smaller special-purpose detectors.
 The LHCf \footnote{Large Hadron Collider forward.} is an experiment designed to
 measure the neutral particles emitted in the very forward region of LHC
 collisions.  The goal of the experiment is to provide data for hadron
-interactions models that are used in the study of extremely high-energy
+interaction models that are used in the study of extremely high-energy
 cosmic-rays \cite{adriani2008lhcf}.
 The goal of the TOTEM\footnote{TOTal Elastic and diffractive cross section
 Measurement.} experiment is to measure the total proton-proton
@@ -458,8 +458,9 @@ of the $\sum E_T$ for QCD events with pile-up. From \cite{chatrchyan2008cms}. }
 
 The performance of the missing transverse energy (\ETm) is shown in
 \FigureRef{fig:met_performance} in QCD events. The \ETm resolution is
-$\sigma(\ETm) \approx 1.0 \sqrt \ET$ and the average \ETm is 
-$\langle \ETm \rangle \approx 1.25 \sqrt \ET$ \cite{chatrchyan2008cms}.
+$\sigma(\ETm) \approx \unit{1.0 \sqrt \ET}{\GeV}$ and the average \ETm is
+$\langle \ETm \rangle \approx \unit{1.25 \sqrt \ET}{\GeV}$
+\cite{chatrchyan2008cms}.
 
 \subsection{Muon System}
 The muon system lies outside of the CMS solenoid and the outer HCAL detectors.
@@ -514,9 +515,9 @@ momentum.\cite{chatrchyan2008cms}
 
 \subsubsection{Performance}
 The performance of the muon system and inner tracker is shown in 
-\FigureRef{fig:muon_performance}. The best momentum resolution for low-momentum muons
+\FigureRef{fig:muon_performance}. The best resolution for low-momentum muons
 is obtained from the measurement in the silicon tracker. However, as the momentum
-increases the muon momentum resolution is best measured by combining information
+increases the best resolution is best obtained by combining information
 from both the inner tracker and the muon detector.
 
 \begin{figure}[htbp]
@@ -536,7 +537,7 @@ from both the inner tracker and the muon detector.
   \caption[Muon transverse momentum resolution as a function of the muon
 momentum.] {Muon transverse momentum resolution as a function of the muon
 momentum using only the muon system, only the tracker and both, for barrel muons
-($|\eta| < 0.8$) and endcap muons ($1.2<|\eta| < 2.4$). From
+($|\eta| < 0.2$) and endcap muons ($1.8<|\eta| < 2.0$). From
 \cite{chatrchyan2008cms}.\label{fig:muon_performance}}
 \end{figure}
 
@@ -547,7 +548,7 @@ events every \unit{25}{\nano\second}, a rate of $10^{9}$ interactions per
 second.
 The size of an event is approximately \unit{1}{\mega\bel} after zero-suppression.
 The total data output rate from CMS is \unit{$\approx 80$}{\tera\bel\per\second}.
-These figures are many orders of magnitude larger that the storage and offline
+These figures are many orders of magnitude larger than the storage and offline
 processing capability available to CMS, which corresponds to about
 \unit{250}{\mega\bel\per\second} or about $\approx 10^{2}$ crossings written to the tape
 storage every second. 
@@ -558,9 +559,9 @@ the job of the trigger to reduce the rate of events by a factor of $10^6$ by
 rejecting the uninteresting events while keeping as many interesting events as
 possible.
 
-An overview of the {DAQ} and trigger is shown in figure \ref{fig:CMSDAQ}.
-The trigger is separated into two parts; the Level-1 (L1) trigger and the High
-Level Trigger (HLT).\cite{chatrchyan2008cms}
+An overview of the {DAQ} and trigger is shown in \FigureRef{fig:CMSDAQ}.
+The trigger is separated into two parts; the Level-1 trigger and the High
+Level Trigger.\cite{chatrchyan2008cms}
 
 \begin{figure}[htbp]
   \centering
@@ -575,17 +576,17 @@ of the architecture of the CMS DAQ and trigger. From \label{fig:CMSDAQ}
 The Level-1 trigger (L1) is designed to reduce the event rate from the bunch
 crossing frequency of \unit{40}{\mega\hertz} to a maximum output rate of
 \unit{100}{\kilo\hertz}.  The L1 trigger is implemented with custom-designed
-fast programmable electronics that takes as input coarse data from the
+fast programmable electronics that take as input coarse data from the
 calorimeters and muon systems; the high resolution data are placed in pipe-lined
 memories awaiting a Level-1 decision. The reduced resolution and granularity data are used to form ``trigger
 primitives'', such as isolated high energy electromagnetic deposits that pass a
-certain \PT or \ET threshold, which the L1 Trigger uses to base its decision. It
+certain \PT or \ET threshold, upon which the L1 Trigger bases its decision. It
 also receives information on event-wide variables such as the total sum of
 transverse energy and the missing transverse energy.
 
 \subsubsection{High-Level Triggers}
 After a fixed time interval of \unit{3.2}{\micro\second} the high resolution
-event data held in the pipeline memories is either read out or discarded
+event data held in the pipeline memories are either read out or discarded
 depending on the decision at the Level-1 trigger.  The data are transferred to a
 processor running the high-level trigger software.
 
@@ -603,7 +604,7 @@ electron, as is described in \SectionRef{sec:trigger1} and
 
 \subsubsection{Computing}
 
-The {CMS} data is available in several different file formats that contain
+The {CMS} data are available in several different file formats that contain
 different levels of details \cite{grandi2004cms},
 \begin{itemize}
 \item Raw data, is the output of the events that pass the {HLT}. The files
@@ -624,7 +625,7 @@ organised into several tiers \cite{grandi2004cms}.  Events that pass the {HLT}
 are sent to the primary Tier-0 centre where the raw data are stored on tape
 before undergoing prompt reconstruction. The reconstructed data are distributed
 to Tier-1 and Tier-2 centres at national laboratories and universities around the
-world. The role of the Tier-1 and Tier-2 sites are to run the physics analyses
+world. The roles of the Tier-1 and Tier-2 sites are to run the physics analyses
 and to reprocess the data when updated calibrations are available. This is
 typically done once or twice a year.
 
