@@ -42,10 +42,9 @@ final state.
   \label{wbos:wproddiag}
 \end{figure}
 
-At proton-proton colliders the \PW production cross section is given by the
-convolution of the cross section at the parton level, and the parton
-distribution functions (PDF) of the protons,
-\todo{include a discusion on factorisation here}
+The \PW production cross section can given by the convolution of the cross
+section at the parton level, and the parton distribution functions (PDF) of the
+protons,
 \begin{multline}
   d\sigma_{(\HepProcess{h_1 h_2 \to \PWpm})}(p_1,p_2;Q^{2}) = \\
   \sum\limits_{a,b}
@@ -59,7 +58,11 @@ distribution functions (PDF) of the protons,
 where $\sum\limits_{a,b}$ represents the sum over the initial parton states $a$
 and $b$, $f_a^{h}(x,Q^2)$ represents the proton {PDF} and
 $d\hat{\sigma}_{(\HepProcess{a b \to \PWpm})}(x_1 p_1, x_2 p_2; Q^2)$
-represents the partonic sub-process cross section.
+represents the partonic sub-process cross section. The ability to separate the
+complicated QCD process in to a short-range pertubativly-calculable
+hard-scattering process and long-range experimentally-measurable parton
+densities is given by factorization theorems. 
+\todo{not sure this is enough}
 
 \subsubsection*{Partonic Sub-Process}
 
@@ -102,15 +105,15 @@ decay at a hadron-hadron collider.}\label{fig:w_process}
 \subsubsection*{Proton Parton Distribution Function} 
 The proton PDF represents the number density of
 parton $a$ that has a fraction between $x$ and $x+\mathrm{d}x$ of the
-momentum of the colliding hadron $h$.  
-\todo[inline]{define Q2}
+momentum of the colliding hadron $h$ at a resolution scale $Q^{2}$.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth]{mstw2008nlo68cl_allpdfs}
-  \caption[Proton PDF at $Q^2 = \unit{10}{\GeV^2} $ and $ Q^2 = \unit{ 100
-}{\GeV^2} $.] {Proton PDF at $Q^2 = \unit{10}{\GeV^2} $ (left) and $ Q^2 =
-\unit{10^{4}}{\GeV^2} $ (right) from \cite{martin2009parton}.}
+  \caption{test}
+[Proton PDFs at $Q^2 = {10}{\GeV^2}$ and $Q^2 = \unit{10000}{\GeV^2}$.]
+{Proton PDF at $Q^2 = \unit{10}{\GeV^2}$ (left) 
+and $Q^2 = \unit{10000}{\GeV^2}$ (right) from \cite{martin2009parton}.}
   \label{wbos:pdf}
 \end{figure}
 
@@ -125,15 +128,17 @@ This is due to the excess of up-type valence quarks with respect to down-type
 valence quarks in the proton (\HepProcess{\Pup\Pup\Pdown}). 
 This can be seen in the ratio of the up-type and the down-type {PDFs},
 \begin{equation}
-  R_{ud}(x,Q^2) = \frac{\Pup(x,Q^2)}{ \Pdown(x,Q^2)} > 1,
+  R_{ud}(x,Q^2) = \frac{\Pup(x,Q^2)}{\Pdown(x,Q^2)} > 1,
 \end{equation}
 where $\Pup(x,Q^2)$ are the up and down quark {PDFs}.
-\FigureRef{fig:pdf_plots} shows the ratio of the up-type and down-type
-quarks.  The ratio $R$ changes as a function of $x$, $R \approx 1$ for $x \ll 1$
-and increases monotonically as $x$ increases.  The up-type quark will have a
-greater fraction of the proton's momentum than the down-type quark.
-\todo{rewrite this to be correct}
-
+\FigureRef{fig:pdf_plots} shows the ratio of the up-type and down-type quarks.
+The ratio $R \approx 1$ for $x \ll 1$. This is due to the equal number or
+up-type and down-type sea quarks in the proton. The equal number of sea quarks,
+and the unequal number of valence quarks has the effect that if an up-type quark
+is picked at random from the proton, it is more likely to be a higher momentum
+valence quark, than if a down-type quark is picked.  Therefore, an up-type quark
+will tend to have a greater fraction of the proton's momentum than a down-type
+quark.
 
 \begin{figure}[htbp]
   \centering
@@ -150,9 +155,8 @@ greater fraction of the proton's momentum than the down-type quark.
     %\label{fig:plot_pdf_ratio}
   %\end{subfigure}
   \includegraphics[width=0.75\textwidth]{plot_pdf_ratio}
-  \caption[Ratio of up quarks to down quarks, $R_{ud}$ at
-$Q^2=\unit{100}{\GeV^2}$.] {Ratio of up quarks to down quarks, $R_{ud}$ at
-$Q^2=\unit{100}{\GeV^2}$.  Generated from \cite{hepdata} using the MSTW2008nlo
+  \caption[Ratio of up quarks to down quarks, $R_{ud}$ at $Q^2=\unit{100}{\GeV^2}$.] 
+{Ratio of up quarks to down quarks, $R_{ud}$ at $Q^2=\unit{100}{\GeV^2}$.  Generated from \cite{hepdata} using the MSTW2008nlo
 PDF sets \cite{martin2009parton}.}
   \label{fig:pdf_plots} 
 \end{figure}
@@ -172,7 +176,7 @@ perpendicular to the beam axis.
   \centering
   \includegraphics[width=0.8\textwidth]{w-rapidity}
   \caption[The rapidity distribution for \PWp and \PWm bosons in
-$\sqrtS=\unit{7}{\TeV}$ proton-proton collisions at the LHC.] {The rapidity
+${\sqrtS=\unit{7}{\TeV}}$ proton-proton collisions at the LHC.] {The rapidity
 distribution for \PWp and \PWm bosons in $\sqrtS=\unit{7}{\TeV}$ proton-proton
 collisions at the LHC.  Generated with the MSTW2008nlo
 PDF set\cite{martin2009parton} interfaced with the MCFM generator tool \cite{campbellmcfm}.}
@@ -233,7 +237,7 @@ increases as the rapidity increases.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{w-asym}
-  \caption[\PW boson charge asymmetry at LHC in $\sqrtS=\unit{7}{\TeV}$
+  \caption[\PW boson charge asymmetry at LHC in ${\sqrtS=\unit{7}{\TeV}}$
 proton-proton collisions.] {\PW boson charge asymmetry at LHC in
 $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions.  Generated with the
 MSTW2008nlo PDF set\cite{martin2009parton} interfaced with the and the MCFM
@@ -384,7 +388,7 @@ the \PW boson.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{lepton-asym}
-  \caption[Electron charge asymmetry at LHC in $\sqrtS=\unit{7}{\TeV}$
+  \caption[Electron charge asymmetry at LHC in ${\sqrtS=\unit{7}{\TeV}}$
 proton-proton collisions.] {Electron charge asymmetry at LHC in
 $\sqrtS=\unit{7}{\TeV}$ proton-proton collisions.  Generated with the
 MSTW2008nlo PDF set\cite{martin2009parton} interfaced with the MCFM generator tool
@@ -397,8 +401,8 @@ measured are the electron and positron yields.  The experimentally measured
 asymmetry is given by \EquationRef{eq:AsymExp},
 \begin{equation}
 A_{exp}(\eta)=\frac{  \frac{dN}{d\eta}(\APelectron) -
-\frac{dN}{d\eta}(\Pelectron) }{ \frac{dN}{d\eta}(\APelectron) +
-\frac{dN}{d\eta}(\Pelectron) }
+\frac{dN}{d\eta}(\Pelectron)}{\frac{dN}{d\eta}(\APelectron) +
+\frac{dN}{d\eta}(\Pelectron)}
 \label{eq:AsymExp}
 \end{equation} 
 
@@ -425,7 +429,7 @@ The measurements presented in this thesis do not correct for acceptance effects.
 
 %\begin{align} 
 %A_{exp}(\eta) &= \frac{ \frac{dN}{d\eta}(\Pelectron) -
-%\frac{dN}{d\eta}(\APelectron) }{ \frac{dN}{d\eta}(\Pelectron) +
+%\frac{dN}{d\eta}(\APelectron) }{\frac{dN}{d\eta}(\Pelectron) +
 %\frac{dN}{d\eta}(\APelectron) }\\   
               %&= \frac{ \frac{d\sigma}{d\eta}(\Wpenu) -
 %\frac{\epsilon^{-}_{acc}}{\epsilon^{+}_{acc}} \frac{d\sigma}{d\eta}(\Wmenu) }{
@@ -478,16 +482,12 @@ where $A^{\pm}_{i}$ is the asymmetry prediction using the {PDF} with the
 positive/negative fluctuation of parameter $i$ and $A_{0}$ is the prediction
 using the central value.
 
-\subsection{Radiative corrections}
-
-\todo[inline]{introduce FSR/radiative corrections here?}
-
 \subsection{Prediction of the Electron Charge Asymmetry above \unit{25}{\GeV}}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{asym-uncert}
-  \caption[The theoretical electron charge asymmetry for a $\pT>\unit{25}{\GeV}$
+  \caption[The theoretical electron charge asymmetry for a ${\pT>\unit{25}{\GeV}}$
 with the {PDF} uncertainties.] {The theoretical electron charge
 asymmetry\cite{monchenault2011predictions} for a $\pT>\unit{25}{\GeV}$ with the
 {PDF} uncertainties for the MSTW08NLO\cite{martin2009parton} and
@@ -509,7 +509,7 @@ the prediction.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{asym-uncert-30}
-  \caption[The theoretical electron charge asymmetry for a $\pT>\unit{25}{\GeV}$
+  \caption[The theoretical electron charge asymmetry for a ${\pT>\unit{25}{\GeV}}$
 with the {PDF} uncertainties.] {The theoretical electron charge
 asymmetry\cite{monchenault2011predictions} for a $\pT>\unit{30}{\GeV}$ with the
 {PDF} uncertainties for the MSTW08NLO\cite{martin2009parton} and
