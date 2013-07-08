@@ -76,7 +76,7 @@
 \pagestyle{fancy}
 
 \fancyhead[RO,LE]{\bfseries\thepage}% two side
-\fancyhead[LO,RE]{\bfseries\leftmark}% two side
+\fancyhead[LO,RE]{\bfseries\nouppercase{\leftmark}}% two side
 
 %\fancyhead[RO,R]{\bfseries\thepage}% one side
 %\fancyhead[LO,L]{\bfseries\leftmark}% one side
