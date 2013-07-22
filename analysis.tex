@@ -436,7 +436,7 @@ is not detected,
 \end{itemize}
 
 The \ETm distributions for the {electroweak} background were obtained from
-Pythia MC simulations for each pseudorapidity/charge bin.  The MC samples used
+PYTHIA\cite{pythia} MC simulations for each pseudorapidity/charge bin.  The MC samples used
 are summarised in \TableRef{tab:samples36}.  The scale of the {electroweak}
 shape is fixed to the signal \ETm shape by the ratio obtained from MC samples.
 
@@ -938,7 +938,7 @@ error on the asymmetry due to the effect of the transverse momentum cut applied
 to the electrons. The largest source of bias in the electron energy scale is the
 changing transparency of the ECAL crystals caused by the changing level of
 radiation during the {LHC} 2010 run. Final state radiation (FSR) is considered
-as a source of electron energy resolution so is corrected for by the following
+as an additional contribution to the electron energy resolution so is corrected for by the following
 method. However, this effect is small as most FSR photons will tend to be
 collected in the electron supercluster.
 
@@ -1046,6 +1046,11 @@ of 1\% on the energy. All unit in $\times 10^{-3}$\cite{baisini2010electron}.}
 \section{Other Systematic Effects}
 There are several over systematic effects that must be evaluated and taken into
 account for the measurements.
+
+Bin-to-bin migrations in pseudorapidity have a negligible effect on the asymmetry
+as the position resolution is small when compared to the size of the bins and
+the pseudorapidity distributions of electrons and positrons are not steeply
+falling in the region of interest, $0<| \eta | < 2.4$.  
 
 The signal extraction procedure may introduce some biases into the measured
 asymmetry. A bias may be introduced into the measurement if there is a

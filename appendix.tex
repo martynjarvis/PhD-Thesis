@@ -209,6 +209,23 @@ of events ($\GeV^{-1}$).}
 \end{figure}
 
 \chapter{Monte Carlo Samples }
+Monte Carlo (MC) simulation samples have been used to develop analysis
+techniques and estimate some of the background contributions. 
+
+The samples used in this thesis are sumarised in Tables \ref{tab:samples36} and
+\ref{tab:samples840}.  Several MC simulations have been used to cross-check MC
+predictions and help assigning experimental systematic uncertainties.
+
+The next-to-leading order (NLO) MC simulations based on the
+{POWHEG}\cite{powheg}, {PYTHIA}\cite{pythia} or {MadGraph}\cite{madgraph} event
+generators.  
+The QCD multijet backgrounds are generated with the {PYTHIA} event generator.
+Taus are simulated using {TAUOLA}\cite{tauola}.  
+All generated events are passed through the CMS detector simulation using
+{Geant4} \cite{geant} and then processed using a reconstruction sequence
+identical to that used for collision data. 
+
+\newpage
 \section{\unit{36}{\invpb}}
 
 \begin{table}[htbp]
@@ -217,7 +234,7 @@ of events ($\GeV^{-1}$).}
 \small{
 \begin{tabular}{ll}
 \toprule
-Sample & dataset \\
+Sample & Dataset \\
 \midrule
 $W^+ \rightarrow e^+\nu$ 
   & {WPlusToENu\_CT10\_TuneZ2\_7TeV-powheg-pythia}\\
@@ -228,7 +245,7 @@ $W \rightarrow \tau \nu$
 DY $M_{e^+e^-}>20$ \GeV 
   & {DYToEE\_M-20\_CT10\_TuneZ2\_7TeV-powheg-pythia}\\
 DY $M_{\tau^+\tau^-}>20$\GeV
-  & {DYToTauTau\_M-20\_CT10\_TuneZ2\_7TeV-powheg-pythia-tauola}\\
+  & {DYToTauTau\_M-20\_CT10\_TuneZ2\_7TeV-tauola}\\
 $t\bar{t}$ + jets 
   & {TT\_TuneZ2\_7TeV-pythia6-tauola}\\
 QCD EM-enr $20<\hat{pt}<30$ \GeV 
@@ -251,12 +268,15 @@ $\gamma$ + jets $50 <\hat{pt} < 80$ \GeV
 \end{tabular}
 }
 %\end{sideways}
-\caption{\label{tab:samples36} The Monte Carlo (MC) samples used in the
-\unit{36}{\invpb} measurement. The QCD EM-enr are samples of QCD that have been
+\caption[The Monte Carlo (MC) samples used in the \unit{36}{\invpb}
+measurement.] {\label{tab:samples36} The Monte Carlo (MC) samples used in the
+\unit{36}{\invpb} measurement. 
+The QCD EM-enr are samples of QCD that have been
 enriched with EM events.  The Drell-Yan (DY) samples include
 \HepProcess{\PZ\to\Plepton\Plepton} and
-\HepProcess{\Pphoton\to\Plepton\Plepton}.  All the samples are from the
-\emph{Fall10} MC production. } 
+\HepProcess{\Pphoton\to\Plepton\Plepton}.
+ All the samples are from the
+\emph{Fall10} MC production.}
 \end{center} 
 \end{table}
 
@@ -271,7 +291,7 @@ enriched with EM events.  The Drell-Yan (DY) samples include
 \toprule
 Sample & Dataset\\ % & $N_{events}$ & $\sigma$ (pb) \\
 \midrule
-\multicolumn{2}{l}{\emph{Pythia}} \\ 
+\multicolumn{2}{l}{\emph{PYTHIA}} \\ 
 $W \rightarrow e \nu$
    & WToENu\_TuneZ2\_7TeV\_pythia6\\
 $W \rightarrow \tau \nu$ 
@@ -303,8 +323,10 @@ $t\bar{t}$ + jets
 \end{tabular}
 }
 %\end{sideways}
-\caption{\label{tab:samples840}Monte Carlo samples used in the
-\unit{840}{\invpb} measurement. All samples are from the
-\emph{Summer11} MC production. }
+\caption[Monte Carlo samples used in the \unit{840}{\invpb} measurement. ]
+{\label{tab:samples840}Monte Carlo samples used in the \unit{840}{\invpb}
+measurement. All samples are from the \emph{Summer11} MC production. 
+} 
+
 \end{center}
 \end{table}
