@@ -32,6 +32,8 @@ test::
 once::
 	$(TEX) $(INPUT)
 
+bib::
+	$(BIB) $(OUTPUT)
 
 spell:
 	aspell -t check ${INPUT}.tex
