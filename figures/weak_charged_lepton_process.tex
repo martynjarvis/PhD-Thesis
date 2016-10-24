@@ -1,0 +1,33 @@
+\documentclass[border=1cm,10pt]{standalone}
+
+% I only need the arrows for this one.
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{trees}
+
+\begin{document}
+
+\begin{tikzpicture}[
+  boson/.style={decorate, decoration={snake}, draw=red},
+  lepton/.style={draw=blue, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=blue]{>}}}},
+  alepton/.style={draw=blue, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=blue]{<}}}},
+  quark/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+  aquark/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+]
+
+% Draw the fermions
+\draw[lepton] (0,0) node[left]  {$l^{-}$} -- (1,1) ;
+\draw[lepton] (1,1) -- (2,0) node[right] {$\nu_{l}$} ;
+
+% Draw the boson
+\draw[boson] (1,1) -- (1,2) node[midway,right] {$W^{-}$} ;
+
+\end{tikzpicture}
+
+\end{document} 

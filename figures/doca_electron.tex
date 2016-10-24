@@ -1,0 +1,24 @@
+\documentclass[border=1cm,12pt]{standalone}
+
+% I only need the arrows for this one.
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=.5] 
+
+% Draw the tracker
+\draw [gray](0,0) circle (1);
+\draw [gray](0,0) circle (2);
+\draw [gray](0,0) circle (3);
+\draw [gray](0,0) circle (4);
+\draw [gray](0,0) circle (5);
+
+% Draw the electron
+\draw [thick,blue,->](-10,10) ++( -45 : 14.142 ) arc ( -45:-10:14.142 ) node[right] {$e^{-}$} ;
+
+\clip [use as bounding box] (-12,-12) rectangle (12,12) ;
+
+\end{tikzpicture}
+
+\end{document} 
